@@ -143,3 +143,28 @@ server με τα Matrix και Element, όμως ο φόρτος που προκ
 Για τα Matrix, Element και Jitsi, οι απαιτήσεις σε λειτουργικό σύστημα
 αναφέρονται στην αρχή της [τεκμηρίωσης του
 toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/prerequisites.md).
+
+## Περισσότερες πληροφορίες
+
+### Nextcloud
+
+Για την εγκατάσταση του Nextcloud έχουμε τους ρόλους Ansible
+[nextcloud](https://gitlab.grnet.gr/digigov-oss/ansible/nextcloud),
+[mysql](https://gitlab.grnet.gr/digigov-oss/ansible/mysql) και
+[nextcloud-collabora](https://gitlab.grnet.gr/digigov-oss/ansible/nextcloud-collabora). 
+
+Σ' αυτό εδώ το αποθετήριο υπάρχει παράδειγμα Ansible playbook που
+χρησιμοποιεί αυτούς τους ρόλους και στήνει Nextcloud σε ένα server (μαζί
+με mysql και collabora). Για να το δοκιμάσετε, η διαδικασία είναι η
+εξής:
+
+1. Αντιγράψτε το φάκελο `examples/nextcloud-deploy` κάπου αλλού και
+   πηγαίνετε εκεί για να κάνετε αλλαγές.
+2. Βρείτε όλες τις εμφανίσεις του `example.com` και τροποποιήστε τις
+   κατάλληλα.
+3. Εγκαταστήστε τα προαπαιτούμενα με `ansible-galaxy install -r
+   requirements.yml`.
+4. Τρέξτε το playbook με `ansible-playbook site.yml`.
+
+Λεπτομέρειες για το τις διαθέσιμες παραμέτρους θα βρείτε στα README των
+άνω ρόλων.

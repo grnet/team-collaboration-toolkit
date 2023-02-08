@@ -1,0 +1,17 @@
+---
+- name: Nextcloud server
+  hosts: nextcloud.example.com
+  vars_files:
+    - group_vars/secrets.yml
+  roles:
+    - common
+    - role: mysql
+      mysql_config:
+        bind-address: 0.0.0.0
+      mysql_allowed_client_ips: "{{ ansible_default_ipv4['address'] }}"
+    - role: apache
+      use_ferm: true
+      use_awstats: false
+    - nextcloud-collabora
+    - nextcloud
+    - mail-satellite
