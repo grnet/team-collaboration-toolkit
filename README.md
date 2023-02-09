@@ -168,3 +168,20 @@ toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/
 
 Λεπτομέρειες για το τις διαθέσιμες παραμέτρους θα βρείτε στα README των
 άνω ρόλων.
+
+### Matrix, Element, Jitsi
+
+Το Matrix είναι ένα πρωτόκολλο (ή σύνολο πρωτοκόλλων), όπως είναι το
+email. Ο Matrix Synapse είναι ένας matrix server, όπως ο Postfix είναι
+ένας email server. Τέλος, το Element είναι ένας Matrix client, που είναι
+μάλιστα web client. Στο παράδειγμα με το email, το αντίστοιχο είναι το
+Roundcube.
+
+Για την εγκατάσταση των Matrix (ειδικότερα του Matrix Synapse), Element
+και Jitsi χρησιμοποιούμε το δημοφιλές
+[matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy).
+Η τεκμηρίωσή του είναι εκτενής και παραπέμπουμε σ' αυτό για περισσότερα.
+Ειδικότερα, για το Jitsi, είναι χρήσιμη και η [περιγραφή της
+αρχιτεκτονικής](https://gitlab.grnet.gr/digigov-oss/ansible/jitsi-meet#jitsi-architecture)
+σε ένα Jitsi Ansible module που δημιουργήσαμε παλιότερα (του οποίου τη
+χρήση δεν προτείνουμε γιατί είναι ασυντήρητο).
