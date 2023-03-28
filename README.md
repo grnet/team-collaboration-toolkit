@@ -235,6 +235,29 @@ Matrix/Element/Jitsi. Σύμφωνα με την εμπειρία μας, τα M
 επιπέδου (πέραν της ανεπίσημης από την κοινότητα) είναι λιγότερο
 αναγκαία σε σχέση με το Nextcloud.
 
+## Γνωστά προβλήματα
+
+### Nextcloud
+
+* Σε «διαμοιρασμένα» ημερολόγια, [δεν ενημερώνει τους συμμετέχοντες σε
+  events](https://github.com/nextcloud/server/issues/26668).
+* Παρόλο που δεν τους ενημερώνει, [ισχυρίζεται ότι τους
+  ενημέρωσε](https://github.com/nextcloud/calendar/issues/4983).
+
+### Matrix/Element
+
+* Ενοχλητικά [κόκκινα
+  γράμματα](https://github.com/vector-im/element-meta/issues/744) στο
+  Element.
+
+### matrix-docker-ansible-deploy
+
+* Λάθη στην [εγκατάσταση δεύτερου
+  JVB](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2513)
+  (στο issue αναφέρονται και workarounds).
+* Δεν υποστηρίζει (ακόμα) [εγγραφή
+  τηλεσυσκέψεων](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/1473).
+
 ## Περισσότερες πληροφορίες
 
 * [Εγκατάσταση Nextcloud για τις ανάγκες ενός
