@@ -167,7 +167,8 @@ toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/
 4. Τρέξτε το playbook με `ansible-playbook site.yml`.
 
 Λεπτομέρειες για το τις διαθέσιμες παραμέτρους θα βρείτε στα README των
-άνω ρόλων.
+άνω ρόλων. Έχουμε κι ένα [FAQ](faq.md) με θέματα που μπορεί να
+αντιμετωπίσετε κατά την εγκατάσταση.
 
 ### Matrix, Element, Jitsi
 
