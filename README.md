@@ -148,27 +148,8 @@ toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/
 
 ### Nextcloud
 
-Για την εγκατάσταση του Nextcloud έχουμε τους ρόλους Ansible
-[nextcloud](https://gitlab.grnet.gr/digigov-oss/ansible/nextcloud),
-[mysql](https://gitlab.grnet.gr/digigov-oss/ansible/mysql) και
-[nextcloud-collabora](https://gitlab.grnet.gr/digigov-oss/ansible/nextcloud-collabora). 
-
-Σ' αυτό εδώ το αποθετήριο υπάρχει παράδειγμα Ansible playbook που
-χρησιμοποιεί αυτούς τους ρόλους και στήνει Nextcloud σε ένα server (μαζί
-με mysql και collabora). Για να το δοκιμάσετε, η διαδικασία είναι η
-εξής:
-
-1. Αντιγράψτε το φάκελο `examples/nextcloud-deploy` κάπου αλλού και
-   πηγαίνετε εκεί για να κάνετε αλλαγές.
-2. Βρείτε όλες τις εμφανίσεις του `example.com` και τροποποιήστε τις
-   κατάλληλα.
-3. Εγκαταστήστε τα προαπαιτούμενα με `ansible-galaxy install -r
-   requirements.yml`.
-4. Τρέξτε το playbook με `ansible-playbook site.yml`.
-
-Λεπτομέρειες για το τις διαθέσιμες παραμέτρους θα βρείτε στα README των
-άνω ρόλων. Έχουμε κι ένα [FAQ](faq.md) με θέματα που μπορεί να
-αντιμετωπίσετε κατά την εγκατάσταση.
+Για την εγκατάσταση του Nextcloud έχουμε το Ansible collection
+[grnet.nextcloud](https://grnetnextcloud.readthedocs.org/).
 
 ### Matrix, Element, Jitsi
 
@@ -191,9 +172,9 @@ Roundcube.
 
 ### Nextcloud
 
-Για τους ρόλους Ansible για Nextcloud και Collabora, υποστήριξη
-προσφέρει η ΕΔΥΤΕ (και συγκεκριμένα ο δημιουργός των ρόλων, Αντώνης
-Χριστοφίδης, achristofides@admin.grnet.gr).
+Για το Ansible collection grnet.nextcloud, υποστήριξη προσφέρει η ΕΔΥΤΕ
+(και συγκεκριμένα ο δημιουργός των ρόλων, Αντώνης Χριστοφίδης,
+achristofides@admin.grnet.gr).
 
 Εκπαίδευση και υποστήριξη στους χρήστες σας θα πρέπει να προσφέρει ο
 οργανισμός σας, δημιουργώντας μια ομάδα υποστήριξης. Η ΕΔΥΤΕ έχει
