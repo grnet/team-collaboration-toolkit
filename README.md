@@ -225,6 +225,10 @@ Matrix/Element/Jitsi. Σύμφωνα με την εμπειρία μας, τα M
   events](https://github.com/nextcloud/server/issues/26668).
 * Παρόλο που δεν τους ενημερώνει, [ισχυρίζεται ότι τους
   ενημέρωσε](https://github.com/nextcloud/calendar/issues/4983).
+* Όταν ο χρήστης έχει ανοιχτό το ημερολόγιο, [πρέπει να πατήσει
+  ανανέωση](https://github.com/nextcloud/calendar/issues/31) για να
+  φανούν αλλαγές που έχουν γίνει από άλλους χρήστες (ή από τον ίδιο
+  χρήστη σε άλλες συσκευές).
 
 ### Matrix/Element
 
