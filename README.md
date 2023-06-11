@@ -207,7 +207,7 @@ server με τα Matrix και Element, όμως ο φόρτος που προκ
 αναφέρονται στην αρχή της [τεκμηρίωσης του
 toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/docs/prerequisites.md).
 
-## Περισσότερες πληροφορίες
+## Εγκατάσταση
 
 ### Nextcloud
 
