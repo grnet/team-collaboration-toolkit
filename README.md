@@ -301,9 +301,12 @@ Matrix/Element/Jitsi. Σύμφωνα με την εμπειρία μας, τα M
 
 ### matrix-docker-ansible-deploy
 
-* Λάθη στην [εγκατάσταση δεύτερου
-  JVB](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2513)
-  (στο issue αναφέρονται και workarounds).
+* Λάθη στην εγκατάσταση δεύτερου JVB
+  ([2513](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2513),
+  [2706](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2706),
+  [2708](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2708),
+  [2721](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2721),
+  [2733](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/2733),)
 * Δεν υποστηρίζει (ακόμα) [εγγραφή
   τηλεσυσκέψεων](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/1473).
 
