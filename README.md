@@ -1,5 +1,7 @@
 # Ασφαλές λογισμικό για συνεργασία
 
+Γρήγορη μετάβαση: [Απαιτήσεις](https://github.com/grnet/team-collaboration-toolkit#%CE%B1%CF%80%CE%B1%CE%B9%CF%84%CE%AE%CF%83%CE%B5%CE%B9%CF%82) | [Εγκατάσταση](https://github.com/grnet/team-collaboration-toolkit#%CE%B5%CE%B3%CE%BA%CE%B1%CF%84%CE%AC%CF%83%CF%84%CE%B1%CF%83%CE%B7) | [Εκπαίδευση/υποστήριξη](https://github.com/grnet/team-collaboration-toolkit#%CE%B5%CE%BA%CF%80%CE%B1%CE%AF%CE%B4%CE%B5%CF%85%CF%83%CE%B7-%CE%BA%CE%B1%CE%B9-%CF%85%CF%80%CE%BF%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%BE%CE%B7) | [Γνωστά προβλήματα](https://github.com/grnet/team-collaboration-toolkit#%CE%B3%CE%BD%CF%89%CF%83%CF%84%CE%AC-%CF%80%CF%81%CE%BF%CE%B2%CE%BB%CE%AE%CE%BC%CE%B1%CF%84%CE%B1)
+
 ## Εισαγωγή
 
 Οι κυβερνήσεις και δημόσιοι οργανισμοί απομακρύνονται τα τελευταία
