@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2019
+# daf9a3bef94549192358462a8bb20263_a023b71 <69530ed134884b79b067e9214de553f8_465041>, 2019
+# george k <norhorn@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2016-06-28 12:18+0000\n"
+"Last-Translator: george k <norhorn@gmail.com>, 2020\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/files_versions/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/apps/files_versions/src/versionstabview.js:63
+msgid "Versions"
+msgstr "Εκδόσεις"
+
+#: /app/apps/files_versions/specialAppInfoFakeDummyForL10nScript.php:3
+msgid ""
+"This application automatically maintains older versions of files that are "
+"changed."
+msgstr ""
+"Η εφαρμογή διατηρεί αυτόματα παλαιότερες εκδόσεις των αρχείων που έχουν "
+"αλλάξει."
+
+#: /app/apps/files_versions/specialAppInfoFakeDummyForL10nScript.php:4
+#, php-format
+msgid ""
+"This application automatically maintains older versions of files that are changed. When enabled, a hidden versions folder is provisioned in every user’s directory and is used to store old file versions. A user can revert to an older version through the web interface at any time, with the replaced file becoming a version. The app automatically manages the versions folder to ensure the user doesn’t run out of Quota because of versions.\n"
+"\t\tIn addition to the expiry of versions, the versions app makes certain never to use more than 50% of the user’s currently available free space. If stored versions exceed this limit, the app will delete the oldest versions first until it meets this limit. More information is available in the Versions documentation."
+msgstr ""
+"Αυτή η εφαρμογή διατηρεί αυτόματα παλαιότερες εκδόσεις αρχείων που έχουν αλλάξει. Όταν είναι ενεργοποιημένη, ένας κρυφός φάκελος παλιών εκδόσεων δημιουργείται στον κατάλογο όλων των χρηστών και χρησιμοποιείται για την αποθήκευση παλιών εκδόσεων αρχείων. Ένας χρήστης μπορεί να επαναφέρει παλαιότερη έκδοση μέσω περιηγητή ανά πάσα στιγμή, με το αρχείο αντικατάστασης να γίνει μια έκδοση. Η εφαρμογή διαχειρίζεται αυτόματα τον φάκελο για να διασφαλίσει ότι ο χρήστης δεν εξαντλεί το όριο του λόγω των εκδόσεων.\n"
+"\t\tΕκτός από τη λήξη των εκδόσεων, η εφαρμογή για εκδόσεις δεν χρησιμοποιεί ποτέ περισσότερο από το 50% του ελεύθερου χώρου που διαθέτει ο χρήστης. Εάν υπερβεί αυτό το όριο, θα διαγράψει πρώτα τις παλαιότερες εκδόσεις έως ότου ικανοποιήσει το όριο. Περισσότερες πληροφορίες διατίθενται στην τεκμηρίωση εκδόσεων."
+
+#: /app/apps/files_versions/src/versionstabview.js:117
+msgid "Failed to revert {file} to revision {timestamp}."
+msgstr "Αποτυχία επαναφοράς του {file} στην αναθεώρηση {timestamp}."
+
+#: /app/apps/files_versions/src/versionstabview.js:190
+msgid "%n byte"
+msgid_plural "%n bytes"
+msgstr[0] "%n bytes"
+msgstr[1] "%n bytes"
+
+#: /app/apps/files_versions/src/versionstabview.js:197
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#: /app/apps/files_versions/src/versionstabview.js:207
+msgid "No other versions available"
+msgstr "Δεν υπάρχουν άλλες εκδόσεις διαθέσιμες"

@@ -1,0 +1,15 @@
+---
+dependencies:
+  - role: aptiko.general.apache_vhost
+    server_name: "{{ collabora_fqdn }}"
+    use_awstats: false
+    document_root: "/var/www/{{ collabora_fqdn }}"
+    ssl_extras: |
+      SSLProxyEngine on
+    letsencrypt: "{{ collabora_fqdn }}"
+    force_ssl: yes
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Collabora for Nextcloud on Debian/Ubuntu
+  license: GPLv3

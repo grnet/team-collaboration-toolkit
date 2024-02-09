@@ -1,0 +1,9 @@
+---
+nextcloud_admin_user: admin
+use_awstats: false
+php_memory_limit: 512M
+opcache_interned_strings_buffer: 8
+mysql_ca_cert: ""
+mysql_client_cert: ""
+mysql_client_key: ""
+nextcloud_download_url: https://download.nextcloud.com/server/releases/latest.zip

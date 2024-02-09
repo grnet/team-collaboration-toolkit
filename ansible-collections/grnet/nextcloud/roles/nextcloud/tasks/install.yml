@@ -1,0 +1,298 @@
+---
+- name: Install apt packages required for nextcloud
+  apt:
+    name:
+      - unzip
+      - php
+      - php-fpm
+      - php-curl
+      - php-gd
+      - php-json
+      - php-mbstring
+      - php-xml
+      - php-zip
+      - php-bz2
+      - php-intl
+      - php-ldap
+      - php-mysql
+      - redis-server
+      - php-redis
+      - python3-pymysql
+
+- name: Start Redis
+  service:
+    name: redis
+    state: started
+
+- name: Set PHP memory limit
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^memory_limit\s*='
+    line: memory_limit = {{ php_memory_limit }}
+  notify:
+    - Restart php-fpm
+
+- name: Set opcache.interned_strings_buffer
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^;?opcache.interned_strings_buffer\s*='
+    line: opcache.interned_strings_buffer = {{ opcache_interned_strings_buffer }}
+  notify:
+    - Restart php-fpm
+
+- name: Install nextcloud
+  unarchive:
+    creates: /var/www/{{ nextcloud_fqdn }}/nextcloud/index.php
+    src: "{{ nextcloud_download_url }}"
+    dest: /var/www/{{ nextcloud_fqdn }}
+    remote_src: yes
+    owner: www-data
+    group: www-data
+
+- name: Check which databases exist
+  community.mysql.mysql_info:
+    login_host: "{{ mysql_fqdn }}"
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+    filter:
+      - databases
+    exclude_fields: db_size
+  check_mode: no
+  changed_when: false
+  register: check_databases
+
+- name: Setup nextcloud
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: >
+      php occ maintenance:install --database-host={{ mysql_fqdn }}
+      --database=mysql --database-name=nextcloud
+      --database-user=root --database-pass={{ mysql_root_password }}
+      --admin-user={{ nextcloud_admin_user }}
+      --admin-pass={{ nextcloud_admin_user_password }}
+  when: '"nextcloud" not in check_databases["databases"]'
+
+- name: Setup trusted domain
+  become: yes
+  become_user: www-data
+  replace:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: '''trusted_domains''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
+    replace: |
+      'trusted_domains' => 
+        array (
+          0 => '{{ nextcloud_fqdn }}',
+        ),
+  notify:
+    - Restart php-fpm
+
+- name: Setup default_phone_region
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: default_phone_region
+    line: "  'default_phone_region' => '{{ default_phone_region }}',"
+    insertbefore: '^\s*\);\s*$'
+  notify:
+    - Restart php-fpm
+
+- name: Setup base URL for command-line tools
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: overwrite.cli.url
+    line: "  'overwrite.cli.url' => 'https://{{ nextcloud_fqdn }}/',"
+    insertbefore: '^\s*\);\s*$'
+  notify:
+    - Restart php-fpm
+
+- name: Setup pretty URLs
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: htaccess.RewriteBase
+    line: "  'htaccess.RewriteBase' => '/',"
+    insertbefore: '^\s*\);\s*$'
+  notify:
+    - Update htaccess
+    - Restart php-fpm
+
+- name: Setup activity_use_cached_mountpoints
+  # This parameter enables users to view activities in group folders or external
+  # storages. However it isn't without problems: please take a good look at
+  # https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/activity_configuration.html#activities-in-groupfolders-or-external-storages
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: activity_use_cached_mountpoints
+    line: "  'activity_use_cached_mountpoints' => true,"
+    insertbefore: '^\s*\);\s*$'
+  when: "'groupfolders' in nextcloud_apps"
+  notify:
+    - Restart php-fpm
+
+- name: Check whether background jobs scheduler is set to cron
+  become: yes
+  become_user: www-data
+  shell:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php occ config:list core --output=plain | grep backgroundjobs_mode | awk '{ print $3 }'
+  check_mode: no
+  ignore_errors: yes
+  changed_when: false
+  register: check_background_jobs
+
+- name: Set background jobs scheduler to cron
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php occ background:cron
+  when: check_background_jobs.stdout != "cron"
+
+- name: Add nextcloud cron job
+  copy:
+    # Note: we should be running cron.php every 5 minutes or so, but this causes
+    # many cron.php instances to run at the same time. The reason is that our
+    # IMAP server (office365) does not support CONDSTORE and Nextcloud has to
+    # go through all the messages each time in order to see whether there has
+    # been any change. For users that have many messages, this takes much.
+    # Currently in the worst case cron.php takes about half an hour to run. For
+    # more information, see
+    # https://gitlab.grnet.gr/digigov/infrastructure/nextcloud-ansible-redux/-/issues/82
+    # and the Nextcloud support ticket referred to in there.
+    dest: /etc/cron.d/nextcloud
+    content: "5 * * * * www-data php -f /var/www/{{ nextcloud_fqdn}}/nextcloud/cron.php\n"
+
+- name: Configure memcache.local
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: "memcache.local"
+    line: '  ''memcache.local'' => ''\\OC\\Memcache\\Redis'','
+    insertbefore: '^\s*\);\s*$'
+  notify:
+    - Restart php-fpm
+
+- name: Configure memcache.locking
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: "memcache.locking"
+    line: '  ''memcache.locking'' => ''\\OC\\Memcache\\Redis'','
+    insertbefore: '^\s*\);\s*$'
+  notify:
+    - Restart php-fpm
+
+- name: Check whether config.php contains a redis block
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: "redis"
+    state: absent
+  check_mode: yes  # The file will never actually be modified
+  register: redis
+  changed_when: not redis.found
+
+- name: Ensure config.php contains a redis block
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    line: "  'redis' => array ( ),"
+    insertbefore: '^\s*\);\s*$'
+  when: not redis.found
+  notify:
+    - Restart php-fpm
+
+- name: Setup redis configuration in config.php
+  become: yes
+  become_user: www-data
+  replace:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: '''redis''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
+    replace: |
+      'redis' => 
+        array (
+          'host' => 'localhost',
+          'port' => 6379,
+        ),
+  notify:
+    - Restart redis
+    - Restart php-fpm
+
+- name: Setup php-fpm for nextcloud
+  template:
+    src: fpm-nextcloud.conf
+    dest: /etc/php/{{ php_version }}/fpm/pool.d/nextcloud.conf
+  notify:
+    - Restart php-fpm
+
+- name: Setup apache for nextcloud
+  template:
+    src: apache-nextcloud.conf
+    dest: /etc/apache2/snippets/{{ nextcloud_fqdn }}/nextcloud.conf
+  notify:
+    - Restart apache
+
+- name: Activate apache proxy_fcgi
+  apache2_module:
+    state: present
+    name: proxy_fcgi
+  notify:
+    - Restart apache
+
+- name: Install nextcloud apps
+  become: yes
+  become_user: www-data
+  shell: echo '{{ nextcloud_admin_user_password }}' | php occ app:install {{ item }}
+  args:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    creates: /var/www/{{ nextcloud_fqdn }}/nextcloud/apps/{{ item }}
+  loop: "{{ nextcloud_apps }}"
+
+- name: Check whether collabora online server address has been set
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    cmd: php occ config:app:get richdocuments wopi_url
+  check_mode: no
+  ignore_errors: yes
+  changed_when: false
+  register: check_collabora_url
+
+- name: Setup collabora online server address
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    cmd: php occ config:app:set --value https://{{ collabora_fqdn }} richdocuments wopi_url
+  when: check_collabora_url.stdout != "https://" ~ collabora_fqdn
+  notify:
+    - Activate richdocuments config
+
+- name: Install Nextcloud translation tool
+  copy:
+    src: translationtool.phar
+    dest: /usr/local/bin/
+
+- name: Copy translation files
+  copy:
+    src: translationfiles
+    dest: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    owner: www-data
+  notify:
+    - Convert po translation files
+
+- import_tasks: configure_mysql_tls.yml
+- import_tasks: configure_email.yml

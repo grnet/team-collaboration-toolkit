@@ -1,0 +1,17 @@
+---
+- name: Nextcloud server
+  hosts: nextcloud.example.com
+  vars_files:
+    - group_vars/secrets.yml
+  roles:
+    - aptiko.general.common
+    - role: aptiko.general.mysql
+      mysql_config:
+        bind-address: 0.0.0.0
+      mysql_allowed_client_ips: "{{ ansible_default_ipv4['address'] }}"
+    - role: aptiko.general.apache
+      use_ferm: true
+      use_awstats: false
+    - grnet.nextcloud.collabora
+    - grnet.nextcloud.nextcloud
+    - aptiko.general.mail_satellite

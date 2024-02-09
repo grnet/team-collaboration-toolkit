@@ -1,0 +1,3368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# John Salatas <jsalatas@gmail.com>, 2017
+# daf9a3bef94549192358462a8bb20263_a023b71 <69530ed134884b79b067e9214de553f8_465041>, 2019
+# Spiros Skafidas <spirosscafidas@gmail.com>, 2019
+# Eirini Basdani <renabasdani@gmail.com>, 2020
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2020
+# Marios Bibis <bibakos2003@yahoo.gr>, 2020
+# Alexandros Diamantidis <adia@hellug.gr>, 2021
+# Gerasimos Theotokatos, 2021
+# george k <norhorn@gmail.com>, 2021
+# Konstantinidis Konstantinos, 2022
+# theodoros bousios, 2022
+# pkst <pkst@eellak.gr>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:35+0000\n"
+"PO-Revision-Date: 2016-10-13 15:52+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/Controller/EmailController.php:111
+msgid "User-Session unexpectedly expired"
+msgstr "Η συνεδρία-χρήστη έληξε απότομα"
+
+#: /app/lib/Controller/EmailController.php:117
+msgid "Provided email-address is not valid"
+msgstr "Η διεύθυνση email δεν είναι έγκυρη"
+
+#: /app/lib/Controller/EmailController.php:123
+#: /app/lib/Controller/EmailController.php:194
+#, php-format
+msgid "%s has published the calendar »%s«"
+msgstr "Ο/η %s έχει δημοσιεύσει το ημερολόγιο »%s«"
+
+#: /app/lib/Controller/EmailController.php:132
+msgid "Unexpected error sending email. Please contact your administrator."
+msgstr ""
+"Απροσδόκητο σφάλμα στην αποστολή email. Παρακαλώ επικοινωνήστε με τον "
+"διαχειριστή."
+
+#: /app/lib/Controller/EmailController.php:137
+#, php-format
+msgid "Successfully sent email to %1$s"
+msgstr "Επιτυχής αποστολή email %1$s"
+
+#: /app/lib/Controller/EmailController.php:195
+msgid "Hello,"
+msgstr "Γεια σας,"
+
+#: /app/lib/Controller/EmailController.php:196
+#, php-format
+msgid "We wanted to inform you that %s has published the calendar »%s«."
+msgstr ""
+"Θα θέλαμε να σας πληροφορήσουμε ότι  ο χρήστης %s δημοσίευσε το ημερολόγιο "
+"»%s«."
+
+#: /app/lib/Controller/EmailController.php:197
+#, php-format
+msgid "Open »%s«"
+msgstr "Άνοιγμα »%s«"
+
+#. TRANSLATORS term at the end of a mail
+#: /app/lib/Controller/EmailController.php:199
+msgid "Cheers!"
+msgstr "Με εκτίμηση!"
+
+#: /app/lib/Dashboard/CalendarWidget.php:76
+msgid "Upcoming events"
+msgstr "Προσεχή γεγονότα"
+
+#. TRANSLATORS components/AppNavigation/AppointmentConfigList.vue:31
+#: /app/lib/Profile/AppointmentsAction.php:86
+#: /app/specialVueFakeDummyForL10nScript.js:38
+msgid "Appointments"
+msgstr "Ραντεβού"
+
+#: /app/lib/Profile/AppointmentsAction.php:91
+#, php-format
+msgid "Schedule appointment \"%s\""
+msgstr "Προγραμματίστε ραντεβού%s"
+
+#: /app/lib/Profile/AppointmentsAction.php:96
+msgid "Schedule an appointment"
+msgstr "Προγραμματίστε ένα ραντεβού"
+
+#: /app/lib/Service/Appointments/BookingCalendarWriter.php:180
+#, php-format
+msgid "Prepare for %s"
+msgstr "Προετοιμασία για %s"
+
+#: /app/lib/Service/Appointments/BookingCalendarWriter.php:207
+#, php-format
+msgid "Follow up for %s"
+msgstr "Επόμενο για %s"
+
+#: /app/lib/Service/Appointments/MailService.php:108
+#, php-format
+msgid "Your appointment \"%s\" needs confirmation"
+msgstr "Το ραντεβού σας \"%s\" χρειάζεται επιβεβαίωση."
+
+#: /app/lib/Service/Appointments/MailService.php:112
+#, php-format
+msgid "Dear %s, please confirm your booking"
+msgstr "Αγαπητέ/ή %s, παρακαλώ επιβεβαιώστε την κράτησή σας"
+
+#: /app/lib/Service/Appointments/MailService.php:119
+msgid "Confirm"
+msgstr "Επιβεβαιώνω"
+
+#: /app/lib/Service/Appointments/MailService.php:121
+#, php-format
+msgid "This confirmation link expires in %s hours."
+msgstr "Αυτός ο σύνδεσμος επιβεβαίωσης λήγει σε %s ώρες"
+
+#: /app/lib/Service/Appointments/MailService.php:124
+msgid ""
+"If you wish to cancel the appointment after all, please contact your "
+"organizer."
+msgstr ""
+"Εάν τελικά επιθυμείτε να ακυρώσετε το ραντεβού σας, παρακαλούμε να "
+"ενημερώσετε τον διοργανωτή σας."
+
+#: /app/lib/Service/Appointments/MailService.php:151
+msgid "Appointment:"
+msgstr "Ραντεβού:"
+
+#: /app/lib/Service/Appointments/MailService.php:162
+msgid "Date:"
+msgstr "Ημερομηνία:"
+
+#: /app/lib/Service/Appointments/MailService.php:165
+msgid "Where:"
+msgstr "Που:"
+
+#: /app/lib/Service/Appointments/MailService.php:168
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:48
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/specialVueFakeDummyForL10nScript.js:396
+msgid "Calendar"
+msgstr "Ημερολόγιο"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "A Calendar app for Nextcloud"
+msgstr "Eφαρμογή ημερολογίου για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"The Calendar app is a user interface for Nextcloud's CalDAV server. Easily sync events from various devices with your Nextcloud and edit them online.\n"
+"\n"
+"* 🚀 **Integration with other Nextcloud apps!** Currently Contacts - more to come.\n"
+"* 🌐 **WebCal Support!** Want to see your favorite team’s matchdays in your calendar? No problem!\n"
+"* 🙋 **Attendees!** Invite people to your events\n"
+"* ⌚️ **Free/Busy!** See when your attendees are available to meet\n"
+"* ⏰ **Reminders!** Get alarms for events inside your browser and via email\n"
+"* 🔍 Search! Find your events at ease\n"
+"* ☑️ Tasks! See tasks with a due date directly in the calendar\n"
+"* 🙈 **We’re not reinventing the wheel!** Based on the great [c-dav library](https://github.com/nextcloud/cdav-library), [ical.js](https://github.com/mozilla-comm/ical.js) and [fullcalendar](https://github.com/fullcalendar/fullcalendar) libraries."
+msgstr ""
+"Η εφαρμογή Ημερολόγιο είναι μια διεπαφή χρήστη για τον διακομιστή CalDAV του Nextcloud. Συνχρονίστε εύκολα τα συμβάντα σας από διάφορες συσκευές με το Nextcloud και επεξεργαστείτε τα online.\n"
+"\n"
+"* 🚀 **Συνεργάζεται με άλλες εφαρμογές Nextcloud!** Επί του παρόντος με τις Επαφές - και με άλλες στο μέλλον.\n"
+"* 🌐 **Υποστήριξη WebCal!** Θέλετε να δείτε το πρόγραμμα της αγαπημένης σας ομάδας στο ημερολόγιό σας; Κανένα πρόβλημα!\n"
+"* 🙋 **Συμμετέχοντες!** Προσκαλέστε άτομα στις εκδηλώσεις σας.\n"
+"* ⌚️ **Ελεύθερος/Απασχολημένος!** Δείτε τη διαθεσιμότητα των συνεργατών σας για συνάντηση\n"
+"* ⏰ **Υπενθυμίσεις!** Λάβετε ειδοποιήσεις για γεγονότα στον περιηγητή σας ή στο ηλ.ταχυδρομείο σας.\n"
+"* 🔍 Αναζήτηση! Εντοπίστε εύκολα γεγονότα που σας ενδιαφέρουν\n"
+"* ☑️ Εργασίες! Δείτε τις εργασίες με ημερομηνία λήξεως απευθείας στο ημερολόγιο.\n"
+"* 🙈 **Δεν ανακαλύπτουμε τον τροχό!** Με βάση τις βιβλιοθήκες [c-dav library](https://github.com/nextcloud/cdav-library), [ical.js](https://github.com/mozilla-comm/ical.js) and [fullcalendar](https://github.com/fullcalendar/fullcalendar) "
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:93
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Previous day"
+msgstr "Προηγούμενη ημέρα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Previous week"
+msgstr "Προηγούμενη εβδομάδα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:100
+#: /app/specialVueFakeDummyForL10nScript.js:6
+msgid "Previous month"
+msgstr "Προηγούμενος μήνας"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:112
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Next day"
+msgstr "Επόμενη ημέρα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Next week"
+msgstr "Επόμενη εβδομάδα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderDatePicker.vue:119
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid "Next month"
+msgstr "Επόμενος μήνας"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderNewEvent.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "New event"
+msgstr "Νέο γεγονός"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderTodayButton.vue:28
+#. TRANSLATORS
+#. components/AppNavigation/EmbedHeader/EmbedHeaderTodayButton.vue:29
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:16
+#: /app/specialVueFakeDummyForL10nScript.js:224
+#: /app/specialVueFakeDummyForL10nScript.js:290
+#: /app/src/fullcalendar/localization/localeProvider.js:48
+msgid "Today"
+msgstr "Σήμερα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderViewMenu.vue:67
+#. TRANSLATORS
+#. components/AppNavigation/EmbedHeader/EmbedHeaderViewButtons.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:18
+#: /app/specialVueFakeDummyForL10nScript.js:226
+#: /app/src/fullcalendar/localization/localeProvider.js:51
+msgid "Day"
+msgstr "Ημέρα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderViewMenu.vue:71
+#. TRANSLATORS
+#. components/AppNavigation/EmbedHeader/EmbedHeaderViewButtons.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:20
+#: /app/specialVueFakeDummyForL10nScript.js:228
+#: /app/src/fullcalendar/localization/localeProvider.js:50
+msgid "Week"
+msgstr "Εβδομάδα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderViewMenu.vue:75
+#. TRANSLATORS
+#. components/AppNavigation/EmbedHeader/EmbedHeaderViewButtons.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:22
+#: /app/specialVueFakeDummyForL10nScript.js:230
+#: /app/src/fullcalendar/localization/localeProvider.js:49
+msgid "Month"
+msgstr "Μήνας"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppNavigationHeader/AppNavigationHeaderViewMenu.vue:79
+#. TRANSLATORS
+#. components/AppNavigation/EmbedHeader/EmbedHeaderViewButtons.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:24
+#: /app/specialVueFakeDummyForL10nScript.js:232
+#: /app/src/fullcalendar/localization/localeProvider.js:52
+msgid "List"
+msgstr "Λίστα"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:34
+#. TRANSLATORS components/AppointmentConfigModal/Confirmation.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:26
+#: /app/specialVueFakeDummyForL10nScript.js:360
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:40
+#. TRANSLATORS components/AppointmentConfigModal/Confirmation.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:28
+#: /app/specialVueFakeDummyForL10nScript.js:362
+msgid "Copy link"
+msgstr "Αντιγραφή συνδέσμου"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:45
+#. TRANSLATORS components/Editor/Repeat/Repeat.vue:220
+#: /app/specialVueFakeDummyForL10nScript.js:30
+#: /app/specialVueFakeDummyForL10nScript.js:614
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:50
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:126
+#. TRANSLATORS views/EditSidebar.vue:70
+#. TRANSLATORS views/EditSimple.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:32
+#: /app/specialVueFakeDummyForL10nScript.js:62
+#: /app/specialVueFakeDummyForL10nScript.js:836
+#: /app/specialVueFakeDummyForL10nScript.js:856
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:112
+#: /app/specialVueFakeDummyForL10nScript.js:34
+msgid "Appointment link was copied to clipboard"
+msgstr "Ο σύνδεσμος του ραντεβού αντιγράφηκε στο πρόχειρο."
+
+#. TRANSLATORS
+#. components/AppNavigation/AppointmentConfigList/AppointmentConfigListItem.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:36
+msgid "Appointment link could not be copied to clipboard"
+msgstr "Δεν ήταν δυνατή η αντιγραφή του συνδέσμου ραντεβού στο πρόχειρο."
+
+#. TRANSLATORS components/AppNavigation/AppointmentConfigList.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:40
+msgid "Add new"
+msgstr "Προσθήκη νέου"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:25
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:24
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:23
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:42
+#: /app/specialVueFakeDummyForL10nScript.js:172
+#: /app/specialVueFakeDummyForL10nScript.js:234
+#: /app/specialVueFakeDummyForL10nScript.js:236
+msgid "Untitled calendar"
+msgstr "Ημερολόγιο χωρίς τίτλο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:44
+msgid "Disable calendar"
+msgstr "Απενεργοποιήστε το ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:46
+msgid "Enable calendar"
+msgstr "Ενεργοποιήστε το ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:48
+msgid "Edit name"
+msgstr "Επεξεργασία ονόματος"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:50
+msgid "Saving name …"
+msgstr "Αποθήκευση ονόματος …"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:86
+#: /app/specialVueFakeDummyForL10nScript.js:52
+msgid "Edit color"
+msgstr "Επεξεργασία χρώματος"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:99
+#: /app/specialVueFakeDummyForL10nScript.js:54
+msgid "Saving color …"
+msgstr "Αποθήκευση χρώματος …"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:105
+#: /app/specialVueFakeDummyForL10nScript.js:56
+msgid "Copy private link"
+msgstr "Αντιγραφή ιδιωτικού συνδέσμου"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:112
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:70
+#. TRANSLATORS views/EditSidebar.vue:64
+#. TRANSLATORS views/EditSimple.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:58
+#: /app/specialVueFakeDummyForL10nScript.js:182
+#: /app/specialVueFakeDummyForL10nScript.js:834
+#: /app/specialVueFakeDummyForL10nScript.js:854
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:119
+#: /app/specialVueFakeDummyForL10nScript.js:60
+msgid "Unshare from me"
+msgstr "Διακοπή διαμοιρασμού με εμένα"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:338
+#: /app/specialVueFakeDummyForL10nScript.js:64
+msgid "An error occurred, unable to change visibility of the calendar."
+msgstr ""
+"Παρουσιάστηκε σφάλμα, δεν δύναται να αλλάξει η εμφάνιση του ημερολογίου."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:357
+#: /app/specialVueFakeDummyForL10nScript.js:66
+msgid "An error occurred, unable to delete the calendar."
+msgstr "Παρουσιάστηκε σφάλμα, δεν δύναται να διαγραφή το ημερολόγιο."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:419
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:284
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:174
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:68
+#: /app/specialVueFakeDummyForL10nScript.js:118
+#: /app/specialVueFakeDummyForL10nScript.js:122
+#: /app/specialVueFakeDummyForL10nScript.js:184
+#: /app/specialVueFakeDummyForL10nScript.js:238
+msgid "Calendar link copied to clipboard."
+msgstr "Ο σύνδεσμος ημερολογίου αντιγράφηκε στο πρόχειρο."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:422
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:287
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:183
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:93
+#: /app/specialVueFakeDummyForL10nScript.js:70
+#: /app/specialVueFakeDummyForL10nScript.js:120
+#: /app/specialVueFakeDummyForL10nScript.js:124
+#: /app/specialVueFakeDummyForL10nScript.js:186
+#: /app/specialVueFakeDummyForL10nScript.js:240
+msgid "Calendar link could not be copied to clipboard."
+msgstr "Ο σύνδεσμος ημερολογίου δεν μπορεί να αντιγραφή στο πρόχειρο."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:457
+#: /app/specialVueFakeDummyForL10nScript.js:72
+msgid "An error occurred, unable to rename the calendar."
+msgstr ""
+"Παρουσιάστηκε σφάλμα, δεν δύναται να αλλαχτεί το όνομα του ημερολογίου."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:497
+#: /app/specialVueFakeDummyForL10nScript.js:74
+msgid "An error occurred, unable to change the calendar's color."
+msgstr "Παρουσιάστηκε σφάλμα, δεν μπορεί να αλλάξει το χρώμα του ημερολογίου."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:136
+#: /app/specialVueFakeDummyForL10nScript.js:76
+msgid "Unsharing the calendar in {countdown} second"
+msgid_plural "Unsharing the calendar in {countdown} seconds"
+msgstr[0] "Αφαίρεση κοινής χρήσης ημερολογίου σε {countdown} δεύτερα"
+msgstr[1] "Αφαίρεση κοινής χρήσης ημερολογίου σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListItem.vue:143
+#: /app/specialVueFakeDummyForL10nScript.js:78
+msgid "Deleting the calendar in {countdown} second"
+msgid_plural "Deleting the calendar in {countdown} seconds"
+msgstr[0] "Διαγραφή ημερολογίου σε {countdown} δεύτερα"
+msgstr[1] "Διαγραφή ημερολογίου σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:23
+#: /app/specialVueFakeDummyForL10nScript.js:80
+msgid "Share link"
+msgstr "Διαμοιρασμός συνδέσμου"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:82
+msgid "Publish calendar"
+msgstr "Δημοσίευση ημερολογίου"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:84
+msgid "Publishing calendar"
+msgstr "Δημοσίευση ημερολογίου"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:86
+msgid "Copy public link"
+msgstr "Αντιγραφή δημόσιου συνδέσμου"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:88
+msgid "Send link to calendar via email"
+msgstr "Αποστολή συνδέσμου στο ημερολόγιο μέσω email"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:90
+msgid "Enter one address"
+msgstr "Εισαγωγή μίας διεύθυνσης"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:77
+#: /app/specialVueFakeDummyForL10nScript.js:92
+msgid "Sending email …"
+msgstr "Αποστολή email  '...'"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:85
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:94
+#: /app/specialVueFakeDummyForL10nScript.js:174
+msgid "Copy subscription link"
+msgstr "Αντιγραφή συνδέσμου συνδρομής"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:90
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:96
+#: /app/specialVueFakeDummyForL10nScript.js:176
+msgid "Copying link …"
+msgstr "Αντιγραφή συνδέσμου '...'"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:97
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:98
+#: /app/specialVueFakeDummyForL10nScript.js:178
+msgid "Copied link"
+msgstr "Αντιγραμμένος σύνδεσμος"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:103
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/PublicCalendarListItem.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:100
+#: /app/specialVueFakeDummyForL10nScript.js:180
+msgid "Could not copy link"
+msgstr "Ο σύνδεσμος δεν μπορεί να αντιγραφεί"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:111
+#: /app/specialVueFakeDummyForL10nScript.js:102
+msgid "Copy embedding code"
+msgstr "Αντιγραφή ενσωματωμένου κώδικα"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:116
+#: /app/specialVueFakeDummyForL10nScript.js:104
+msgid "Copying code …"
+msgstr "Αντιγραφή κώδικα '...'"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:122
+#: /app/specialVueFakeDummyForL10nScript.js:106
+msgid "Copied code"
+msgstr "Αντιγραμμένος κώδικας"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:128
+#: /app/specialVueFakeDummyForL10nScript.js:108
+msgid "Could not copy code"
+msgstr "Ο κώδικας δεν μπορεί να αντιγραφεί"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:136
+#: /app/specialVueFakeDummyForL10nScript.js:110
+msgid "Delete share link"
+msgstr "Διαγραφή κοινόχρηστου συνδέσμου"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:141
+#: /app/specialVueFakeDummyForL10nScript.js:112
+msgid "Deleting share link …"
+msgstr "Διαγραφή κοινόχρηστου συνδέσμου '...'"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:238
+#: /app/specialVueFakeDummyForL10nScript.js:114
+msgid "An error occurred, unable to publish calendar."
+msgstr "Παρουσιάστηκε σφάλμα, δεν θα δημοσιευτεί το ημερολόγιο."
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:266
+#: /app/specialVueFakeDummyForL10nScript.js:116
+msgid "An error occurred, unable to send email."
+msgstr "Παρουσιάστηκε σφάλμα, δεν θα σταλεί το email."
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:353
+#: /app/specialVueFakeDummyForL10nScript.js:126
+msgid "Embed code copied to clipboard."
+msgstr "Ο ενσωματωμένος κώδικας αντιγράφηκε στο πρόχειρο."
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:362
+#: /app/specialVueFakeDummyForL10nScript.js:128
+msgid "Embed code could not be copied to clipboard."
+msgstr "Ο ενσωματωμένος κώδικας δεν μπορεί να αντιγραφεί στο πρόχειρο."
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingPublishItem.vue:382
+#: /app/specialVueFakeDummyForL10nScript.js:130
+msgid "Unpublishing calendar failed"
+msgstr "Η κατάργηση δημοσιευμένου ημερολογίου απέτυχε"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingSearch.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:132
+msgid "Share with users or groups"
+msgstr "Κοινή χρήση με χρήστες ή ομάδες"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingSearch.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:134
+msgid "No users or groups"
+msgstr "Δεν υπάρχουν χρήστες ή ομάδες"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingShareItem.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:136
+msgid "can edit"
+msgstr "δυνατότητα επεξεργασίας"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingShareItem.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:138
+msgid "Unshare with {displayName}"
+msgstr "Κατάργηση κοινής χρήσης με {displayName}"
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingShareItem.vue:111
+#: /app/specialVueFakeDummyForL10nScript.js:140
+msgid "An error occurred, unable to change the unshare the calendar."
+msgstr ""
+"Παρουσιάστηκε σφάλμα, δεν είναι δυνατή η αλλαγή της κατάργησης της κοινής "
+"χρήσης του ημερολογίου."
+
+#. TRANSLATORS
+#. components/AppNavigation/CalendarList/CalendarListItemSharingShareItem.vue:131
+#: /app/specialVueFakeDummyForL10nScript.js:142
+msgid "An error occurred, unable to change the permission of the share."
+msgstr ""
+"Παρουσιάστηκε σφάλμα, δεν ήταν δυνατή η αλλαγή των δικαιωμάτων της κοινής "
+"χρήσης."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:144
+msgid "+ New calendar"
+msgstr "+ Νέο ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:38
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreenRow.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:146
+#: /app/specialVueFakeDummyForL10nScript.js:254
+#: /app/specialVueFakeDummyForL10nScript.js:256
+#: /app/specialVueFakeDummyForL10nScript.js:258
+#: /app/specialVueFakeDummyForL10nScript.js:260
+msgid "New calendar"
+msgstr "Νέο ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:148
+#: /app/specialVueFakeDummyForL10nScript.js:154
+#: /app/specialVueFakeDummyForL10nScript.js:160
+msgid "Name for new calendar"
+msgstr "Όνομα για νέο ημερολόγιο."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:150
+#: /app/specialVueFakeDummyForL10nScript.js:156
+msgid "Creating calendar …"
+msgstr "Δημιουργία ημερολογίου '...'"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:152
+msgid "New calendar with task list"
+msgstr "Νέο ημερολόγιο με λίστα εργασιών"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:78
+#: /app/specialVueFakeDummyForL10nScript.js:158
+msgid "New subscription from link (read-only)"
+msgstr "Νέα συνδρομή από τον σύνδεσμο (μόνο για ανάγνωση)"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:162
+msgid "Creating subscription …"
+msgstr "Δημιουργία συνδρομής ..."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:218
+#: /app/specialVueFakeDummyForL10nScript.js:164
+#: /app/specialVueFakeDummyForL10nScript.js:166
+#: /app/specialVueFakeDummyForL10nScript.js:170
+msgid "An error occurred, unable to create the calendar."
+msgstr "Παρουσιάστηκε σφάλμα, δεν μπορεί να δημιουργηθεί το ημερολόγιο."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/CalendarListNew.vue:270
+#: /app/specialVueFakeDummyForL10nScript.js:168
+msgid ""
+"Please enter a valid link (starting with http://, https://, webcal://, or "
+"webcals://)"
+msgstr ""
+"Παρακαλώ εισάγετε έγκυρο σύνδεσμο (ξεκινούν με http://, https://, webcal://,"
+" ή webcals://)"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:23
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:188
+#: /app/specialVueFakeDummyForL10nScript.js:190
+msgid "Trash bin"
+msgstr "Κάδος απορριμμάτων"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:192
+msgid "Loading deleted elements."
+msgstr "Φόρτωση διαγραμμένων στοιχείων."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:194
+msgid "You do not have any deleted elements."
+msgstr "Δεν έχετε διαγραμμένα στοιχεία."
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:54
+#. TRANSLATORS components/AppointmentConfigModal.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:196
+#: /app/specialVueFakeDummyForL10nScript.js:390
+msgid "Name"
+msgstr "Όνομα"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:198
+msgid "Deleted"
+msgstr "Διαγράφηκε"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:200
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:202
+msgid "Delete permanently"
+msgstr "Οριστική διαγραφή"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:101
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:264
+#: /app/specialVueFakeDummyForL10nScript.js:204
+#: /app/specialVueFakeDummyForL10nScript.js:218
+msgid "Empty trash bin"
+msgstr "Άδειασμα κάδου"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:164
+#: /app/specialVueFakeDummyForL10nScript.js:206
+msgid "Untitled element"
+msgstr "Στοιχείο χωρίς όνομα"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:170
+#: /app/specialVueFakeDummyForL10nScript.js:208
+msgid "Unknown calendar"
+msgstr "Άγνωστο ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:222
+#: /app/specialVueFakeDummyForL10nScript.js:210
+msgid "Could not load deleted calendars and objects"
+msgstr "Δεν ήταν δυνατή η φόρτωση διαγραμμένων ημερολογίων και αντικειμένων"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:240
+#: /app/specialVueFakeDummyForL10nScript.js:212
+#: /app/specialVueFakeDummyForL10nScript.js:214
+msgid "Could not restore calendar or event"
+msgstr "Δεν ήταν δυνατή η επαναφορά ημερολογίου ή συμβάντος"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:263
+#: /app/specialVueFakeDummyForL10nScript.js:216
+msgid "Do you really want to empty the trash bin?"
+msgstr "Θέλετε να αδειάσετε τον κάδο απορριμμάτων;"
+
+#. TRANSLATORS components/AppNavigation/CalendarList/Trashbin.vue:98
+#: /app/specialVueFakeDummyForL10nScript.js:220
+msgid "Elements in the trash bin are deleted after {numDays} day"
+msgid_plural "Elements in the trash bin are deleted after {numDays} days"
+msgstr[0] ""
+"Τα περιεχόμενα στον κάδο απορριμάτων θα διαγραφούν μετά από {numDays} ημέρα"
+msgstr[1] ""
+"Τα περιεχόμενα στον κάδο απορριμάτων θα διαγραφούν μετά από {numDays} ημέρες"
+
+#. TRANSLATORS components/AppNavigation/CalendarList.vue:106
+#: /app/specialVueFakeDummyForL10nScript.js:222
+msgid "Could not update calendar order."
+msgstr "Δεν μπορεί να γίνει ενημέρωση εντολών ημερολογίου."
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:242
+msgid "Import calendars"
+msgstr "Εισαγωγή ημερολογίων"
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:244
+msgid "Please select a calendar to import into …"
+msgstr "Παρακαλώ επιλέξτε ημερολόγιο για εισαγωγή σε  ..."
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:246
+msgid "Filename"
+msgstr "Όνομα αρχείου"
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:248
+msgid "Calendar to import into"
+msgstr " Ημερολόγιο για εισαγωγή σε "
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:250
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#. TRANSLATORS components/AppNavigation/Settings/ImportScreen.vue:50
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:252
+#: /app/specialVueFakeDummyForL10nScript.js:270
+msgid "Import calendar"
+msgid_plural "Import calendars"
+msgstr[0] "Εισαγωγή ημερολογίου"
+msgstr[1] "Εισαγωγή ημερολογίων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:192
+#: /app/specialVueFakeDummyForL10nScript.js:262
+msgid "{filename} is an unsupported file-type"
+msgstr "το {filename} είναι μη υποστηριζόμενος τύπος-αρχείου"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:211
+#: /app/specialVueFakeDummyForL10nScript.js:264
+msgid "{filename} could not be parsed"
+msgstr "το {filename} δεν μπορεί να αναλυθεί"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:229
+#: /app/specialVueFakeDummyForL10nScript.js:266
+msgid "No valid files found, aborting import"
+msgstr "Δεν βρέθηκαν συμβατά αρχεία, ακύρωση εισαγωγής"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:247
+#: /app/specialVueFakeDummyForL10nScript.js:268
+msgid "Import partially failed. Imported {accepted} out of {total}."
+msgstr "Η εισαγωγή απέτυχε εν μέρει. Εισήχθησαν {accepted} από {total}."
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportSection.vue:245
+#: /app/specialVueFakeDummyForL10nScript.js:272
+msgid "Successfully imported %n event"
+msgid_plural "Successfully imported %n events"
+msgstr[0] "Επιτυχής εισαγωγή %n συμβάν"
+msgstr[1] "Επιτυχής εισαγωγή %n συμβάντων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsTimezoneSelect.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:274
+msgid "Automatic"
+msgstr "Αυτόματο"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsTimezoneSelect.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:276
+msgid "Automatic ({detected})"
+msgstr "Αυτόματα ({detected})"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsTimezoneSelect.vue:81
+#. TRANSLATORS components/AppNavigation/Settings.vue:279
+#: /app/specialVueFakeDummyForL10nScript.js:278
+#: /app/specialVueFakeDummyForL10nScript.js:336
+#: /app/specialVueFakeDummyForL10nScript.js:338
+#: /app/specialVueFakeDummyForL10nScript.js:340
+#: /app/specialVueFakeDummyForL10nScript.js:342
+#: /app/specialVueFakeDummyForL10nScript.js:344
+#: /app/specialVueFakeDummyForL10nScript.js:346
+#: /app/specialVueFakeDummyForL10nScript.js:348
+#: /app/specialVueFakeDummyForL10nScript.js:350
+msgid "New setting was not saved successfully."
+msgstr "Οι νέες ρυθμίσεις δεν αποθηκεύτηκαν επιτυχώς."
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:24
+#: /app/specialVueFakeDummyForL10nScript.js:280
+msgid "Shortcut overview"
+msgstr "Επισκόπηση συντόμευσης"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:282
+msgid "or"
+msgstr "ή"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:284
+msgid "Navigation"
+msgstr "Πλοήγηση"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:286
+msgid "Previous period"
+msgstr "Προηγούμενη περίοδος"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:288
+msgid "Next period"
+msgstr "Επόμενη περίοδος"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:292
+msgid "Views"
+msgstr "Προβολές"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:86
+#: /app/specialVueFakeDummyForL10nScript.js:294
+msgid "Day view"
+msgstr "Εμφάνιση ημέρας"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:89
+#: /app/specialVueFakeDummyForL10nScript.js:296
+msgid "Week view"
+msgstr "Εμφάνιση εβδομάδας"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:92
+#: /app/specialVueFakeDummyForL10nScript.js:298
+msgid "Month view"
+msgstr "Εμφάνιση μήνα"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:300
+msgid "List view"
+msgstr "Προβολή λίστας"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:99
+#: /app/specialVueFakeDummyForL10nScript.js:302
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:102
+#: /app/specialVueFakeDummyForL10nScript.js:304
+msgid "Create event"
+msgstr "Δημιουργία συμβάντος"
+
+#. TRANSLATORS components/AppNavigation/Settings/ShortcutOverview.vue:105
+#: /app/specialVueFakeDummyForL10nScript.js:306
+msgid "Show shortcuts"
+msgstr "Εμφάνιση συντομεύσεων"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:308
+msgid "Enable birthday calendar"
+msgstr "Ενεργοποίηση ημερολογίου γενεθλίων"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:310
+msgid "Show tasks in calendar"
+msgstr "Εμφάνιση εργασιών στο ημερολόγιο"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:312
+msgid "Enable simplified editor"
+msgstr "Ενεργοποίηση απλοποιημένου προγράμματος επεξεργασίας"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:314
+msgid "Limit visible events per view"
+msgstr "Περιορισμός ορατών γεγονότων ανά σελίδα"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:316
+msgid "Show weekends"
+msgstr "Εμφάνιση σαββατοκύριακων"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:318
+msgid "Show week numbers"
+msgstr "Εμφάνιση αριθμού εβδομάδας"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:320
+msgid "Time increments"
+msgstr "Χρόνος μεταξύ δυο ραντεβού"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:322
+msgid "Default reminder"
+msgstr "Προεπιλεγμένη υπενθύμιση"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:89
+#: /app/specialVueFakeDummyForL10nScript.js:324
+msgid "Copy primary CalDAV address"
+msgstr "Αντιγραφή κύριας διεύθυνσης CalDAV"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:326
+msgid "Copy iOS/macOS CalDAV address"
+msgstr "Αντιγραφή διεύθυνσης iOS/macOS CalDAV"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:103
+#: /app/specialVueFakeDummyForL10nScript.js:328
+msgid "Personal availability settings"
+msgstr "Ρυθμίσεις προσωπικής διαθεσιμότητας"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:111
+#: /app/specialVueFakeDummyForL10nScript.js:330
+msgid "Show keyboard shortcuts"
+msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:220
+#: /app/specialVueFakeDummyForL10nScript.js:332
+msgid "Settings & import"
+msgstr "Ρυθμίσεις & εισαγωγή"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:255
+#: /app/specialVueFakeDummyForL10nScript.js:334
+msgid "No reminder"
+msgstr "Χωρίς υπενθύμιση"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:400
+#: /app/specialVueFakeDummyForL10nScript.js:352
+#: /app/specialVueFakeDummyForL10nScript.js:356
+msgid "CalDAV link copied to clipboard."
+msgstr "Αντιγράφηκε στο πρόχειρο ο σύνδεσμος CalDAV"
+
+#. TRANSLATORS components/AppNavigation/Settings.vue:403
+#: /app/specialVueFakeDummyForL10nScript.js:354
+#: /app/specialVueFakeDummyForL10nScript.js:358
+msgid "CalDAV link could not be copied to clipboard."
+msgstr "Δεν αντιγράφηκε στο πρόχειρο ο σύνδεσμος CalDAV"
+
+#. TRANSLATORS components/AppointmentConfigModal/Confirmation.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:364
+msgid "Appointment was created successfully"
+msgstr "Το ραντεβού σας δημιουργήθηκε επιτυχώς"
+
+#. TRANSLATORS components/AppointmentConfigModal/Confirmation.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:366
+msgid "Appointment was updated successfully"
+msgstr "Το ραντεβού σας ενημερώθηκε επιτυχώς"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationInput.vue:64
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:368
+#: /app/specialVueFakeDummyForL10nScript.js:372
+msgid "{duration} minute"
+msgid_plural "{duration} minutes"
+msgstr[0] "{duration} λεπτό"
+msgstr[1] "{duration} λεπτά"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:370
+msgid "0 minutes"
+msgstr "0  λεπτά"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:374
+msgid "{duration} hour"
+msgid_plural "{duration} hours"
+msgstr[0] "{duration} ώρα"
+msgstr[1] "{duration} ώρες"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:92
+#: /app/specialVueFakeDummyForL10nScript.js:376
+msgid "{duration} day"
+msgid_plural "{duration} days"
+msgstr[0] "{duration} ημέρα"
+msgstr[1] "{duration} ημέρες"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:100
+#: /app/specialVueFakeDummyForL10nScript.js:378
+msgid "{duration} week"
+msgid_plural "{duration} weeks"
+msgstr[0] "{duration} εβδομάδα"
+msgstr[1] "{duration} εβδομάδες"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:380
+msgid "{duration} month"
+msgid_plural "{duration} months"
+msgstr[0] "{duration} μήνα"
+msgstr[1] "{duration} μήνες"
+
+#. TRANSLATORS components/AppointmentConfigModal/DurationSelect.vue:116
+#: /app/specialVueFakeDummyForL10nScript.js:382
+msgid "{duration} year"
+msgid_plural "{duration} years"
+msgstr[0] "{duration} χρόνο"
+msgstr[1] "{duration} χρόνια"
+
+#. TRANSLATORS components/AppointmentConfigModal/NoEmailAddressWarning.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:384
+msgid ""
+"To configure appointments, add your email address in personal settings."
+msgstr ""
+"Για να ρυθμίσετε τα ραντεβού σας, προσθέστε την διεύθυνση email στις "
+"προσωπικές ρυθμίσεις"
+
+#. TRANSLATORS components/AppointmentConfigModal/VisibilitySelect.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:386
+msgid "Public – shown on the profile page"
+msgstr "Δημόσιο - εμφανίζεται στο προφίλ"
+
+#. TRANSLATORS components/AppointmentConfigModal/VisibilitySelect.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:388
+msgid "Private – only accessible via secret link"
+msgstr "Ιδιωτικό - προσβάσιμο μόνο μέσω κρυφού συνδέσμου"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:392 /app/src/models/rfcProps.js:51
+msgid "Location"
+msgstr "Τοποθεσία"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:394 /app/src/models/rfcProps.js:59
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:398
+msgid "Visibility"
+msgstr "Ορατότητα"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:400
+msgid "Duration"
+msgstr "Διάρκεια"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:402
+msgid "Increments"
+msgstr "Χρόνος μεταξύ δυο ραντεβού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:404
+msgid "Additional calendars to check for conflicts"
+msgstr "Επιπρόσθετα ημερολόγια για τον έλεγχο κωλυμάτων"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:78
+#: /app/specialVueFakeDummyForL10nScript.js:406
+msgid "Pick time ranges where appointments are allowed"
+msgstr "Επιλέξτε το χρονικό περιθώριο οπου επιτρέπονται τα ραντεβού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:408
+msgid "to"
+msgstr "προς"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:410
+msgid "Delete slot"
+msgstr "Διαγραφή θέσης"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:412
+msgid "No times set"
+msgstr "Δεν υπάρχουν χρόνοι"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:414
+msgid "Add"
+msgstr "Προσθήκη"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:85
+#. TRANSLATORS components/Editor/Repeat/RepeatOnTheSelect.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:416
+#: /app/specialVueFakeDummyForL10nScript.js:670
+msgid "Monday"
+msgstr "Δευτέρα"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:86
+#: /app/specialVueFakeDummyForL10nScript.js:418
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:87
+#: /app/specialVueFakeDummyForL10nScript.js:420
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:88
+#: /app/specialVueFakeDummyForL10nScript.js:422
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:89
+#: /app/specialVueFakeDummyForL10nScript.js:424
+msgid "Friday"
+msgstr "Παρασκευή"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:426
+msgid "Saturday"
+msgstr "Σάββατο"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:91
+#: /app/specialVueFakeDummyForL10nScript.js:428
+msgid "Sunday"
+msgstr "Κυριακή"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:430
+msgid "Add time before and after the event"
+msgstr "Προσθέστε χρόνο πριν και μετά από το γεγονός"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:99
+#: /app/specialVueFakeDummyForL10nScript.js:432
+msgid "Before the event"
+msgstr "Πριν το γεγονός"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:102
+#: /app/specialVueFakeDummyForL10nScript.js:434
+msgid "After the event"
+msgstr "Μετά το γεγονός"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:436
+msgid "Planning restrictions"
+msgstr "Περιορισμοί σχεδιασμού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:112
+#: /app/specialVueFakeDummyForL10nScript.js:438
+msgid "Minimum time before next available slot"
+msgstr "Ελάχιστος χρόνος πριν το επόμενο διαθέσιμο κενό"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:440
+msgid "Max slots per day"
+msgstr "Μέγιστες θέσεις ανά ημέρα"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:121
+#: /app/specialVueFakeDummyForL10nScript.js:442
+msgid "Limit how far in the future appointments can be booked"
+msgstr "Περιορίστε πόσο μακριά μπορούν να κανονιστούν μελλοντικά ραντεβού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:196
+#: /app/specialVueFakeDummyForL10nScript.js:444
+msgid "Create appointment"
+msgstr "Δημιουργία ραντεβού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:199
+#: /app/specialVueFakeDummyForL10nScript.js:446
+msgid "Edit appointment"
+msgstr "Επεξεργασία ραντεβού"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:203
+#. TRANSLATORS components/Editor/Repeat/Repeat.vue:218
+#. TRANSLATORS components/Editor/SaveButtons.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:448
+#: /app/specialVueFakeDummyForL10nScript.js:612
+#: /app/specialVueFakeDummyForL10nScript.js:724
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#. TRANSLATORS components/AppointmentConfigModal.vue:206
+#. TRANSLATORS components/Editor/SaveButtons.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:450
+#: /app/specialVueFakeDummyForL10nScript.js:726
+msgid "Update"
+msgstr "Ενημέρωση"
+
+#. TRANSLATORS components/Appointments/AppointmentBookingConfirmation.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:452
+msgid "Your appointment is booked"
+msgstr "Το ραντεβού σας έχει κανονιστεί"
+
+#. TRANSLATORS components/Appointments/AppointmentBookingConfirmation.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:454
+msgid ""
+"We sent you an email with details. Please confirm your appointment using the"
+" link in the email. You can close this page now."
+msgstr ""
+"Σας στείλαμε ενα email με τις λεπτομέρειες. Παρακαλούμε να επιβεβαιώσετε το "
+"ραντεβού κάνοντας χρήση του συνδέσμου στο email. Μπορείτε να κλείσετε αυτή "
+"την σελίδα "
+
+#. TRANSLATORS components/Appointments/AppointmentDetails.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:456
+msgid "Your name"
+msgstr "Το όνομά σας"
+
+#. TRANSLATORS components/Appointments/AppointmentDetails.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:458
+msgid "Your email address"
+msgstr "Η διεύθυνση ηλεκτρονικού ταχυδρομείου σας"
+
+#. TRANSLATORS components/Appointments/AppointmentDetails.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:460
+msgid "Please share anything that will help prepare for our meeting"
+msgstr ""
+"Παρακαλούμε να μοιραστείτε οτιδήποτε θα βοηθούσε στην προετοιμασία της "
+"συνάντησης"
+
+#. TRANSLATORS components/Appointments/AppointmentDetails.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:462
+msgid ""
+"Could not book the appointment. Please try again later or contact the "
+"organizer."
+msgstr ""
+"Δεν μπορέσαμε να κανουμε την κράτηση του ραντεβού. Παρακαλώ δοκιμάστε ξανά "
+"αργότερα ή επικοινωνήστε με τον διοργανωτή"
+
+#. TRANSLATORS components/Appointments/AppointmentDetails.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:464
+msgid "Book the appointment"
+msgstr "Κλείστε το ραντεβού"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:466
+msgid "Reminder"
+msgstr "Υπενθύμιση"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:468
+msgid "before at"
+msgstr "πριν από το"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:470
+msgid "Notification"
+msgstr "Ειδοποίηση"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:472
+msgid "Email"
+msgstr "Ηλ. ταχυδρομείο"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:102
+#: /app/specialVueFakeDummyForL10nScript.js:474
+msgid "Audio notification"
+msgstr "Ηχητική ειδοποίηση"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:476
+msgid "Other notification"
+msgstr "Άλλη ειδοποίηση"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:117
+#: /app/specialVueFakeDummyForL10nScript.js:478
+msgid "Relative to event"
+msgstr "Σχετικά με το συμβάν"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:123
+#: /app/specialVueFakeDummyForL10nScript.js:480
+msgid "On date"
+msgstr "Την ημερομηνία"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:133
+#: /app/specialVueFakeDummyForL10nScript.js:482
+msgid "Edit time"
+msgstr "Επεξεργασία ώρας"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:140
+#: /app/specialVueFakeDummyForL10nScript.js:484
+msgid "Save time"
+msgstr "Εξοικονόμηση χρόνου"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:147
+#: /app/specialVueFakeDummyForL10nScript.js:486
+msgid "Remove reminder"
+msgstr "Διαγραφή υπενθύμισης"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:302
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqWeeklyOptions.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:488
+#: /app/specialVueFakeDummyForL10nScript.js:666
+msgid "on"
+msgstr "σε"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListItem.vue:306
+#: /app/specialVueFakeDummyForL10nScript.js:490
+msgid "at"
+msgstr "στις"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListNew.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:492
+msgid "+ Add reminder"
+msgstr "+ Προσθήκη υπενθύμισης"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmListNew.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:494
+msgid "Add reminder"
+msgstr "Προσθήκη υπενθύμισης"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmTimeUnitSelect.vue:73
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:496
+#: /app/specialVueFakeDummyForL10nScript.js:634
+#: /app/src/filters/recurrenceRuleFormat.js:211
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "δευτερόλεπτο"
+msgstr[1] "δευτερόλεπτα"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmTimeUnitSelect.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:498
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "λεπτό"
+msgstr[1] "λεπτά"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmTimeUnitSelect.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:500
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "ώρα"
+msgstr[1] "ώρες"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmTimeUnitSelect.vue:90
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqSelect.vue:57
+#. TRANSLATORS components/Editor/Repeat/RepeatOnTheSelect.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:502
+#: /app/specialVueFakeDummyForL10nScript.js:658
+#: /app/specialVueFakeDummyForL10nScript.js:672
+msgid "day"
+msgid_plural "days"
+msgstr[0] "ημέρα"
+msgstr[1] "ημέρες"
+
+#. TRANSLATORS components/Editor/Alarm/AlarmTimeUnitSelect.vue:94
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqSelect.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:504
+#: /app/specialVueFakeDummyForL10nScript.js:660
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "εβδομάδα"
+msgstr[1] "εβδομάδες"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:506
+msgid "Suggested"
+msgstr "Προτεινόμενο"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:89
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:508
+#: /app/specialVueFakeDummyForL10nScript.js:698
+msgid "Available"
+msgstr "Διαθέσιμα"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:510
+msgid "Not available"
+msgstr "Δεν είναι διαθέσιμο"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:101
+#: /app/specialVueFakeDummyForL10nScript.js:512
+msgid "Checking availability"
+msgstr "Έλεγχος διαθεσιμότητας"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:514
+msgid "Invitation accepted"
+msgstr "Η πρόσκληση έγινε αποδεκτή."
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:114
+#: /app/specialVueFakeDummyForL10nScript.js:516
+msgid "Accepted {organizerName}'s invitation"
+msgstr "Αποδοχή της πρόσκλησης του/της {organizerName}"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:123
+#: /app/specialVueFakeDummyForL10nScript.js:518
+msgid "Invitation declined"
+msgstr "Η πρόσκληση απορρίφθηκε."
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:129
+#: /app/specialVueFakeDummyForL10nScript.js:520
+msgid "Declined {organizerName}'s invitation"
+msgstr "Απόρριψη της πρόσκλησης του {organizerName}"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:138
+#: /app/specialVueFakeDummyForL10nScript.js:522
+msgid "Invitation is delegated"
+msgstr "Η πρόσκληση παραπέμφθηκε"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:144
+#: /app/specialVueFakeDummyForL10nScript.js:524
+msgid "Participation marked as tentative"
+msgstr "Η συμμετοχή χαρακτηρίστηκε ως με επιφύλαξη"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:151
+#: /app/specialVueFakeDummyForL10nScript.js:526
+msgid "Invitation sent"
+msgstr "Η πρόσκληση εστάλη"
+
+#. TRANSLATORS components/Editor/AvatarParticipationStatus.vue:156
+#: /app/specialVueFakeDummyForL10nScript.js:528
+msgid "Has not responded to {organizerName}'s invitation yet"
+msgstr "Δεν έχετε απαντήσει ακόμα στην πρόσκληση του/της {organizerName}"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:530
+msgid "Availability of attendees, resources and rooms"
+msgstr "Διαθεσιμότητα των συμμετεχόντων, των πόρων και των δωματίων"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:172
+#: /app/specialVueFakeDummyForL10nScript.js:532
+msgid "{organizer} (organizer)"
+msgstr "{organizer} (διοργανωτής)"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:198
+#: /app/specialVueFakeDummyForL10nScript.js:534 /app/src/models/rfcProps.js:88
+msgid "Free"
+msgstr "Ελεύθερος"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:201
+#: /app/specialVueFakeDummyForL10nScript.js:536
+msgid "Busy (tentative)"
+msgstr "Απασχολημένος (με επιφύλαξη)"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:204
+#: /app/specialVueFakeDummyForL10nScript.js:538 /app/src/models/rfcProps.js:89
+msgid "Busy"
+msgstr "Απασχολημένος"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:207
+#: /app/specialVueFakeDummyForL10nScript.js:540
+msgid "Out of office"
+msgstr "Εκτός γραφείου"
+
+#. TRANSLATORS components/Editor/FreeBusy/FreeBusy.vue:210
+#: /app/specialVueFakeDummyForL10nScript.js:542
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:544
+msgid "Accept"
+msgstr "Αποδοχή"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:546
+msgid "Decline"
+msgstr "Απόρριψη"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:548
+#: /app/specialVueFakeDummyForL10nScript.js:550 /app/src/models/rfcProps.js:72
+msgid "Tentative"
+msgstr "Με επιφύλαξη"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:106
+#: /app/specialVueFakeDummyForL10nScript.js:552
+msgid "The invitation has been accepted successfully."
+msgstr "Η πρόσκληση έγινε αποδεκτή"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:554
+msgid "Failed to accept the invitation."
+msgstr "Αποτυχία αποδοχής της πρόσκλησης"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:556
+msgid "The invitation has been declined successfully."
+msgstr "Η πρόσκληση έχει απορριφθεί επιτυχώς"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:118
+#: /app/specialVueFakeDummyForL10nScript.js:558
+msgid "Failed to decline the invitation."
+msgstr "Αποτυχία απόρριψης της πρόσκλησης"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:124
+#: /app/specialVueFakeDummyForL10nScript.js:560
+msgid "Your participation has been marked as tentative."
+msgstr "Η συμμετοχή έχει χαρακτηρίστεί ως δοκιμαστική"
+
+#. TRANSLATORS components/Editor/InvitationResponseButtons.vue:127
+#: /app/specialVueFakeDummyForL10nScript.js:562
+msgid "Failed to set the participation status to tentative."
+msgstr "Αποτυχία αλλαγής κατάστασης συμμετοχής σε δοκιμαστική."
+
+#. TRANSLATORS components/Editor/Invitees/InviteesList.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:564
+msgid "Create Talk room for this event"
+msgstr "Δημιουργία δωματίου Talk για το γεγονός"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesList.vue:52
+#: /app/specialVueFakeDummyForL10nScript.js:566
+msgid "Show busy times"
+msgstr "Εμφάνιση απασχολημένων ωρών"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesList.vue:110
+#: /app/specialVueFakeDummyForL10nScript.js:568
+msgid "No attendees yet"
+msgstr "Δεν υπάρχουν ακόμη συμμετέχοντες"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesList.vue:212
+#: /app/specialVueFakeDummyForL10nScript.js:570
+msgid "Successfully appended link to talk room to description."
+msgstr "Ο σύνδεσμος στο δωμάτιο Talk προστέθηκε με επιτυχία στην περιγραφή."
+
+#. TRANSLATORS components/Editor/Invitees/InviteesList.vue:214
+#: /app/specialVueFakeDummyForL10nScript.js:572
+msgid "Error creating Talk room"
+msgstr "Σφάλμα δημιουργίας δωματίου Talk"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:574
+msgid "Send email"
+msgstr "Αποστολή email"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:576
+msgid "Chairperson"
+msgstr "Επικεφαλής"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:578
+msgid "Required participant"
+msgstr "Απαιτείται συμμετοχή"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:580
+msgid "Optional participant"
+msgstr "Προαιρετική συμμετοχή"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:582
+msgid "Non-participant"
+msgstr "Μη-συμμετέχοντας"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListItem.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:584
+msgid "Remove attendee"
+msgstr "Κατάργηση του συμμετέχοντα"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListSearch.vue:93
+#: /app/specialVueFakeDummyForL10nScript.js:586
+msgid "Search for emails, users or contacts"
+msgstr "Αναζήτηση για ηλ. διευθύνσεις, χρήστες ή επαφές"
+
+#. TRANSLATORS components/Editor/Invitees/InviteesListSearch.vue:96
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:134
+#: /app/specialVueFakeDummyForL10nScript.js:588
+#: /app/specialVueFakeDummyForL10nScript.js:708
+msgid "No match found"
+msgstr "Δεν βρέθηκε αποτέλεσμα."
+
+#. TRANSLATORS components/Editor/Invitees/OrganizerListItem.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:590
+msgid "(organizer)"
+msgstr "(organizer)"
+
+#. TRANSLATORS components/Editor/OrganizerNoEmailError.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:592
+msgid ""
+"To send out invitations and handle responses, [linkopen]add your email "
+"address in personal settings[linkclose]."
+msgstr ""
+"Για να στείλετε προσκλήσεις και να χειριστείτε τις απαντήσεις, "
+"[linkopen]προσθέστε το email σας στις προσωπικές ρυθμίσεις [linkclose]."
+
+#. TRANSLATORS components/Editor/Properties/PropertyColor.vue:52
+#: /app/specialVueFakeDummyForL10nScript.js:594
+msgid "Remove color"
+msgstr "Αφαίρεση χρώματος"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitle.vue:30
+#. TRANSLATORS views/EditSidebar.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:596
+#: /app/specialVueFakeDummyForL10nScript.js:830
+msgid "Event title"
+msgstr "Τίτλος γεγονότος"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:78
+#: /app/specialVueFakeDummyForL10nScript.js:598
+#: /app/src/fullcalendar/localization/localeProvider.js:56
+msgid "All day"
+msgstr "Ολοήμερο"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:188
+#: /app/specialVueFakeDummyForL10nScript.js:600
+msgid ""
+"Cannot modify all-day setting for events that are part of a recurrence-set."
+msgstr ""
+"Δεν είναι δυνατή η τροποποίηση της ρύθμισης ολοήμερου συμβάντος που αποτελεί"
+" μέρος σετ-επανάληψης."
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:196
+#: /app/specialVueFakeDummyForL10nScript.js:602
+msgid "from {startDate}"
+msgstr "από {startDate}"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:202
+#: /app/specialVueFakeDummyForL10nScript.js:604
+msgid "from {startDate} at {startTime}"
+msgstr "από {startDate} στις {startTime}"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:213
+#: /app/specialVueFakeDummyForL10nScript.js:606
+msgid "to {endDate}"
+msgstr "έως {endDate}"
+
+#. TRANSLATORS components/Editor/Properties/PropertyTitleTimePicker.vue:218
+#: /app/specialVueFakeDummyForL10nScript.js:608
+msgid "to {endDate} at {endTime}"
+msgstr "έως {endDate} στις {endTime}"
+
+#. TRANSLATORS components/Editor/Repeat/Repeat.vue:28
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqInterval.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:610
+#: /app/specialVueFakeDummyForL10nScript.js:648
+msgid "Repeat"
+msgstr "Επανάληψη"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:616
+msgid "End repeat"
+msgstr "Τέλος επανάληψης"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:618
+msgid "Select to end repeat"
+msgstr "Επιλέξτε για διακοπή επανάληψης"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:130
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqSelect.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:620
+#: /app/specialVueFakeDummyForL10nScript.js:656
+msgid "never"
+msgstr "ποτέ"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:133
+#: /app/specialVueFakeDummyForL10nScript.js:622
+msgid "on date"
+msgstr "την ημερομηνία"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:136
+#: /app/specialVueFakeDummyForL10nScript.js:624
+msgid "after"
+msgstr "μετά"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatEndRepeat.vue:121
+#: /app/specialVueFakeDummyForL10nScript.js:626
+msgid "time"
+msgid_plural "times"
+msgstr[0] "φορά"
+msgstr[1] "φορές"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatExceptionWarning.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:628
+msgid ""
+"This event is the recurrence-exception of a recurrence-set. You cannot add a"
+" recurrence-rule to it."
+msgstr ""
+"Αυτό το συμβάν είναι επανάληψη-εξαίρεση ενός σετ-επανάληψης. Δεν μπορείτε να"
+" προσθέσετε κανόνα επανάληψης σε αυτό."
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:630
+#: /app/specialVueFakeDummyForL10nScript.js:632
+#: /app/src/filters/recurrenceRuleFormat.js:208
+msgid "first"
+msgstr "πρώτο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:636
+#: /app/src/filters/recurrenceRuleFormat.js:214
+msgid "third"
+msgstr "τρίτο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:638
+#: /app/src/filters/recurrenceRuleFormat.js:217
+msgid "fourth"
+msgstr "τέταρτο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:640
+#: /app/src/filters/recurrenceRuleFormat.js:220
+msgid "fifth"
+msgstr "πέμπτο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:642
+#: /app/src/filters/recurrenceRuleFormat.js:223
+msgid "second to last"
+msgstr "προτελευταίο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFirstLastSelect.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:644
+#: /app/src/filters/recurrenceRuleFormat.js:226
+msgid "last"
+msgstr "τελευταίο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatForkWarning.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:646
+msgid ""
+"Changes to the recurrence-rule will only apply to this and all future "
+"occurrences."
+msgstr ""
+"Οι αλλαγές στον κανόνα-επανάληψης θα ισχύουν μόνο για αυτό και για όλα τα "
+"μελλοντικά συμβάντα."
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqInterval.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:650
+msgid "Repeat every"
+msgstr "Επανάληψη κάθε"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqMonthlyOptions.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:652
+msgid "By day of the month"
+msgstr "Την ημέρα του μήνα"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqMonthlyOptions.vue:48
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqYearlyOptions.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:654
+#: /app/specialVueFakeDummyForL10nScript.js:668
+msgid "On the"
+msgstr "Στο"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqSelect.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:662
+msgid "month"
+msgid_plural "months"
+msgstr[0] "μήνας"
+msgstr[1] "μήνες"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatFreqSelect.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:664
+msgid "year"
+msgid_plural "years"
+msgstr[0] "έτος"
+msgstr[1] "έτη"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatOnTheSelect.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:674
+msgid "weekday"
+msgstr "καθημερινή"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatOnTheSelect.vue:88
+#: /app/specialVueFakeDummyForL10nScript.js:676
+msgid "weekend day"
+msgstr "ημέρα Σαββατοκύριακου"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatSummary.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:678
+msgid "No recurrence"
+msgstr "Καμμία επανάληψη"
+
+#. TRANSLATORS components/Editor/Repeat/RepeatUnsupportedWarning.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:680
+msgid ""
+"The recurrence definition of this event is not fully supported by Nextcloud."
+" If you edit the recurrence-options, certain recurrences may be lost."
+msgstr ""
+"Ο τρόπος επανάληψης αυτού του συμβάντος δεν υποστηρίζεται πλήρως από το "
+"Nextcloud. Αν επεξεργαστείτε τις επιλογές επανάληψης, ορισμένες επαναλήψεις "
+"ενδέχεται να χαθούν."
+
+#. TRANSLATORS components/Editor/Resources/ResourceList.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:682
+msgid "Suggestions"
+msgstr "Προτάσεις"
+
+#. TRANSLATORS components/Editor/Resources/ResourceList.vue:110
+#: /app/specialVueFakeDummyForL10nScript.js:684
+msgid "No rooms or resources yet"
+msgstr "Κανένα δωμάτιο ή πόροι ακόμα"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:686
+msgid "Add resource"
+msgstr "Προσθήκη πηγής"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:688
+msgid "Has a projector"
+msgstr "Έχει προβολέα"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:690
+msgid "Has a whiteboard"
+msgstr "Έχει λευκό πίνακα γραφής"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:55
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:692
+#: /app/specialVueFakeDummyForL10nScript.js:704
+msgid "Wheelchair accessible"
+msgstr "Προσβάσιμο με αναπηρικό καρότσι"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:694
+msgid "Remove resource"
+msgstr "Αφαίρεση πόρου"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListItem.vue:147
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:209
+#: /app/specialVueFakeDummyForL10nScript.js:696
+#: /app/specialVueFakeDummyForL10nScript.js:714
+msgid "{seatingCapacity} seat"
+msgid_plural "{seatingCapacity} seats"
+msgstr[0] "{seatingCapacity} θέση"
+msgstr[1] "{seatingCapacity} θέσεις"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:69
+#: /app/specialVueFakeDummyForL10nScript.js:700
+msgid "Projector"
+msgstr "Projector"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:702
+msgid "Whiteboard"
+msgstr "Λευκός πίνακας"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:131
+#: /app/specialVueFakeDummyForL10nScript.js:706
+msgid "Search for resources or rooms"
+msgstr "Αναζήτηση για πόρους ή δωμάτια"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:254
+#: /app/specialVueFakeDummyForL10nScript.js:710
+msgid "available"
+msgstr "διαθέσιμο"
+
+#. TRANSLATORS components/Editor/Resources/ResourceListSearch.vue:258
+#: /app/specialVueFakeDummyForL10nScript.js:712
+msgid "unavailable"
+msgstr "μη διαθέσιμο"
+
+#. TRANSLATORS components/Editor/Resources/ResourceRoomType.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:716
+msgid "Room type"
+msgstr "Τύπος δωματίου"
+
+#. TRANSLATORS components/Editor/Resources/ResourceRoomType.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:718
+msgid "Any"
+msgstr "Οποιοδήποτε"
+
+#. TRANSLATORS components/Editor/Resources/ResourceSeatingCapacity.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:720
+msgid "Minimum seating capacity"
+msgstr "Ελάχιστος αριθμός θέσεων"
+
+#. TRANSLATORS components/Editor/SaveButtons.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:722
+msgid "More"
+msgstr "Περισσότερα"
+
+#. TRANSLATORS components/Editor/SaveButtons.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:728
+msgid "Update this occurrence"
+msgstr "Ενημερώστε αυτό το περιστατικό"
+
+#. TRANSLATORS components/Editor/SaveButtons.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:730
+msgid "Update this and all future"
+msgstr "Ενημερώστε αυτό και όλα τα μελλοντικά"
+
+#. TRANSLATORS components/EmptyCalendar.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:732
+msgid "Public calendar does not exist"
+msgstr "Το δημόσιο ημερολόγιο δεν υπάρχει"
+
+#. TRANSLATORS components/EmptyCalendar.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:734
+msgid "Maybe the share was deleted or has expired?"
+msgstr "Ίσως το κοινόχρηστο διαγράφηκε ή δεν υπάρχει;"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:52
+#: /app/specialVueFakeDummyForL10nScript.js:736
+msgid "Please select a time zone:"
+msgstr "Παρακαλούμε επιλέξτε χρονική ζώνη:"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:738
+msgid "Pick a time"
+msgstr "Επιλογή χρόνου"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:740
+msgid "Pick a date"
+msgstr "Επιλογή ημερομηνίας"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:276
+#: /app/specialVueFakeDummyForL10nScript.js:742
+#: /app/specialVueFakeDummyForL10nScript.js:756
+msgid "from {formattedDate}"
+msgstr "από {formattedDate}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:279
+#: /app/specialVueFakeDummyForL10nScript.js:744
+#: /app/specialVueFakeDummyForL10nScript.js:758
+msgid "to {formattedDate}"
+msgstr "έως {formattedDate}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:282
+#: /app/specialVueFakeDummyForL10nScript.js:746
+#: /app/specialVueFakeDummyForL10nScript.js:760
+msgid "on {formattedDate}"
+msgstr "σε {formattedDate}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:290
+#: /app/specialVueFakeDummyForL10nScript.js:748
+#: /app/specialVueFakeDummyForL10nScript.js:764
+msgid "from {formattedDate} at {formattedTime}"
+msgstr "από {formattedDate} στις {formattedTime}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:293
+#: /app/specialVueFakeDummyForL10nScript.js:750
+#: /app/specialVueFakeDummyForL10nScript.js:766
+msgid "to {formattedDate} at {formattedTime}"
+msgstr "έως {formattedDate} στις {formattedTime}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:296
+#: /app/specialVueFakeDummyForL10nScript.js:752
+#: /app/specialVueFakeDummyForL10nScript.js:768
+msgid "on {formattedDate} at {formattedTime}"
+msgstr "σε {formattedDate} στις {formattedTime}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:299
+#: /app/specialVueFakeDummyForL10nScript.js:754
+#: /app/specialVueFakeDummyForL10nScript.js:770
+msgid "{formattedDate} at {formattedTime}"
+msgstr "{formattedDate} στις {formattedTime}"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:341
+#: /app/specialVueFakeDummyForL10nScript.js:762
+msgid "Please enter a valid date"
+msgstr "Παρακαλώ εισάγετε έγκυρη ημερομηνία"
+
+#. TRANSLATORS components/Shared/DatePicker.vue:385
+#: /app/specialVueFakeDummyForL10nScript.js:772
+msgid "Please enter a valid date and time"
+msgstr "Παρακαλώ εισάγετε έγκυρη ημερομηνία και ώρα"
+
+#. TRANSLATORS components/Shared/TimezoneSelect.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:774
+msgid "Type to search time zone"
+msgstr "Πληκτρολογήστε για αναζήτηση χρονικής ζώνης"
+
+#. TRANSLATORS components/Shared/TimezoneSelect.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:776
+msgid "Global"
+msgstr "Καθολικό"
+
+#. TRANSLATORS views/Appointments/Booking.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:778
+msgid "Select date"
+msgstr "Επιλέξτε ημερομηνία"
+
+#. TRANSLATORS views/Appointments/Booking.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:780
+msgid "Select slot"
+msgstr "Επιλογή θέσης"
+
+#. TRANSLATORS views/Appointments/Booking.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:782
+msgid "No slots available"
+msgstr "Καμμια διαθέσιμη θέση"
+
+#. TRANSLATORS views/Appointments/Confirmation.vue:3
+#: /app/specialVueFakeDummyForL10nScript.js:784
+msgid "The slot for your appointment has been confirmed"
+msgstr "H θέση σας για το ραντεβού σας έχει επιβεβαιωθεί"
+
+#. TRANSLATORS views/Appointments/Confirmation.vue:6
+#: /app/specialVueFakeDummyForL10nScript.js:786
+msgid "Appointment Details:"
+msgstr "Λεπτομέρειες Ραντεβού"
+
+#. TRANSLATORS views/Appointments/Confirmation.vue:8
+#: /app/specialVueFakeDummyForL10nScript.js:788
+msgid "Time:"
+msgstr "Χρόνος:"
+
+#. TRANSLATORS views/Appointments/Confirmation.vue:10
+#: /app/specialVueFakeDummyForL10nScript.js:790
+msgid "Booked for:"
+msgstr "Κρατηση για"
+
+#. TRANSLATORS views/Appointments/Conflict.vue:4
+#: /app/specialVueFakeDummyForL10nScript.js:792
+msgid ""
+"Thank you. Your booking from {startDate} to {endDate} has been confirmed."
+msgstr ""
+"Ευχαριστούμε. Η κράτησή σας απο {startDate} εώς {endDate} έχει επιβεβαιωθεί."
+
+#. TRANSLATORS views/Appointments/Conflict.vue:7
+#: /app/specialVueFakeDummyForL10nScript.js:794
+msgid "Book another appointment:"
+msgstr "Κλείστε ένα άλλο ραντεβού:"
+
+#. TRANSLATORS views/Appointments/Conflict.vue:9
+#: /app/specialVueFakeDummyForL10nScript.js:796
+#: /app/specialVueFakeDummyForL10nScript.js:802
+msgid "See all available slots"
+msgstr "Δείτε όλες τις διαθέσιμες θέσεις"
+
+#. TRANSLATORS views/Appointments/Conflict.vue:12
+#: /app/specialVueFakeDummyForL10nScript.js:798
+msgid ""
+"The slot for your appointment from {startDate} to {endDate} is not available"
+" any more."
+msgstr ""
+"Το κενό για το ραντεβού σας απο {startDate} to {endDate} δεν είναι διαθέσιμο"
+" πιά."
+
+#. TRANSLATORS views/Appointments/Conflict.vue:15
+#: /app/specialVueFakeDummyForL10nScript.js:800
+msgid "Please book a different slot:"
+msgstr "Παρακαλώ καντε κράτηση σε διαφορετικό κενό:"
+
+#. TRANSLATORS views/Appointments/Overview.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:804
+msgid "Book an appointment with {name}"
+msgstr "Κάντε κράτηση για ραντεβού με τον/την {name}"
+
+#. TRANSLATORS views/Appointments/Overview.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:806
+msgid "No public appointments found for {name}"
+msgstr "Δεν βρέθηκαν ραντεβού για τον/την {name}"
+
+#. TRANSLATORS views/Calendar.vue:257
+#: /app/specialVueFakeDummyForL10nScript.js:808
+#: /app/specialVueFakeDummyForL10nScript.js:810
+#: /app/src/defaults/defaultCategories.js:41
+msgid "Personal"
+msgstr "Προσωπικά"
+
+#. TRANSLATORS views/Calendar.vue:269
+#: /app/specialVueFakeDummyForL10nScript.js:812
+msgid ""
+"The automatic time zone detection determined your time zone to be UTC.\n"
+"This is most likely the result of security measures of your web browser.\n"
+"Please set your time zone manually in the calendar settings."
+msgstr ""
+"Η αυτόματη επιλογή χρονικής ζώνης καθορίστηκε σε UTC.\n"
+"Αυτό συμβαίνει συνήθως λόγω ρυθμίσεων ασφαλείας του περιηγητή σας.\n"
+"Παρακαλούμε επιλέξτε τη χρονική ζώνη χειροκίνητα από τις ρυθμίσεις ημερολογίου."
+
+#. TRANSLATORS views/Calendar.vue:275
+#: /app/specialVueFakeDummyForL10nScript.js:814
+msgid ""
+"Your configured time zone ({timezoneId}) was not found. Falling back to UTC.\n"
+"Please change your time zone in the settings and report this issue."
+msgstr ""
+"Η χρονική ζώνη ({timezoneId}) που καθορίσατε δεν βρέθηκε. Επαναφορά σε UTC.\n"
+"Παρακαλούμε αλλάξτε τη χρονική ζώνη σας από τις ρυθμίσεις και αναφέρετε το σφάλμα."
+
+#. TRANSLATORS views/Dashboard.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:816
+msgid "No more events today"
+msgstr "Δεν υπάρχουν άλλα γεγονότα για σήμερα"
+
+#. TRANSLATORS views/Dashboard.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:818
+msgid "No upcoming events"
+msgstr "Κανένα προσεχές γεγονός"
+
+#. TRANSLATORS views/Dashboard.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:820
+msgid "Create a new event"
+msgstr "Δημιουργία νέου γεγονότος"
+
+#. TRANSLATORS views/Dashboard.vue:241
+#: /app/specialVueFakeDummyForL10nScript.js:822
+msgid "[Today]"
+msgstr "[Σήμερα]"
+
+#. TRANSLATORS views/Dashboard.vue:243
+#: /app/specialVueFakeDummyForL10nScript.js:824
+msgid "[Tomorrow]"
+msgstr "[Αύριο]"
+
+#. TRANSLATORS views/Dashboard.vue:246
+#: /app/specialVueFakeDummyForL10nScript.js:826
+msgid "[Yesterday]"
+msgstr "[Χθες]"
+
+#. TRANSLATORS views/Dashboard.vue:248
+#: /app/specialVueFakeDummyForL10nScript.js:828
+msgid "[Last] dddd"
+msgstr "[Last] ηηηη"
+
+#. TRANSLATORS views/EditSidebar.vue:43
+#. TRANSLATORS views/EditSimple.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:832
+#: /app/specialVueFakeDummyForL10nScript.js:850
+msgid "Event does not exist"
+msgstr "Δεν υπάρχει το γεγονός"
+
+#. TRANSLATORS views/EditSidebar.vue:76
+#. TRANSLATORS views/EditSimple.vue:86
+#: /app/specialVueFakeDummyForL10nScript.js:838
+#: /app/specialVueFakeDummyForL10nScript.js:858
+msgid "Delete this occurrence"
+msgstr "Διαγράψτε το περιστατικό"
+
+#. TRANSLATORS views/EditSidebar.vue:82
+#. TRANSLATORS views/EditSimple.vue:92
+#: /app/specialVueFakeDummyForL10nScript.js:840
+#: /app/specialVueFakeDummyForL10nScript.js:860
+msgid "Delete this and all future"
+msgstr "Διαγράψτε αυτό και όλα τα μελλοντικά"
+
+#. TRANSLATORS views/EditSidebar.vue:119
+#: /app/specialVueFakeDummyForL10nScript.js:842
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#. TRANSLATORS views/EditSidebar.vue:183
+#: /app/specialVueFakeDummyForL10nScript.js:844
+msgid "Attendees"
+msgstr "Συμμετέχοντες"
+
+#. TRANSLATORS views/EditSidebar.vue:204
+#: /app/specialVueFakeDummyForL10nScript.js:846
+msgid "Resources"
+msgstr "Πηγές"
+
+#. TRANSLATORS views/EditSimple.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:848
+#: /app/specialVueFakeDummyForL10nScript.js:862
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#. TRANSLATORS views/EditSimple.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:852
+msgid "Show more details"
+msgstr "Δείτε περισσότερες λεπτομέρειες"
+
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:236
+msgid "Subscribe to {name}"
+msgstr "Εγγραφείτε στον {name}"
+
+#. TRANSLATORS components/AppNavigation/EmbedTopNavigation.vue:23
+#: /app/specialVueFakeDummyForL10nScript.js:234
+msgid "Export {name}"
+msgstr "Εξαγωγη {name}"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/defaults/defaultCategories.js:32
+#: /app/src/utils/illustration.js:804
+msgid "Anniversary"
+msgstr "Επέτειος"
+
+#: /app/src/defaults/defaultCategories.js:33
+msgid "Appointment"
+msgstr "Ραντεβού"
+
+#: /app/src/defaults/defaultCategories.js:34
+msgid "Business"
+msgstr "Επιχείρηση"
+
+#: /app/src/defaults/defaultCategories.js:35
+msgid "Education"
+msgstr "Εκπαίδευση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/defaults/defaultCategories.js:36
+#: /app/src/utils/illustration.js:120
+msgid "Holiday"
+msgstr "Διακοπές"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/defaults/defaultCategories.js:37
+#: /app/src/utils/illustration.js:343
+msgid "Meeting"
+msgstr "Συνάντηση"
+
+#: /app/src/defaults/defaultCategories.js:38
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+#: /app/src/defaults/defaultCategories.js:39
+msgid "Non-working hours"
+msgstr "Μη εργάσιμες ώρες"
+
+#: /app/src/defaults/defaultCategories.js:40
+msgid "Not in office"
+msgstr "Εκτός γραφείου"
+
+#: /app/src/defaults/defaultCategories.js:42
+msgid "Phone call"
+msgstr "Τηλεφωνική κλήση"
+
+#: /app/src/defaults/defaultCategories.js:43
+msgid "Sick day"
+msgstr "Ημέρα ανάρρωσης"
+
+#: /app/src/defaults/defaultCategories.js:44
+msgid "Special occasion"
+msgstr "Ειδική περίπτωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/defaults/defaultCategories.js:45
+#: /app/src/utils/illustration.js:725
+msgid "Travel"
+msgstr "Ταξίδι"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/defaults/defaultCategories.js:46
+#: /app/src/utils/illustration.js:122
+msgid "Vacation"
+msgstr "Διακοπές"
+
+#: /app/src/filters/alarmFormat.js:40
+msgid "Midnight on the day the event starts"
+msgstr "Τα μεσάνυχτα της ημέρας που ξεκινά το γεγονός"
+
+#: /app/src/filters/alarmFormat.js:53
+msgid "%n day before the event at {formattedHourMinute}"
+msgid_plural "%n days before the event at {formattedHourMinute}"
+msgstr[0] "%n ημέρα πριν το γεγονός σε {formattedHourMinute}"
+msgstr[1] "%n ημέρες πριν το γεγονός σε {formattedHourMinute}"
+
+#: /app/src/filters/alarmFormat.js:60
+msgid "%n week before the event at {formattedHourMinute}"
+msgid_plural "%n weeks before the event at {formattedHourMinute}"
+msgstr[0] "%n εβδομάδα πριν το γεγονός σε {formattedHourMinute}"
+msgstr[1] "%n εβδομάδες πριν το γεγονός σε {formattedHourMinute}"
+
+#: /app/src/filters/alarmFormat.js:67
+msgid "on the day of the event at {formattedHourMinute}"
+msgstr "την ημέρα της γεγονότος σε {formattedHourMinute}"
+
+#: /app/src/filters/alarmFormat.js:74
+msgid "at the event's start"
+msgstr "στην έναρξη του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:76
+msgid "at the event's end"
+msgstr "στο τέλος του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:84
+msgid "{time} before the event starts"
+msgstr "{time} πριν την έναρξη του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:86
+msgid "{time} before the event ends"
+msgstr "{time} πριν τη λήξη του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:91
+msgid "{time} after the event starts"
+msgstr "{time} μετά την έναρξη του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:93
+msgid "{time} after the event ends"
+msgstr "{time} μετά τη λήξη του γεγονότος"
+
+#: /app/src/filters/alarmFormat.js:99
+msgid "on {time}"
+msgstr "στις {time}"
+
+#: /app/src/filters/alarmFormat.js:103
+msgid "on {time} ({timezoneId})"
+msgstr "στις {time} ({timezoneId})"
+
+#: /app/src/filters/dateRangeFormat.js:39
+msgid "Week {number} of {year}"
+msgstr "Εβδομάδα {number} του {year}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:34
+msgid "Does not repeat"
+msgstr "Δεν επαναλαμβάνεται"
+
+#: /app/src/filters/recurrenceRuleFormat.js:41
+msgid "Daily"
+msgstr "Ημερησίως"
+
+#: /app/src/filters/recurrenceRuleFormat.js:45
+msgid "Weekly"
+msgstr "Εβδομαδιαίως"
+
+#: /app/src/filters/recurrenceRuleFormat.js:49
+msgid "Monthly"
+msgstr "Μηνιαίως"
+
+#: /app/src/filters/recurrenceRuleFormat.js:53
+msgid "Yearly"
+msgstr "Ετησίως"
+
+#: /app/src/filters/recurrenceRuleFormat.js:59
+msgid "Every %n day"
+msgid_plural "Every %n days"
+msgstr[0] "Κάθε %n ημέρα"
+msgstr[1] "Κάθε %n ημέρες"
+
+#: /app/src/filters/recurrenceRuleFormat.js:63
+msgid "Every %n week"
+msgid_plural "Every %n weeks"
+msgstr[0] "Κάθε %n εβδομάδα"
+msgstr[1] "Κάθε %n εβδομάδες"
+
+#: /app/src/filters/recurrenceRuleFormat.js:67
+msgid "Every %n month"
+msgid_plural "Every %n months"
+msgstr[0] "Κάθε %n μήνα"
+msgstr[1] "Κάθε %n μήνες"
+
+#: /app/src/filters/recurrenceRuleFormat.js:71
+msgid "Every %n year"
+msgid_plural "Every %n years"
+msgstr[0] "Κάθε %n χρόνο"
+msgstr[1] "Κάθε %n χρόνια"
+
+#: /app/src/filters/recurrenceRuleFormat.js:80
+msgid "on {weekday}"
+msgid_plural "on {weekdays}"
+msgstr[0] "σε {weekday}"
+msgstr[1] "σε {weekdays}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:88
+msgid "on day {dayOfMonthList}"
+msgid_plural "on days {dayOfMonthList}"
+msgstr[0] "σε ημέρα {dayOfMonthList}"
+msgstr[1] "σε ημέρες {dayOfMonthList}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:95
+msgid "on the {ordinalNumber} {byDaySet}"
+msgstr "την {ordinalNumber} {byDaySet}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:104
+msgid "in {monthNames}"
+msgstr "τον {monthNames}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:111
+msgid "in {monthNames} on the {ordinalNumber} {byDaySet}"
+msgstr "τον {monthNames} στις {ordinalNumber} {byDaySet}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:123
+msgid "until {untilDate}"
+msgstr "έως {untilDate}"
+
+#: /app/src/filters/recurrenceRuleFormat.js:127
+msgid "%n time"
+msgid_plural "%n times"
+msgstr[0] "%n φορά"
+msgstr[1] "%n φορές"
+
+#: /app/src/fullcalendar/eventSources/eventSourceFunction.js:108
+msgid "Untitled event"
+msgstr "Συμβάν χωρίς τίτλο"
+
+#: /app/src/fullcalendar/eventSources/eventSourceFunction.js:114
+msgid "Untitled task"
+msgstr "Εργασία χωρίς όνομα"
+
+#: /app/src/fullcalendar/interaction/eventClick.js:110
+msgid "Please ask your administrator to enable the Tasks App."
+msgstr ""
+"Παρακαλώ ζητήστε από τον διαχειριστή την ενεργοποίηση της εφαρμογής "
+"Εργασίες."
+
+#: /app/src/fullcalendar/localization/localeProvider.js:43
+msgid "Prev"
+msgstr "Προηγούμενο"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:44
+msgid "Next"
+msgstr "Επόμενο"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:45
+msgid "Prev year"
+msgstr "Προηγούμενο έτος"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:46
+msgid "Next year"
+msgstr "Επόμενο έτος"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:47
+msgid "Year"
+msgstr "Έτος"
+
+#. TRANSLATORS W is an abbreviation for Week
+#: /app/src/fullcalendar/localization/localeProvider.js:55
+msgid "W"
+msgstr "Εβδ"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:57
+msgid "%n more"
+msgstr "%n επιπλέον"
+
+#: /app/src/fullcalendar/localization/localeProvider.js:58
+msgid "No events to display"
+msgstr "Κανένα γεγονός για εμφάνιση"
+
+#: /app/src/fullcalendar/rendering/eventLimitText.js:33
+msgid "+%n more"
+msgid_plural "+%n more"
+msgstr[0] "+ %n επιπλέον"
+msgstr[1] "+ %n επιπλέον"
+
+#: /app/src/fullcalendar/rendering/noEventsDidMount.js:39
+msgid "No events"
+msgstr "Κανένα γεγονός"
+
+#: /app/src/fullcalendar/rendering/noEventsDidMount.js:40
+msgid "Create a new event or change the visible time-range"
+msgstr "Δημιουργήστε ένα νέο γεγονός ή αλλάξτε το χρονικό όριο εμφάνισης."
+
+#: /app/src/mixins/EditorMixin.js:651 /app/src/mixins/EditorMixin.js:681
+msgid "It might have been deleted, or there was a typo in a link"
+msgstr ""
+"Ίσως έχει διαγραφεί, ή υπάρχει λάθος στην πληκτρολόγηση του συνδέσμου."
+
+#: /app/src/mixins/EditorMixin.js:758
+msgid "It might have been deleted, or there was a typo in the link"
+msgstr ""
+"Ίσως έχει διαγραφεί, ή υπάρχει λάθος στην πληκτρολόγηση του συνδέσμου."
+
+#: /app/src/models/resourceProps.js:32
+msgid "Meeting room"
+msgstr "Δωμάτιο σύσκεψης"
+
+#: /app/src/models/resourceProps.js:33
+msgid "Lecture hall"
+msgstr "Αίθουσα διδασκαλίας"
+
+#: /app/src/models/resourceProps.js:34
+msgid "Seminar room"
+msgstr "Χώρος σεμιναρίων"
+
+#: /app/src/models/resourceProps.js:35
+msgid "Other"
+msgstr "Άλλο"
+
+#: /app/src/models/rfcProps.js:36
+msgid "When shared show"
+msgstr "Εμφάνιση με τον διαμοιρασμό"
+
+#: /app/src/models/rfcProps.js:39
+msgid "When shared show full event"
+msgstr "Προβολή πλήρους συμβάντος, όταν κοινοποιείται"
+
+#: /app/src/models/rfcProps.js:40
+msgid "When shared show only busy"
+msgstr "Όταν είναι σε κοινή χρήση να προβάλλονται μόνο απασχολημένοι "
+
+#: /app/src/models/rfcProps.js:41
+msgid "When shared hide this event"
+msgstr "Απόκρυψη αυτού του συμβάντος, όταν κοινοποιείται"
+
+#: /app/src/models/rfcProps.js:44
+msgid "The visibility of this event in shared calendars."
+msgstr "Η ορατότητα του γεγονότος στα ημερολόγια κοινής χρήσης."
+
+#: /app/src/models/rfcProps.js:52
+msgid "Add a location"
+msgstr "Προσθήκη τοποθεσίας"
+
+#: /app/src/models/rfcProps.js:60
+msgid "Add a description"
+msgstr "Προσθήκη περιγραφής"
+
+#: /app/src/models/rfcProps.js:68
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: /app/src/models/rfcProps.js:71
+msgid "Confirmed"
+msgstr "Επιβεβαιώθηκε"
+
+#: /app/src/models/rfcProps.js:73
+msgid "Canceled"
+msgstr "Ακυρώθηκε"
+
+#: /app/src/models/rfcProps.js:76
+msgid "Confirmation about the overall status of the event."
+msgstr "Επιβεβαίωση της συνολικής κατάστασης του γεγονότος."
+
+#: /app/src/models/rfcProps.js:83
+msgid "Show as"
+msgstr "Εμφάνιση ως"
+
+#: /app/src/models/rfcProps.js:86
+msgid "Take this event into account when calculating free-busy information."
+msgstr ""
+"Λαβετε υποψιν αυτο το γεγονός οταν υπολογίζετε την πληροφορια διαθεσιμος-"
+"κατειλημμένος"
+
+#: /app/src/models/rfcProps.js:97
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: /app/src/models/rfcProps.js:100
+msgid "Categories help you to structure and organize your events."
+msgstr ""
+"Οι κατηγορίες σας βοηθούν να δομήσετε και να οργανώσετε τα γεγονότα σας"
+
+#: /app/src/models/rfcProps.js:101
+msgid "Search or add categories"
+msgstr "Αναζήτηση ή προσθήκη κατηγοριών"
+
+#: /app/src/models/rfcProps.js:102
+msgid "Add this as a new category"
+msgstr "Προσθήκη αυτού σε νέα κατηγορία"
+
+#: /app/src/models/rfcProps.js:109
+msgid "Custom color"
+msgstr "Προσαρμοσμένο χρώμα"
+
+#: /app/src/models/rfcProps.js:112
+msgid "Special color of this event. Overrides the calendar-color."
+msgstr "Ειδικό χρώμα αυτού του γεγονότος. Υπερισχύει του ημερολογίου."
+
+#: /app/src/services/talkService.js:41
+msgid "Chat room for event"
+msgstr "Χώρος άμεσων μηνυμάτων για το γεγονός "
+
+#: /app/src/store/calendars.js:1012
+msgid "Imported {filename}"
+msgstr "Εισηγμένο {filename}"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:84
+msgid "Meditation"
+msgstr "Διαλογισμός"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:86
+msgid "Relaxing"
+msgstr "Χαλάρωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:88
+msgid "Relax"
+msgstr "Ξεκούραση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:90
+msgid "Break"
+msgstr "Διάλειμμα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:103
+msgid "Commute"
+msgstr "Μετακίνηση προς την εργασία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:105
+msgid "Commuting"
+msgstr "Μετακίνηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:107
+msgid "Shuttle"
+msgstr ""
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:135
+msgid "Invoice"
+msgstr "Tιμολόγιο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:137
+msgid "Finance"
+msgstr "Χρηματοοικονομικά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:139
+msgid "Bank"
+msgstr "Τράπεζα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:141
+msgid "Money"
+msgstr "Χρήματα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:151
+msgid "Wedding"
+msgstr "Γάμος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:160
+msgid "Dog"
+msgstr "Σκύλος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:170
+msgid "Concert"
+msgstr "Συναυλία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:172
+msgid "Festival"
+msgstr "Φεστιβάλ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:182
+msgid "Theater"
+msgstr "Θέατρο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:184
+msgid "Theatre"
+msgstr "Θέατρο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:195
+msgid "Presentation"
+msgstr "Παρουσίαση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:197
+msgid "Talk"
+msgstr "Ομιλία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:199
+msgid "Speech"
+msgstr "Λόγος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:212
+msgid "Deadline"
+msgstr "Προθεσμία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:214
+msgid "Submission"
+msgstr "Υποβολή"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:216
+msgid "Reporting"
+msgstr "Αναφορά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:227
+msgid "Camping"
+msgstr "Κατασκήνωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:229
+msgid "Camp"
+msgstr "Κατασκήνωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:242
+msgid "Election"
+msgstr "Εκλογή"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:244
+msgid "Voting"
+msgstr "Ψηφοφορία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:246
+msgid "Vote"
+msgstr "Ψήφος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:256
+msgid "Barbecue"
+msgstr ""
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:258
+msgid "Barbeque"
+msgstr ""
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:268
+msgid "Garden"
+msgstr "Κήπος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:270
+msgid "Farm"
+msgstr "Φάρμα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:281
+msgid "Movie"
+msgstr "Ταινία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:283
+msgid "Cinema"
+msgstr "Σινεμά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:292
+msgid "Graduation"
+msgstr "Αποφοίτηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:301
+msgid "Brainstorm"
+msgstr "Καταιγισμός ιδεών"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:313 /app/src/utils/illustration.js:353
+msgid "Review"
+msgstr "Επισκόπηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:315
+msgid "Audit"
+msgstr "Έλεγχος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:317
+msgid "Inspection"
+msgstr "Επιθεώρηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:319
+msgid "Proofreading"
+msgstr "Γρήγορη ανάγνωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:329
+msgid "Baseball"
+msgstr "Μπέιζμπολ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:345
+msgid "Meet"
+msgstr "Συνάντηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:347
+msgid "Planning"
+msgstr "Σχεδιασμός"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:349
+msgid "Pointing"
+msgstr "Επισήμανση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:351
+msgid "Retrospective"
+msgstr "Αναδρομικά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:363
+msgid "Office"
+msgstr "Γραφείο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:365
+msgid "Contributor week"
+msgstr "Εβδομάδα συνεργάτη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:374
+msgid "Mail"
+msgstr "Αλληλογραφία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:384
+msgid "Soccer"
+msgstr "Ποδόσφαιρο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:386
+msgid "Football"
+msgstr "Ποδόσφαιρο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:395
+msgid "Gaming"
+msgstr "Παιχνίδια"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:406
+msgid "Drive"
+msgstr "Οδήγηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:408
+msgid "Driving"
+msgstr "Οδήγηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:421
+msgid "Bicycle"
+msgstr "Ποδήλατο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:423
+msgid "Cycle"
+msgstr "Cycle"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:425
+msgid "Cycling"
+msgstr "Ποδηλασία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:427
+msgid "Biking"
+msgstr "Ποδηλασία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:429
+msgid "Bike"
+msgstr "Ποδήλατο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:439
+msgid "Podcast"
+msgstr "Podcast"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:448
+msgid "Basketball"
+msgstr "Μπάσκετ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:458
+msgid "Fishing"
+msgstr "Ψάρεμα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:468
+msgid "Hiking"
+msgstr "Πεζοπορία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:470
+msgid "Hike"
+msgstr "Πεζοπόρος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:482
+msgid "Art"
+msgstr "Τέχνη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:484
+msgid "Exhibition"
+msgstr "Εκθεση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:486
+msgid "Museum"
+msgstr "Μουσείο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:496
+msgid "Pilates"
+msgstr "Πιλάτες"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:506
+msgid "Park"
+msgstr "Πάρκο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:508
+msgid "Walk"
+msgstr "Περίπατος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:517
+msgid "Studying"
+msgstr "Μελέτη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:529
+msgid "Doctor"
+msgstr "Ιατρός"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:531
+msgid "Health"
+msgstr "Υγεία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:533
+msgid "Dentist"
+msgstr "Οδοντίατρος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:535
+msgid "Hospital"
+msgstr "Νοσοκομείο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:545
+msgid "Interview"
+msgstr "Συνέντευξη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:560
+msgid "Training"
+msgstr "Training"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:562
+msgid "Practice"
+msgstr "Πρακτική"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:564
+msgid "Sports"
+msgstr "Αθλήματα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:566
+msgid "Exercise"
+msgstr "Ασκηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:568
+msgid "Work out"
+msgstr "Work out"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:570
+msgid "Working out"
+msgstr "Working out"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:572
+msgid "Gym"
+msgstr "Γυμναστήριο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:584
+msgid "Barber"
+msgstr "Μπαρμπέρης"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:586
+msgid "Haircut"
+msgstr "Κόμμωση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:588
+msgid "Hairdresser"
+msgstr "Κουρείο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:599
+msgid "Exam"
+msgstr "Εξετάσεις"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:601
+msgid "Written test"
+msgstr "Γραπτή εξέταση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:603
+msgid "Oral test"
+msgstr "Προφορική εξέταση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:612
+msgid "Working"
+msgstr "Εργαζόμενος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:623
+msgid "New Years Eve"
+msgstr "Πρωτοχρονιά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:625
+msgid "NYE"
+msgstr "Νέα χρονιά"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:627
+msgid "Fireworks"
+msgstr "Πυροτεχνήματα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:638
+msgid "Running"
+msgstr "Τρέξιμο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:640
+msgid "Go for a run"
+msgstr "Πηγαίνετε για ένα τρέξιμο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:642
+msgid "Marathon"
+msgstr "Μαραθώνιος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:665
+msgid "Video-conference"
+msgstr "Τηλεδιάσκεψη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:667
+msgid "Conference-call"
+msgstr "Κλήση τηλεδιάσκεψης"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:669
+msgid "Video-call"
+msgstr "Κλήση βίντεο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:671
+msgid "Video-chat"
+msgstr "Video-chat"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:673
+msgid "Video-meeting"
+msgstr "Video-συνάντηση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:683
+msgid "Call"
+msgstr "Κλήση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:685
+msgid "Calling"
+msgstr "Σε κλήση"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:694
+msgid "Christmas"
+msgstr "Χριστούγεννα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:703
+msgid "Conference"
+msgstr "Διάσκεψη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:712
+msgid "Pizza"
+msgstr "Πίτσα"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:723
+msgid "Travelling"
+msgstr "Ταξιδεύοντας"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:727
+msgid "Trip"
+msgstr "Εκδρομή"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:738
+msgid "Journey"
+msgstr "Διαδρομή"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:748
+msgid "Collaborate"
+msgstr "Συνεργασία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:750
+msgid "Pair"
+msgstr "Ζεύγος"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:761
+msgid "Lecture"
+msgstr "Διάλεξη"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:763
+msgid "Seminar"
+msgstr "Σεμινάριο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:765
+msgid "Teaching"
+msgstr "Διδασκαλία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:775
+msgid "Photograph"
+msgstr "Φωτογραφία"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:787
+msgid "Party"
+msgstr "Πάρτυ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:789
+msgid "Celebration"
+msgstr "Εορτασμός"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:791
+msgid "Celebrate"
+msgstr "Εορτασμός"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:802
+msgid "Birthday"
+msgstr "Γενέθλια"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:814
+msgid "Shopping"
+msgstr "Ψώνια"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:824
+msgid "Groceries"
+msgstr "Ψώνια"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:834
+msgid "Skate"
+msgstr "Πατινάζ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:836
+msgid "Skateboard"
+msgstr "Skateboard"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:845
+msgid "Wine tasting"
+msgstr "Γευσιγνωσία κρασιού"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:854
+msgid "Golf"
+msgstr "Γκόλφ"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:863
+msgid "Dinner"
+msgstr "Δείπνο"
+
+#. TRANSLATORS This string is used for matching the event title to an
+#. illustration
+#: /app/src/utils/illustration.js:872
+msgid "Lunch"
+msgstr "Γεύμα"
+
+#: /app/templates/appointments/404-booking.php:31
+msgid "Appointment not found"
+msgstr "Το ραντεβού δεν βρέθηκε"
+
+#: /app/templates/appointments/404-index.php:31
+msgid "User not found"
+msgstr "Ο/Η χρήστης δεν βρέθηκε"

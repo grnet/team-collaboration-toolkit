@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2016
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2018
+# george k <norhorn@gmail.com>, 2020
+# theodoros bousios, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2016-06-28 12:18+0000\n"
+"Last-Translator: theodoros bousios, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/files_trashbin/lib/AppInfo/Application.php:79
+#: /app/apps/files_trashbin/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/apps/files_trashbin/src/filelist.js:68
+msgid "Deleted files"
+msgstr "Διεγραμμένα αρχεία"
+
+#: /app/apps/files_trashbin/lib/Trashbin.php:1065
+#: /app/apps/files_trashbin/lib/Trashbin.php:1067
+msgid "restored"
+msgstr "επαναφέρθηκαν"
+
+#: /app/apps/files_trashbin/specialAppInfoFakeDummyForL10nScript.php:3
+msgid ""
+"This application enables users to restore files that were deleted from the "
+"system."
+msgstr ""
+"Η εφαρμογή επιτρέπει στους χρήστες να επαναφέρουν αρχεία που διαγράφηκαν από"
+" το σύστημα."
+
+#: /app/apps/files_trashbin/specialAppInfoFakeDummyForL10nScript.php:4
+#, php-format
+msgid ""
+"This application enables users to restore files that were deleted from the system. It displays a list of deleted files in the web interface, and has options to restore those deleted files back to the users file directories or remove them permanently from the system. Restoring a file also restores related file versions, if the versions application is enabled. When a file is deleted from a share, it can be restored in the same manner, though it is no longer shared. By default, these files remain in the trash bin for 30 days.\n"
+"To prevent a user from running out of disk space, the Deleted files app will not utilize more than 50% of the currently available free quota for deleted files. If the deleted files exceed this limit, the app deletes the oldest files until it gets below this limit. More information is available in the Deleted Files documentation."
+msgstr ""
+"Η εφαρμογή επιτρέπει στους χρήστες να επαναφέρουν τα αρχεία που διαγράφηκαν από το σύστημα. Εμφανίζει μια λίστα με τα διαγραμμένα αρχεία στη διεπαφή ιστού και έχει επιλογές για επαναφορά των διαγραμμένων αρχείων στους καταλόγους αρχείων χρηστών ή για την οριστική κατάργησή τους από το σύστημα. Η επαναφορά ενός αρχείου επαναφέρει επίσης τις σχετικές εκδόσεις αρχείων, εάν είναι ενεργοποιημένη η εφαρμογή εκδόσεων. Όταν ένα αρχείο διαγράφεται από ένα κοινόχρηστο στοιχείο, μπορεί να αποκατασταθεί με τον ίδιο τρόπο, αν και δεν είναι πλέον κοινόχρηστος. Από προεπιλογή, αυτά τα αρχεία παραμένουν στον κάδο απορριμάτων για 30 ημέρες.\n"
+"Για να αποφευχθεί η εξάντληση του χώρου στο δίσκο, η εφαρμογή \"Διαγραμμένα αρχεία\" δεν θα χρησιμοποιήσει περισσότερο από το 50% του τρέχων διαθέσιμου ορίου για τα διαγραμμένα αρχεία. Εάν τα διαγραμμένα αρχεία υπερβαίνουν αυτό το όριο, η εφαρμογή διαγράφει τα παλαιότερα αρχεία μέχρι να πέσει κάτω από αυτό το όριο. Περισσότερες πληροφορίες διατίθενται στην τεκμηρίωση \"Διαγραμμένα αρχεία\"."
+
+#: /app/apps/files_trashbin/src/app.js:61
+#: /app/apps/files_trashbin/src/app.js:91
+#: /app/apps/files_trashbin/tests/js/filelistSpec.js:114
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#: /app/apps/files_trashbin/src/app.js:66
+#: /app/apps/files_trashbin/src/app.js:114
+#: /app/apps/files_trashbin/src/app.js:120
+#: /app/apps/files_trashbin/src/app.js:121
+msgid "Delete permanently"
+msgstr "Μόνιμη διαγραφή"
+
+#: /app/apps/files_trashbin/src/app.js:106
+msgid "Error while restoring file from trash bin"
+msgstr "Σφάλμα κατά την επαναφορά αρχείου από τον κάδο"
+
+#: /app/apps/files_trashbin/src/app.js:136
+msgid "Error while removing file from trash bin"
+msgstr "Σφάλμα κατά την κατάργηση αρχείου από τον κάδο"
+
+#: /app/apps/files_trashbin/src/filelist.js:200
+msgid "Error while restoring files from trash bin"
+msgstr "Σφάλμα κατά την επαναφορά αρχείων από τον κάδο"
+
+#: /app/apps/files_trashbin/src/filelist.js:223
+msgid "Error while emptying trash bin"
+msgstr "Σφάλμα κατά το άδειασμα του κάδου"
+
+#: /app/apps/files_trashbin/src/filelist.js:241
+msgid "Error while removing files from trash bin"
+msgstr "Σφάλμα κατά την κατάργηση αρχείων από τον κάδο"
+
+#: /app/apps/files_trashbin/src/filelist.js:319
+msgid "This operation is forbidden"
+msgstr "Αυτή η ενέργεια δεν επιτρέπεται"
+
+#: /app/apps/files_trashbin/src/filelist.js:327
+msgid ""
+"This directory is unavailable, please check the logs or contact the "
+"administrator"
+msgstr ""
+"Ο κατάλογος δεν είναι διαθέσιμος, παρακαλώ ελέγξτε τα αρχεία καταγραφής ή "
+"επικοινωνήστε με το διαχειριστή"
+
+#: /app/apps/files_trashbin/templates/index.php:9
+msgid "No deleted files"
+msgstr "Κανένα διαγεγραμμένο αρχείο"
+
+#: /app/apps/files_trashbin/templates/index.php:10
+msgid "You will be able to recover deleted files from here"
+msgstr "Θα έχετε την δυνατότητα επαναφοράς διαγεγραμμένων αρχείων από εδώ"
+
+#: /app/apps/files_trashbin/templates/index.php:17
+msgid "No entries found in this folder"
+msgstr "Δεν βρέθηκαν καταχωρήσεις σε αυτόν το φάκελο"
+
+#: /app/apps/files_trashbin/templates/index.php:27
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+#: /app/apps/files_trashbin/templates/index.php:32
+msgid "Name"
+msgstr "Όνομα"
+
+#: /app/apps/files_trashbin/templates/index.php:36
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#: /app/apps/files_trashbin/templates/index.php:42
+msgid "Deleted"
+msgstr "Διαγραμμένα"
+
+#: /app/apps/files_trashbin/tests/js/filelistSpec.js:119
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: /app/apps/files_trashbin/src/app.js:90
+msgid "Error while restoring file from trashbin"
+msgstr "Σφάλμα κατά την επαναφορά αρχείου από τον κάδο"
+
+#: /app/apps/files_trashbin/src/app.js:120
+msgid "Error while removing file from trashbin"
+msgstr "Σφάλμα κατά την κατάργηση αρχείου από τον κάδο"
+
+#: /app/apps/files_trashbin/src/filelist.js:182
+msgid "Error while restoring files from trashbin"
+msgstr "Σφάλμα κατά την επαναφορά αρχείων από τον κάδο"
+
+#: /app/apps/files_trashbin/src/filelist.js:205
+msgid "Error while emptying trashbin"
+msgstr "Σφάλμα κατά το άδειασμα του κάδου"
+
+#: /app/apps/files_trashbin/src/filelist.js:223
+msgid "Error while removing files from trashbin"
+msgstr "Σφάλμα κατά την κατάργηση αρχείων από τον κάδο"

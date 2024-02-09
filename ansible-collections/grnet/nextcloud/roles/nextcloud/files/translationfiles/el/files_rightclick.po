@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:49+0000\n"
+"PO-Revision-Date: 2019-03-14 10:52+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2021\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/js/files.js:62
+msgid "Unselect"
+msgstr "Αναίρεση επιλογής"
+
+#: /app/js/files.js:85
+msgid "Share folder"
+msgstr "Διαμοιρασμός φακέλου"
+
+#: /app/js/files.js:85
+msgid "Share file"
+msgstr "Διαμοιρασμός αρχείου"
+
+#: /app/js/files.js:91
+msgid "Select"
+msgstr "Επιλογή"
+
+#: /app/js/script.js:159
+msgid "Copied !"
+msgstr "Αντιγράφηκε !"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Right click"
+msgstr "Δεξί κλικ"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Right click menu for Nextcloud"
+msgstr "Μενού δεξί κλικ για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"This app allows users and developers to have a right click menu. Simply use "
+"the RightClick object to quickly create context menus. The Files app already"
+" shows the actions menu when right clicking on files and folders."
+msgstr ""
+"Αυτή η εφαρμογή επιτρέπει στους χρήστες και στους προγραμματιστές να έχουν "
+"ένα μενού δεξί κλικ. Απλά χρησιμοποιήστε το αντικείμενο RightClick για να "
+"δημιουργήσετε γρήγορα μενού περιβάλλοντος. Η εφαρμογή \"Αρχεία\" εμφανίζει "
+"ήδη το μενού ενεργειών όταν κάνετε δεξί κλικ σε αρχεία και φακέλους."

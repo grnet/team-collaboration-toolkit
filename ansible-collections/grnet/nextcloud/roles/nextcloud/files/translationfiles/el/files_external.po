@@ -1,0 +1,729 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# Dimitris Kardarakos <dimkard@posteo.net>, 2017
+# Konstantina Tsolakoglou <konstantina@accountant.com>, 2018
+# daf9a3bef94549192358462a8bb20263_a023b71 <69530ed134884b79b067e9214de553f8_465041>, 2019
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2020
+# george k <norhorn@gmail.com>, 2020
+# pkst <pkst@eellak.gr>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2016-06-28 12:18+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/files_external/js/app.js:37
+#: /app/apps/files_external/lib/AppInfo/Application.php:107
+#: /app/apps/files_external/lib/Settings/Section.php:63
+#: /app/apps/files_external/templates/settings.php:107
+#: /app/apps/files_external/templates/settings.php:118
+msgid "External storage"
+msgstr "Εξωτερικός αποθηκευτικός χώρος"
+
+#: /app/apps/files_external/js/mountsfilelist.js:53
+msgid "Personal"
+msgstr "Προσωπικός"
+
+#: /app/apps/files_external/js/mountsfilelist.js:55
+msgid "System"
+msgstr "Συστήματος"
+
+#: /app/apps/files_external/js/oauth1.js:13
+#: /app/apps/files_external/js/oauth2.js:13
+msgid "Grant access"
+msgstr "Παροχή πρόσβασης"
+
+#: /app/apps/files_external/js/oauth1.js:43
+#: /app/apps/files_external/js/oauth1.js:71
+#: /app/apps/files_external/js/oauth1.js:77
+msgid "Error configuring OAuth1"
+msgstr "Σφάλμα ρύθμισης του OAuth1"
+
+#: /app/apps/files_external/js/oauth1.js:76
+msgid "Please provide a valid app key and secret."
+msgstr "Παρακαλούμε δώστε έγκυρο κλειδί εφαρμογής και μυστικό."
+
+#: /app/apps/files_external/js/oauth2.js:53
+#: /app/apps/files_external/js/oauth2.js:88
+msgid "Error configuring OAuth2"
+msgstr "Σφάλμα ρύθμισης του OAuth2"
+
+#: /app/apps/files_external/js/public_key.js:41
+msgid "Generate keys"
+msgstr "Δημιουργία κλειδιών"
+
+#: /app/apps/files_external/js/public_key.js:60
+msgid "Error generating key pair"
+msgstr "Σφάλμα κατά τη δημιουργία ζεύγους κλειδιών"
+
+#: /app/apps/files_external/js/settings.js:72
+msgid "All users. Type to select user or group."
+msgstr "Όλοι οι χρήστες. Πληκτρολογήστε για να επιλέξετε χρήστη ή ομάδα."
+
+#: /app/apps/files_external/js/settings.js:157
+msgid "(Group)"
+msgstr ""
+
+#: /app/apps/files_external/js/settings.js:474
+msgid "Compatibility with Mac NFD encoding (slow)"
+msgstr "Συμβατότητα με Mac NFD κωδικόποιηση (αργό) "
+
+#: /app/apps/files_external/js/settings.js:475
+#: /app/apps/files_external/templates/settings.php:9
+msgid "Enable encryption"
+msgstr "Ενεργοποίηση κρυπτογράφησης"
+
+#: /app/apps/files_external/js/settings.js:476
+#: /app/apps/files_external/templates/settings.php:10
+msgid "Enable previews"
+msgstr "Ενεργοποίηση προεπισκοπήσεων"
+
+#: /app/apps/files_external/js/settings.js:477
+#: /app/apps/files_external/templates/settings.php:11
+msgid "Enable sharing"
+msgstr "Ενεργοποίηση διαμοιρασμού"
+
+#: /app/apps/files_external/js/settings.js:478
+#: /app/apps/files_external/templates/settings.php:12
+msgid "Check for changes"
+msgstr "Έλεγχος για αλλαγές"
+
+#: /app/apps/files_external/js/settings.js:479
+#: /app/apps/files_external/templates/settings.php:13
+msgid "Never"
+msgstr "Ποτέ"
+
+#: /app/apps/files_external/js/settings.js:480
+#: /app/apps/files_external/templates/settings.php:14
+msgid "Once every direct access"
+msgstr "Σε κάθε απευθείας πρόσβαση"
+
+#: /app/apps/files_external/js/settings.js:481
+#: /app/apps/files_external/templates/settings.php:15
+msgid "Read only"
+msgstr "Μόνο για ανάγνωση"
+
+#: /app/apps/files_external/js/settings.js:482
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: /app/apps/files_external/js/settings.js:965
+msgid "Admin defined"
+msgstr "Ορίσθηκε διαχειριστής "
+
+#: /app/apps/files_external/js/settings.js:1005
+msgid ""
+"Automatic status checking is disabled due to the large number of configured "
+"storages, click to check status"
+msgstr ""
+
+#: /app/apps/files_external/js/settings.js:1166
+msgid "Are you sure you want to delete this external storage?"
+msgstr "Σίγουρα θέλετε να διαγράψετε τον εξωτερικό χώρο αποθήκευσης;"
+
+#: /app/apps/files_external/js/settings.js:1168
+msgid "Delete storage?"
+msgstr "Διαγραφή αποθηκευτικού χώρου;"
+
+#: /app/apps/files_external/js/settings.js:1374
+#: /app/apps/files_external/js/settings.js:1392
+#: /app/apps/files_external/js/settings.js:1420
+msgid "Saved"
+msgstr "Αποθηκεύτηκαν"
+
+#: /app/apps/files_external/js/settings.js:1408
+msgid "Saving …"
+msgstr "Αποθηκεύεται ..."
+
+#: /app/apps/files_external/js/settings.js:1422
+#: /app/apps/files_external/js/statusmanager.js:434
+#: /app/apps/files_external/templates/settings.php:180
+#: /app/apps/files_external/templates/settings.php:229
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: /app/apps/files_external/js/statusmanager.js:89
+msgid "Empty response from the server"
+msgstr "Κενή απάντηση από τον διακομιστή"
+
+#: /app/apps/files_external/js/statusmanager.js:107
+msgid ""
+"Couldn't access. Please log out and in again to activate this mount point"
+msgstr ""
+"Αδυναμία πρόσβασης. Παρακαλούμε αποσυνδεθείτε και συνδεθείτε ξανά για "
+"ενεργοποίηση του σημείου προσάρτησης"
+
+#: /app/apps/files_external/js/statusmanager.js:109
+msgid "Couldn't get the information from the remote server: {code} {type}"
+msgstr ""
+"Δεν μπορέσαμε να πάρουμε πληροφορίες απο τον απομακρυσμένο εξυπηρετητή: "
+"{code} {type}"
+
+#: /app/apps/files_external/js/statusmanager.js:162
+msgid "Couldn't get the list of external mount points: {type}"
+msgstr ""
+"Δεν μπορέσαμε να πάρουμε την λίστα εξωτερικών σημείων προσάρτησης: {type}"
+
+#: /app/apps/files_external/js/statusmanager.js:187
+#: /app/apps/files_external/js/statusmanager.js:193
+#: /app/apps/files_external/js/statusmanager.js:196
+msgid "There was an error with message: "
+msgstr "Υπήρξε σφάλμα στο μήνυμα:"
+
+#: /app/apps/files_external/js/statusmanager.js:187
+#: /app/apps/files_external/js/statusmanager.js:193
+#: /app/apps/files_external/js/statusmanager.js:196
+msgid "External mount error"
+msgstr "Σφάλμα εξωτερικής προσάρτησης"
+
+#: /app/apps/files_external/js/statusmanager.js:198
+msgid "external-storage"
+msgstr "Εξωτερικός-αποθηκευτικός-χώρος"
+
+#: /app/apps/files_external/js/statusmanager.js:272
+msgid ""
+"Couldn't fetch list of Windows network drive mount points: Empty response "
+"from server"
+msgstr ""
+"Αδυναμία λήψης της λίστας των σημείων προσάρτησης δικτύων Windows: Κενή "
+"απάντηση από τον διακομιστή"
+
+#: /app/apps/files_external/js/statusmanager.js:391
+msgid "Please enter the credentials for the {mount} mount"
+msgstr "Παρακαλούμε βάλτε τα διαπιστευτήρια  για την  {mount} προσάρτηση"
+
+#: /app/apps/files_external/js/statusmanager.js:394
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV2.php:41
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:45
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/Rackspace.php:40
+#: /app/apps/files_external/lib/Lib/Auth/Password/Password.php:40
+#: /app/apps/files_external/lib/Lib/Auth/Password/UserProvided.php:55
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSA.php:50
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSAPrivateKey.php:49
+#: /app/apps/files_external/templates/settings.php:222
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+#: /app/apps/files_external/js/statusmanager.js:395
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV2.php:42
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:47
+#: /app/apps/files_external/lib/Lib/Auth/Password/Password.php:41
+#: /app/apps/files_external/lib/Lib/Auth/Password/UserProvided.php:57
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSAPrivateKey.php:50
+#: /app/apps/files_external/templates/settings.php:226
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+#: /app/apps/files_external/js/statusmanager.js:417
+msgid "Credentials saved"
+msgstr "Τα διαπιστευτήρια αποθηκεύτηκαν"
+
+#: /app/apps/files_external/js/statusmanager.js:424
+msgid "Credentials saving failed"
+msgstr "Αποτυχία αποθήκευσης διαπιστευτηρίων"
+
+#: /app/apps/files_external/js/statusmanager.js:432
+msgid "Credentials required"
+msgstr "Απαιτούνται διαπιστευτήρια "
+
+#: /app/apps/files_external/lib/Controller/GlobalStoragesController.php:107
+#: /app/apps/files_external/lib/Controller/StoragesController.php:144
+#: /app/apps/files_external/lib/Controller/UserStoragesController.php:137
+msgid "Forbidden to manage local mounts"
+msgstr ""
+
+#: /app/apps/files_external/lib/Controller/GlobalStoragesController.php:195
+#: /app/apps/files_external/lib/Controller/StoragesController.php:367
+#: /app/apps/files_external/lib/Controller/StoragesController.php:396
+#: /app/apps/files_external/lib/Controller/UserGlobalStoragesController.php:130
+#: /app/apps/files_external/lib/Controller/UserGlobalStoragesController.php:182
+#: /app/apps/files_external/lib/Controller/UserStoragesController.php:213
+#, php-format
+msgid "Storage with ID \"%d\" not found"
+msgstr "Αποθηκευτικός χώρος με ID \"%d\" δεν βρέθηκε "
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:165
+msgid "Invalid backend or authentication mechanism class"
+msgstr "Μη έγκυρη κλάση συστήματος ή μηχανισμού πιστοποίησης"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:184
+msgid "Invalid mount point"
+msgstr "Μη έγκυρο σημείο ανάρτησης"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:194
+msgid "Objectstore forbidden"
+msgstr "Απαγορευμένο objectstore"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:208
+#, php-format
+msgid "Invalid storage backend \"%s\""
+msgstr "Μή έγκυρο σύστημα υποστήριξης αποθηκευτικού χώρου  \"%s\""
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:220
+#, php-format
+msgid "Not permitted to use backend \"%s\""
+msgstr "Μη επιτρεπόμενο σύστημα υποστήριξης \"%s\""
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:231
+#, php-format
+msgid "Not permitted to use authentication mechanism \"%s\""
+msgstr "Μη επιτρεπόμενος μηχανισμός πιστοποίησης \"%s\""
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:243
+msgid "Unsatisfied backend parameters"
+msgstr "Ελλιπείς παράμετροι συστήματος"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:252
+msgid "Unsatisfied authentication mechanism parameters"
+msgstr "Ελλιπείς παράμετροι μηχανισμού πιστοποίησης"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:298
+#, php-format
+msgid "Insufficient data: %s"
+msgstr "Μη επαρκή δεδομένα: %s"
+
+#: /app/apps/files_external/lib/Controller/StoragesController.php:303
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: /app/apps/files_external/lib/Controller/UserGlobalStoragesController.php:174
+#, php-format
+msgid "Storage with ID \"%d\" is not user editable"
+msgstr "Αποθηκευτικός χώρος με ID \"%d\" δεν είναι επεξεργάσιμος από τον χρήστη "
+
+#: /app/apps/files_external/lib/Lib/Auth/AmazonS3/AccessKey.php:41
+#: /app/apps/files_external/lib/Lib/Auth/AmazonS3/AccessKey.php:43
+msgid "Access key"
+msgstr "Κλειδί πρόσβασης"
+
+#: /app/apps/files_external/lib/Lib/Auth/AmazonS3/AccessKey.php:44
+msgid "Secret key"
+msgstr "Μυστικό κλειδί"
+
+#: /app/apps/files_external/lib/Lib/Auth/Builtin.php:35
+msgid "Builtin"
+msgstr "Builtin"
+
+#: /app/apps/files_external/lib/Lib/Auth/NullMechanism.php:35
+msgid "None"
+msgstr "Τίποτα"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth1/OAuth1.php:38
+msgid "OAuth1"
+msgstr "OAuth1"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth1/OAuth1.php:42
+msgid "App key"
+msgstr "Κλειδί εφαρμογής"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth1/OAuth1.php:43
+msgid "App secret"
+msgstr "Μυστικό εφαρμογής"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth2/OAuth2.php:38
+msgid "OAuth2"
+msgstr "OAuth2"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth2/OAuth2.php:42
+msgid "Client ID"
+msgstr "ID πελάτη"
+
+#: /app/apps/files_external/lib/Lib/Auth/OAuth2/OAuth2.php:43
+msgid "Client secret"
+msgstr "Μυστικό πελάτη"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV2.php:39
+msgid "OpenStack v2"
+msgstr "OpenStack v2"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV2.php:44
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:49
+msgid "Tenant name"
+msgstr "Όνομα \"ένοικου\""
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV2.php:45
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:50
+msgid "Identity endpoint URL"
+msgstr "URL τελικού σημείου ταυτοποίησης"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:43
+msgid "OpenStack v3"
+msgstr "OpenStack v3"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/OpenStackV3.php:46
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:57
+msgid "Domain"
+msgstr "Τομέας"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/Rackspace.php:38
+msgid "Rackspace"
+msgstr "Rackspace"
+
+#: /app/apps/files_external/lib/Lib/Auth/OpenStack/Rackspace.php:41
+msgid "API key"
+msgstr "Κλειδί API"
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/GlobalAuth.php:51
+#: /app/apps/files_external/templates/settings.php:217
+msgid "Global credentials"
+msgstr "Παγκόσμια διαπιστευτήρια"
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/LoginCredentials.php:80
+msgid "Log-in credentials, save in database"
+msgstr "Διαπιστευτήρια εισόδου, αποθηκεύστε στην βάση δεδομέων"
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/Password.php:38
+msgid "Username and password"
+msgstr "Όνομα χρήστη και κωδικός πρόσβασης"
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/SessionCredentials.php:49
+msgid "Log-in credentials, save in session"
+msgstr "Διαπιστευτήρια εισόδου, αποθηκεύστε στην συνεδρία "
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/UserGlobalAuth.php:55
+msgid "Global credentials, user entered"
+msgstr "Δημόσια διαπιστευτήρια, καταχωρήθηκαν από τον χρήστη"
+
+#: /app/apps/files_external/lib/Lib/Auth/Password/UserProvided.php:53
+msgid "User entered, store in database"
+msgstr "Χρήστης εισήχθη, τοποθετήστε στην βάση δεδομένων"
+
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSA.php:48
+msgid "RSA public key"
+msgstr "Δημόσιο κλειδί RSA"
+
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSA.php:51
+msgid "Public key"
+msgstr "Δημόσιο κλειδί"
+
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSAPrivateKey.php:47
+msgid "RSA private key"
+msgstr "Ιδιωτικό κλειδί RSA"
+
+#: /app/apps/files_external/lib/Lib/Auth/PublicKey/RSAPrivateKey.php:53
+msgid "Private key"
+msgstr "Ιδιωτικό κλειδί"
+
+#: /app/apps/files_external/lib/Lib/Auth/SMB/KerberosApacheAuth.php:41
+msgid "Kerberos default realm, defaults to \"WORKGROUP\""
+msgstr ""
+
+#: /app/apps/files_external/lib/Lib/Auth/SMB/KerberosApacheAuth.php:45
+msgid "Kerberos ticket Apache mode"
+msgstr ""
+
+#: /app/apps/files_external/lib/Lib/Auth/SMB/KerberosAuth.php:33
+msgid "Kerberos ticket"
+msgstr "Εισητήριο Kerberos"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:41
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:43
+#: /app/apps/files_external/lib/Lib/Backend/Swift.php:49
+msgid "Bucket"
+msgstr "Κάδος"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:44
+msgid "Hostname"
+msgstr "Όνομα Υπολογιστή"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:46
+msgid "Port"
+msgstr "Θύρα"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:48
+#: /app/apps/files_external/lib/Lib/Backend/Swift.php:48
+msgid "Region"
+msgstr "Περιοχή"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:50
+msgid "Enable SSL"
+msgstr "Ενεργοποίηση SSL"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:52
+msgid "Enable Path Style"
+msgstr "Ενεργοποίηση μορφής διαδρομής"
+
+#: /app/apps/files_external/lib/Lib/Backend/AmazonS3.php:54
+msgid "Legacy (v2) authentication"
+msgstr "Έλεγχος ταυτότητας Παλαιού τύπου (v2)"
+
+#: /app/apps/files_external/lib/Lib/Backend/DAV.php:40
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: /app/apps/files_external/lib/Lib/Backend/DAV.php:42
+#: /app/apps/files_external/lib/Lib/Backend/OwnCloud.php:40
+msgid "URL"
+msgstr "URL"
+
+#: /app/apps/files_external/lib/Lib/Backend/DAV.php:43
+#: /app/apps/files_external/lib/Lib/Backend/FTP.php:43
+#: /app/apps/files_external/lib/Lib/Backend/OwnCloud.php:41
+#: /app/apps/files_external/lib/Lib/Backend/SFTP_Key.php:39
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:55
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:53
+msgid "Remote subfolder"
+msgstr "Απομακρυσμένος υποφάκελος"
+
+#: /app/apps/files_external/lib/Lib/Backend/DAV.php:45
+#: /app/apps/files_external/lib/Lib/Backend/OwnCloud.php:43
+msgid "Secure https://"
+msgstr "Ασφαλής σύνδεση https://"
+
+#: /app/apps/files_external/lib/Lib/Backend/FTP.php:40
+msgid "FTP"
+msgstr "FTP"
+
+#: /app/apps/files_external/lib/Lib/Backend/FTP.php:42
+#: /app/apps/files_external/lib/Lib/Backend/SFTP.php:39
+#: /app/apps/files_external/lib/Lib/Backend/SFTP_Key.php:38
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:53
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:48
+msgid "Host"
+msgstr "Διακομιστής"
+
+#: /app/apps/files_external/lib/Lib/Backend/FTP.php:45
+msgid "Secure ftps://"
+msgstr "Ασφαλής ftps://"
+
+#: /app/apps/files_external/lib/Lib/Backend/Local.php:38
+msgid "Local"
+msgstr "Τοπικός"
+
+#: /app/apps/files_external/lib/Lib/Backend/Local.php:40
+msgid "Location"
+msgstr "Τοποθεσία"
+
+#: /app/apps/files_external/lib/Lib/Backend/OwnCloud.php:38
+msgid "Nextcloud"
+msgstr "Nextcloud"
+
+#: /app/apps/files_external/lib/Lib/Backend/SFTP.php:37
+msgid "SFTP"
+msgstr "SFTP"
+
+#: /app/apps/files_external/lib/Lib/Backend/SFTP.php:40
+msgid "Root"
+msgstr "Root"
+
+#: /app/apps/files_external/lib/Lib/Backend/SFTP_Key.php:36
+msgid "SFTP with secret key login"
+msgstr "SFTP με σύνδεση με κρυφό κλειδί"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:51
+msgid "SMB/CIFS"
+msgstr ""
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:54
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:51
+msgid "Share"
+msgstr "Διαμοιράστε"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:59
+msgid "Show hidden files"
+msgstr "Εμφάνιση κρυφών αρχείων"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:62
+msgid "Verify ACL access when listing files"
+msgstr "Επαληθεύστε την πρόσβαση ACL κατά την καταχώριση αρχείων"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:65
+msgid ""
+"Check the ACL's of each file or folder inside a directory to filter out "
+"items where the user has no read permissions, comes with a performance "
+"penalty"
+msgstr ""
+"Ελέγξτε τα ACL κάθε αρχείου ή φακέλου μέσα σε έναν κατάλογο για να "
+"φιλτράρετε στοιχεία όπου ο χρήστης δεν έχει δικαιώματα ανάγνωσης, με "
+"καθυστέρηση στις επιδόσεις"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:66
+msgid "Timeout"
+msgstr "Λήξη χρόνου"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:46
+msgid "SMB/CIFS using OC login"
+msgstr ""
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:49
+msgid "Username as share"
+msgstr "Όνομα χρήστη ως διαμοιραζόμενος φάκελος"
+
+#: /app/apps/files_external/lib/Lib/Backend/Swift.php:44
+msgid "OpenStack Object Storage"
+msgstr "Αποθήκη αντικειμένων OpenStack"
+
+#: /app/apps/files_external/lib/Lib/Backend/Swift.php:46
+msgid "Service name"
+msgstr "Όνομα υπηρεσίας"
+
+#: /app/apps/files_external/lib/Lib/Backend/Swift.php:50
+msgid "Request timeout (seconds)"
+msgstr "Χρονικό όριο αιτήματος (δευτερόλεπτα)"
+
+#: /app/apps/files_external/lib/MountConfig.php:191
+#, php-format
+msgid ""
+"The cURL support in PHP is not enabled or installed. Mounting of %s is not "
+"possible. Please ask your system administrator to install it."
+msgstr ""
+"Η cURL υποστήριξη στην PHP δεν είναι ενεργοποιημένη. Η προσάρτηση του %s δεν"
+" είναι δυνατή. Παρακαλούμε ζητήστε από τον διαχειριστή του συστήματός σας να"
+" το εγκαταστήσει. "
+
+#: /app/apps/files_external/lib/MountConfig.php:193
+#, php-format
+msgid ""
+"The FTP support in PHP is not enabled or installed. Mounting of %s is not "
+"possible. Please ask your system administrator to install it."
+msgstr ""
+"Η FTP υποστήριξη στην PHP δεν είναι ενεργοποιημένη ή εγκατεστημένη. Η "
+"προσάρτηση του %s δεν είναι δυνατή. Παρακαλούμε ζητήστε τον διαχειριστή του "
+"συστήματός σας να το εγκατασταστήσει. "
+
+#: /app/apps/files_external/lib/MountConfig.php:195
+#, php-format
+msgid ""
+"\"%1$s\" is not installed. Mounting of %2$s is not possible. Please ask your"
+" system administrator to install it."
+msgstr ""
+"Το \"%1$s\" δεν είναι εγκατεστημένο. Η προσάρτηση του %2$s δεν είναι δυνατή."
+" Παρακαλώ ζητήστε τον διαχειριστή του συστήματός να το εγκαταστήσει. "
+
+#: /app/apps/files_external/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "External storage support"
+msgstr "Υποστήριξη εξωτερικού αποθηκευτικού χώρου"
+
+#: /app/apps/files_external/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Adds basic external storage support"
+msgstr "Προσθέτει βασική υποστήριξη εξωτερικού αποθηκευτικού χώρου"
+
+#: /app/apps/files_external/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"This application enables administrators to configure connections to external storage providers, such as FTP servers, S3 or SWIFT object stores, other Nextcloud servers, WebDAV servers, and more. Administrators can choose which types of storage to enable and can mount these storage locations for a user, a group, or the entire system. Users will see a new folder appear in their root Nextcloud directory, which they can access and use like any other Nextcloud folder. External storage also allows users to share files stored in these external locations. In these cases, the credentials for the owner of the file are used when the recipient requests the file from external storage, thereby ensuring that the recipient can access the shared file.\n"
+"\n"
+"External storage can be configured using the GUI or at the command line. This second option provides the advanced user with more flexibility for configuring bulk external storage mounts and setting mount priorities. More information is available in the external storage GUI documentation and the external storage Configuration File documentation."
+msgstr ""
+"Η εφαρμογή επιτρέπει στους διαχειριστές να διαμορφώνουν συνδέσεις σε εξωτερικούς παρόχους αποθηκευτικού χώρου, όπως διακομιστές FTP, S3 ή SWIFT, άλλοι διακομιστές Nextcloud, διακομιστές WebDAV και πολλά άλλα. Οι διαχειριστές μπορούν να επιλέξουν τους τύπους αποθήκευσης που επιτρέπουν και μπορούν να προσαρτήσουν αυτές τις θέσεις αποθήκευσης για έναν χρήστη, μια ομάδα ή ολόκληρο το σύστημα. Οι χρήστες θα εμφανίσουν έναν νέο φάκελο στον κεντρικό τους κατάλογο Nextcloud, τον οποίο μπορούν να έχουν πρόσβαση και να χρησιμοποιήσουν όπως και κάθε άλλο φάκελο Nextcloud. Η εξωτερική αποθήκευση επιτρέπει επίσης στους χρήστες να μοιράζονται αρχεία που είναι αποθηκευμένα σε αυτές τις εξωτερικές τοποθεσίες. Σε αυτές τις περιπτώσεις, τα διαπιστευτήρια του κατόχου του αρχείου χρησιμοποιούνται όταν ο παραλήπτης ζητά το αρχείο από εξωτερικό αποθηκευτικό χώρο, εξασφαλίζοντας έτσι ότι ο παραλήπτης μπορεί να έχει πρόσβαση στο κοινόχρηστο αρχείο.\n"
+"\n"
+"Η εξωτερική αποθήκευση μπορεί να ρυθμιστεί χρησιμοποιώντας το GUI ή στη γραμμή εντολών. Αυτή η δεύτερη επιλογή παρέχει στον προχωρημένο χρήστη περισσότερη ευελιξία για τη διαμόρφωση των μαζικών εξωτερικών χώρων αποθήκευσης και τη ρύθμιση των προτεραιοτήτων αποθήκευσης. Περισσότερες πληροφορίες διατίθενται στην τεκμηρίωση GUI του εξωτερικού χώρου αποθήκευσης και στην τεκμηρίωση του αρχείου διαμόρφωσης εξωτερικής αποθήκευσης."
+
+#: /app/apps/files_external/templates/list.php:9
+#: /app/apps/files_external/templates/settings.php:100
+msgid ""
+"No external storage configured or you don't have the permission to configure"
+" them"
+msgstr ""
+"Δεν έχει ρυθμιστεί καμία εξωτερική αποθήκευση ή δεν έχετε δικαιώματα "
+"ρύθμισης"
+
+#: /app/apps/files_external/templates/list.php:19
+msgid "Name"
+msgstr "Όνομα"
+
+#: /app/apps/files_external/templates/list.php:23
+msgid "Storage type"
+msgstr "Τύπος αποθηκευτικού χώρου"
+
+#: /app/apps/files_external/templates/list.php:26
+msgid "Scope"
+msgstr "Εύρος"
+
+#: /app/apps/files_external/templates/settings.php:108
+msgid "Open documentation"
+msgstr "Άνοιγμα τεκμηρίωσης"
+
+#: /app/apps/files_external/templates/settings.php:109
+msgid ""
+"External storage enables you to mount external storage services and devices "
+"as secondary Nextcloud storage devices. You may also allow users to mount "
+"their own external storage services."
+msgstr ""
+"Ο εξωτερικός χώρος αποθήκευσης σάς επιτρέπει να συνδέσετε εξωτερικές "
+"υπηρεσίες και συσκευές αποθήκευσης ως δευτερεύουσες συσκευές αποθήκευσης "
+"Nextcloud. Μπορείτε επίσης να επιτρέψετε στους χρήστες να εγκαταστήσουν τις "
+"δικές τους υπηρεσίες εξωτερικής αποθήκευσης."
+
+#: /app/apps/files_external/templates/settings.php:117
+#: /app/apps/files_external/templates/settings.php:144
+msgid "Folder name"
+msgstr "Όνομα φακέλου"
+
+#: /app/apps/files_external/templates/settings.php:119
+msgid "Authentication"
+msgstr "Πιστοποίηση"
+
+#: /app/apps/files_external/templates/settings.php:120
+msgid "Configuration"
+msgstr "Ρυθμίσεις"
+
+#: /app/apps/files_external/templates/settings.php:122
+msgid "Available for"
+msgstr "Διαθέσιμο για"
+
+#: /app/apps/files_external/templates/settings.php:141
+msgid "Click to recheck the configuration"
+msgstr "Κλίκ για επανέλεγχο ρυθμίσεων"
+
+#: /app/apps/files_external/templates/settings.php:150
+msgid "Add storage"
+msgstr "Προσθήκη αποθηκευτικού χώρου"
+
+#: /app/apps/files_external/templates/settings.php:176
+msgid "Advanced settings"
+msgstr "Ρυθμίσεις για προχωρημένους"
+
+#: /app/apps/files_external/templates/settings.php:191
+msgid "Allow users to mount external storage"
+msgstr "Να επιτρέπεται στους χρήστες η σύνδεση εξωτερικού αποθηκευτικού χώρου"
+
+#: /app/apps/files_external/templates/settings.php:218
+msgid ""
+"Global credentials can be used to authenticate with multiple external "
+"storages that have the same credentials."
+msgstr ""
+"Τα δημόσια διαπιστευτήρια μπορούν να χρησιμοποιηθούν για τον έλεγχο "
+"ταυτότητας με διάφορους εξωτερικούς χώρους αποθήκευσης με ίδια "
+"διαπιστευτήρια."
+
+#: /app/apps/files_external/appinfo/app.php:46
+#: /app/apps/files_external/js/app.js:37
+#: /app/apps/files_external/lib/Settings/Section.php:63
+#: /app/apps/files_external/templates/settings.php:104
+msgid "External storages"
+msgstr "Εξωτερικοί αποθηκευτικοί χώροι"
+
+#: /app/apps/files_external/js/settings.js:157
+msgid "(group)"
+msgstr "(ομάδα)"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB.php:48
+msgid "SMB / CIFS"
+msgstr "SMB / CIFS"
+
+#: /app/apps/files_external/lib/Lib/Backend/SMB_OC.php:46
+msgid "SMB / CIFS using OC login"
+msgstr "SMB / CIFS χρησιμοποιώντας λογαριασμό OC"
+
+#: /app/apps/files_external/lib/Lib/Auth/SMB/KerberosApacheAuth.php:45
+msgid "Kerberos ticket apache mode"
+msgstr ""

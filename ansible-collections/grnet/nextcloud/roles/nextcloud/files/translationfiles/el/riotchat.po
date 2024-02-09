@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# george k <norhorn@gmail.com>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 03:42+0000\n"
+"PO-Revision-Date: 2020-05-13 03:19+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2021\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/Settings/AdminSection.php:73
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Element"
+msgstr "Συνομιλίες"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Element for Nextcloud"
+msgstr "Στοιχείο για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid "Element Web integrated into Nextcloud"
+msgstr "Το Element Web ενσωματώθηκε στο Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:5
+msgid ""
+"Element for Nextcloud allows you to install Element Web easily through Nextcloud and join the Matrix decentralized communication network.\n"
+"\n"
+"This app does not include a Matrix server, only the client. You will have to either set up your own Matrix homeserver, rent one, or use a public one.\n"
+"\n"
+"This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Element or the Element project, or any of its subsidiaries or its affiliates.\n"
+"\n"
+"The name Element as well as related names, marks, emblems and images are registered trademarks of their respective owners.\n"
+"\n"
+"The upstream project can be found at [https://github.com/vector-im/element-web](https://github.com/vector-im/element-web)."
+msgstr ""
+"Το Εlement για το Nextcloud σάς επιτρέπει να εγκαταστήσετε εύκολα το Element"
+" Web μέσω του Nextcloud και να εγγραφείτε στο αποκεντρωμένο δίκτυο "
+"επικοινωνίας Matrix. Αυτή η εφαρμογή δεν περιλαμβάνει διακομιστή Matrix, "
+"μόνο τον πελάτη. Θα πρέπει είτε να ρυθμίσετε τον δικό σας Matrix homeserver,"
+" να νοικιάσετε έναν ή να χρησιμοποιήσετε έναν δημόσιο. Αυτό το έργο δεν "
+"σχετίζεται, σχετίζεται, εξουσιοδοτείται, εγκρίνεται ή είναι με οποιονδήποτε "
+"τρόπο επίσημα συνδεδεμένο με το Element ή το έργο Element ή με οποιαδήποτε "
+"από τις θυγατρικές της. Το όνομα Element καθώς και τα σχετικά ονόματα, "
+"σήματα, εμβλήματα και εικόνες είναι σήματα κατατεθέντα των αντίστοιχων "
+"κατόχων τους. Το upstream έργο βρίσκεται στη διεύθυνση [https://github.com/ "
+"vector-im / element-web] (https://github.com/vector-im/element-web)."
+
+#. TRANSLATORS components/AdminSettings.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Element common configuration"
+msgstr "Κοινή διαμόρφωση Element"
+
+#. TRANSLATORS components/AdminSettings.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Here you can configure Element."
+msgstr "Εδώ μπορείτε να διαμορφώσετε το Element."
+
+#. TRANSLATORS components/AdminSettings.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:6
+msgid "Default server URL:"
+msgstr "Προεπιλεγμένη διεύθυνση URL διακομιστή:"
+
+#. TRANSLATORS components/AdminSettings.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Default server name:"
+msgstr "Προεπιλεγμένο όνομα διακομιστή:"
+
+#. TRANSLATORS components/AdminSettings.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Disable custom URLs"
+msgstr "Απενεργοποίηση προσαρμοσμένων διευθύνσεων URLs"
+
+#. TRANSLATORS components/AdminSettings.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid ""
+"Redirect immediately to SSO (requires SSO to be configured on the Matrix "
+"Homeserver)"
+msgstr ""
+"Άμεση ανακατεύθυνση στο SSO (απαιτείται η ρύθμιση παραμέτρων του SSO στον "
+"διακομιστή Matrix στο σπίτι)"
+
+#. TRANSLATORS components/AdminSettings.vue:91
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "Disable login language selector"
+msgstr "Απενεργοποίηση επιλογής γλώσσας κατά την σύνδεση"
+
+#. TRANSLATORS components/AdminSettings.vue:103
+#: /app/specialVueFakeDummyForL10nScript.js:16
+msgid "Show labs settings"
+msgstr "Εμφάνιση ρυθμίσεων εργαστηρίων"
+
+#. TRANSLATORS components/AdminSettings.vue:105
+#: /app/specialVueFakeDummyForL10nScript.js:18
+msgid ""
+"Make share room links go to Element for Nextcloud instead of "
+"https://matrix.to"
+msgstr ""
+"Φτιάξτε τους συνδέσμους των δωματίων κοινής χρήσης να μεταβείνουν στο "
+"Element για το Nextcloud αντί για https://matrix.to"
+
+#. TRANSLATORS components/AdminSettings.vue:118
+#: /app/specialVueFakeDummyForL10nScript.js:20
+msgid "Set custom permalink to this Element instance"
+msgstr ""
+"Ορίστε προσαρμοσμένο σύνδεσμο διαρκείας permalink σε αυτήν την εγκατάσταση "
+"Element"
+
+#. TRANSLATORS components/AdminSettings.vue:122
+#: /app/specialVueFakeDummyForL10nScript.js:22
+msgid "Jitsi settings"
+msgstr "Ρυθμίσεις του Jitsi"
+
+#. TRANSLATORS components/AdminSettings.vue:123
+#: /app/specialVueFakeDummyForL10nScript.js:24
+msgid "Configure the Jitsi instance that Element will connect to."
+msgstr "Διαμορφώστε την παρουσία Jitsi στην οποία θα συνδεθεί το Element."
+
+#. TRANSLATORS components/AdminSettings.vue:128
+#: /app/specialVueFakeDummyForL10nScript.js:26
+msgid ""
+"Custom Jitsi instance (leave blank to use default Element Jitsi server):"
+msgstr ""
+"Εξατομικευμένη παρουσία Jitsi (αφήστε κενό για χρήση του προεπιλεγμένου "
+"διακομιστή Element Jitsi):"
+
+#. TRANSLATORS components/AdminSettings.vue:137
+#: /app/specialVueFakeDummyForL10nScript.js:28
+msgid "Custom integration server"
+msgstr "Διακομιστής προσαρμοσμένης ενοποίησης"
+
+#. TRANSLATORS components/AdminSettings.vue:138
+#: /app/specialVueFakeDummyForL10nScript.js:30
+msgid ""
+"Configure a custom integration server for Element (leave empty to use "
+"Scalar)."
+msgstr ""
+"Διαμορφώστε έναν προσαρμοσμένο διακομιστή ενοποίησης για το Element (αφήστε "
+"κενό για χρήση του Scalar)."
+
+#. TRANSLATORS components/AdminSettings.vue:143
+#: /app/specialVueFakeDummyForL10nScript.js:32
+msgid "Integration UI URL:"
+msgstr "Ενσωμάτωση UI URL:"
+
+#. TRANSLATORS components/AdminSettings.vue:154
+#: /app/specialVueFakeDummyForL10nScript.js:34
+msgid "Integration REST URL:"
+msgstr "Ενσωμάτωση REST URL:"
+
+#. TRANSLATORS components/AdminSettings.vue:165
+#: /app/specialVueFakeDummyForL10nScript.js:36
+msgid "Integration widgets URL:"
+msgstr "Ενσωμάτωση widgets URL:"
+
+#. TRANSLATORS components/AdminSettings.vue:175
+#: /app/specialVueFakeDummyForL10nScript.js:38
+msgid "Custom Element config"
+msgstr "Διαμόρφωση προσαρμοσμένου Element"
+
+#. TRANSLATORS components/AdminSettings.vue:176
+#: /app/specialVueFakeDummyForL10nScript.js:40
+msgid "Specify a custom configuration for Element."
+msgstr "Καθορίστε μια προσαρμοσμένη διαμόρφωση για το Element."
+
+#. TRANSLATORS components/AdminSettings.vue:188
+#: /app/specialVueFakeDummyForL10nScript.js:42
+msgid "Use a custom configuration"
+msgstr "Χρησιμοποιήστε μια προσαρμοσμένη ρύθμιση"
+
+#. TRANSLATORS components/AdminSettings.vue:239
+#: /app/specialVueFakeDummyForL10nScript.js:44
+msgid ""
+"These are experimental features in Element that you can enable. For "
+"information on what each feature is, check out the documentation for it "
+"{linkstart}here{linkend}."
+msgstr ""
+"Αυτά είναι πειραματικά χαρακτηριστικά στο Element που μπορείτε να "
+"ενεργοποιήσετε. Για πληροφορίες σχετικά με το τι είναι κάθε λειτουργία, "
+"ανατρέξτε στην τεκμηρίωση για αυτό {linkstart} εδώ {linkend}."
+
+#. TRANSLATORS components/AdminSettings.vue:244
+#: /app/specialVueFakeDummyForL10nScript.js:46
+msgid ""
+"This version of Element for Nextcloud is based on Element Web "
+"{riotWebVersion}. Check out the source code for Element Web "
+"{linkstart}here{linkend}."
+msgstr ""
+"Αυτή η έκδοση του Element για το Nextcloud βασίζεται στο Element Web "
+"{riotWebVersion}. Δείτε τον πηγαίο κώδικα για το Element Web {linkstart} εδώ"
+" {linkend}."
+
+#. TRANSLATORS components/AdminSettings.vue:270
+#: /app/specialVueFakeDummyForL10nScript.js:48
+msgid "Experimental feature {feature}"
+msgstr "Δοκιμαστικές λειτουργίες {feature}"
+
+#. TRANSLATORS components/AdminSettings.vue:277
+#: /app/specialVueFakeDummyForL10nScript.js:50
+msgid "Custom config has been set"
+msgstr "Η προσαρμοσμένη ρύθμιση έχει οριστεί"
+
+#. TRANSLATORS components/AdminSettings.vue:279
+#: /app/specialVueFakeDummyForL10nScript.js:52
+msgid "{settingName} has been set to {value}"
+msgstr "Το {settingName} άλλαξε σε {value}"
+
+#. TRANSLATORS components/AdminSettings.vue:283
+#: /app/specialVueFakeDummyForL10nScript.js:54
+msgid "Custom config could not be set. Try reloading the page."
+msgstr ""
+"Αδύνατη η εφαρμογή της προσαρμοσμένης ρύθμισης. Δοκιμάστε να φορτώσετε ξανά "
+"τη σελίδα."
+
+#. TRANSLATORS components/AdminSettings.vue:285
+#: /app/specialVueFakeDummyForL10nScript.js:56
+msgid "{settingName} could not be set. Try reloading the page."
+msgstr "Το {settingName} δεν μπορεί να ρυθμιστεί. Ανανεώστε την σελίδα."

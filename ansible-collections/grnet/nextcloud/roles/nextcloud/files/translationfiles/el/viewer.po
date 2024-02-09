@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# george k <norhorn@gmail.com>, 2020
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 03:34+0000\n"
+"PO-Revision-Date: 2019-03-06 23:02+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2021\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Viewer"
+msgstr "Πρόγραμμα προβολής"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Simple file viewer with slideshow for media"
+msgstr "Απλό πρόγραμμα προβολής αρχείων με παρουσίαση διαφανειών για πολυμέσα"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Show your latest holiday photos and videos like in the movies, show a "
+"glimpse of your latest novel directly from your nextcloud, choose the best "
+"GIF of your collection thanks to the direct preview of your favorites files "
+"and many more!"
+msgstr ""
+"Δείτε τις τελευταίες φωτογραφίες και βίντεο των διακοπών σας, όπως στις "
+"ταινίες, δείτε το τελευταίο μυθιστόρημά σας απευθείας από το nextcloud, "
+"επιλέξτε το καλύτερο GIF της συλλογής σας χάρη στην άμεση προεπισκόπηση των "
+"αγαπημένων σας αρχείων και πολλά άλλα!"
+
+#. TRANSLATORS c/components/Audios.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Your browser does not support audio."
+msgstr "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει ήχο."
+
+#. TRANSLATORS c/components/Error.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Error loading {name}"
+msgstr "Σφάλμα φόρτωσης {name}"
+
+#. TRANSLATORS c/components/Videos.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:6
+msgid "Your browser does not support videos."
+msgstr "Ο περιηγητής σας δεν υποστηρίζει βίντεο."
+
+#. TRANSLATORS c/views/Viewer.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Open sidebar"
+msgstr "Άνοιγμα πλευρικής στήλης"
+
+#. TRANSLATORS c/views/Viewer.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Download"
+msgstr "Λήψη"
+
+#. TRANSLATORS c/views/Viewer.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#. TRANSLATORS c/views/Viewer.vue:391
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "There is no plugin available to display this file type"
+msgstr ""
+"Δεν υπάρχει διαθέσιμο πρόσθετο για την προβολή αυτού του τύπου αρχείου"
+
+#. TRANSLATORS c/views/Viewer.vue:607
+#: /app/specialVueFakeDummyForL10nScript.js:16
+msgid "View"
+msgstr "Προβολή"

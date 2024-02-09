@@ -1,0 +1,1283 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# 1742109a73c6757f2023b1ead056a296_448aed3 <62b31798b6428e250850d52338f80af7_612493>, 2017
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2019
+# Eirini Basdani <renabasdani@gmail.com>, 2019
+# Andy Scherzinger <info@andy-scherzinger.de>, 2020
+# george k <norhorn@gmail.com>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# theodoros bousios, 2022
+# pkst <pkst@eellak.gr>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 03:23+0000\n"
+"PO-Revision-Date: 2016-10-25 09:07+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/Dashboard/TasksWidget.php:58
+msgid "Upcoming tasks"
+msgstr "Επερχόμενες εργασίες"
+
+#: /app/lib/Service/CollectionsService.php:72
+msgid "Important"
+msgstr "Σημαντικό "
+
+#. TRANSLATORS rc/views/AppContent/Week.vue:94
+#: /app/lib/Service/CollectionsService.php:77
+#: /app/specialVueFakeDummyForL10nScript.js:284
+msgid "Today"
+msgstr "Σήμερα"
+
+#: /app/lib/Service/CollectionsService.php:82
+msgid "Week"
+msgstr "Εβδομάδα"
+
+#: /app/lib/Service/CollectionsService.php:87
+msgid "All"
+msgstr "Όλες"
+
+#: /app/lib/Service/CollectionsService.php:92
+msgid "Current"
+msgstr "Τρέχουσα"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:424
+#: /app/lib/Service/CollectionsService.php:97
+#: /app/specialVueFakeDummyForL10nScript.js:370
+msgid "Completed"
+msgstr "Ολοκληρωμένες"
+
+#. TRANSLATORS rc/App.vue:77
+#. TRANSLATORS rc/views/Dashboard.vue:128
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/specialVueFakeDummyForL10nScript.js:2
+#: /app/specialVueFakeDummyForL10nScript.js:466
+msgid "Tasks"
+msgstr "Εργασίες"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "The Tasks app for Nextcloud"
+msgstr "Η εφαρμογή Εργασίες για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Once enabled, a new Tasks menu will appear in your Nextcloud apps menu. From"
+" there you can add and delete tasks, edit their title, description, start "
+"and due dates and mark them as important. Tasks can be shared between users."
+" Tasks can be synchronized using CalDav (each task list is linked to an "
+"Nextcloud calendar, to sync it to your local client: Thunderbird, Evolution,"
+" KDE Kontact, iCal … - just add the calendar as a remote calendar in your "
+"client). You can download your tasks as ICS files using the download button "
+"for each calendar."
+msgstr ""
+"Μόλις ενεργοποιηθεί, θα εμφανιστεί ένα νέο μενού Εργασίες στο μενού "
+"εφαρμογών του Nextcloud. Από εκεί μπορείτε να προσθέσετε και να διαγράψετε "
+"εργασίες, να επεξεργαστείτε τον τίτλο, την περιγραφή, τις ημερομηνίες "
+"έναρξης και λήξης και να τις επισημάνετε ως σημαντικές. Οι εργασίες μπορούν "
+"να μοιράζονται μεταξύ των χρηστών. Οι εργασίες μπορούν να συγχρονιστούν "
+"χρησιμοποιώντας το CalDav (κάθε λίστα εργασιών συνδέεται με ένα ημερολόγιο "
+"Nextcloud, για να το συγχρονίσετε με την εφαρμογή σας: Thunderbird, "
+"Evolution, KDE Kontact, iCal… - απλώς προσθέστε το ημερολόγιο ως "
+"απομακρυσμένο ημερολόγιο στην εφαρμογή σας). Μπορείτε να κάνετε λήψη των "
+"εργασιών σας ως αρχεία ICS χρησιμοποιώντας το κουμπί λήψης για κάθε "
+"ημερολόγιο."
+
+#. TRANSLATORS rc/components/AppNavigation/AppNavigationSettings.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Default list"
+msgstr "Προεπιλεγμένη λίστα"
+
+#. TRANSLATORS rc/components/AppNavigation/AppNavigationSettings.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:6
+msgid "Visibility of Smart Collections"
+msgstr "Ορατότητα Έξυπνων Συλλογών"
+
+#. TRANSLATORS rc/components/AppNavigation/AppNavigationSettings.vue:94
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Hidden"
+msgstr "Κρυφό"
+
+#. TRANSLATORS rc/components/AppNavigation/AppNavigationSettings.vue:98
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Visible"
+msgstr "Ορατό"
+
+#. TRANSLATORS rc/components/AppNavigation/AppNavigationSettings.vue:102
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid "Automatic"
+msgstr "Αυτόματο"
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarShare.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "Share with users or groups"
+msgstr "Κοινή χρήση με χρήστες ή ομάδες"
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarShare.vue:99
+#: /app/specialVueFakeDummyForL10nScript.js:16
+msgid "No users or groups"
+msgstr "Δεν υπάρχουν χρήστες ή ομάδες"
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarSharee.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:18
+msgid "Can edit"
+msgstr "Μπορεί να επεξεργαστεί"
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarSharee.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:20
+msgid "Unshare with {displayName}"
+msgstr "Κατάργηση κοινής χρήσης με {displayName}"
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarSharee.vue:120
+#: /app/specialVueFakeDummyForL10nScript.js:22
+msgid "Unable to delete the share."
+msgstr "Αδυναμία διαγραφής κοινόχρηστου."
+
+#. TRANSLATORS rc/components/AppNavigation/CalendarSharee.vue:138
+#: /app/specialVueFakeDummyForL10nScript.js:24
+msgid "Unable to change permissions."
+msgstr "Αδυναμία αλλαγής δικαιωμάτων."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:26
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:28
+msgid "Copy private link"
+msgstr "Αντιγραφή ιδιωτικού συνδέσμου"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:30
+msgid "Copied"
+msgstr "Αντιγράφηκε"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:32
+msgid "Cannot copy"
+msgstr "Δεν είναι δυνατή η αντιγραφή"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:82
+#. TRANSLATORS rc/views/AppSidebar.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:34
+#: /app/specialVueFakeDummyForL10nScript.js:308
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:97
+#. TRANSLATORS rc/views/AppSidebar.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:36
+#: /app/specialVueFakeDummyForL10nScript.js:310
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: /app/specialVueFakeDummyForL10nScript.js:36
+msgid "Unshare"
+msgstr "Αναίρεση διαμοιρασμού"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:123
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:53
+#. TRANSLATORS rc/views/AppNavigation.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:38
+#: /app/specialVueFakeDummyForL10nScript.js:270
+#: /app/specialVueFakeDummyForL10nScript.js:292
+msgid "Cancel"
+msgstr "Aκύρωση"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:128
+#. TRANSLATORS rc/views/AppNavigation.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:40
+#: /app/specialVueFakeDummyForL10nScript.js:294
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:239
+#: /app/specialVueFakeDummyForL10nScript.js:42
+msgid ""
+"This will delete the calendar \"{calendar}\" and all corresponding events "
+"and tasks."
+msgstr ""
+"Θα διαγραφεί το ημερολόγιο \"{calendar}\" και όλα τα σχετικά γεγονότα και "
+"εργασίες."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:240
+#: /app/specialVueFakeDummyForL10nScript.js:44
+msgid "This will unshare the calendar \"{calendar}\"."
+msgstr "Αυτό θα καταργήσει την κοινή χρήση του ημερολογίου \"{calendar}\"."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:243
+#: /app/specialVueFakeDummyForL10nScript.js:46
+msgid "This will delete the list \"{list}\" and all corresponding tasks."
+msgstr "Αυτό θα διαγράψει τη λίστα \"{list}\" και όλες τις αντίστοιχες εργασίες."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:244
+#: /app/specialVueFakeDummyForL10nScript.js:48
+msgid "This will unshare the list \"{list}\"."
+msgstr "Αυτό θα καταργήσει την κοινή χρήση της λίστας \"{list}\"."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:435
+#: /app/specialVueFakeDummyForL10nScript.js:50
+msgid "Calendar link copied to clipboard."
+msgstr "Ο σύνδεσμος του ημερολογίου αντιγράφηκε στο πρόχειρο."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:436
+#: /app/specialVueFakeDummyForL10nScript.js:52
+msgid "List link copied to clipboard."
+msgstr "Ο σύνδεσμος λίστας αντιγράφηκε στο πρόχειρο."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:443
+#: /app/specialVueFakeDummyForL10nScript.js:54
+msgid "Calendar link could not be copied to clipboard."
+msgstr "Αδυναμία αντιγραφής συνδέσμου ημερολογίου στο πρόχειρο."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:444
+#: /app/specialVueFakeDummyForL10nScript.js:56
+msgid "List link could not be copied to clipboard."
+msgstr "Δεν ήταν δυνατή η αντιγραφή του συνδέσμου λίστας στο πρόχειρο."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:491
+#. TRANSLATORS rc/views/AppNavigation.vue:425
+#: /app/specialVueFakeDummyForL10nScript.js:58
+#: /app/specialVueFakeDummyForL10nScript.js:296
+msgid "The name \"{calendar}\" is already used."
+msgstr "Το όνομα \"{calendar}\" είναι σε χρήση."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:493
+#. TRANSLATORS rc/views/AppNavigation.vue:427
+#: /app/specialVueFakeDummyForL10nScript.js:60
+#: /app/specialVueFakeDummyForL10nScript.js:298
+msgid "An empty name is not allowed."
+msgstr "Δεν επιτρέπεται κενό όνομα."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:515
+#: /app/specialVueFakeDummyForL10nScript.js:62
+msgid "An error occurred, unable to delete the calendar."
+msgstr "Παρουσιάστηκε σφάλμα, δεν δύναται να διαγραφεί το ημερολόγιο."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:516
+#: /app/specialVueFakeDummyForL10nScript.js:64
+msgid "An error occurred, unable to delete the list."
+msgstr "Παρουσιάστηκε σφάλμα, δεν ήταν δυνατή η διαγραφή της λίστας."
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:250
+#: /app/specialVueFakeDummyForL10nScript.js:66
+msgid "Deleting the calendar in {countdown} second"
+msgid_plural "Deleting the calendar in {countdown} seconds"
+msgstr[0] "Διαγραφή ημερολογίου σε {countdown} δεύτερα"
+msgstr[1] "Διαγραφή ημερολογίου σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:251
+#: /app/specialVueFakeDummyForL10nScript.js:68
+msgid "Unsharing the calendar in {countdown} second"
+msgid_plural "Unsharing the calendar in {countdown} seconds"
+msgstr[0] "Κατάργηση κοινής χρήσης ημερολογίου σε {countdown} δεύτερα"
+msgstr[1] "Κατάργηση κοινής χρήσης ημερολογίου σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:254
+#: /app/specialVueFakeDummyForL10nScript.js:70
+msgid "Deleting the list in {countdown} second"
+msgid_plural "Deleting the list in {countdown} seconds"
+msgstr[0] "Διαγραφή λίστας σε {countdown} δεύτερα"
+msgstr[1] "Διαγραφή λίστας σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:255
+#: /app/specialVueFakeDummyForL10nScript.js:72
+msgid "Unsharing the list in {countdown} second"
+msgid_plural "Unsharing the list in {countdown} seconds"
+msgstr[0] "Κατάργηση κοινής χρήσης λίστας σε {countdown} δεύτερα"
+msgstr[1] "Κατάργηση κοινής χρήσης λίστας σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/components/AppNavigation/ListItemCalendar.vue:277
+#: /app/specialVueFakeDummyForL10nScript.js:74
+msgid "Shared with {num} entity"
+msgid_plural "Shared with {num} entities"
+msgstr[0] "Κοινη χρήση με {num} οντότητα"
+msgstr[1] "Κοινη χρήση με {num} οντότητες"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:24
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:76
+#: /app/specialVueFakeDummyForL10nScript.js:82
+msgid "Trash bin"
+msgstr "Κάδος απορριμμάτων"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:78
+msgid "Loading deleted calendars, tasks and events."
+msgstr "Φόρτωση διαγραμμένων ημερολογίων, εργασιών και συμβάντων."
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:80
+msgid "You do not have any deleted calendars, tasks or events."
+msgstr "Δεν έχετε διαγραμμένα ημερολόγια, εργασίες ή συμβάντα."
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:84
+msgid "Name"
+msgstr "Όνομα"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:86
+msgid "Deleted"
+msgstr "Διαγραμμένα"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:88
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:90
+msgid "Delete permanently"
+msgstr "Διαγραφή οριστικά"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:92
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:274
+#: /app/specialVueFakeDummyForL10nScript.js:92
+#: /app/specialVueFakeDummyForL10nScript.js:112
+msgid "Empty trash bin"
+msgstr "Άδειασμα κάδου"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:161
+#: /app/specialVueFakeDummyForL10nScript.js:94
+msgid "Untitled task"
+msgstr "Εργασία χωρίς όνομα"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:163
+#: /app/specialVueFakeDummyForL10nScript.js:96
+msgid "Untitled event"
+msgstr "Συμβάν χωρίς όνομα"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:165
+#: /app/specialVueFakeDummyForL10nScript.js:98
+msgid "Untitled journal"
+msgstr "Μπλοκ σημειώσεων χωρίς τίτλο"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:167
+#: /app/specialVueFakeDummyForL10nScript.js:100
+msgid "Untitled item"
+msgstr "Στοιχείο χωρίς όνομα"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:170
+#: /app/specialVueFakeDummyForL10nScript.js:102
+msgid "Unknown calendar"
+msgstr "Άγνωστο ημερολόγιο"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:226
+#: /app/specialVueFakeDummyForL10nScript.js:104
+msgid "Could not load deleted calendars and objects"
+msgstr "Δεν ήταν δυνατή η φόρτωση διαγραμμένων ημερολογίων και αντικειμένων"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:244
+#: /app/specialVueFakeDummyForL10nScript.js:106
+msgid "Could not delete calendar or event"
+msgstr "Δεν ήταν δυνατή η διαγραφή ημερολογίου ή συμβάντος"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:268
+#: /app/specialVueFakeDummyForL10nScript.js:108
+msgid "Could not restore calendar or event"
+msgstr "Δεν ήταν δυνατή η επαναφορά ημερολογίου ή συμβάντος"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:273
+#: /app/specialVueFakeDummyForL10nScript.js:110
+msgid "Do you really want to empty the trash bin?"
+msgstr "Θέλετε πραγματικά να αδειάσετε τον κάδο απορριμμάτων;"
+
+#. TRANSLATORS rc/components/AppNavigation/Trashbin.vue:89
+#: /app/specialVueFakeDummyForL10nScript.js:114
+msgid "Elements in the trash bin are deleted after {numDays} day"
+msgid_plural "Elements in the trash bin are deleted after {numDays} days"
+msgstr[0] "Θέλετε πραγματικά να αδειάσετε τον κάδο απορριμμάτων;"
+msgstr[1] ""
+"Τα περιεχόμενα στον κάδο απορριμάτων θα διαγραφούν μετά από {numDays} ημέρα"
+
+#. TRANSLATORS rc/components/AppSidebar/CalendarPickerItem.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:116
+msgid "Select a calendar"
+msgstr "Επιλέξτε ένα ημερολόγιο"
+
+#. TRANSLATORS rc/components/AppSidebar/CalendarPickerItem.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:118
+msgid "No calendar matches the search."
+msgstr "Κανένα ημερολόγιο δεν ταιριάζει με την αναζήτηση."
+
+#. TRANSLATORS rc/components/AppSidebar/DatetimePickerItem.vue:46
+#. TRANSLATORS rc/components/AppSidebar/DatetimePickerItem.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:120
+#: /app/specialVueFakeDummyForL10nScript.js:124
+msgid "Set date"
+msgstr "Ορισμός ημερομηνίας"
+
+#. TRANSLATORS rc/components/AppSidebar/DatetimePickerItem.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:122
+msgid "Set time"
+msgstr "Ορισμός ώρας"
+
+#. TRANSLATORS rc/components/AppSidebar/DatetimePickerItem.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:126
+msgid "Delete date"
+msgstr "Διαγραφή ημερομηνίας"
+
+#. TRANSLATORS rc/components/AppSidebar/NotesItem.vue:93
+#: /app/specialVueFakeDummyForL10nScript.js:128
+msgid "Click here to add a note."
+msgstr "Κάντε κλικ εδώ για να προσθέσετε μια σημείωση."
+
+#. TRANSLATORS rc/components/AppSidebar/SliderItem.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:130
+msgid "Set value"
+msgstr "Ορισμός τιμής"
+
+#. TRANSLATORS rc/components/AppSidebar/SliderItem.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:132
+msgid "Delete value"
+msgstr "Διαγραφή τιμής"
+
+#. TRANSLATORS rc/components/AppSidebar/TagsItem.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:134
+msgid "Add this as a new tag"
+msgstr "Προσθήκη ως νέα ετικέτα"
+
+#. TRANSLATORS rc/components/AppSidebar/TagsItem.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:136
+msgid "No tag available. Create one!"
+msgstr "Δεν υπάρχει διαθέσιμη ετικέτα. Δημιουργήστε μια!"
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:138
+msgid "Delete all completed tasks."
+msgstr "Διαγραφή όλων των ολοκληρωμένων εργασιών."
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:140
+msgid "Delete completed tasks."
+msgstr "Διαγραφή ολοκληρωμένων εργασιών."
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:142
+msgid "Deleted all completed tasks from calendar \"{calendar}\"."
+msgstr ""
+"Διαγραφή όλων των ολοκληρωμένων εργασιών από το ημερολόγιο \"{calendar}\"."
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:144
+msgid "No errors"
+msgstr "Κανένα σφάλμα"
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:146
+msgid "Open your browser console for more details"
+msgstr "Ανοίξτε την κονσόλα του περιηγητή για περισσότερες λεπτομέρειες"
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:148
+msgid ""
+"This will delete {taskCount} completed task and its subtasks from calendar "
+"\"{calendar}\"."
+msgid_plural ""
+"This will delete {taskCount} completed tasks and their subtasks from "
+"calendar \"{calendar}\"."
+msgstr[0] ""
+"Θα διαγραφή η ολοκληρωμένη εργασία του {taskCount} και των υπο εργασιών από "
+"το ημερολόγιο \"{calendar}\"."
+msgstr[1] ""
+"Θα διαγραφούν ολοκληρωμένες εργασίες του {taskCount} και των υπο εργασιών "
+"από το ημερολόγιο \"{calendar}\"."
+
+#. TRANSLATORS rc/components/DeleteCompletedModal.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:150
+msgid "Could not delete {failedCount} task."
+msgid_plural "Could not delete {failedCount} tasks."
+msgstr[0] "Αδυναμία διαγραφής εργασίας {failedCount}."
+msgstr[1] "Αδυναμία διαγραφής εργασιών {failedCount}."
+
+#. TRANSLATORS rc/components/Header.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:152
+msgid "Add an important task to \"{calendar}\"…"
+msgstr "Προσθήκη σημαντικής εργασίας στο \"{calendar}\"…"
+
+#. TRANSLATORS rc/components/Header.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:154
+msgid "Add a task due today to \"{calendar}\"…"
+msgstr "Προσθέστε εργασία για σήμερα στο \"{calendar}\"…"
+
+#. TRANSLATORS rc/components/Header.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:156
+msgid "Add a current task to \"{calendar}\"…"
+msgstr "Προσθήκη τρέχουσας εργασίας στο \"{calendar}\"…"
+
+#. TRANSLATORS rc/components/Header.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:158
+msgid "Add a task to \"{calendar}\"…"
+msgstr "Προσθήκη έργασίας στο \"{calendar}\"…"
+
+#. TRANSLATORS rc/components/LoadCompletedButton.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:160
+msgid "Load all completed tasks."
+msgstr "Φόρτωση όλων των ολοκληρωμένων εργασιών."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:24
+#: /app/specialVueFakeDummyForL10nScript.js:162
+msgid "Change sort order"
+msgstr "Αλλαγή σειράς ταξινόμησης"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:103
+#: /app/specialVueFakeDummyForL10nScript.js:164
+msgid "Relevance"
+msgstr "Συνάφεια"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:104
+#: /app/specialVueFakeDummyForL10nScript.js:166
+msgid "Sort by completed state, due date, priority, start date and summary."
+msgstr ""
+"Ταξινόμηση κατά ολοκληρωμένη κατάσταση, ημερομηνία λήξης, προτεραιότητα, "
+"ημερομηνία έναρξης και σύνοψη."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:168
+msgid "Start date"
+msgstr "Ημερομηνία έναρξης"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:110
+#: /app/specialVueFakeDummyForL10nScript.js:170
+msgid "Sort by start date and summary."
+msgstr "Ταξινόμηση ανά ημερομηνία έναρξης και σύνοψη."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:172
+msgid "Due date"
+msgstr "Ημερομηνία λήξης"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:116
+#: /app/specialVueFakeDummyForL10nScript.js:174
+msgid "Sort by due date and summary."
+msgstr "Ταξινόμηση ανά ημερομηνία λήξης και σύνοψη."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:122
+#: /app/specialVueFakeDummyForL10nScript.js:176
+msgid "Created date"
+msgstr "Ημερομηνία δημιουργίας"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:123
+#: /app/specialVueFakeDummyForL10nScript.js:178
+msgid "Sort by created date and summary."
+msgstr "Ταξινόμηση κατά ημερομηνία δημιουργίας και σύνοψη."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:128
+#: /app/specialVueFakeDummyForL10nScript.js:180
+msgid "Last modified"
+msgstr "Τελευταία τροποποίηση"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:129
+#: /app/specialVueFakeDummyForL10nScript.js:182
+msgid "Sort by last-modified date and summary."
+msgstr "Ταξινόμηση κατά ημερομηνία και σύνοψη τελευταίας τροποποίησης."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:134
+#: /app/specialVueFakeDummyForL10nScript.js:184
+msgid "Completed date"
+msgstr "Ημερομηνία ολοκλήρωσης"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:135
+#: /app/specialVueFakeDummyForL10nScript.js:186
+msgid "Sort by completed date."
+msgstr "Ταξινόμηση κατά ημερομηνία ολοκλήρωσης"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:140
+#: /app/specialVueFakeDummyForL10nScript.js:188
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:141
+#: /app/specialVueFakeDummyForL10nScript.js:190
+msgid "Sort by priority and summary."
+msgstr "Ταξινόμηση κατά προτεραιότητα και σύνοψη."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:146
+#: /app/specialVueFakeDummyForL10nScript.js:192
+msgid "Alphabetically"
+msgstr "Αλφαβητικά"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:147
+#: /app/specialVueFakeDummyForL10nScript.js:194
+msgid "Sort by summary and priority."
+msgstr "Ταξινόμηση κατά σύνοψη και προτεραιότητα."
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:152
+#: /app/specialVueFakeDummyForL10nScript.js:196
+msgid "Manually"
+msgstr "Χειροκίνητα"
+
+#. TRANSLATORS rc/components/SortorderDropdown.vue:153
+#: /app/specialVueFakeDummyForL10nScript.js:198
+msgid "Sort by manual order."
+msgstr "Ταξινόμηση με χειροκίνητη σειρά."
+
+#. TRANSLATORS rc/components/TaskBody.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:200
+#, javascript-format
+msgid "{complete} % completed"
+msgstr "Ολοκληρώθηκε το {complete} %"
+
+#. TRANSLATORS rc/components/TaskBody.vue:77
+#: /app/specialVueFakeDummyForL10nScript.js:202
+msgid "Task has hidden subtasks"
+msgstr "Η εργασίας έχει κρυφές δευτερεύουσες υποεργασίες"
+
+#. TRANSLATORS rc/components/TaskBody.vue:78
+#: /app/specialVueFakeDummyForL10nScript.js:204
+msgid "Task is pinned"
+msgstr "Η εργασία είναι καρφιτσωμένη"
+
+#. TRANSLATORS rc/components/TaskBody.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:206
+msgid "Task has a note"
+msgstr "Η εργασία έχει μια σημείωση"
+
+#. TRANSLATORS rc/components/TaskBody.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:208
+msgid "Add subtask"
+msgstr "Προσθήκη υποεργασίας"
+
+#. TRANSLATORS rc/components/TaskBody.vue:103
+#: /app/specialVueFakeDummyForL10nScript.js:210
+msgid "Show subtasks"
+msgstr "Εμφάνιση υποεργασιών"
+
+#: /app/specialVueFakeDummyForL10nScript.js:210
+msgid "Hide subtasks"
+msgstr "Απόκρυψη υποεργασιών"
+
+#. TRANSLATORS rc/components/TaskBody.vue:111
+#: /app/specialVueFakeDummyForL10nScript.js:212
+msgid "Show closed subtasks"
+msgstr "Εμφάνιση ολοκληρωμένων υποεργασιών"
+
+#: /app/specialVueFakeDummyForL10nScript.js:212
+msgid "Hide closed subtasks"
+msgstr "Απόκρυψη ολοκληρωμένων υποεργασιών"
+
+#. TRANSLATORS rc/components/TaskBody.vue:119
+#: /app/specialVueFakeDummyForL10nScript.js:214
+msgid "Delete task"
+msgstr "Διαγραφή εργασίας"
+
+#. TRANSLATORS rc/components/TaskBody.vue:137
+#: /app/specialVueFakeDummyForL10nScript.js:216
+msgid "Toggle starred"
+msgstr "Εναλλαγή αστεριού"
+
+#. TRANSLATORS rc/components/TaskBody.vue:238
+#: /app/specialVueFakeDummyForL10nScript.js:218
+msgid "[Yesterday]"
+msgstr "[Χθες]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:240
+#: /app/specialVueFakeDummyForL10nScript.js:220
+msgid "[Today]"
+msgstr "[Σήμερα]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:242
+#: /app/specialVueFakeDummyForL10nScript.js:222
+msgid "[Tomorrow]"
+msgstr "[Αύριο]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:252
+#: /app/specialVueFakeDummyForL10nScript.js:224
+msgid "[Completed yesterday]"
+msgstr "[Ολοκληρώθηκε εχθές]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:254
+#: /app/specialVueFakeDummyForL10nScript.js:226
+msgid "[Completed today]"
+msgstr "[Ολοκληρώθηκε σήμερα]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:256
+#: /app/specialVueFakeDummyForL10nScript.js:228
+msgid "[Completed tomorrow]"
+msgstr "[Ολοκληρώνεται αύριο]"
+
+#. TRANSLATORS rc/components/TaskBody.vue:276
+#: /app/specialVueFakeDummyForL10nScript.js:230
+msgid "[Yesterday at] LT"
+msgstr "[Χθες στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:278
+#: /app/specialVueFakeDummyForL10nScript.js:232
+msgid "[Today at] LT"
+msgstr "[Σήμερα στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:280
+#: /app/specialVueFakeDummyForL10nScript.js:234
+msgid "[Tomorrow at] LT"
+msgstr "[Αύριο στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:282
+#: /app/specialVueFakeDummyForL10nScript.js:236
+#: /app/specialVueFakeDummyForL10nScript.js:238
+#: /app/specialVueFakeDummyForL10nScript.js:240
+msgid "L [at] LT"
+msgstr "L [στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:293
+#. TRANSLATORS rc/views/AppSidebar.vue:379
+#: /app/specialVueFakeDummyForL10nScript.js:242
+#: /app/specialVueFakeDummyForL10nScript.js:332
+msgid "[Completed yesterday at] LT"
+msgstr "[Ολοκληρώθηκε χθές στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:295
+#. TRANSLATORS rc/views/AppSidebar.vue:380
+#: /app/specialVueFakeDummyForL10nScript.js:244
+#: /app/specialVueFakeDummyForL10nScript.js:334
+msgid "[Completed today at] LT"
+msgstr "[Ολοκληρώθηκε σήμερα στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:297
+#: /app/specialVueFakeDummyForL10nScript.js:246
+msgid "[Completed tomorrow at] LT"
+msgstr "[Ολοκληρώνεται αύριο στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:299
+#: /app/specialVueFakeDummyForL10nScript.js:248
+#: /app/specialVueFakeDummyForL10nScript.js:250
+#: /app/specialVueFakeDummyForL10nScript.js:252
+msgid "[Completed] L [at] LT"
+msgstr "[Ολοκληρώθηκε] L [στις] LT"
+
+#. TRANSLATORS rc/components/TaskBody.vue:354
+#: /app/specialVueFakeDummyForL10nScript.js:254
+msgid "Add a subtask to \"{task}\"…"
+msgstr "Προσθήκη υποέργου σε \"{task}\"…"
+
+#. TRANSLATORS rc/components/TaskBody.vue:128
+#. TRANSLATORS rc/views/AppSidebar.vue:124
+#: /app/specialVueFakeDummyForL10nScript.js:256
+#: /app/specialVueFakeDummyForL10nScript.js:454
+msgid "Deleting the task in {countdown} second"
+msgid_plural "Deleting the task in {countdown} seconds"
+msgstr[0] "Διαγραφή εργασίας σε {countdown} δεύτερα"
+msgstr[1] "Διαγραφή εργασίας σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/components/TaskCheckbox.vue:77
+#: /app/specialVueFakeDummyForL10nScript.js:258
+msgid "Task is cancelled"
+msgstr "Η εργασία ακυρώθηκε"
+
+#. TRANSLATORS rc/components/TaskCheckbox.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:260
+msgid "Task is completed"
+msgstr "Η εργασία ολοκληρώθηκε"
+
+#. TRANSLATORS rc/components/TaskCheckbox.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:262
+msgid "Task is read-only"
+msgstr "Η εργασία είναι μόνο για ανάγνωση"
+
+#. TRANSLATORS rc/components/TaskCheckbox.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:264
+msgid "Task is not completed"
+msgstr "Η εργασία δεν ολοκληρώθηκε"
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:31
+#. TRANSLATORS rc/views/Dashboard.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:266
+#: /app/specialVueFakeDummyForL10nScript.js:462
+msgid "Create a new task"
+msgstr "Δημιουργία νέας εργασίας"
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:268
+msgid "Task summary"
+msgstr "Περίληψη εργασίας"
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:272
+msgid "Create task"
+msgstr "Δημιουργία εργασίας"
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:274
+msgid "Creating the new task…"
+msgstr "Δημιουργία νέας εργασίας ..."
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:276
+msgid "\"{task}\" was added to \"{calendar}\""
+msgstr "\"{task}\" προστέθηκε στο \"{calendar}\""
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:278
+msgid "Open task"
+msgstr "Άνοιγμα εργασίας"
+
+#. TRANSLATORS rc/components/TaskCreateDialog.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:280
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#. TRANSLATORS rc/views/AppContent/Calendar.vue:91
+#: /app/specialVueFakeDummyForL10nScript.js:282
+msgid "%n Completed Task"
+msgid_plural "%n Completed Tasks"
+msgstr[0] "%n Ολοκληρωμένη Εργασία"
+msgstr[1] "%n Ολοκληρωμένες Εργασίες"
+
+#. TRANSLATORS rc/views/AppContent/Week.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:286
+msgid "Tomorrow"
+msgstr "Αύριο"
+
+#. TRANSLATORS rc/views/AppNavigation.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:288
+msgid "Add List…"
+msgstr "Προσθήκη λίστας…"
+
+#. TRANSLATORS rc/views/AppNavigation.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:290
+msgid "New List"
+msgstr "Νέα λίστα"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:300
+msgid "All day"
+msgstr "Ολοήμερο"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:302
+msgid "Unpin"
+msgstr "Ξεκαρφίτσωμα"
+
+#: /app/specialVueFakeDummyForL10nScript.js:302
+msgid "Pin"
+msgstr "Καρφίτσωμα"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:93
+#: /app/specialVueFakeDummyForL10nScript.js:304
+msgid "Show in Calendar"
+msgstr "Εμφάνιση στο ημερολόγιο"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:101
+#: /app/specialVueFakeDummyForL10nScript.js:306
+msgid "Edit title"
+msgstr "Επεξεργασία τίτλου"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:139
+#: /app/specialVueFakeDummyForL10nScript.js:312
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:149
+#: /app/specialVueFakeDummyForL10nScript.js:314
+msgid "Select a classification"
+msgstr "Επιλέξτε μια ταξινόμηση"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:156
+#: /app/specialVueFakeDummyForL10nScript.js:316
+msgid "Select a status"
+msgstr "Επιλέξτε κατάσταση"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:189
+#: /app/specialVueFakeDummyForL10nScript.js:318
+msgid "Select tags"
+msgstr "Επιλέξτε ετικέτες"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:202
+#: /app/specialVueFakeDummyForL10nScript.js:320
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:217
+#: /app/specialVueFakeDummyForL10nScript.js:322
+msgid "Reminders"
+msgstr "Υπενθυμίσεις"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:225
+#: /app/specialVueFakeDummyForL10nScript.js:324
+msgid "Repeat"
+msgstr "Επανάληψη"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:325
+#: /app/specialVueFakeDummyForL10nScript.js:326
+msgid "When shared show full event"
+msgstr "Όταν είναι σε κοινή χρήση να προβάλλεται το πλήρες συμβάν"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:330
+#: /app/specialVueFakeDummyForL10nScript.js:328
+msgid "When shared show only busy"
+msgstr "Όταν είναι σε κοινή χρήση να προβάλλονται μόνο απασχολημένοι "
+
+#. TRANSLATORS rc/views/AppSidebar.vue:336
+#: /app/specialVueFakeDummyForL10nScript.js:330
+msgid "When shared hide this event"
+msgstr "Απόκρυψη, όταν είναι σε κοινή χρήση"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:381
+#: /app/specialVueFakeDummyForL10nScript.js:336
+#: /app/specialVueFakeDummyForL10nScript.js:342
+msgid "[Completed] L"
+msgstr "[Ολοκληρώθηκε] L"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:382
+#: /app/specialVueFakeDummyForL10nScript.js:338
+msgid "[Completed last] dddd [at] LT"
+msgstr "[Ολοκληρώθηκε τελευταία] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:383
+#: /app/specialVueFakeDummyForL10nScript.js:340
+msgid "[Completed] dddd [at] LT"
+msgstr "[Ολοκληρώθηκε] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:392
+#: /app/specialVueFakeDummyForL10nScript.js:344
+msgid "[Last modified yesterday at] LT"
+msgstr "[Τελευταία τροποποίηση χθες στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:393
+#: /app/specialVueFakeDummyForL10nScript.js:346
+msgid "[Last modified today at] LT"
+msgstr "[Τελευταία τροποποίηση σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:394
+#: /app/specialVueFakeDummyForL10nScript.js:348
+#: /app/specialVueFakeDummyForL10nScript.js:354
+msgid "[Last modified] L"
+msgstr "[Τελευταία τροποποίηση] L"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:395
+#: /app/specialVueFakeDummyForL10nScript.js:350
+msgid "[Last modified last] dddd [at] LT"
+msgstr "[Τελευταία τροποποίηση την προηγούμενη] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:396
+#: /app/specialVueFakeDummyForL10nScript.js:352
+msgid "[Last modified] dddd [at] LT"
+msgstr "[Τελευταία τροποποίηση] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:405
+#: /app/specialVueFakeDummyForL10nScript.js:356
+msgid "[Created yesterday at] LT"
+msgstr "[Δημιουργήθηκε χθες στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:406
+#: /app/specialVueFakeDummyForL10nScript.js:358
+msgid "[Created today at] LT"
+msgstr "[Δημιουργήθηκε σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:407
+#: /app/specialVueFakeDummyForL10nScript.js:360
+#: /app/specialVueFakeDummyForL10nScript.js:366
+msgid "[Created] L"
+msgstr "[Δημιουργήθηκε] L"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:408
+#: /app/specialVueFakeDummyForL10nScript.js:362
+msgid "[Created last] dddd [at] LT"
+msgstr "[Δημιουργήθηκε την τελευταία] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:409
+#: /app/specialVueFakeDummyForL10nScript.js:364
+msgid "[Created] dddd [at] LT"
+msgstr "[Δημιουργήθηκε] dddd [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:418
+#: /app/specialVueFakeDummyForL10nScript.js:368
+msgid "Needs action"
+msgstr "Χρειάζεται ενέργεια"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:430
+#: /app/specialVueFakeDummyForL10nScript.js:372
+msgid "In process"
+msgstr "Σε εξέλιξη"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:436
+#: /app/specialVueFakeDummyForL10nScript.js:374
+msgid "Canceled"
+msgstr "Ακυρώθηκε"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:444
+#: /app/specialVueFakeDummyForL10nScript.js:376
+msgid "Clear status"
+msgstr "Εκκαθάριση κατάστασης"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:502
+#: /app/specialVueFakeDummyForL10nScript.js:378
+msgid "Loading task from server."
+msgstr "Φόρτωση εργασίας από διακομιστή."
+
+#: /app/specialVueFakeDummyForL10nScript.js:378
+msgid "Task not found!"
+msgstr "Δεν βρέθηκε εργασία!"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:542
+#: /app/specialVueFakeDummyForL10nScript.js:380
+msgid "[Starts today]"
+msgstr "[Αρχίζει σήμερα]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:544
+#: /app/specialVueFakeDummyForL10nScript.js:382
+msgid "[Starts tomorrow]"
+msgstr "[Αρχίζει αύριο]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:546
+#: /app/specialVueFakeDummyForL10nScript.js:384
+#: /app/specialVueFakeDummyForL10nScript.js:392
+msgid "[Starts on] LL"
+msgstr "[Ξεκινά σε] LL"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:548
+#: /app/specialVueFakeDummyForL10nScript.js:386
+msgid "[Started yesterday]"
+msgstr "[Ξεκίνησε εχθές]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:550
+#: /app/specialVueFakeDummyForL10nScript.js:388
+#: /app/specialVueFakeDummyForL10nScript.js:390
+msgid "[Started on] LL"
+msgstr "[Ξεκίνησε] LL"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:566
+#: /app/specialVueFakeDummyForL10nScript.js:394
+msgid "[Started today at] LT"
+msgstr "[Ξεκίνησε σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:569
+#: /app/specialVueFakeDummyForL10nScript.js:396
+msgid "[Starts today at] LT"
+msgstr "[Ξεκινά σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:573
+#: /app/specialVueFakeDummyForL10nScript.js:398
+msgid "[Starts tomorrow at] LT"
+msgstr "[Ξεκινά αύριο στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:575
+#: /app/specialVueFakeDummyForL10nScript.js:400
+#: /app/specialVueFakeDummyForL10nScript.js:408
+msgid "[Starts on] LL [at] LT"
+msgstr "[Ξεκινά σε] LL [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:577
+#: /app/specialVueFakeDummyForL10nScript.js:402
+msgid "[Started yesterday at] LT"
+msgstr "[Ξεκίνησε εχθές στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:579
+#: /app/specialVueFakeDummyForL10nScript.js:404
+#: /app/specialVueFakeDummyForL10nScript.js:406
+msgid "[Started on] LL [at] LT"
+msgstr "[Ξεκίνησε] LL [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:592
+#: /app/specialVueFakeDummyForL10nScript.js:410
+msgid "Set start date"
+msgstr "Ορισμός ημερομηνίας έναρξης"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:600
+#. TRANSLATORS rc/views/Dashboard.vue:153
+#: /app/specialVueFakeDummyForL10nScript.js:412
+#: /app/specialVueFakeDummyForL10nScript.js:472
+msgid "[Due today]"
+msgstr "[Λήγει σήμερα]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:602
+#. TRANSLATORS rc/views/Dashboard.vue:155
+#: /app/specialVueFakeDummyForL10nScript.js:414
+#: /app/specialVueFakeDummyForL10nScript.js:474
+msgid "[Due tomorrow]"
+msgstr "[Λήγει αύριο]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:604
+#: /app/specialVueFakeDummyForL10nScript.js:416
+#: /app/specialVueFakeDummyForL10nScript.js:424
+msgid "[Due on] LL"
+msgstr "[Έως στις] LL"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:606
+#: /app/specialVueFakeDummyForL10nScript.js:418
+msgid "[Was due yesterday]"
+msgstr "[Έληγε εχθές]"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:608
+#: /app/specialVueFakeDummyForL10nScript.js:420
+#: /app/specialVueFakeDummyForL10nScript.js:422
+msgid "[Was due on] LL"
+msgstr "[Έληγε στις] LL"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:624
+#: /app/specialVueFakeDummyForL10nScript.js:426
+msgid "[Was due today at] LT"
+msgstr "[Έληγε σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:627
+#. TRANSLATORS rc/views/Dashboard.vue:165
+#: /app/specialVueFakeDummyForL10nScript.js:428
+#: /app/specialVueFakeDummyForL10nScript.js:484
+msgid "[Due today at] LT"
+msgstr "[Λήξη σήμερα στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:631
+#. TRANSLATORS rc/views/Dashboard.vue:167
+#: /app/specialVueFakeDummyForL10nScript.js:430
+#: /app/specialVueFakeDummyForL10nScript.js:486
+msgid "[Due tomorrow at] LT"
+msgstr "[Λήγει αύριο στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:633
+#: /app/specialVueFakeDummyForL10nScript.js:432
+#: /app/specialVueFakeDummyForL10nScript.js:440
+msgid "[Due on] LL [at] LT"
+msgstr "[Λήγει σε] LL [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:635
+#: /app/specialVueFakeDummyForL10nScript.js:434
+msgid "[Was due yesterday at] LT"
+msgstr "[Έληγε χθες στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:637
+#: /app/specialVueFakeDummyForL10nScript.js:436
+#: /app/specialVueFakeDummyForL10nScript.js:438
+msgid "[Was due on] LL [at] LT"
+msgstr "[Έληγε την] LL [στις] LT"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:650
+#: /app/specialVueFakeDummyForL10nScript.js:442
+msgid "Set due date"
+msgstr "Ορισμός ημερομηνίας λήξης"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:670
+#: /app/specialVueFakeDummyForL10nScript.js:444
+msgid "Priority {priority}: low"
+msgstr "Προτεραιότητα {priority}: χαμηλή"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:673
+#: /app/specialVueFakeDummyForL10nScript.js:446
+msgid "Priority {priority}: medium"
+msgstr "Προτεραιότητα {priority}: μεσαία"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:676
+#: /app/specialVueFakeDummyForL10nScript.js:448
+msgid "Priority {priority}: high"
+msgstr "Προτεραιότητα {priority}: υψηλή"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:678
+#: /app/specialVueFakeDummyForL10nScript.js:450
+msgid "No priority assigned"
+msgstr "Δεν έχει οριστεί προτεραιότητα"
+
+#. TRANSLATORS rc/views/AppSidebar.vue:693
+#: /app/specialVueFakeDummyForL10nScript.js:452
+#, javascript-format
+msgid "{percent} % completed"
+msgstr "{complete} % ολοκληρωμένες"
+
+#. TRANSLATORS rc/views/Dashboard.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:456
+msgid "No upcoming tasks"
+msgstr "Δεν υπάρχουν επερχόμενες εργασίες"
+
+#. TRANSLATORS rc/views/Dashboard.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:458
+msgid "upcoming tasks"
+msgstr "επερχόμενες εργασίες"
+
+#. TRANSLATORS rc/views/Dashboard.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:460
+msgid "No tasks today"
+msgstr "Δεν υπάρχουν εργασίες σήμερα"
+
+#. TRANSLATORS rc/views/Dashboard.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:464
+msgid "Mark as done"
+msgstr "Σήμανση ως ολοκληρωμένου"
+
+#. TRANSLATORS rc/views/Dashboard.vue:146
+#: /app/specialVueFakeDummyForL10nScript.js:468
+msgid "No due date assigned"
+msgstr "Δεν έχει οριστεί ημερομηνία λήξης"
+
+#. TRANSLATORS rc/views/Dashboard.vue:151
+#: /app/specialVueFakeDummyForL10nScript.js:470
+msgid "[Due yesterday]"
+msgstr "[Έληξε χθες]"
+
+#. TRANSLATORS rc/views/Dashboard.vue:156
+#: /app/specialVueFakeDummyForL10nScript.js:476
+#: /app/specialVueFakeDummyForL10nScript.js:478
+#: /app/specialVueFakeDummyForL10nScript.js:480
+msgid "[Due] L"
+msgstr "[Λήγει] L"
+
+#. TRANSLATORS rc/views/Dashboard.vue:163
+#: /app/specialVueFakeDummyForL10nScript.js:482
+msgid "[Due yesterday at] LT"
+msgstr "[Έληξε χθες στις] LT"
+
+#. TRANSLATORS rc/views/Dashboard.vue:169
+#: /app/specialVueFakeDummyForL10nScript.js:488
+#: /app/specialVueFakeDummyForL10nScript.js:490
+#: /app/specialVueFakeDummyForL10nScript.js:492
+msgid "[Due] L [at] LT"
+msgstr "[Λήγει σε] L [στις] LT"
+
+#: /app/src/store/tasks.js:755
+msgid "Successfully created the task."
+msgstr "Επιτυχής δημιουργία εργασίας."
+
+#: /app/src/store/tasks.js:835
+msgid "Could not delete the task."
+msgstr "Αδυναμία διαγραφής εργασίας."
+
+#: /app/src/store/tasks.js:927
+msgid "Synchronizing to the server."
+msgstr "Συγχρονισμός με τον διακομιστή."
+
+#: /app/src/store/tasks.js:930
+msgid "Task successfully saved to server."
+msgstr "Η εργασία αποθηκεύτηκε επιτυχώς στον διακομιστή."
+
+#: /app/src/store/tasks.js:938 /app/src/store/tasks.js:944
+msgid ""
+"Could not update the task because it was changed on the server. Please click"
+" to refresh it, local changes will be discarded."
+msgstr ""
+"Δεν ήταν δυνατή η ενημέρωση της εργασίας επειδή άλλαξε στον διακομιστή. Κλικ"
+" για ανανέωση, οι τοπικές αλλαγές θα διαγραφούν."
+
+#: /app/src/store/tasks.js:940
+msgid "Could not update the task."
+msgstr "Αδυναμία ενημέρωσης της εργασίας."
+
+#: /app/src/store/tasks.js:1357
+msgid "Successfully updated the task."
+msgstr "Επιτυχής ενημέρωση εργασίας."
+
+#: /app/src/store/tasks.js:1429
+msgid "Task successfully moved to new calendar."
+msgstr "Η Εργασία μεταφέρθηκε επιτυχώς στο νέο ημερολόγιο."
+
+#: /app/src/store/tasks.js:1433
+msgid "An error occurred"
+msgstr "Παρουσιάστηκε σφάλμα"
+
+#: /app/src/talk.js:58
+msgid "Create a task"
+msgstr "Δημιουργήστε μια εργασία"
+
+#: /app/src/talk.js:67
+msgid "Message from {author} in {conversationName}"
+msgstr "Μήνυμα από {author} σε {conversationName}"

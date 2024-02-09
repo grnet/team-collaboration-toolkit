@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# eleni lainidou <elainidou@hotmail.com>, 2017
+# NickThom, 2017
+# Salih Emin <cerebrux.gr@gmail.com>, 2017
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2018
+# Konstantina Tsolakoglou <konstantina@accountant.com>, 2019
+# Spiros Skafidas <spirosscafidas@gmail.com>, 2020
+# george k <norhorn@gmail.com>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# theodoros bousios, 2022
+# pkst <pkst@eellak.gr>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:51+0000\n"
+"PO-Revision-Date: 2016-07-29 12:01+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/js/personalsettings.js:10
+msgid "Copy to clipboard"
+msgstr "Αντιγραφή στο πρόχειρο"
+
+#: /app/js/personalsettings.js:26
+msgid "Copied!"
+msgstr "Αντιγράφηκε!"
+
+#: /app/js/personalsettings.js:46
+msgid "Not supported!"
+msgstr "Δεν υποστηρίζεται!"
+
+#: /app/js/personalsettings.js:48
+msgid "Press ⌘-C to copy."
+msgstr "Για αντιγραφή πατήστε ⌘-C."
+
+#: /app/js/personalsettings.js:50
+msgid "Press Ctrl-C to copy."
+msgstr "Για αντιγραφή πατήστε Ctrl-C."
+
+#: /app/lib/Notification/Notifier.php:79
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "First run wizard"
+msgstr " Οδηγός πρώτης εκτέλεσης"
+
+#: /app/lib/Notification/Notifier.php:137
+msgid ""
+"Add your profile information! For example your email is needed to receive "
+"notifications."
+msgstr ""
+"Προσθέστε τα στοιχεία του προφίλ σας! Για παράδειγμα, το email σας είναι "
+"απαραίτητο για τη λήψη ειδοποιήσεων."
+
+#: /app/lib/Notification/Notifier.php:139
+msgid ""
+"Add your profile information! For example your email is needed to receive "
+"notifications and reset your password."
+msgstr ""
+"Προσθέστε τα στοιχεία του προφίλ σας! Για παράδειγμα, το email σας είναι "
+"απαραίτητο για να λαμβάνετε ειδοποιήσεις και να επαναφέρετε τον κωδικό "
+"πρόσβασης σας."
+
+#: /app/lib/Notification/Notifier.php:144
+msgid ""
+"Add your profile information! Set a profile picture and full name for easier"
+" recognition across all features."
+msgstr ""
+"Προσθέστε τις πληροφορίες του προφίλ σας! Ορίστε φωτογραφία και πλήρες όνομα"
+" στο προφιλ σας για ευκολότερη αναγνώριση σε όλες τις λειτουργίες."
+
+#: /app/lib/Notification/Notifier.php:146
+msgid ""
+"Add your profile information! Set a full name for easier recognition across "
+"all features."
+msgstr ""
+"Προσθέστε τα στοιχεία του προφίλ σας! Ορίστε ένα πλήρες όνομα για ευκολότερη"
+" αναγνώριση σε όλες τις λειτουργίες."
+
+#: /app/lib/Notification/Notifier.php:150
+msgid ""
+"Add your profile information! Set a profile picture for easier recognition "
+"across all features."
+msgstr ""
+"Προσθέστε τα στοιχεία του προφίλ σας! Ορίστε μια εικόνα προφίλ για "
+"ευκολότερη αναγνώριση σε όλες τις λειτουργίες."
+
+#: /app/lib/Notification/Notifier.php:167
+msgid "App recommendation: Nextcloud Calendar"
+msgstr "Προτεινόμενη εφαρμογή: Ημερολόγιο Nextclound "
+
+#: /app/lib/Notification/Notifier.php:168
+msgid "Schedule work & meetings, synced with all your devices."
+msgstr ""
+"Προγραμματισμένες εργασίες & συνταντήσεις, συγχρονίζονται σε όλες τις "
+"συσκευές σας."
+
+#: /app/lib/Notification/Notifier.php:172
+msgid "App recommendation: Nextcloud Contacts"
+msgstr "Προτεινόμενη εφαρμογή: Επαφές Nextclound "
+
+#: /app/lib/Notification/Notifier.php:173
+msgid ""
+"Keep your colleagues and friends in one place without leaking their private "
+"info."
+msgstr ""
+"Κρατήστε συνεργάτες και φίλους σε ένα μέρος χωρίς να κινδυνεύουν τα "
+"προσωπικά δεδομένα τους."
+
+#: /app/lib/Notification/Notifier.php:177
+msgid "App recommendation: Nextcloud Mail"
+msgstr "Προτεινόμενη εφαρμογή: Ηλ.Ταχυδρομείο Nextclound "
+
+#: /app/lib/Notification/Notifier.php:178
+msgid "Simple email app nicely integrated with Files, Contacts and Calendar."
+msgstr ""
+"Απλή εφαρμογή ηλ.ταχυδρομίου ενσωματώνοντας Αρχεία, Επαφές και Ημερολόγιο."
+
+#: /app/lib/Notification/Notifier.php:183
+msgid "App recommendation: Tasks"
+msgstr "Προτεινόμενη εφαρμογή: Εργασίες"
+
+#: /app/lib/Notification/Notifier.php:184
+msgid ""
+"Sync tasks from various devices with your Nextcloud and edit them online."
+msgstr ""
+"Συγχρονίστε εργασίες από διάφορες συσκευές με το Nextcloud και "
+"επεξεργαστείτε τις στο διαδίκτυο."
+
+#: /app/lib/Notification/Notifier.php:188
+msgid "App recommendation: Deck"
+msgstr "Προτεινόμενη εφαρμογή: Deck"
+
+#: /app/lib/Notification/Notifier.php:189
+msgid "Kanban style organization for personal planning and team projects."
+msgstr "Στυλ Kanban, οργάνωσης για προσωπικό σχεδιασμό και ομαδικές εργασίες."
+
+#: /app/lib/Notification/Notifier.php:193
+msgid "App recommendation: Notes"
+msgstr "Προτεινόμενη εφαρμογή: Σημειώσεις"
+
+#: /app/lib/Notification/Notifier.php:194
+msgid "Distraction-free notes and writing."
+msgstr "Χωρίς περιορισμούς σημειώσεις και γραφή."
+
+#: /app/lib/Notification/Notifier.php:198
+msgid "App recommendation: Social"
+msgstr "Προτεινόμενη εφαρμογή: Κοινωνικά"
+
+#: /app/lib/Notification/Notifier.php:199
+msgid "Nextcloud becomes part of the federated social networks."
+msgstr "Το Nextcloud γίνεται μέρος των κοινωνικών δικτύων!"
+
+#: /app/lib/Notification/Notifier.php:203
+msgid "App recommendation: Group folders"
+msgstr "Προτεινόμενη εφαρμογή: Ομαδικοί φάκελοι"
+
+#: /app/lib/Notification/Notifier.php:204
+msgid "Admin-configured folders shared by everyone in a group."
+msgstr "Ο διαχειριστής - ρύθμισε τους κοινόχρηστους φακέλους σε ομάδας."
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "About"
+msgstr "Περί"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid "A welcome and introduction wizard for Nextcloud"
+msgstr "Οδηγός καλωσορίσματος και εισαγωγής για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:5
+msgid ""
+"This application enables a pop-up window when a user first logs into Nextcloud. This window welcomes new users to Nextcloud, and contains links to the standard desktop client, Android app, and the iOS app. The window also shows a link for accessing Nextcloud via WebDAV. At any time, the first run wizard can be opened again via link \"About\" on settings menu.\n"
+"The First run wizard can be customized to meet specific design goals, or to change links and messages. Create an appropriate theme following the Theming documentation, and changes to the look and feel of this Wizard are simple. More information is available in the first run wizard documentation, as well as the theming documentation."
+msgstr ""
+"Η εφαρμογή ενεργοποιεί ένα αναδυόμενο παράθυρο όταν ένας χρήστης συνδεθεί πρώτη φορά στο Nextcloud. Αυτό το παράθυρο καλωσορίζει τους νέους χρήστες στο Nextcloud και περιέχει συνδέσμους με τον τυπικό υπολογιστή-πελάτη, την εφαρμογή Android και την εφαρμογή iOS. Το παράθυρο εμφανίζει επίσης έναν σύνδεσμο για την πρόσβαση στο Nextcloud μέσω του WebDAV. Μπορείτε να ανοίξετε ξανά τον οδηγό πρώτης εκτέλεσης ανά πάσα στιγμή μέσω του συνδέσμου \"Πληροφορίες\" στο μενού ρυθμίσεων.\n"
+"Ο πρώτος οδηγός εκτέλεσης μπορεί να προσαρμοστεί ώστε να ανταποκρίνεται σε συγκεκριμένους στόχους σχεδιασμού ή να αλλάζει συνδέσμους και μηνύματα. Δημιουργήστε ένα κατάλληλο θέμα ακολουθώντας την τεκμηρίωση Theming και οι αλλαγές στην εμφάνιση και την αίσθηση αυτού του οδηγού είναι απλές. Περισσότερες πληροφορίες διατίθενται στην τεκμηρίωση του οδηγού πρώτης εκτέλεσης, καθώς και στην τεκμηρίωση των θεμάτων."
+
+#. TRANSLATORS e:386
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Start using {cloudName}"
+msgstr "Ξεκινήστε να χρησιμοποιείτε το {cloudName}"
+
+#. TRANSLATORS ents/IntroVideo.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Welcome to {cloudName}!"
+msgstr "Καλώς ήρθατε στο {cloudName}!"
+
+#: /app/templates/page.apps.php:30
+msgid "Extend your cloud"
+msgstr "Επεκτείνετε το σύννεφο σας"
+
+#: /app/templates/page.apps.php:33
+msgid ""
+"Find more than 100 apps in the Nextcloud App Store to customize your cloud:"
+msgstr ""
+"Βρείτε περισσότερες από 100 εφαρμογές στο Nextcloud App Store για να "
+"προσαρμόσετε το cloud σας:"
+
+#: /app/templates/page.apps.php:35
+msgid "Groupware apps like Calendar, Contacts, Mail"
+msgstr "Ομαδικές εφαρμογές όπως Ημερολόγιο, Επαφές, Αλληλογραφία"
+
+#: /app/templates/page.apps.php:36
+msgid "Communication with Nextcloud Talk"
+msgstr "Επικοινωνία με το Nextcloud Talk"
+
+#: /app/templates/page.apps.php:37
+msgid "Collaboration apps for document editing"
+msgstr "Εφαρμογές συνεργασία για επεξεργασία εγγράφων"
+
+#: /app/templates/page.apps.php:38
+msgid ""
+"Security and authentication features like two-factor authentication, SSO and"
+" ransomware protection"
+msgstr ""
+"Χαρακτηριστικά ασφαλείας και ελέγχου ταυτότητας, όπως προστασία δύο - "
+"παραγόντων , προστασία SSO και ransomware"
+
+#: /app/templates/page.apps.php:39
+msgid ""
+"Many others like a music player, a password manager, a kanban app, a "
+"download manager or a Markdown editor"
+msgstr ""
+"Πολλοί άλλοι, όπως ένα πρόγραμμα αναπαραγωγής μουσικής, ένας διαχειριστής "
+"κωδικού πρόσβασης, μια εφαρμογή kanban, ένας διαχειριστής λήψεων ή ένας "
+"επεξεργαστής Markdown."
+
+#: /app/templates/page.apps.php:44
+msgid "Browse the App Store"
+msgstr "Εξερευνήστε το App Store"
+
+#: /app/templates/page.clients.php:31
+msgid "Stay in sync"
+msgstr "Μείνετε συγχρονισμένοι"
+
+#: /app/templates/page.clients.php:33
+msgid "Nextcloud gives you access to your files wherever you are."
+msgstr "Το Nextcloud σας δίνει πρόσβαση στα αρχεία σας οπουδήποτε κι αν είστε"
+
+#: /app/templates/page.clients.php:34
+msgid ""
+"Our easy to use desktop and mobile clients are available for all major "
+"platforms at zero cost!"
+msgstr ""
+"Έυχρηστη εφαρμογή για υπολογιστή και κινητό, διαθέσιμη για όλες τις μεγάλες "
+"πλατφόρμες με μηδενικό κόστος!"
+
+#: /app/templates/page.clients.php:36 /app/templates/personal-settings.php:31
+msgid "Get the apps to sync your files"
+msgstr "Λήψη των εφαρμογών για συγχρονισμό των αρχείων σας"
+
+#: /app/templates/page.clients.php:39 /app/templates/personal-settings.php:38
+msgid "Desktop client"
+msgstr "Πελάτης σταθερού υπολογιστή"
+
+#: /app/templates/page.clients.php:43 /app/templates/personal-settings.php:42
+msgid "Android app on Google Play Store"
+msgstr "Εφαρμογή Android στο Google Play Store"
+
+#: /app/templates/page.clients.php:48 /app/templates/personal-settings.php:46
+msgid "Android app on F-Droid"
+msgstr "Εφαρμογή Android στο F-Droid"
+
+#: /app/templates/page.clients.php:53 /app/templates/personal-settings.php:50
+msgid "iOS app"
+msgstr "Εφαρμογή iOS"
+
+#: /app/templates/page.clients.php:57
+#, php-format
+msgid "Connect your desktop apps to %s"
+msgstr "Συνδέστε τις εφαρμογές του υπολογιστή σας με το %s"
+
+#: /app/templates/page.clients.php:61 /app/templates/personal-settings.php:69
+msgid "Connect your calendar"
+msgstr "Σύνδεσε το ημερολόγιό σου"
+
+#: /app/templates/page.clients.php:66 /app/templates/personal-settings.php:74
+msgid "Connect your contacts"
+msgstr "Σύνδεσε τις επαφές σου"
+
+#: /app/templates/page.clients.php:71 /app/templates/personal-settings.php:79
+msgid "Access files via WebDAV"
+msgstr "Πρόσβαση στα αρχεία μέσω WebDAV"
+
+#: /app/templates/page.clients.php:77 /app/templates/personal-settings.php:85
+msgid "Download macOS/iOS configuration profile"
+msgstr "Κατεβάστε το προφίλ ρυθμίσεων για macOS / iOS"
+
+#: /app/templates/page.final.php:9
+msgid "Get help"
+msgstr "Λήψη βοήθειας"
+
+#: /app/templates/page.final.php:12
+msgid "Start contributing"
+msgstr "Ξεκινήστε να συνεισφέρετε"
+
+#: /app/templates/page.final.php:13
+msgid ""
+"Do you want to get a certain improvement in Nextcloud? Did you find a "
+"problem? Do you want to help translate, promote or document Nextcloud?"
+msgstr ""
+"Θέλετε να έχετε κάποια βελτίωση στο Nextcloud; Βρήκατε κάποιο πρόβλημα; "
+"Θέλετε να βοηθήσετε να μεταφράσετε, να προωθήσετε ή να τεκμηριώσετε το "
+"Nextcloud;"
+
+#: /app/templates/page.final.php:14
+msgid "Become part of the Community"
+msgstr "Γίνετε μέρος της Κοινότητας"
+
+#: /app/templates/page.final.php:17
+msgid "Enterprise support"
+msgstr "Υποστήριξη επιχειρήσεων"
+
+#: /app/templates/page.final.php:18
+msgid ""
+"If you run Nextcloud in a mission critical environment with large numbers of"
+" users and big amounts of data and need the certainty of support from the "
+"experts behind the Nextcloud technology, an Enterprise Subscription from "
+"Nextcloud is available with email and phone support."
+msgstr ""
+"Εάν εκτελείτε το Nextcloud σε ένα κρίσιμο περιβάλλον με μεγάλο αριθμό "
+"χρηστών, αρκετά δεδομένα και χρειάζεστε τη σιγουριά υποστήριξης από τους "
+"έμπειρους τεχνολογίας του Nextcloud, υπάρχει μια συνδρομή Enterprise από το "
+"Nextcloud με υποστήριξη email και τηλεφώνου."
+
+#: /app/templates/page.final.php:19
+msgid "Get enterprise support"
+msgstr "Αποκτήστε υποστήριξη επιχειρήσεων"
+
+#: /app/templates/page.final.php:24
+msgid "Get more information"
+msgstr "Λήψη περισσότερων πληροφοριών"
+
+#: /app/templates/page.final.php:25
+msgid "The Nextcloud documentation for home users:"
+msgstr "Τεκμηρίωση του Nextcloud για οικιακούς χρήστες:"
+
+#: /app/templates/page.final.php:27
+msgid "User manual"
+msgstr "Εγχειρίδιο χρήστη"
+
+#: /app/templates/page.final.php:28
+msgid "Admin manual"
+msgstr "Εγχειρίδιο διαχειριστή"
+
+#: /app/templates/page.final.php:29
+msgid "Developer manual"
+msgstr "Εγχειρίδιο προγραμματιστή"
+
+#: /app/templates/page.final.php:31
+msgid "You can also ask for help in our community support channels:"
+msgstr "Μπορείτε να να ζητήσετε βοήθεια στο κανάλι υποστήριξης κοινότητας:"
+
+#: /app/templates/page.final.php:33
+msgid "the Nextcloud forums"
+msgstr "τα Nextcloud forums"
+
+#: /app/templates/page.final.php:34
+msgid "the Nextcloud IRC chat channel on freenode.net"
+msgstr "το Nextcloud IRC chat στο freenode.net"
+
+#: /app/templates/page.values.php:31
+msgid "A safe home for all your data"
+msgstr "Μια ασφαλής τοποθεσία για όλα σας τα δεδομένα"
+
+#: /app/templates/page.values.php:34
+msgid ""
+"Nextcloud puts your data at your fingertips, under your control. Store your "
+"documents, calendar, contacts and photos on a server in your company, at "
+"home, at one of our providers or in a data center you know."
+msgstr ""
+"Το Nextcloud θέτει τα δεδομένα, υπό τον έλεγχό σας. Αποθηκεύστε τα έγγραφα, "
+"το ημερολόγιο, τις επαφές και τις φωτογραφίες σας σε ένα διακομιστή στην "
+"εταιρεία σας, στο σπίτι, σε έναν πάροχο ή σε ένα κέντρο δεδομένων που "
+"γνωρίζετε."
+
+#: /app/templates/page.values.php:40
+msgid "Host your data and files where you decide"
+msgstr "Τοποθετήστε τα δεδομένα και τα αρχεία σας όπου αποφασίζετε"
+
+#: /app/templates/page.values.php:44
+msgid "Open standards and interoperability"
+msgstr "Ανοικτά πρότυπα και διαλειτουργικότητα"
+
+#. TRANSLATORS NOTE: The characters %% should be left unchanged.
+#: /app/templates/page.values.php:50
+#, php-format
+msgid "100%% open source & community-focused"
+msgstr "100%% Ανοικτά Δεδομένα & εστιασμένα στην κοινότητα"
+
+#: /app/templates/page.values.php:55
+#, php-format
+msgid "Learn more about %s"
+msgstr "Μάθετε περισσότερα %s"
+
+#: /app/templates/page.values.php:57
+#, php-format
+msgid "This Nextcloud is on version %s"
+msgstr "Αυτό το Nextcloud είναι στην έκδοση %s"
+
+#: /app/templates/personal-settings.php:33
+#, php-format
+msgid ""
+"%s gives you access to your files wherever you are. Our easy to use desktop "
+"and mobile clients are available for all major platforms at zero cost."
+msgstr ""
+"%s σας δίνει πρόσβαση στα αρχεία σας όπου κι αν βρίσκεστε. Οι εύχρηστες "
+"εφαρμογές υπολογιστών και κινητών είναι διαθέσιμες για όλες τις μεγάλες "
+"πλατφόρμες με μηδενικό κόστος."
+
+#: /app/templates/personal-settings.php:58
+#, php-format
+msgid ""
+"Set up sync clients using an <a href=\"%s\">app password</a>. That way you "
+"can make sure you are able to revoke access in case you lose that device."
+msgstr ""
+"Ρυθμίστε τον συγχρονισμό υπολογιστών χρησιμοποιώντας <a href=\"%s\">εφαρμογή"
+" κωδικών</a>. Με αυτόν τον τρόπο μπορείτε να βεβαιωθείτε ότι είστε σε θέση "
+"να ανακαλέσετε την πρόσβαση σε περίπτωση που χάσετε τη συσκευή."
+
+#: /app/templates/personal-settings.php:61
+#, php-format
+msgid "Connect other apps to %s"
+msgstr "Σύνδεση άλλων εφαρμογών στο %s"
+
+#: /app/templates/personal-settings.php:63
+#, php-format
+msgid ""
+"Besides the mobile apps and desktop client you can connect any other "
+"software that supports the WebDAV/CalDAV/CardDAV protocols to %s."
+msgstr ""
+"Εκτός από εφαρμογές υπολογιστών και κινητών μπορείτε να συνδέσετε "
+"οποιοδήποτε άλλη εφαρμογή υποστηρίζει το πρωτόκολλο WebDAV/CalDAV/CardDAV "
+"%s."
+
+#: /app/templates/personal-settings.php:91
+msgid "Server address"
+msgstr "Διεύθυνση διακομιστή"
+
+#: /app/templates/personal-settings.php:93
+msgid "Use this link to connect your apps and desktop client to this server:"
+msgstr ""
+"Χρησιμοποιήστε τον σύνδεσμο για να συνδέσετε την εφαρμογή υπολογιστή και "
+"κινητού σε αυτόν τον διακομιστή:"
+
+#: /app/templates/personal-settings.php:96
+msgid "Copy link"
+msgstr "Αντιγραφή συνδέσμου"
+
+#. TRANSLATORS e:36
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Start using Nextcloud"
+msgstr "Έναρξη χρήσης Nextcloud"
+
+#: /app/templates/page.apps.php:33
+msgid ""
+"Find more than 100 apps in the Nextcloud app store to customize your cloud:"
+msgstr ""
+"Βρείτε περισσότερες από 100 εφαρμογές στο κατάστημα εφαρμογών Nextcloud για "
+"να προσαρμόσετε το σύννεφο σας:"
+
+#: /app/templates/page.apps.php:44
+msgid "Browse the app store"
+msgstr "Εξερεύνηση αγοράς αφαρμογών"
+
+#: /app/templates/page.clients.php:43 /app/templates/personal-settings.php:42
+msgid "Android app"
+msgstr "Εφαρμογή Android"
+
+#: /app/templates/page.values.php:44
+msgid "Open Standards and Interoperability"
+msgstr "Ανοικτά πρότυπα και διαλειτουργικότητα"
+
+#: /app/templates/page.values.php:48
+#, php-format
+msgid "100%% Open Source & community-focused"
+msgstr "100%% Ανοικτά Δεδομένα & εστιασμένα στην κοινότητα"

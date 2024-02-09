@@ -1,0 +1,148 @@
+---
+- name: Check that a valid URL has been passed
+  assert:
+    that:
+     - nextcloud_download_url is defined
+     - nextcloud_download_url | regex_search('^http.*/[^/]*\\d+\\.\\d+\\.\\d+(-enterprise)?\\.zip$')
+    fail_msg: >
+      The variable nextcloud_download_url is not a valid Nextcloud package
+      download URL.  Note that it must point to a specific version and not
+      vaguely to the "latest" or something. Specify it as in this example:
+      ansible-playbook site.yml --tags nextcloud_upgrade -e nextcloud_download_url=https://download.nextcloud.com/server/releases/nextcloud-23.0.9.zip
+
+- name: Get existing Nextcloud version
+  shell:
+    cmd: "php /var/www/{{ nextcloud_fqdn }}/nextcloud/occ --version"
+  become: yes
+  become_user: www-data
+  register: existing_version
+  check_mode: no
+  ignore_errors: yes
+  changed_when: no
+
+- name: Get new Nextcloud version
+  set_fact:
+    new_version: "{{ nextcloud_download_url | regex_search('.*/(.*)\\.zip', '\\1') | first }}"
+
+- name: Wait for confirmation
+  pause:
+    prompt: >
+      This will replace {{ existing_version.stdout }} with {{ new_version }}.
+      Press Enter to continue or (Ctrl+C, a) to abort.
+
+- name: Check whether /tmp/nextcloud.cron exists
+  stat:
+    path: /tmp/nextcloud.cron
+  register: stat_tmp_nextcloud_cron
+
+- name: Check whether /tmp/nextcloud exists
+  stat:
+    path: /tmp/nextcloud
+  register: stat_tmp_nextcloud
+
+- name: Check whether /tmp/nextcloud.old exists
+  stat:
+    path: /tmp/nextcloud.old
+  register: stat_tmp_nextcloud_old
+
+- name: Get filesystem of /tmp
+  stat:
+    path: /tmp
+  register: stat_tmp
+
+- name: Get filesystem of /var/www/{{ nextcloud_fqdn }}/nextcloud
+  stat:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/data
+  register: stat_nextcloud_data
+
+- name: Check that no relics of previous upgrade exist
+  assert:
+    that:
+     - not stat_tmp_nextcloud_cron.stat.exists
+     - not stat_tmp_nextcloud.stat.exists
+    fail_msg: >
+      Either /tmp/nextcloud or /tmp/nextcloud.cron exists. This likely
+      means that a previous upgrade attempt failed. Refusing to run
+      until you sort it out.
+
+- name: Check that /tmp/nextcloud.old does not exist
+  assert:
+    that:
+      - not stat_tmp_nextcloud_old.stat.exists
+    fail_msg: >
+      /tmp/nextcloud.old exists. This may be normal; /tmp/nextcloud.old
+      may be a leftover of a previous upgrade. Still, just to be sure,
+      you have to manually move it out of there before I resume.
+  
+- name: Check that /tmp and /var/www/{{ nextcloud_fqdn }} are on same filesystem
+  assert:
+    that:
+      - stat_tmp.stat.dev == stat_nextcloud_data.stat.dev
+    fail_msg: >
+      The Nextcloud upgrade procedure assumes that /tmp and
+      /var/www/{{ nextcloud_fqdn }}/nextcloud/data are on the same
+      filesystem. This appears to not be the case here.
+
+- name: Deactivate nextcloud cron
+  command: mv /etc/cron.d/nextcloud /tmp/nextcloud.cron
+
+- name: Download and unzip Nextcloud
+  unarchive:
+    remote_src: yes
+    src: "{{ nextcloud_download_url }}"
+    dest: /tmp
+    owner: www-data
+    group: www-data
+
+- name: Copy the config.php file
+  copy:
+    remote_src: yes
+    src: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    dest: /tmp/nextcloud/config/
+  become: yes
+  become_user: www-data
+
+- name: Stop php-fpm
+  service:
+    name: php{{ php_version }}-fpm
+    state: stopped
+
+- name: Move out the old nextcloud directory
+  command: mv /var/www/{{ nextcloud_fqdn }}/nextcloud /tmp/nextcloud.old
+
+- name: Move in the new nextcloud directory
+  command: mv /tmp/nextcloud /var/www/{{ nextcloud_fqdn }}/
+
+- name: Move the data directory to the new installation
+  command:
+    cmd: mv /tmp/nextcloud.old/data /var/www/{{ nextcloud_fqdn }}/nextcloud/data
+  become: yes
+  become_user: www-data
+
+- name: Start php-fpm
+  service:
+    name: php{{ php_version }}-fpm
+    state: started
+
+- name: Perform upgrade
+  command:
+    cmd: "php occ upgrade"
+    chdir: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
+  become: yes
+  become_user: www-data
+
+- name: Copy translations
+  copy:
+    remote_src: yes
+    src: /tmp/nextcloud.old/translationfiles
+    dest: /var/www/{{ nextcloud_fqdn }}/nextcloud/translationfiles
+  become: yes
+  become_user: www-data
+
+- name: Restart php-fpm (just to be sure it gets the translations)
+  service:
+    name: php{{ php_version }}-fpm
+    state: restarted
+
+- name: Re-enable cron
+  command: mv /tmp/nextcloud.cron /etc/cron.d/nextcloud

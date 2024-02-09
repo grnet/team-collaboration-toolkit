@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# Salih Emin <cerebrux.gr@gmail.com>, 2017
+# Konstantina Tsolakoglou <konstantina@accountant.com>, 2018
+# george k <norhorn@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2016-06-28 12:18+0000\n"
+"Last-Translator: george k <norhorn@gmail.com>, 2020\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/federation/lib/Controller/SettingsController.php:74
+msgid "Added to the list of trusted servers"
+msgstr "Προσθήκη στην λίστα των έμπιστων διακομιστών"
+
+#: /app/apps/federation/lib/Controller/SettingsController.php:102
+msgid "Server is already in the list of trusted servers."
+msgstr "Ο διακομιστής περιλαμβάνεται ήδη στην λίστα των έμπιστων ownCloud"
+
+#: /app/apps/federation/lib/Controller/SettingsController.php:108
+msgid "No server to federate with found"
+msgstr "Δεν βρέθηκε διακομιστής για συνένωση"
+
+#: /app/apps/federation/lib/DbHandler.php:94
+msgid "Could not add server"
+msgstr "Αδυναμία προσθήκης διακομιστή"
+
+#: /app/apps/federation/lib/Settings/Admin.php:79
+#: /app/apps/federation/templates/settings-admin.php:10
+msgid "Trusted servers"
+msgstr "Έμπιστοι διακομιστές"
+
+#: /app/apps/federation/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Federation"
+msgstr "Federation"
+
+#: /app/apps/federation/specialAppInfoFakeDummyForL10nScript.php:3
+msgid ""
+"Federation allows you to connect with other trusted servers to exchange the "
+"user directory."
+msgstr ""
+"Το Federation σας επιτρέπει να συνδεθείτε με αξιόπιστους διακομιστές για "
+"ανταλλαγή καταλόγου χρηστών."
+
+#: /app/apps/federation/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Federation allows you to connect with other trusted servers to exchange the "
+"user directory. For example this will be used to auto-complete external "
+"users for federated sharing."
+msgstr ""
+"Το Federation σας επιτρέπει να συνδεθείτε με άλλους αξιόπιστους διακομιστές "
+"για να ανταλλάξετε τον κατάλογο χρηστών. Για παράδειγμα, αυτό θα "
+"χρησιμοποιηθεί για την αυτόματη συμπλήρωση εξωτερικών χρηστών για ομαδική "
+"κοινή χρήση."
+
+#: /app/apps/federation/templates/settings-admin.php:11
+msgid ""
+"Federation allows you to connect with other trusted servers to exchange the "
+"user directory. For example this will be used to auto-complete external "
+"users for federated sharing. It is not necessary to add a server as trusted "
+"server in order to create a federated share."
+msgstr ""
+"Το Federation σας επιτρέπει να συνδεθείτε με άλλους αξιόπιστους διακομιστές "
+"για να ανταλλάξετε τον κατάλογο χρηστών. Για παράδειγμα, αυτό θα "
+"χρησιμοποιηθεί για την αυτόματη συμπλήρωση εξωτερικών χρηστών για ομαδική "
+"κοινή χρήση. Δεν είναι απαραίτητο να προσθέσετε έναν διακομιστή ως αξιόπιστο"
+" για να δημιουργήσετε ένα κοινόχρηστο μεταξύ τους στοιχείο."
+
+#: /app/apps/federation/templates/settings-admin.php:33
+msgid "+ Add trusted server"
+msgstr "+Προσθήκη έμπιστων διακομιστών"
+
+#: /app/apps/federation/templates/settings-admin.php:34
+msgid "Trusted server"
+msgstr "Έμπιστοι διακομιστές"
+
+#: /app/apps/federation/templates/settings-admin.php:35
+msgid "Add"
+msgstr "Προσθήκη"

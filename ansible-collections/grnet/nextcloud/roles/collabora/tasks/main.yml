@@ -1,0 +1,131 @@
+---
+
+- name: Install collabora apt key
+  get_url:
+    url: https://collaboraoffice.com/downloads/gpg/collaboraonline-release-keyring.gpg
+    dest: /usr/share/keyrings/
+
+- name: Add collabora apt repository
+  apt_repository:
+    filename: collabora
+    repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-{{ ansible_distribution |lower }}{{ ansible_distribution_version | replace(".", "") }} ./'
+    validate_certs: true
+    update_cache: true
+    state: present
+
+- name: Install collabora
+  apt:
+    name:
+      - coolwsd
+      - code-brand
+      - python3-lxml
+      - collaboraoffice-dict*
+      - collaboraofficebasis*
+
+- name: Create group cool
+  group:
+    name: cool
+    system: true
+    state: present
+
+- name: Create user cool
+  user:
+    name: cool
+    group: cool
+    home: /opt/cool
+    shell: /usr/sbin/nologin
+    system: true
+    state: present
+
+- name: Create /etc/coolwsd
+  file:
+    path: /etc/coolwsd
+    owner: root
+    group: root
+    mode:  0755
+    state: directory
+
+- name: "Allow domain {{ nextcloud_fqdn }} (1)"
+  xml:
+    path: /etc/coolwsd/coolwsd.xml
+    xpath: /config/storage/wopi/alias_groups
+    pretty_print: yes
+    attribute: mode
+    value: "groups"
+  notify: Restart coolwsd
+
+- name: "Allow domain {{ nextcloud_fqdn }} (2)"
+  xml:
+    path: /etc/coolwsd/coolwsd.xml
+    xpath: /config/storage/wopi/alias_groups
+    pretty_print: yes
+    input_type: xml
+    set_children: "<group><host allow='true'>https://{{ nextcloud_fqdn | regex_replace('\\.', '\\.') }}:443</host></group>"
+  notify: Restart coolwsd
+
+- name: "Setup allowed_languages"
+  xml:
+    path: /etc/coolwsd/coolwsd.xml
+    xpath: /config/allowed_languages
+    value: "{{ collabora_allowed_languages }}"
+  notify: Restart coolwsd
+
+- name: "Disable Collabora SSL, since we have reverse proxy"
+  xml:
+    path: /etc/coolwsd/coolwsd.xml
+    xpath: /config/ssl/enable
+    value: "false"
+  notify: Restart coolwsd
+
+- name: "Tell Collabora we use SSL reverse proxy"
+  xml:
+    path: /etc/coolwsd/coolwsd.xml
+    xpath: /config/ssl/termination
+    value: "true"
+  notify: Restart coolwsd
+
+- name: Start coolwsd
+  systemd:
+    name: coolwsd.service
+    state: started
+    enabled: true
+
+- name: Wait until collabora is started
+  wait_for:
+    host: localhost
+    port: 9980
+
+- name: Activate apache proxy
+  apache2_module:
+    state: present
+    name: proxy
+  notify:
+    - Restart apache
+
+- name: Activate apache proxy_wstunnel
+  apache2_module:
+    state: present
+    name: proxy_wstunnel
+  notify:
+    - Restart apache
+
+- name: Activate apache proxy_http
+  apache2_module:
+    state: present
+    name: proxy_http
+  notify:
+    - Restart apache
+
+- name: Activate apache ssl
+  apache2_module:
+    state: present
+    name: ssl
+  notify:
+    - Restart apache
+
+- name: Setup apache reverse proxy for collabora
+  template:
+    src: apache-collabora.conf
+    dest: /etc/apache2/snippets/{{ collabora_fqdn }}/collabora.conf
+  notify:
+    - Restart apache

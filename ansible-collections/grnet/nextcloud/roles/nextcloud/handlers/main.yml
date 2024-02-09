@@ -1,0 +1,31 @@
+---
+- name: Restart redis
+  service:
+    name: redis
+    state: restarted
+
+- name: Activate richdocuments config
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php occ richdocuments:activate-config
+
+- name: Update htaccess
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php occ maintenance:update:htaccess
+
+- name: Convert po translation files
+  become: yes
+  become_user: www-data
+  command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php /usr/local/bin/translationtool.phar convert-po-files
+
+- name: Restart php-fpm
+  service:
+    name: php{{ php_version }}-fpm
+    state: restarted

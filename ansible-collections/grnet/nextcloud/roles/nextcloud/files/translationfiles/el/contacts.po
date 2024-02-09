@@ -1,0 +1,1372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# 
+# Translators:
+# Christos Kontogiorgas <christos.kontogiorgas@gmail.com>, 2017
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2016-2019
+# Eirini Basdani <renabasdani@gmail.com>, 2019
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# george k <norhorn@gmail.com>, 2021
+# george k <norhorn@gmail.com>, 2019-2020
+# Georgios Koloventzos <g.koloventzos@gmail.com>, 2020
+# george k <norhorn@gmail.com>, 2019
+# Kostas Bas <paraoute@gmail.com>, 2016
+# Kostas Goutoudis <goutoudis@gmail.com>, 2016
+# Kyriakos Giannakis <kerk12gr@gmail.com>, 2017
+# Manolis Saldaris <Ustramator@gmail.com>, 2016
+# NickThom, 2017
+# pkst <pkst@eellak.gr>, 2022
+# Salih Emin <cerebrux.gr@gmail.com>, 2017
+# Stratos Christoforidis <stratos@christoforides.eu>, 2016
+# theodoros bousios, 2022
+# Vinux7 <vinux7@openmailbox.org>, 2017
+# Alexandros Kapetanios <alexandros@gnugr.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:39+0000\n"
+"PO-Revision-Date: 2016-10-21 15:49+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (http://www.transifex.com/nextcloud/nextcloud/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/ContactsMenu/Providers/DetailsProvider.php:118
+msgid "Details"
+msgstr "Λεπτομέριες"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsImportContacts.vue:182
+#: /app/lib/Controller/ContactsController.php:60
+#: /app/specialVueFakeDummyForL10nScript.js:128 /app/src/main.js:71
+#: /app/src/models/constants.ts:36 /app/src/router/index.js:47
+msgid "All contacts"
+msgstr "Όλες οι επαφές"
+
+#. TRANSLATORS components/AdminSettings.vue:25
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:44
+#. TRANSLATORS components/EntityPicker/ContactsPicker.vue:47
+#. TRANSLATORS views/Contacts.vue:234
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/specialVueFakeDummyForL10nScript.js:6
+#: /app/specialVueFakeDummyForL10nScript.js:116
+#: /app/specialVueFakeDummyForL10nScript.js:268
+#: /app/specialVueFakeDummyForL10nScript.js:368
+#: /app/src/models/constants.ts:164
+msgid "Contacts"
+msgstr "Επαφές"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "A contacts app for Nextcloud"
+msgstr "Εφαρμογή επαφών για το Nextcloud"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"The Nextcloud contacts app is a user interface for Nextcloud's CardDAV server. Easily sync contacts from various devices with your Nextcloud and edit them online.\n"
+"\n"
+"* 🚀 **Integration with other Nextcloud apps!** Currently Mail and Calendar – more to come.\n"
+"* 🎉 **Never forget a birthday!** You can sync birthdays and other recurring events with your Nextcloud Calendar.\n"
+"* 👥 **Sharing of Adressbooks!** You want to share your contacts with your friends or coworkers? No problem!\n"
+"* 🙈 **We’re not reinventing the wheel!** Based on the great and open SabreDAV library."
+msgstr "Η εφαρμογή επαφών του Nextcloud είναι η διεπαφή χρήστη για το χειρισμό του διακομιστή Nextcloud CardDAV. Εύκολος συγχρονισμός και επεξεργασία επαφών από διάφορες συσκευές με το Nextcloud\n\n* 🚀 **Συνεργασία με άλλες εφαρμογές Nextcloud!** Ήδη με Ηλεκτρονικό Ταχυδρομείο και Ημερολόγιο - προσεχώς και άλλα.\n* 🎉 **Δεν ξεχνάτε ποτέ γενέθλια!** Συγχρονισμός γενεθλίων και άλλων επετείων με το ημερολόγιο Nextclound\n* 👥 **Κοινή χρήση Βιβλίου διευθύνσεων!** Θέλεις να μοιραστείς τις επαφές σου με φίλους ή συνεργάτες? Κανένα πρόβλημα!\n* 🙈 ** Δεν ανακαλύψαμε τον τροχό!** Βασίζεται στο ανοικτό λογισμικό SabreDAV."
+
+#. TRANSLATORS components/Actions/ActionCopyNtoFN.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Copy to full name"
+msgstr "Αντιγραφή στο πλήρες όνομα"
+
+#. TRANSLATORS components/Actions/ActionToggleYear.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Omit year"
+msgstr "Παράλειψη έτους"
+
+#. TRANSLATORS components/AdminSettings.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Allow updating avatars from social media"
+msgstr "Να επιτρέπεται η ενημέρωση του άβαταρ από τα μέσα κοινωνικής δικτύωσης."
+
+#. TRANSLATORS components/AppContent/CircleContent.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Please select a circle"
+msgstr "Παρακαλούμε επιλέξτε έναν κύκλο"
+
+#. TRANSLATORS components/AppContent/CircleContent.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid "Loading circle …"
+msgstr "Φόρτωση κύκλου ..."
+
+#. TRANSLATORS components/AppContent/CircleContent.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "Your request to join this circle is pending approval"
+msgstr "Το αίτημά σας για συμμετοχή σε αυτόν τον κύκλο βρίσκεται σε αναμονή έγκρισης"
+
+#. TRANSLATORS components/AppContent/CircleContent.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:16
+msgid "You are not a member of {circle}"
+msgstr "Δεν είστε μέλος του κύκλου {circle}"
+
+#. TRANSLATORS components/AppContent/CircleContent.vue:142
+#: /app/specialVueFakeDummyForL10nScript.js:18
+msgid "There was an error fetching the member list"
+msgstr "Παρουσιάστηκε σφάλμα κατά την ανάκτηση της λίστας μελών"
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:20
+msgid "Loading contacts …"
+msgstr "Φόρτωση επαφών ..."
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:22
+msgid "There are no contacts yet"
+msgstr "Δεν υπάρχουν ακόμη επαφές"
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:24
+msgid "Create contact"
+msgstr "Δημιουργία επαφής"
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:26
+msgid "There are no contacts in this group"
+msgstr "Δεν υπάρχουν επαφές σε αυτήν την ομάδα "
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:28
+msgid "Create contacts"
+msgstr "Δημιουργία επαφών"
+
+#. TRANSLATORS components/AppContent/ContactsContent.vue:49
+#. TRANSLATORS components/AppNavigation/GroupNavigationItem.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:30
+#: /app/specialVueFakeDummyForL10nScript.js:40
+msgid "Add contacts"
+msgstr "Προσθήκη επαφών"
+
+#. TRANSLATORS components/AppNavigation/CircleNavigationItem.vue:30
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:42
+#. TRANSLATORS components/MembersList/MembersListItem.vue:57
+#: /app/specialVueFakeDummyForL10nScript.js:32
+#: /app/specialVueFakeDummyForL10nScript.js:274
+#: /app/specialVueFakeDummyForL10nScript.js:324
+msgid "Loading …"
+msgstr "Φόρτωση…"
+
+#. TRANSLATORS components/AppNavigation/CircleNavigationItem.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:34
+msgid "Add member"
+msgstr "Προσθήκη μέλους"
+
+#. TRANSLATORS components/AppNavigation/CircleNavigationItem.vue:55
+#. TRANSLATORS components/CircleDetails.vue:110
+#. TRANSLATORS components/MembersList/MembersListItem.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:36
+#: /app/specialVueFakeDummyForL10nScript.js:164
+#: /app/specialVueFakeDummyForL10nScript.js:328
+msgid "Leave circle"
+msgstr "Αποχώρηση από τον κύκλο"
+
+#. TRANSLATORS components/AppNavigation/CircleNavigationItem.vue:77
+#. TRANSLATORS components/CircleDetails.vue:118
+#: /app/specialVueFakeDummyForL10nScript.js:38
+#: /app/specialVueFakeDummyForL10nScript.js:166
+msgid "Delete circle"
+msgstr "Διαγραφή κύκλου"
+
+#. TRANSLATORS components/AppNavigation/GroupNavigationItem.vue:39
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:55
+#. TRANSLATORS components/ContactDetails.vue:120
+#: /app/specialVueFakeDummyForL10nScript.js:42
+#: /app/specialVueFakeDummyForL10nScript.js:70
+#: /app/specialVueFakeDummyForL10nScript.js:226
+msgid "Download"
+msgstr "Λήψη"
+
+#. TRANSLATORS components/AppNavigation/GroupNavigationItem.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:44
+msgid "Send email"
+msgstr "Αποστολή email"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:76
+#. TRANSLATORS components/ContactDetails.vue:425
+#. TRANSLATORS components/Properties/PropertyGroups.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:46
+#: /app/specialVueFakeDummyForL10nScript.js:252
+#: /app/specialVueFakeDummyForL10nScript.js:352
+#: /app/src/models/constants.ts:132
+msgid "Groups"
+msgstr "Ομάδες"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:48
+msgid "Create a new group"
+msgstr "Δημιουργήστε μια νέα ομάδα"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:50
+msgid "Group name"
+msgstr "Όνομα ομάδας"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:52
+#: /app/src/models/constants.ts:151
+msgid "Circles"
+msgstr "Κύκλοι"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:112
+#: /app/specialVueFakeDummyForL10nScript.js:54
+msgid "Create a new circle"
+msgstr "Δημιουργήστε έναν νέο κύκλο"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:309
+#: /app/specialVueFakeDummyForL10nScript.js:56
+msgid "Show all groups"
+msgstr "Εμφάνιση όλων των ομάδων"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:310
+#: /app/specialVueFakeDummyForL10nScript.js:58
+msgid "Collapse groups"
+msgstr "Σύμπτυξη ομάδων"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:314
+#: /app/specialVueFakeDummyForL10nScript.js:60
+msgid "Show all circles"
+msgstr "Εμφάνιση όλων των κύκλων"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:315
+#: /app/specialVueFakeDummyForL10nScript.js:62
+msgid "Collapse circles"
+msgstr "Σύμπτυξη κύκλων"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:330
+#: /app/specialVueFakeDummyForL10nScript.js:64
+msgid "This group already exists"
+msgstr "Αυτή η ομάδα υπάρχει ήδη"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:367
+#: /app/specialVueFakeDummyForL10nScript.js:66
+msgid "This circle already exists"
+msgstr "Αυτός ο κύκλος υπάρχει ήδη"
+
+#. TRANSLATORS components/AppNavigation/RootNavigation.vue:384
+#: /app/specialVueFakeDummyForL10nScript.js:68
+msgid "An error happened during the creation of the circle"
+msgstr "Παρουσιάστηκε σφάλμα κατά τη δημιουργία του κύκλου"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:72
+msgid "Rename"
+msgstr "Μετονομασία"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:74
+#: /app/specialVueFakeDummyForL10nScript.js:76
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:88
+#. TRANSLATORS components/ContactDetails.vue:134
+#. TRANSLATORS components/Properties/PropertyActions.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:78
+#: /app/specialVueFakeDummyForL10nScript.js:232
+#: /app/specialVueFakeDummyForL10nScript.js:346
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:172
+#: /app/specialVueFakeDummyForL10nScript.js:80
+#: /app/src/mixins/CircleActionsMixin.js:52
+msgid "Copied"
+msgstr "Αντιγράφτηκε"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:173
+#: /app/specialVueFakeDummyForL10nScript.js:82
+msgid "Cannot copy"
+msgstr "Αδυναμία αντιγραφής"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:175
+#: /app/specialVueFakeDummyForL10nScript.js:84
+#: /app/src/mixins/CircleActionsMixin.js:55
+msgid "Copy link"
+msgstr "Αντιγραφή συνδέσμου"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:211
+#: /app/specialVueFakeDummyForL10nScript.js:86
+msgid "Toggling of address book was not successful"
+msgstr "Η εναλλαγή του βιβλίου διευθύνσεων απέτυχε"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:220
+#: /app/specialVueFakeDummyForL10nScript.js:88
+msgid "This will delete the address book and every contacts within it"
+msgstr "Θα διαγραφεί το βιβλίο διευθύνσεων και όλες τις επαφές"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:221
+#: /app/specialVueFakeDummyForL10nScript.js:90
+msgid "Delete {addressbook}?"
+msgstr "Διαγραφή του {addressbook}?"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:236
+#: /app/specialVueFakeDummyForL10nScript.js:92
+msgid "Deletion of address book was not successful."
+msgstr "Απέτυχε η διαγραφή του βιβλίου διευθύνσεων."
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:257
+#: /app/specialVueFakeDummyForL10nScript.js:94
+msgid "Renaming of address book was not successful."
+msgstr "Η μετονομασία του βιβλίου διευθύνσεων απέτυχε."
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsAddressbook.vue:160
+#: /app/specialVueFakeDummyForL10nScript.js:96
+msgid "Shared with {num} entity"
+msgid_plural "Shared with {num} entities"
+msgstr[0] "Κοινη χρήση με {num} οντότητα"
+msgstr[1] "Κοινή χρήση με {num} οντότητες"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookShare.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:98
+msgid "Share with users or groups"
+msgstr "Διαμοιρασμός με χρήστες ή ομάδες"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookShare.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:100
+msgid "No users or groups"
+msgstr "Χωρίς χρήστες ή ομάδες"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookSharee.vue:45
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookSharee.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:102
+#: /app/specialVueFakeDummyForL10nScript.js:104
+msgid "can edit"
+msgstr "με δυνατότητα επεξεργασίας"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookSharee.vue:104
+#: /app/specialVueFakeDummyForL10nScript.js:106
+msgid "Unable to delete the share"
+msgstr "Δεν είναι δυνατή η διαγραφή του κοινόχρηστου"
+
+#. TRANSLATORS
+#. components/AppNavigation/Settings/SettingsAddressbookSharee.vue:123
+#: /app/specialVueFakeDummyForL10nScript.js:108
+msgid "Unable to change permissions"
+msgstr "Δεν είναι δυνατή η αλλαγή δικαιωμάτων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:28
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:33
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:110
+#: /app/specialVueFakeDummyForL10nScript.js:112
+#: /app/specialVueFakeDummyForL10nScript.js:114
+msgid "Import contacts"
+msgstr "Εισαγωγή επαφών"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:118
+msgid "Import into the {addressbookName} address book"
+msgstr "Εισαγωγή στο {addressbookName} βιβλίο διευθύνσεων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:120
+msgid "Select local file"
+msgstr "Επιλογή τοπικού αρχείου"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:122
+msgid "Import from Files"
+msgstr "Εισαγωγή από Αρχεία"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:124
+msgid "Importing is disabled because there are no address books available"
+msgstr "Η λειτουργία εισαγωγής απενεργοποιήθηκε, καθώς δεν βρέθηκε κάποιο βιβλίο διευθύνσεων διαθέσιμο"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsImportContacts.vue:97
+#: /app/specialVueFakeDummyForL10nScript.js:126
+msgid "Choose a vCard file to import"
+msgstr "Επιλογή αρχείου vCard για εισαγωγή"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsNewAddressbook.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:130
+msgid "Add new address book"
+msgstr "Προσθήκη νέου βιβλίο διευθύνσεων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsNewAddressbook.vue:78
+#: /app/specialVueFakeDummyForL10nScript.js:132
+msgid "An error occurred, unable to create the address book"
+msgstr "Παρουσιάστηκε σφάλμα, δεν ήταν δυνατή η δημιουργία του βιβλίου διευθύνσεων"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:134 /app/src/models/rfcProps.js:51
+msgid "First name"
+msgstr "Όνομα"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:136 /app/src/models/rfcProps.js:50
+msgid "Last name"
+msgstr "Επώνυμο"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:138 /app/src/models/rfcProps.js:66
+msgid "Phonetic first name"
+msgstr "Φωνητικό πρώτο όνομα"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:140 /app/src/models/rfcProps.js:70
+msgid "Phonetic last name"
+msgstr "Φωνητικό επίθετο"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:142
+msgid "Display name"
+msgstr "Εμφανιζόμενο όνομα"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:74
+#. TRANSLATORS components/Properties/PropertyRev.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:144
+#: /app/specialVueFakeDummyForL10nScript.js:360
+msgid "Last modified"
+msgstr "Τελευταία τροποίηση"
+
+#. TRANSLATORS components/AppNavigation/Settings/SettingsSortContacts.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:146
+msgid "Sort by {sorting}"
+msgstr "Ταξινόμηση κατά {sorting}"
+
+#. TRANSLATORS components/AppNavigation/SettingsSection.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:148
+msgid "Update avatars from social media"
+msgstr "Ενημέρωση των avatar από τα κοινωνικά δίκτυα"
+
+#. TRANSLATORS components/AppNavigation/SettingsSection.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:150
+msgid "(refreshed once per week)"
+msgstr "(ανανεώνεται μία φορά την εβδομάδα)"
+
+#. TRANSLATORS components/AppNavigation/SettingsSection.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:152
+msgid "Address books"
+msgstr "Βιβλία διευθύνσεων"
+
+#. TRANSLATORS components/CircleDetails/CircleConfigs.vue:108
+#: /app/specialVueFakeDummyForL10nScript.js:154
+msgid "An error happened during the config change"
+msgstr "Παρουσιάστηκε σφάλμα κατά την αλλαγή της ρύθμισης"
+
+#. TRANSLATORS components/CircleDetails.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:156
+msgid "Circle name"
+msgstr "Όνομα κύκλου"
+
+#. TRANSLATORS components/CircleDetails.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:158
+msgid "Circle owned by {owner}"
+msgstr "Κύκλος που ανήκει στον/στην {owner}"
+
+#. TRANSLATORS components/CircleDetails.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:160
+#: /app/src/mixins/CircleActionsMixin.js:65
+msgid "Request to join"
+msgstr "Αίτημα συμμετοχής"
+
+#. TRANSLATORS components/CircleDetails.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:162
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. TRANSLATORS components/CircleDetails.vue:167
+#: /app/specialVueFakeDummyForL10nScript.js:168
+msgid "There is no description for this circle"
+msgstr "Δεν υπάρχει περιγραφή για αυτόν τον κύκλο"
+
+#. TRANSLATORS components/CircleDetails.vue:169
+#: /app/specialVueFakeDummyForL10nScript.js:170
+msgid "Enter a description for the circle"
+msgstr "Εισαγάγετε μια περιγραφή για τον κύκλο"
+
+#. TRANSLATORS components/CircleDetails.vue:206
+#: /app/specialVueFakeDummyForL10nScript.js:172
+msgid "An error happened during description sync"
+msgstr "Παρουσιάστηκε σφάλμα κατά τον συγχρονισμό της περιγραφής"
+
+#. TRANSLATORS components/CircleDetails.vue:221
+#: /app/specialVueFakeDummyForL10nScript.js:174
+msgid "An error happened during name sync"
+msgstr "Παρουσιάστηκε σφάλμα κατά τον συγχρονισμό του ονόματος"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAddNewProp.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:176
+msgid "Add new property"
+msgstr "Προσθήκη νέου πεδίου"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAddNewProp.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:178
+msgid "Choose property type"
+msgstr "Διάλεξε τύπο πεδίου"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:180
+#: /app/specialVueFakeDummyForL10nScript.js:190
+msgid "Upload a new picture"
+msgstr "Μεταφόρτωση νέας φωτογραφίας"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:182
+#: /app/specialVueFakeDummyForL10nScript.js:192
+msgid "Choose from Files"
+msgstr "Επιλέξτε από τα Αρχεία"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:184
+#: /app/specialVueFakeDummyForL10nScript.js:194
+msgid "Get from "
+msgstr "Λήψη από"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:186
+#: /app/specialVueFakeDummyForL10nScript.js:196
+msgid "Download picture"
+msgstr "Λήψη εικόνας"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:82
+#: /app/specialVueFakeDummyForL10nScript.js:188
+#: /app/specialVueFakeDummyForL10nScript.js:198
+msgid "Delete picture"
+msgstr "Διαγραφή εικόνας"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:275
+#: /app/specialVueFakeDummyForL10nScript.js:200
+msgid "Invalid image"
+msgstr "Μη έγκυρη εικόνα"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:285
+#: /app/specialVueFakeDummyForL10nScript.js:202
+msgid "Image is too big (max 1MB)."
+msgstr "Η εικόνα είναι πολύ μεγάλη (μέγιστο 1MB)."
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:406
+#: /app/specialVueFakeDummyForL10nScript.js:204
+msgid "Pick an avatar"
+msgstr "Επιλογή άβαταρ"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:428
+#: /app/specialVueFakeDummyForL10nScript.js:206
+msgid "Error while processing the picture."
+msgstr "Σφάλμα κατά την επεξεργασία εικόνας."
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:464
+#: /app/specialVueFakeDummyForL10nScript.js:208
+msgid "Avatar downloaded from social network"
+msgstr "Το άβαταρ λήφθηκε από κοινωνικό δίκτυο"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:467
+#: /app/specialVueFakeDummyForL10nScript.js:210
+msgid "Avatar already up to date"
+msgstr "Το άβαταρ είναι ήδη ενημερωμένο"
+
+#. TRANSLATORS components/ContactDetails/ContactDetailsAvatar.vue:469
+#: /app/specialVueFakeDummyForL10nScript.js:212
+msgid "Avatar download failed"
+msgstr "Η λήψη του άβαταρ επέτυχε"
+
+#. TRANSLATORS components/ContactDetails.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:214
+msgid "No contact selected"
+msgstr "Καμιά επαφή δεν επιλέχθηκε"
+
+#. TRANSLATORS components/ContactDetails.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:216
+msgid "Select a contact on the list to begin"
+msgstr "Επέλεξε μια επαφή απο την λίστα για έναρξη"
+
+#. TRANSLATORS components/ContactDetails.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:218
+msgid "Name"
+msgstr "Όνομα"
+
+#. TRANSLATORS components/ContactDetails.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:220
+msgid "Company"
+msgstr "Εταιρία"
+
+#. TRANSLATORS components/ContactDetails.vue:72
+#: /app/specialVueFakeDummyForL10nScript.js:222
+msgid "Title"
+msgstr "Τίτλος"
+
+#. TRANSLATORS components/ContactDetails.vue:107
+#: /app/specialVueFakeDummyForL10nScript.js:224
+msgid ""
+"This contact was broken and received a fix. Please review the content and "
+"click here to save it."
+msgstr "Η επαφή παρουσίασε σφάλμα και διορθώθηκε. Παρακαλώ ελέγξτε την καταχώρηση και αποθηκεύστε εδώ."
+
+#. TRANSLATORS components/ContactDetails.vue:128
+#: /app/specialVueFakeDummyForL10nScript.js:228
+#: /app/specialVueFakeDummyForL10nScript.js:242
+msgid "Clone contact"
+msgstr "Κλωνοποίηση επαφής"
+
+#. TRANSLATORS components/ContactDetails.vue:131
+#: /app/specialVueFakeDummyForL10nScript.js:230
+msgid "Generate QR Code"
+msgstr "Δημιουργία Κώδικα QR"
+
+#. TRANSLATORS components/ContactDetails.vue:146
+#: /app/specialVueFakeDummyForL10nScript.js:234
+msgid "Contact vCard as QR code"
+msgstr "Κάρτα επαφής vCard ως κώδικας QR"
+
+#. TRANSLATORS components/ContactDetails.vue:155
+#: /app/specialVueFakeDummyForL10nScript.js:236
+msgid "Pick an address book"
+msgstr "Επιλέξτε ένα βιβλίο διευθύνσεων"
+
+#. TRANSLATORS components/ContactDetails.vue:161
+#: /app/specialVueFakeDummyForL10nScript.js:238
+msgid "Select address book"
+msgstr "Επιλογή βιβλίου διευθύνσεων"
+
+#. TRANSLATORS components/ContactDetails.vue:165
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:82
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:240
+#: /app/specialVueFakeDummyForL10nScript.js:280
+#: /app/specialVueFakeDummyForL10nScript.js:296
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#. TRANSLATORS components/ContactDetails.vue:329
+#: /app/specialVueFakeDummyForL10nScript.js:244
+msgid "This contact is not yet synced. Edit it to save it to the server."
+msgstr "Η επαφή δεν συγχρονίστηκε. Επεξεργαστείτε την για αποθήκευση στον διακομιστή."
+
+#. TRANSLATORS components/ContactDetails.vue:334
+#: /app/specialVueFakeDummyForL10nScript.js:246
+msgid ""
+"This contact is in read-only mode. You do not have permission to edit this "
+"contact."
+msgstr "Η επαφή είναι μόνο για εμφάνιση. Δεν έχετε δικαιώματα για την επεξεργασία της."
+
+#. TRANSLATORS components/ContactDetails.vue:347
+#: /app/specialVueFakeDummyForL10nScript.js:248
+msgid ""
+"The contact you were trying to edit has changed. Please manually refresh the"
+" contact. Any further edits will be discarded."
+msgstr "Η επαφή που προσπαθείτε να επεξεργαστείτε άλλαξε. Παρακαλώ ανανεώστε. Όποια άλλη επεξεργασία θα απορριφθεί."
+
+#. TRANSLATORS components/ContactDetails.vue:397
+#: /app/specialVueFakeDummyForL10nScript.js:250
+msgid "Address book"
+msgstr "Βιβλίο διευθύνσεων"
+
+#. TRANSLATORS components/ContactDetails.vue:548
+#. TRANSLATORS views/Contacts.vue:35
+#. TRANSLATORS views/Contacts.vue:269
+#: /app/specialVueFakeDummyForL10nScript.js:254
+#: /app/specialVueFakeDummyForL10nScript.js:366
+#: /app/specialVueFakeDummyForL10nScript.js:370
+#: /app/src/services/checks/missingFN.js:35
+msgid "New contact"
+msgstr "Νέα επαφή"
+
+#. TRANSLATORS components/ContactDetails.vue:575
+#: /app/specialVueFakeDummyForL10nScript.js:256
+msgid "Syntax error. Cannot open the contact."
+msgstr "Σφάλμα σύνταξης. Η επαφή δεν ανοίγει."
+
+#. TRANSLATORS components/ContactDetails.vue:577
+#: /app/specialVueFakeDummyForL10nScript.js:258
+msgid "The contact doesn't exists anymore on the server."
+msgstr "Αυτή η επαφή δεν υπάρχει πλέον στον διακομιστή."
+
+#. TRANSLATORS components/ContactDetails.vue:579
+#: /app/specialVueFakeDummyForL10nScript.js:260
+msgid ""
+"Unable to retrieve the contact from the server, please check your network "
+"connection."
+msgstr "Δεν είναι δυνατή η λήψη της επαφής από τον διακομιστή, παρακαλούμε ελέγξτε την σύνδεσή του δικτύου σας."
+
+#. TRANSLATORS components/ContactDetails.vue:627
+#: /app/specialVueFakeDummyForL10nScript.js:262
+msgid "An error occurred while trying to move the contact"
+msgstr "Παρουσιάστηκε σφάλμα κατά την μετακίνηση της επαφής"
+
+#. TRANSLATORS components/ContactDetails.vue:660
+#: /app/specialVueFakeDummyForL10nScript.js:264
+msgid "An error occurred while trying to copy the contact"
+msgstr "Παρουσιάστηκε σφάλμα κατά την αντιγραφή επαφής"
+
+#. TRANSLATORS components/EntityPicker/ContactsPicker.vue:12
+#: /app/specialVueFakeDummyForL10nScript.js:266
+msgid "Add to {group}"
+msgstr "Προσθήκη σε {group}"
+
+#. TRANSLATORS components/EntityPicker/EntityBubble.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:270
+msgid "Remove {type}"
+msgstr "Κατάργηση {type}"
+
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:272
+msgid "Search {types}"
+msgstr "Αναζήτηση  {types}"
+
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:276
+msgid "Search for people to add"
+msgstr "Αναζητήστε άτομα για προσθήκη"
+
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:74
+#. TRANSLATORS components/Properties/PropertyGroups.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:278
+#: /app/specialVueFakeDummyForL10nScript.js:356
+msgid "No results"
+msgstr "Κανένα αποτέλεσμα"
+
+#. TRANSLATORS components/EntityPicker/EntityPicker.vue:167
+#: /app/specialVueFakeDummyForL10nScript.js:282
+msgid "Add to group"
+msgstr "Προσθήκη στην ομάδα"
+
+#. TRANSLATORS components/EntityPicker/EntitySearchResult.vue:24
+#: /app/specialVueFakeDummyForL10nScript.js:284
+msgid "Add {type}"
+msgstr "Προσθήκη {type}"
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:286
+msgid "New circle name"
+msgstr "Νέο όνομα κύκλου"
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:288
+msgid "Personal circle"
+msgstr "Προσωπικός κύκλος"
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:290
+msgid ""
+"This circle will only be visible to you. Other members will not be able to "
+"see or use it."
+msgstr "Αυτός ο κύκλος θα είναι ορατός μόνο σε εσάς. Τα άλλα μέλη δε θα μπορούν να τον δουν ή να το χρησιμοποιήσουν."
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:292
+msgid "Local circle"
+msgstr "Τοπικός κύκλος"
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:294
+msgid ""
+"This circle will not be shared with the other instances of the global scale"
+msgstr "Αυτός ο κύκλος δε θα είναι κοινόχρηστος με τις άλλες  εγκαταστάσεις παγκόσμιας κλίμακας"
+
+#. TRANSLATORS components/EntityPicker/NewCircleIntro.vue:79
+#: /app/specialVueFakeDummyForL10nScript.js:298
+msgid "Create circle"
+msgstr "Δημιουργία κύκλου"
+
+#. TRANSLATORS components/MemberList.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:300
+msgid "Loading members list …"
+msgstr "Φόρτωση λίστας μελών …"
+
+#. TRANSLATORS components/MemberList.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:302
+msgid "The list of members is only visible to members of this circle"
+msgstr "Η λίστα των μελών είναι ορατή μόνο σε μέλη αυτού του κύκλου"
+
+#. TRANSLATORS components/MemberList.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:304
+msgid "There is no member in this circle"
+msgstr "Δεν υπάρχει κάποιο μέλος σε αυτόν τον κύκλο"
+
+#. TRANSLATORS components/MemberList.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:306
+msgid "Add members"
+msgstr "Προσθήκη μελών"
+
+#. TRANSLATORS components/MemberList.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:308
+msgid "Show circle details"
+msgstr "Εμφάνιση λεπτομερειών κύκλου"
+
+#. TRANSLATORS components/MemberList.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:310
+msgid "Add to {circle}"
+msgstr "Προσθήκη σε {circle}"
+
+#. TRANSLATORS components/MemberList.vue:212
+#: /app/specialVueFakeDummyForL10nScript.js:312
+msgid "Unable to get the recommendations list"
+msgstr "Δεν είναι δυνατή η λήψη της λίστας προτάσεων"
+
+#. TRANSLATORS components/MemberList.vue:237
+#: /app/specialVueFakeDummyForL10nScript.js:314
+msgid "Unable to get the results"
+msgstr "Δεν είναι δυνατή η λήψη των αποτελεσμάτων"
+
+#. TRANSLATORS components/MemberList.vue:262
+#: /app/specialVueFakeDummyForL10nScript.js:316
+msgid "Some members could not be added"
+msgstr "Δεν ήταν δυνατή η προσθήκη ορισμένων μελών"
+
+#. TRANSLATORS components/MemberList.vue:270
+#: /app/specialVueFakeDummyForL10nScript.js:318
+msgid "There was an issue adding members to the circle"
+msgstr "Παρουσιάστηκε πρόβλημα με την προσθήκη μελών στον κύκλο"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:320
+msgid "Accept membership request"
+msgstr "Αποδοχή αιτήματος μέλους"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:322
+msgid "Reject membership request"
+msgstr "Απόρριψη αιτήματος μέλους"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:326
+msgid "Manage level"
+msgstr "Διαχείριση ρόλου"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:89
+#: /app/specialVueFakeDummyForL10nScript.js:330
+msgid "Remove member"
+msgstr "Κατάργηση μέλους"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:156
+#: /app/specialVueFakeDummyForL10nScript.js:332
+msgid "Pending"
+msgstr "Εκκρεμεί"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:262
+#: /app/specialVueFakeDummyForL10nScript.js:334
+msgid "Promote as sole owner"
+msgstr "Προαγωγή σε μοναδικό κάτοχο"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:266
+#: /app/specialVueFakeDummyForL10nScript.js:336
+msgid "Promote to {level}"
+msgstr "Προαγωγή σε {level}"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:268
+#: /app/specialVueFakeDummyForL10nScript.js:338
+msgid "Demote to {level}"
+msgstr "Υποβίβαση σε {level}"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:288
+#: /app/specialVueFakeDummyForL10nScript.js:340
+msgid "Could not delete the member {displayName}"
+msgstr "Αδυναμία διαγραφής του μέλους {displayName}"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:313
+#: /app/specialVueFakeDummyForL10nScript.js:342
+msgid "Could not change the member level to {level}"
+msgstr "Δεν ήταν δυνατή η αλλαγή του ρόλου του μέλους σε {level}"
+
+#. TRANSLATORS components/MembersList/MembersListItem.vue:331
+#: /app/specialVueFakeDummyForL10nScript.js:344
+msgid "Could not accept membership request"
+msgstr "Δεν ήταν δυνατή η αποδοχή του αιτήματος μέλους"
+
+#. TRANSLATORS components/Properties/PropertyDateTime.vue:36
+#. TRANSLATORS components/Properties/PropertyMultipleText.vue:35
+#. TRANSLATORS components/Properties/PropertyText.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:348
+#: /app/specialVueFakeDummyForL10nScript.js:358
+#: /app/specialVueFakeDummyForL10nScript.js:364
+msgid "Select type"
+msgstr "Επιλέξτε τύπο"
+
+#. TRANSLATORS components/Properties/PropertyDateTime.vue:130
+#: /app/specialVueFakeDummyForL10nScript.js:350
+msgid "Select Date"
+msgstr "Επιλέξτε Ημέρα"
+
+#. TRANSLATORS components/Properties/PropertyGroups.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:354
+msgid "Add contact in group"
+msgstr "Προσθήκη στην ομάδα"
+
+#. TRANSLATORS components/Properties/PropertySelect.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:362
+msgid "Select option"
+msgstr "Επιλέξτε μια επιλογή"
+
+#. TRANSLATORS views/Contacts.vue:304
+#: /app/specialVueFakeDummyForL10nScript.js:372
+msgid "Unable to create the contact."
+msgstr "Αδυναμία δημιουργίας επαφής."
+
+#. TRANSLATORS views/Contacts.vue:351
+#: /app/specialVueFakeDummyForL10nScript.js:374
+msgid "Contact not found"
+msgstr "Δεν βρέθηκε η επαφή."
+
+#. TRANSLATORS views/Contacts.vue:366
+#: /app/specialVueFakeDummyForL10nScript.js:376
+msgid "Group {group} not found"
+msgstr "Η ομάδα {group} δε βρέθηκε"
+
+#. TRANSLATORS views/Processing/AddToGroupView.vue:33
+#. TRANSLATORS views/Processing/ImportView.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:378
+#: /app/specialVueFakeDummyForL10nScript.js:386
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#. TRANSLATORS views/Processing/AddToGroupView.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:380
+msgid "{success} contact added to {name}"
+msgid_plural "{success} contacts added to {name}"
+msgstr[0] "Προστέθηκε {success} επαφή σε {name}"
+msgstr[1] "Προστέθηκαν {success} επαφές σε {name}"
+
+#. TRANSLATORS views/Processing/AddToGroupView.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:382
+msgid "Adding {success} contact to {name}"
+msgid_plural "Adding {success} contacts to {name}"
+msgstr[0] "Προσθήκη {success} επαφής σε {name}"
+msgstr[1] "Προσθήκη {success} επαφών σε {name}"
+
+#. TRANSLATORS views/Processing/AddToGroupView.vue:92
+#. TRANSLATORS views/Processing/ImportView.vue:92
+#: /app/specialVueFakeDummyForL10nScript.js:384
+#: /app/specialVueFakeDummyForL10nScript.js:392
+msgid "{count} error"
+msgid_plural "{count} errors"
+msgstr[0] "{count} σφάλμα"
+msgstr[1] "{count} σφάλματα"
+
+#. TRANSLATORS views/Processing/ImportView.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:388
+msgid "Importing %n contact into {addressbook}"
+msgid_plural "Importing %n contacts into {addressbook}"
+msgstr[0] "Εισαγωγή %n επαφής σε {addressbook}"
+msgstr[1] "Εισαγωγή %n επαφών σε {addressbook}"
+
+#. TRANSLATORS views/Processing/ImportView.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:390
+msgid "Done importing %n contact into {addressbook}"
+msgid_plural "Done importing %n contacts into {addressbook}"
+msgstr[0] "Ολοκληρώθηκε η εισαγωγή %n επαφής σε {addressbook}"
+msgstr[1] "Ολοκληρώθηκε η εισαγωγή %n επαφών σε {addressbook}"
+
+#: /app/src/files-action.js:31
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#: /app/src/mixins/CircleActionsMixin.js:53
+msgid "Could not copy"
+msgstr "Δεν ήταν δυνατή η αντιγραφή"
+
+#: /app/src/mixins/CircleActionsMixin.js:67
+msgid "Join circle"
+msgstr "Συμμετοχή στον κύκλο"
+
+#: /app/src/mixins/CircleActionsMixin.js:74
+msgid ""
+"You are about to leave {circle}.\n"
+"Are you sure?"
+msgstr "Πρόκειται να αποχωρήσετε από τον κύκλο {circle}.\nΕίστε σίγουρος;"
+
+#: /app/src/mixins/CircleActionsMixin.js:77
+msgid "Please confirm circle leave"
+msgstr "Παρακαλώ επιβεβαιώστε την αποχώρηση από τον κύκλο"
+
+#: /app/src/mixins/CircleActionsMixin.js:102
+msgid "Could not leave the circle {displayName}"
+msgstr "Δεν ήταν δυνατή η αποχώρηση από τον κύκλο {displayName}"
+
+#: /app/src/mixins/CircleActionsMixin.js:121
+msgid "Unable to join the circle"
+msgstr "Δεν είναι δυνατή η συμμετοχή στον κύκλο"
+
+#: /app/src/mixins/CircleActionsMixin.js:131
+msgid ""
+"You are about to delete {circle}.\n"
+"Are you sure?"
+msgstr "Πρόκειται να διαγράψετε τον κύκλο {circle}.\nΕίστε σίγουροι?"
+
+#: /app/src/mixins/CircleActionsMixin.js:134
+msgid "Please confirm circle deletion"
+msgstr "Παρακαλώ επιβεβαιώστε την αποχώρηση από τον κύκλο"
+
+#: /app/src/mixins/CircleActionsMixin.js:151
+msgid "Unable to delete the circle"
+msgstr "Δεν είναι δυνατή η διαγραφή του κύκλου"
+
+#: /app/src/mixins/CopyToClipboardMixin.js:62
+msgid "Link copied to the clipboard"
+msgstr "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο"
+
+#: /app/src/mixins/CopyToClipboardMixin.js:66
+msgid "Could not copy link to the clipboard."
+msgstr "Δεν ήταν δυνατή η αντιγραφή του συνδέσμου στο πρόχειρο."
+
+#: /app/src/models/constants.ts:37
+msgid "Not grouped"
+msgstr "Χωρίς ομάδα"
+
+#: /app/src/models/constants.ts:38
+msgid "Recently contacted"
+msgstr "Πρόσφατη επικοινωνία"
+
+#: /app/src/models/constants.ts:61
+msgid ""
+"Circles allow you to create groups with other users on a Nextcloud instance "
+"and share with them."
+msgstr "Οι κύκλοι σας επιτρέπουν να δημιουργείτε ομάδες με άλλους χρήστες σε μια εγκατάσταση Nextcloud και να μοιράζεστε μαζί τους."
+
+#: /app/src/models/constants.ts:82
+msgid "Circle"
+msgstr "Κύκλος"
+
+#: /app/src/models/constants.ts:83
+msgid "User"
+msgstr "Χρήστης"
+
+#: /app/src/models/constants.ts:84
+msgid "Group"
+msgstr "Ομάδα"
+
+#: /app/src/models/constants.ts:85 /app/src/models/rfcProps.js:160
+msgid "Email"
+msgstr "Ηλ. ταχυδρομείο"
+
+#: /app/src/models/constants.ts:86 /app/src/models/rfcProps.js:278
+msgid "Contact"
+msgstr "Επαφή"
+
+#: /app/src/models/constants.ts:92
+msgid "Member"
+msgstr "Μέλος"
+
+#: /app/src/models/constants.ts:93
+msgid "Moderator"
+msgstr "Συντονιστής"
+
+#: /app/src/models/constants.ts:94
+msgid "Admin"
+msgstr "Διαχειριστής"
+
+#: /app/src/models/constants.ts:95
+msgid "Owner"
+msgstr "Κάτοχος"
+
+#: /app/src/models/constants.ts:100
+msgid "Invites"
+msgstr "Προσκλήσεις"
+
+#: /app/src/models/constants.ts:101
+msgid "Anyone can request membership"
+msgstr "Οποιοσδήποτε μπορεί να αιτηθεί συμμετοχή"
+
+#: /app/src/models/constants.ts:102
+msgid "Members need to accept invitation"
+msgstr "Τα μέλη πρέπει να αποδεχτούν την πρόσκληση"
+
+#: /app/src/models/constants.ts:103
+msgid "Memberships must be confirmed/accepted by a Moderator (requires Open)"
+msgstr "Τα αιτήματα μελών πρέπει να επιβεβαιωθούν/αποδεχθούν από έναν συντονιστή (απαιτείται Ανοιχτός κύκλος)"
+
+#: /app/src/models/constants.ts:104
+msgid "Members can also invite"
+msgstr "Τα μέλη μπορούν επίσης να προσκαλέσουν"
+
+#: /app/src/models/constants.ts:109
+msgid "Visibility"
+msgstr "Ορατότητα"
+
+#: /app/src/models/constants.ts:110
+msgid "Visible to everyone"
+msgstr "Ορατός σε όλους"
+
+#: /app/src/models/constants.ts:113
+msgid "Circle membership"
+msgstr "Κύκλος ως μέλος"
+
+#: /app/src/models/constants.ts:116
+msgid "Prevent circle from being a member of another circle"
+msgstr "Αποτρέψτε τον κύκλο να είναι μέλος άλλου κύκλου"
+
+#: /app/src/models/constants.ts:126
+msgid "Users"
+msgstr "Χρήστες"
+
+#: /app/src/models/constants.ts:157
+msgid "Emails"
+msgstr "Ηλ.Μηνύματα"
+
+#: /app/src/models/rfcProps.js:44
+msgid "Nickname"
+msgstr "Παρατσούκλι"
+
+#: /app/src/models/rfcProps.js:48
+msgid "Detailed name"
+msgstr "Λεπτομερές όνομα"
+
+#: /app/src/models/rfcProps.js:52
+msgid "Additional names"
+msgstr "Επιπλέον ονόματα"
+
+#: /app/src/models/rfcProps.js:53
+msgid "Prefix"
+msgstr "Πρόθεμα"
+
+#: /app/src/models/rfcProps.js:54
+msgid "Suffix"
+msgstr "Κατάληξη"
+
+#: /app/src/models/rfcProps.js:74
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+#: /app/src/models/rfcProps.js:79
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+#: /app/src/models/rfcProps.js:84
+msgid "Location"
+msgstr "Τοποθεσία"
+
+#: /app/src/models/rfcProps.js:94
+msgid "Federated Cloud ID"
+msgstr "Federated Cloud ID"
+
+#: /app/src/models/rfcProps.js:101 /app/src/models/rfcProps.js:126
+#: /app/src/models/rfcProps.js:168 /app/src/models/rfcProps.js:206
+#: /app/src/models/rfcProps.js:207
+msgid "Home"
+msgstr "Σπίτι"
+
+#: /app/src/models/rfcProps.js:102 /app/src/models/rfcProps.js:127
+#: /app/src/models/rfcProps.js:169 /app/src/models/rfcProps.js:208
+#: /app/src/models/rfcProps.js:209
+msgid "Work"
+msgstr "Εργασία"
+
+#: /app/src/models/rfcProps.js:103 /app/src/models/rfcProps.js:128
+#: /app/src/models/rfcProps.js:170 /app/src/models/rfcProps.js:306
+msgid "Other"
+msgstr "Άλλο"
+
+#: /app/src/models/rfcProps.js:108 /app/src/models/rfcProps.js:112
+msgid "Address"
+msgstr "Διεύθυνση"
+
+#: /app/src/models/rfcProps.js:110
+msgid "Post office box"
+msgstr "Ταχυδρομική θυρίδα"
+
+#: /app/src/models/rfcProps.js:111
+msgid "Extended address"
+msgstr "Εκτεταμένη διεύθυνση"
+
+#: /app/src/models/rfcProps.js:113
+msgid "City"
+msgstr "Πόλη"
+
+#: /app/src/models/rfcProps.js:114
+msgid "State or province"
+msgstr "Νομός ή περιφέρεια"
+
+#: /app/src/models/rfcProps.js:115
+msgid "Postal code"
+msgstr "Ταχυδρομικός Κώδικας"
+
+#: /app/src/models/rfcProps.js:116
+msgid "Country"
+msgstr "Χώρα"
+
+#: /app/src/models/rfcProps.js:132
+msgid "Birthday"
+msgstr "Γενέθλια"
+
+#: /app/src/models/rfcProps.js:143
+msgid "Anniversary"
+msgstr "Επέτειος"
+
+#: /app/src/models/rfcProps.js:151
+msgid "Date of death"
+msgstr "Ημερομηνία θανάτου"
+
+#: /app/src/models/rfcProps.js:175
+msgid "Instant messaging"
+msgstr "Άμεσα μηνύματα"
+
+#: /app/src/models/rfcProps.js:198
+msgid "Phone"
+msgstr "Τηλέφωνο"
+
+#: /app/src/models/rfcProps.js:210 /app/src/models/rfcProps.js:211
+msgid "Mobile"
+msgstr "Κινητό"
+
+#: /app/src/models/rfcProps.js:212
+msgid "Work mobile"
+msgstr "Κινητό εργασίας"
+
+#: /app/src/models/rfcProps.js:213
+msgid "Home mobile"
+msgstr "Κινητό οικίας"
+
+#: /app/src/models/rfcProps.js:214
+msgid "Fax"
+msgstr "Φαξ"
+
+#: /app/src/models/rfcProps.js:215
+msgid "Fax home"
+msgstr "Φαξ σπίτι"
+
+#: /app/src/models/rfcProps.js:216
+msgid "Fax work"
+msgstr "Φαξ εργασία"
+
+#: /app/src/models/rfcProps.js:217
+msgid "Pager"
+msgstr "Βομβητής"
+
+#: /app/src/models/rfcProps.js:218
+msgid "Voice"
+msgstr "Ομιλία"
+
+#: /app/src/models/rfcProps.js:219
+msgid "Car"
+msgstr "Αμάξι"
+
+#: /app/src/models/rfcProps.js:220
+msgid "Work pager"
+msgstr "Βομβητής δουλειάς"
+
+#: /app/src/models/rfcProps.js:227
+msgid "Social network"
+msgstr "Κοινωνικό δίκτυο"
+
+#: /app/src/models/rfcProps.js:251
+msgid "Relationship to you"
+msgstr "Σχέση με εσάς"
+
+#: /app/src/models/rfcProps.js:255 /app/src/models/rfcProps.js:286
+msgid "Spouse"
+msgstr "Σύζυγος"
+
+#: /app/src/models/rfcProps.js:256 /app/src/models/rfcProps.js:287
+msgid "Child"
+msgstr "Παιδί"
+
+#: /app/src/models/rfcProps.js:257 /app/src/models/rfcProps.js:288
+msgid "Mother"
+msgstr "Μητέρα"
+
+#: /app/src/models/rfcProps.js:258 /app/src/models/rfcProps.js:289
+msgid "Father"
+msgstr "Πατέρας"
+
+#: /app/src/models/rfcProps.js:259 /app/src/models/rfcProps.js:290
+msgid "Parent"
+msgstr "Γονέας"
+
+#: /app/src/models/rfcProps.js:260 /app/src/models/rfcProps.js:291
+msgid "Brother"
+msgstr "Αδελφός"
+
+#: /app/src/models/rfcProps.js:261 /app/src/models/rfcProps.js:292
+msgid "Sister"
+msgstr "Αδελφή"
+
+#: /app/src/models/rfcProps.js:262 /app/src/models/rfcProps.js:293
+msgid "Relative"
+msgstr "Συγγενής"
+
+#: /app/src/models/rfcProps.js:263 /app/src/models/rfcProps.js:281
+msgid "Friend"
+msgstr "Φίλος"
+
+#: /app/src/models/rfcProps.js:264 /app/src/models/rfcProps.js:282
+msgid "Colleague"
+msgstr "Συνάδελφος"
+
+#: /app/src/models/rfcProps.js:265 /app/src/models/rfcProps.js:284
+msgid "Manager"
+msgstr "Διευθυντής"
+
+#: /app/src/models/rfcProps.js:266 /app/src/models/rfcProps.js:285
+msgid "Assistant"
+msgstr "Βοηθός"
+
+#: /app/src/models/rfcProps.js:271
+msgid "Related contacts"
+msgstr "Συναφείς επαφές"
+
+#: /app/src/models/rfcProps.js:279
+msgid "Agent"
+msgstr "Agent"
+
+#: /app/src/models/rfcProps.js:280
+msgid "Emergency"
+msgstr "Επείγον"
+
+#: /app/src/models/rfcProps.js:283
+msgid "Co-worker"
+msgstr "Συνάδελφος"
+
+#: /app/src/models/rfcProps.js:297
+msgid "Gender"
+msgstr "Φύλο"
+
+#: /app/src/models/rfcProps.js:304
+msgid "Female"
+msgstr "Γυναίκα"
+
+#: /app/src/models/rfcProps.js:305
+msgid "Male"
+msgstr "Άνδρας"
+
+#: /app/src/models/rfcProps.js:307
+msgid "None"
+msgstr "Κανένα"
+
+#: /app/src/models/rfcProps.js:308
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: /app/src/models/rfcProps.js:312
+msgid "Time zone"
+msgstr "Ζώνη ώρας"
+
+#: /app/src/models/rfcProps.js:321
+msgid "Spoken languages"
+msgstr "Ομιλούσες γλώσσες"
+
+#: /app/src/store/addressbooks.js:381
+msgid "{failed} contact failed to be read"
+msgid_plural "{failed} contacts failed to be read"
+msgstr[0] "Αποτυχία ανάγνωσης {failed} επαφής"
+msgstr[1] "Αποτυχία ανάγνωσης {failed} επαφών"
+
+#: /app/src/store/circles.js:128
+msgid "Some circle(s) an error occurred. Check the console for more details."
+msgstr "Παρουσιάστηκε ένα σφάλμα κύκλου(ων). Ελέγξτε την κονσόλα για περισσότερες λεπτομέρειες."
+
+#: /app/src/store/circles.js:188
+msgid "Unable to create circle {circleName}"
+msgstr "Δεν είναι δυνατή η δημιουργία του κύκλου {circleName}"
+
+#: /app/src/store/circles.js:206
+msgid "Unable to delete circle {circleId}"
+msgstr "Δεν είναι δυνατή η διαγραφή του κύκλου {circleId}"
+
+#: /app/src/store/contacts.js:319
+msgid "Unable to delete contact"
+msgstr "Δεν είναι δυνατή η διαγραφή της επαφής"

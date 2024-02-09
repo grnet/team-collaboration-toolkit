@@ -1,0 +1,36 @@
+---
+mysql_fqdn: nextcloud.example.com
+nextcloud_fqdn: nextcloud.example.com
+collabora_fqdn: nextcloud.example.com
+
+# Settings for Nextcloud and Collabora
+default_phone_region: GR
+mail_from_address: noreply
+mail_domain: example.com
+collabora_allowed_languages: en_US en_GB el_GR fr_FR de_DE
+opcache_interned_strings_buffer: 16  # See nextcloud ansible module README.md
+nextcloud_apps:  # These apps could also be installed from the web interface
+  - calendar
+  - files_texteditor
+  - deck
+  - files_accesscontrol
+  - richdocuments
+  - contacts
+  - bruteforcesettings
+  - impersonate
+  - groupfolders
+
+# Settings for the mail satellite, a local installation of Postfix that
+# will merely send everything to a smarthost. This is required so that
+# Nextcloud can send email to users.
+smarthost: relay.example.com
+mailname: example.com
+mail_aliases:
+  root: admin@example.com
+  www-data: root
+
+# Https certificates will be created automatically. During the creation
+# of such certificates, certbot asks for an email address.
+# Letsencrypt.org occasionally sends email to this address (e.g. when a
+# certificate somehow does not renew in time).
+letsencrypt_admin: admin@example.com

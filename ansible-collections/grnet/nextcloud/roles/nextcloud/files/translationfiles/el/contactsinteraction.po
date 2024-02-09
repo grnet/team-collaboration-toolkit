@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2020-09-18 18:53+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>, 2020\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/contactsinteraction/lib/AddressBook.php:150
+#: /app/apps/contactsinteraction/lib/Listeners/ContactInteractionListener.php:130
+#: /app/apps/contactsinteraction/lib/Listeners/ContactInteractionListener.php:161
+msgid "Recently contacted"
+msgstr "Πρόσφατη επικοινωνία"
+
+#: /app/apps/contactsinteraction/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Contacts Interaction"
+msgstr "Ενσωμάτωση επαφών"
+
+#: /app/apps/contactsinteraction/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Manages interaction between users and contacts"
+msgstr "Διαχειρίζεται την αλληλεπίδραση μεταξύ χρηστών και επαφών"
+
+#: /app/apps/contactsinteraction/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Collect data about user and contacts interactions and provide an address "
+"book for the data"
+msgstr ""
+"Συλλογή δεδομένων σχετικά με αλληλεπιδράσεις χρήστη και επαφών και παροχή "
+"βιβλίου διευθύνσεων για τα δεδομένα"

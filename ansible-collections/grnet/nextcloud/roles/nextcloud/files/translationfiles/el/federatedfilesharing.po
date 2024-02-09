@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pantelis Sarantos <hello@pantelis.ninja>, 2017
+# eleni lainidou <elainidou@hotmail.com>, 2017
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2019
+# Salih Emin <cerebrux.gr@gmail.com>, 2019
+# george k <norhorn@gmail.com>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2016-06-28 12:18+0000\n"
+"Last-Translator: ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/federatedfilesharing/js/external.js:35
+#: /app/apps/federatedfilesharing/js/external.js:48
+msgid "Do you want to add the remote share {name} from {owner}@{remote}?"
+msgstr ""
+"Θέλετε να προσθέσουμε τον απομακρυσμένο κοινόχρηστο φάκελο {name} από "
+"{owner}@{remote}?"
+
+#: /app/apps/federatedfilesharing/js/external.js:38
+#: /app/apps/federatedfilesharing/js/external.js:51
+msgid "Remote share"
+msgstr "Απομακρυσμένος κοινόχρηστος φάκελος"
+
+#: /app/apps/federatedfilesharing/js/external.js:57
+msgid "Remote share password"
+msgstr "Συνθηματικό απομακρυσμένου κοινόχρηστου φακέλου"
+
+#: /app/apps/federatedfilesharing/js/external.js:68
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#: /app/apps/federatedfilesharing/js/external.js:69
+msgid "Add remote share"
+msgstr "Προσθήκη απομακρυσμένου κοινόχρηστου φακέλου"
+
+#: /app/apps/federatedfilesharing/js/settings-personal.js:26
+#: /app/apps/federatedfilesharing/js/settings-personal.js:39
+#: /app/apps/federatedfilesharing/js/settings-personal.js:61
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: /app/apps/federatedfilesharing/js/settings-personal.js:33
+msgid "Copied!"
+msgstr "Αντιγράφτηκε!"
+
+#: /app/apps/federatedfilesharing/js/settings-personal.js:47
+msgid "Not supported!"
+msgstr "Δεν υποστηρίζεται!"
+
+#: /app/apps/federatedfilesharing/js/settings-personal.js:49
+msgid "Press ⌘-C to copy."
+msgstr "Για αντιγραφή πατήστε ⌘-C."
+
+#: /app/apps/federatedfilesharing/js/settings-personal.js:51
+msgid "Press Ctrl-C to copy."
+msgstr "Για αντιγραφή πατήστε Ctrl-C."
+
+#: /app/apps/federatedfilesharing/lib/AddressHandler.php:78
+msgid "Invalid Federated Cloud ID"
+msgstr "Μη έγκυρο Federated Cloud ID"
+
+#: /app/apps/federatedfilesharing/lib/Controller/MountPublicLinkController.php:204
+msgid "Server to server sharing is not enabled on this server"
+msgstr ""
+"Ο διαμοιρασμός μεταξύ διακομιστών δεν έχει ενεργοποιηθεί σε αυτόν το "
+"διακομιστή"
+
+#: /app/apps/federatedfilesharing/lib/Controller/MountPublicLinkController.php:225
+msgid "Couldn't establish a federated share."
+msgstr "Αδυναμία επίτευξης ομόσπονδου κοινόχρηστου φακέλου"
+
+#: /app/apps/federatedfilesharing/lib/Controller/MountPublicLinkController.php:227
+msgid "Couldn't establish a federated share, maybe the password was wrong."
+msgstr ""
+"Δεν μπόρεσε να γίνει ένας federated διαμοιρασμός, μπορεί να ήταν λάθος το "
+"συνθηματικό"
+
+#: /app/apps/federatedfilesharing/lib/Controller/MountPublicLinkController.php:236
+msgid ""
+"Federated Share request sent, you will receive an invitation. Check your "
+"notifications."
+msgstr ""
+"Το αίτημα για Federate διαμοιρασμό εστάλη, θα λάβεις μια πρόσκληση. Έλεγξε "
+"τις ειδοποιήσεις."
+
+#: /app/apps/federatedfilesharing/lib/Controller/MountPublicLinkController.php:241
+msgid ""
+"Couldn't establish a federated share, it looks like the server to federate "
+"with is too old (Nextcloud <= 9)."
+msgstr ""
+"Δεν μπόρεσε να δημιουργήσει ένα ομοσπονδιακό κοινόχρηστο, μοιάζει ο "
+"ομόσπονδος διακομιστής είναι πολύ παλαιός (Nextcloud <= 9)."
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:184
+msgid "It is not allowed to send federated group shares from this server."
+msgstr ""
+"Δεν επιτρέπεται η αποστολή ομοσπονδιακών κονόχρηστων ομάδας από αυτόν τον "
+"διακομιστή."
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:196
+#, php-format
+msgid ""
+"Sharing %1$s failed, because this item is already shared with user %2$s"
+msgstr ""
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:208
+msgid "Not allowed to create a federated share with the same user"
+msgstr ""
+"Δεν επιτρέπεται η δημιουργία federated διαμοιρασμού με τον ίδιο χρήστη"
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:216
+msgid "Federated shares require read permissions"
+msgstr ""
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:248
+#, php-format
+msgid "File is already shared with %s"
+msgstr "Το αρχείο είναι ήδη κοινόχρηστο με %s"
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:316
+#, php-format
+msgid ""
+"Sharing %1$s failed, could not find %2$s, maybe the server is currently "
+"unreachable or uses a self-signed certificate."
+msgstr ""
+"Η κοινή χρήση του %1$s απέτυχε, αδύνατη η εύρεση του %2$s, ίσως ο "
+"διακομιστής δεν είναι προσβάσιμος αυτήν τη στιγμή ή χρησιμοποιεί αυτό-"
+"υπογεγραμμένο πιστοποιητικό."
+
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:850
+#: /app/apps/federatedfilesharing/lib/FederatedShareProvider.php:856
+msgid "Could not find share"
+msgstr "Αδυναμία εύρεσης κοινόχρηστου"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:81
+msgid "Federated sharing"
+msgstr "Ομόσποσνδος διαμοιρασμός"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:112
+#, php-format
+msgid ""
+"You received \"%3$s\" as a remote share from %4$s (%1$s) (on behalf of %5$s "
+"(%2$s))"
+msgstr ""
+"Λάβατε \"%3$s\" ως απομακρυσμένο κοινόχρηστο %4$s (%1$s) (εκ μέρους του %5$s"
+" (%2$s))"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:116
+msgid ""
+"You received {share} as a remote share from {user} (on behalf of {behalf})"
+msgstr ""
+"Λάβατε {share} ως απομακρυσμένο κοινόχρηστο από {user} (εκ μέρους του "
+"{behalf})"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:132
+#, php-format
+msgid "You received \"%3$s\" as a remote share from %4$s (%1$s)"
+msgstr "Λάβατε \"%3$s\" ως απομακρυσμένο κοινόχρηστο %4$s (%1$s)"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:137
+msgid "You received {share} as a remote share from {user}"
+msgstr "Λάβατε {share} ως απομακρυσμένο κοινόχρηστο από {user}"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:154
+msgid "Accept"
+msgstr "Αποδοχή"
+
+#: /app/apps/federatedfilesharing/lib/Notifier.php:161
+msgid "Decline"
+msgstr "Απόρριψη"
+
+#: /app/apps/federatedfilesharing/lib/Settings/Admin.php:93
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:12
+msgid "Federated Cloud Sharing"
+msgstr "Διαμοιρασμός Federated Cloud"
+
+#: /app/apps/federatedfilesharing/lib/Settings/Personal.php:66
+#, php-format
+msgid "Share with me through my #Nextcloud Federated Cloud ID, see %s"
+msgstr ""
+"Διαμοιρασμός με εμένα μέσω του #Nextcloud Federated Cloud ID μου, δείτε %s"
+
+#: /app/apps/federatedfilesharing/lib/Settings/Personal.php:67
+msgid "Share with me through my #Nextcloud Federated Cloud ID"
+msgstr "Διαμοιρασμός με εμένα μέσω του #Nextcloud Federated Cloud ID μου"
+
+#: /app/apps/federatedfilesharing/lib/Settings/PersonalSection.php:70
+msgid "Sharing"
+msgstr "Διαμοιρασμός"
+
+#: /app/apps/federatedfilesharing/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Federated file sharing"
+msgstr "Federated διαμοιρασμός αρχείου"
+
+#: /app/apps/federatedfilesharing/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Provide federated file sharing across servers"
+msgstr "Παρέχει κοινής χρήσης αρχεία μεταξύ διακομιστών"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:15
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:11
+msgid "Open documentation"
+msgstr "Άνοιγμα τεκμηρίωσης"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:18
+msgid ""
+"Adjust how people can share between servers. This includes shares between "
+"users on this server as well if they are using federated sharing."
+msgstr ""
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:26
+msgid ""
+"Allow users on this server to send shares to other servers (this option also"
+" allows WebDAV access to public shares)"
+msgstr ""
+"Να επιτρέπεται στους χρήστες αυτού του διακομιστή να στέλνουν κοινόχρηστα "
+"στοιχεία σε άλλους διακομιστές (αυτή η επιλογή επιτρέπει επίσης στο WebDAV "
+"πρόσβαση σε δημόσιες κοινοποιήσεις)."
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:35
+msgid "Allow users on this server to receive shares from other servers"
+msgstr ""
+"Να επιτρέπεται στους χρίστες του διακομιστή να λαμβάνουν διαμοιρασμένα "
+"αρχεία από άλλους διακομιστές"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:45
+msgid "Allow users on this server to send shares to groups on other servers"
+msgstr ""
+"Επιτρέπει σε χρήστες αυτού του διακομιστή να διαμοιράζεται αρχεία σε ομάδες "
+"άλλου διακομιστή"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:54
+msgid "Allow users on this server to receive group shares from other servers"
+msgstr ""
+"Να επιτρέπεται στους χρήστες αυτού του διακομιστή να δέχονται κοινόχρηστους "
+"φακέλους ομάδας από άλλους διακομιστές"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:64
+msgid "Search global and public address book for users"
+msgstr "Αναζήτηση σε γενικό και δημόσιο βιβλίο διευθύνσεων για χρήστες"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:73
+msgid "Allow users to publish their data to a global and public address book"
+msgstr ""
+"Επιτρέψτε στους χρήστες να δημοσιεύουν τα δεδομένα τους σε ένα γενικό και "
+"δημόσιο βιβλίο διευθύνσεων"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:9
+msgid "Federated Cloud"
+msgstr "Federated Cloud"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:13
+msgid ""
+"You can share with anyone who uses a Nextcloud server or other Open Cloud "
+"Mesh (OCM) compatible servers and services! Just put their Federated Cloud "
+"ID in the share dialog. It looks like person@cloud.example.com"
+msgstr ""
+"Μπορείτε να διαμοιράζεστε με οποιονδήποτε χρησιμοποιεί Nextcloud ή άλλο "
+"συμβατό διακομιστή και υπηρεσιών Open Cloud Mesh (OCM)! Απλά προσθέστε το "
+"Federated Cloud ID στο πλαίσιο διαλόγου διαμοιρασμού. Θα μοιάζει με "
+"person@cloud.example.com"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:16
+msgid "Your Federated Cloud ID:"
+msgstr "Το ID σας στο Federated Cloud:"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:24
+msgid "Share it so your friends can share files with you:"
+msgstr ""
+"Διαμοιραστείτε το ώστε οι φίλοι σας να μπορούν να διαμοιράζονται αρχεία με "
+"εσάς:"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:38
+msgid "Add to your website"
+msgstr "Προσθήκη στην ιστοσελίδα σας"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:47
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:55
+msgid "Share with me via Nextcloud"
+msgstr "Διαμοιραστείτε με εμένα μέσω του Nextcloud"
+
+#: /app/apps/federatedfilesharing/templates/settings-personal.php:52
+msgid "HTML Code:"
+msgstr "Κώδικας HTML:"
+
+#: /app/apps/federatedfilesharing/templates/settings-admin.php:18
+msgid "Adjust how people can share between servers."
+msgstr "Προσαρμόστε το πως τα άτομα θα διαμοιράζονται μεταξύ των διακομιστών"

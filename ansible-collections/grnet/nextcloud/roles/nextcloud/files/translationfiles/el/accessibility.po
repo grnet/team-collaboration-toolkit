@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2019
+# Spiros Skafidas <spirosscafidas@gmail.com>, 2019
+# george k <norhorn@gmail.com>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# pkst <pkst@eellak.gr>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 02:14+0000\n"
+"PO-Revision-Date: 2019-03-14 15:59+0000\n"
+"Last-Translator: pkst <pkst@eellak.gr>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:56
+msgid "Dark theme"
+msgstr "Σκούρο θέμα"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:57
+msgid "Enable dark theme"
+msgstr "Ενεργοποίηση σκούρου θέματος"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:58
+msgid ""
+"A dark theme to ease your eyes by reducing the overall luminosity and "
+"brightness. It is still under development, so please report any issues you "
+"may find."
+msgstr ""
+"Ένα σκούρο θέμα που διευκολύνει τα μάτια σας μειώνοντας την συνολική "
+"ακτινοβολία και φωτεινότητα. Είναι ακόμη υπό δοκιμή, οπότε θα σας "
+"παρακαλούσαμε να αναφέρετε οποιαδήποτε προβλήματα παρατηρηθούν."
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:70
+msgid "High contrast mode"
+msgstr "Λειτουργία υψηλής αντίθεσης"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:71
+msgid "Enable high contrast mode"
+msgstr "Ενεργοποίηση λειτουργίας υψηλής αντίθεσης"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:72
+msgid ""
+"A high contrast mode to ease your navigation. Visual quality will be reduced"
+" but clarity will be increased."
+msgstr ""
+"Λειτουργία με υψηλή αντίθεση για να διευκολύνει την πλοήγηση σας. Η οπτική "
+"ποιότητα θα είναι μειωμένη αλλά θα έχετε υψηλότερη ευκρίνεια."
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:84
+msgid "Dyslexia font"
+msgstr "Γραμματοσειρά για δυσλεκτικούς"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:85
+msgid "Enable dyslexia font"
+msgstr "Ενεργοποίηση γραμματοσειράς για δυσλεκτικούς"
+
+#: /app/apps/accessibility/lib/AccessibilityProvider.php:86
+msgid ""
+"OpenDyslexic is a free typeface/font designed to mitigate some of the common"
+" reading errors caused by dyslexia."
+msgstr ""
+"Η OpenDyslexic είναι μία δωρεάν γραμματοσειρά σχεδιασμένη ώστε να περιορίζει"
+" ορισμένα από τα πιο συνήθη λάθη που προκαλεί η δυσλεξία στην ανάγνωση"
+
+#. TRANSLATORS src/Accessibility.vue:3
+#: /app/apps/accessibility/lib/Settings/PersonalSection.php:86
+#: /app/apps/accessibility/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/apps/accessibility/specialVueFakeDummyForL10nScript.js:2
+msgid "Accessibility"
+msgstr "Προσβασιμότητα"
+
+#: /app/apps/accessibility/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Accessibility options for nextcloud"
+msgstr "Ρυθμίσεις προσβασιμότητας του nextcloud."
+
+#: /app/apps/accessibility/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Provides multiple accessibilities options to ease your use of Nextcloud"
+msgstr ""
+"Προσφέρει πολλαπλές επιλογές προσβασιμότητας για να διευκολύνουν τη χρήση "
+"του Nextcloud"
+
+#. TRANSLATORS src/Accessibility.vue:67
+#: /app/apps/accessibility/specialVueFakeDummyForL10nScript.js:4
+msgid ""
+"Universal access is very important to us. We follow web standards and check "
+"to make everything usable also without mouse, and assistive software such as"
+" screenreaders. We aim to be compliant with the {guidelines}Web Content "
+"Accessibility Guidelines{linkend} 2.1 on AA level, with the high contrast "
+"theme even on AAA level."
+msgstr ""
+"Η  πρόσβαση  από όλους είναι πολύ σημαντική για εμάς. Ακολουθούμε τα πρότυπα"
+" του διαδικτύου και ελέγχουμε ότι τα πάντα μπορούν να χρησιμοποιηθούν χωρίς "
+"ποντίκι και βοηθητικό λογισμικό όπως προγράμματα ανάγνωσης οθόνης. Στόχος "
+"μας είναι να συμμορφωνόμαστε με τις {προδιαγραφές} Προδιαγραφές πρόσβασης "
+"περιεχομένου Ιστού 2.1 σε επίπεδο AA, με το θέμα υψηλής αντίθεσης ακόμη και "
+"σε επίπεδο ΑΑΑ."
+
+#. TRANSLATORS src/Accessibility.vue:78
+#: /app/apps/accessibility/specialVueFakeDummyForL10nScript.js:6
+msgid ""
+"If you find any issues, don’t hesitate to report them on {issuetracker}our "
+"issue tracker{linkend}. And if you want to get involved, come join "
+"{designteam}our design team{linkend}!"
+msgstr ""
+"Αν διαπιστώσετε τυχόν προβλήματα, μη διστάσετε να τα αναφέρετε στον "
+"{issuetracker} στον διακομιστή προβλημάτων μας{linkend}. Και αν θέλετε να "
+"εμπλακείτε, ελάτε στο {designteam} στην ομάδα σχεδιασμού μας{linkend}!"

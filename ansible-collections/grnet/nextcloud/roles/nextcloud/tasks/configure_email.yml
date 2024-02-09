@@ -1,0 +1,54 @@
+---
+- name: Setup mail_from_address
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_from_address
+    line: "  'mail_from_address' => '{{ mail_from_address }}',"
+    insertbefore: '^\s*\);\s*$'
+
+- name: Setup mail_domain
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_domain
+    line: "  'mail_domain' => '{{ mail_domain }}',"
+    insertbefore: '^\s*\);\s*$'
+
+- name: Setup mail_smtpmode
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_smtpmode
+    line: "  'mail_smtpmode' => 'smtp',"
+    insertbefore: '^\s*\);\s*$'
+
+- name: Setup mail_sendmailmode
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_sendmailmode
+    line: "  'mail_sendmailmode' => 'smtp',"
+    insertbefore: '^\s*\);\s*$'
+
+- name: Setup mail_smtphost
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_smtphost
+    line: "  'mail_smtphost' => 'localhost',"
+    insertbefore: '^\s*\);\s*$'
+
+- name: Setup mail_smtpport
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: mail_smtpport
+    line: "  'mail_smtpport' => '25',"
+    insertbefore: '^\s*\);\s*$'

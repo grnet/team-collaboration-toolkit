@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2019
+# george k <norhorn@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 03:16+0000\n"
+"PO-Revision-Date: 2019-03-11 18:23+0000\n"
+"Last-Translator: george k <norhorn@gmail.com>, 2020\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/Dashboard/RecommendationWidget.php:63
+msgid "Recommended files"
+msgstr "Προτεινόμενα αρχεία"
+
+#: /app/lib/Service/RecentlyCommentedFilesSource.php:169
+msgid "Recently commented"
+msgstr "Σχολιάστηκε πρόσφατα"
+
+#: /app/lib/Service/RecentlyEditedFilesSource.php:60
+msgid "Recently edited"
+msgstr "Επεξεργάστηκε πρόσφατα"
+
+#: /app/lib/Service/RecentlySharedFilesSource.php:128
+msgid "Recently shared"
+msgstr "Διαμοιράστηκε πρόσφατα"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+msgid "Recommendations"
+msgstr "Συστάσεις"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid "Shows recommended files"
+msgstr "Εμφάνιση συνιστώμενων αρχείων"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"Shows recommended files for quick access of files and folders with recent "
+"activity"
+msgstr ""
+"Εμφανίζει τα συνιστώμενα αρχεία για γρήγορη πρόσβαση αρχείων και φακέλων με "
+"πρόσφατη δραστηριότητα"
+
+#. TRANSLATORS nts/Dashboard.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "No recommendations yet"
+msgstr "Δεν υπάρχουν προτάσεις ακόμα"
+
+#. TRANSLATORS nts/Settings.vue:9
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Show recommendations"
+msgstr "Εμφάνιση προτεινόμενων"

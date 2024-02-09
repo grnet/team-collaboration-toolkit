@@ -1,0 +1,32 @@
+---
+- name: Set variables for Debian 11
+  set_fact:
+    php_version: 7.4
+  when: ansible_distribution_release == "bullseye"
+  check_mode: no
+  tags:
+    - upgrade_nextcloud
+
+- name: Set variables for Ubuntu 20.04
+  set_fact:
+    php_version: 7.4
+  when: ansible_distribution_release == "focal"
+  check_mode: no
+  tags:
+    - upgrade_nextcloud
+
+- name: Set variables for Ubuntu 22.04
+  set_fact:
+    php_version: 8.1
+  when: ansible_distribution_release == "jammy"
+  check_mode: no
+  tags:
+    - upgrade_nextcloud
+
+- import_tasks: install.yml
+  when: "'upgrade_nextcloud' not in ansible_run_tags"
+
+- import_tasks: upgrade.yml
+  when: "'upgrade_nextcloud' in ansible_run_tags"
+  tags:
+    - upgrade_nextcloud

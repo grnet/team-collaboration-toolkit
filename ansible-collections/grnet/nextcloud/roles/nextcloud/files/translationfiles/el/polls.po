@@ -1,0 +1,2995 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Nextcloud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Konstantina Tsolakoglou <konstantina@accountant.com>, 2018
+# Eirini Basdani <renabasdani@gmail.com>, 2019
+# daf9a3bef94549192358462a8bb20263_a023b71 <69530ed134884b79b067e9214de553f8_465041>, 2020
+# ΦΩΤΕΙΝΗ ΧΑΛΚΙΑ <photchalkia@gmail.com>, 2021
+# Efstathios Iosifidis <iefstathios@gmail.com>, 2021
+# STYLIANOS TSETIS, 2022
+# george k <norhorn@gmail.com>, 2022
+# xristos pats, 2022
+# pkst <pkst@eellak.gr>, 2022
+# theodoros bousios, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextcloud 3.14159\n"
+"Report-Msgid-Bugs-To: translations\\@example.com\n"
+"POT-Creation-Date: 2022-03-31 03:12+0000\n"
+"PO-Revision-Date: 2017-10-23 12:58+0000\n"
+"Last-Translator: theodoros bousios, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/nextcloud/teams/64236/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /app/lib/Activity/PollChanges.php:54
+msgid "Poll changes"
+msgstr "Αλλαγές δημοσκόπησης "
+
+#: /app/lib/Model/Mail/InvitationMail.php:44
+#, php-format
+msgid "Poll invitation \"%s\""
+msgstr "Πρόσκληση στη δημοσκόπηση «%s»"
+
+#: /app/lib/Model/Mail/InvitationMail.php:48
+#: /app/lib/Model/Mail/ReminderMail.php:67
+msgid ""
+"This email is sent to you, because you are invited to vote in this poll by "
+"the poll owner. At least your name or your email address is recorded in this"
+" poll. If you want to get removed from this poll, contact the site "
+"administrator or the initiator of this poll, where the mail is sent from."
+msgstr ""
+"Σας στάλθηκε αυτό το email, επειδή προσκληθήκατε να ψηφίσετε στην "
+"δημοσκόπηση. Το όνομα ή το email σας θα καταγραφούν. Αν δεν επιθυμείτε "
+"επικοινωνήστε με τον διαχειριστή της δημοσκόπησης που σας την έστειλε."
+
+#: /app/lib/Model/Mail/InvitationMail.php:56
+msgid ""
+"{owner} invited you to take part in the poll \"{title}\" as a member of the "
+"group {group_name}"
+msgstr ""
+"{owner} Σας προσκάλεσε να συμμετέχετε στην δημοσκόπηση \"{title}\" ως μέλος "
+"της ομάδας {group_name} "
+
+#: /app/lib/Model/Mail/InvitationMail.php:62
+msgid "{owner} invited you to take part in the poll \"{title}\""
+msgstr "Ο/η {owner} σας προσκάλεσε να συμμετέχετε στην δημοσκόπηση \"{title}\""
+
+#: /app/lib/Model/Mail/InvitationMail.php:72
+#: /app/lib/Model/Mail/ReminderMail.php:97
+msgid ""
+"This link gives you personal access to the poll named above. Press the "
+"button above or copy the following link and add it in your browser's "
+"location bar:"
+msgstr ""
+"Ο σύνδεσμος σας δίνει πρόσβαση στην παραπάνω δημοσκόπηση. Πιέστε το κουμπί "
+"από πάνω ή αντιγράψτε τον σύνδεσμο και προσθέστε τον στην μπάρα αναζήτησης "
+"του περιηγητή σας:  "
+
+#: /app/lib/Model/Mail/InvitationMail.php:74
+#: /app/lib/Model/Mail/ReminderMail.php:99
+msgid ""
+"Do not share this link with other people, because it is connected to your "
+"votes."
+msgstr ""
+"Μην μοιράζεστε αυτόν τον σύνδεσμο με άλλα άτομα, επειδή συνδέεται με τις "
+"ψήφους σας."
+
+#: /app/lib/Model/Mail/MailBase.php:166
+#, php-format
+msgid "Notification for poll \"%s\""
+msgstr "Ειδοποίηση για δημοσκόπηση \"%s\""
+
+#: /app/lib/Model/Mail/MailBase.php:174
+msgid "Go to poll"
+msgstr "Μετάβαση στην δημοσκόπηση"
+
+#: /app/lib/Model/Mail/MailBase.php:178
+#: /app/lib/Model/Mail/NotificationMail.php:55
+msgid ""
+"This email is sent to you, because you subscribed to notifications of this "
+"poll. To opt out, visit the poll and remove your subscription."
+msgstr ""
+"Αυτό το e-mail σας αποστέλλεται, επειδή έχετε εγγραφεί στις ειδοποιήσεις της"
+" δημοσκόπησης. Για να εξαιρεθείτε, επισκεφθείτε τη δημοσκόπηση και "
+"καταργήστε τη συνδρομή σας."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:88
+#: /app/lib/Model/Mail/MailBase.php:189
+#: /app/specialVueFakeDummyForL10nScript.js:322
+msgid "Legal Notice"
+msgstr "Νομική ειδοποίηση"
+
+#: /app/lib/Model/Mail/MailBase.php:196
+msgid "Privacy Policy"
+msgstr "Πολιτική απορρήτου"
+
+#: /app/lib/Model/Mail/NotificationMail.php:51
+msgid "Polls App - New Activity"
+msgstr "Εφαρμογή Polls - Νέα δραστηριότητα"
+
+#: /app/lib/Model/Mail/NotificationMail.php:62
+msgid "\"{title}\" has recent activity:"
+msgstr "\"{title}\" έχει πρόσφατη δραστηριότητα: "
+
+#: /app/lib/Model/Mail/NotificationMail.php:68
+msgid "A user"
+msgstr "Ένας χρήστης"
+
+#: /app/lib/Model/Mail/NotificationMail.php:81
+#: /app/lib/Model/Mail/NotificationMail.php:104
+#, php-format
+msgid "%s has voted."
+msgstr "Ο/Η %s ψήφισε."
+
+#: /app/lib/Model/Mail/NotificationMail.php:82
+#: /app/lib/Model/Mail/NotificationMail.php:93
+msgid "Updated poll configuration. Please check your votes."
+msgstr ""
+"Ενημερώθηκε η διαμόρφωση δημοσκόπησης. Παρακαλούμε ελέγξτε τις ψήφους σας."
+
+#: /app/lib/Model/Mail/NotificationMail.php:83
+#: /app/lib/Model/Mail/NotificationMail.php:94
+msgid "The poll has been deleted."
+msgstr "Η δημοσκόπηση διαγράφηκε."
+
+#: /app/lib/Model/Mail/NotificationMail.php:84
+#: /app/lib/Model/Mail/NotificationMail.php:95
+msgid "The poll has been restored."
+msgstr "Έγινε επαναφορά της δημοσκόπησης."
+
+#: /app/lib/Model/Mail/NotificationMail.php:85
+#: /app/lib/Model/Mail/NotificationMail.php:96
+msgid "The poll has been closed."
+msgstr "Η δημοσκόπηση ολοκληρώθηκε."
+
+#: /app/lib/Model/Mail/NotificationMail.php:86
+#: /app/lib/Model/Mail/NotificationMail.php:98
+msgid "A voting option has been added."
+msgstr "Μια επιλογή ψήφου προστέθηκε."
+
+#: /app/lib/Model/Mail/NotificationMail.php:87
+#: /app/lib/Model/Mail/NotificationMail.php:99
+msgid "A voting option has been changed."
+msgstr "Μια επιλογή ψήφου έχει αλλάξει."
+
+#: /app/lib/Model/Mail/NotificationMail.php:88
+#: /app/lib/Model/Mail/NotificationMail.php:100
+msgid "A voting option has been confirmed."
+msgstr "Μια επιλογή ψήφου έχει επιβεβαιωθεί."
+
+#: /app/lib/Model/Mail/NotificationMail.php:89
+#: /app/lib/Model/Mail/NotificationMail.php:102
+msgid "A voting option has been removed."
+msgstr "Μια επιλογή ψήφου έχει αφαιρεθεί."
+
+#: /app/lib/Model/Mail/NotificationMail.php:90
+#: /app/lib/Model/Mail/NotificationMail.php:97
+msgid "The poll owner has been changed."
+msgstr "Ο κάτοχος της δημοσκόπησης έχει αλλάξει."
+
+#: /app/lib/Model/Mail/NotificationMail.php:91
+#: /app/lib/Model/Mail/NotificationMail.php:92
+#, php-format
+msgid "%s created the poll."
+msgstr "%sδημιουργήθηκε η δημοσκόπηση. "
+
+#: /app/lib/Model/Mail/NotificationMail.php:101
+msgid "A voting option has been unconfirmed."
+msgstr "Μια επιλογή ψήφου δεν επιβεβαιώθηκε."
+
+#: /app/lib/Model/Mail/NotificationMail.php:103
+#, php-format
+msgid "%s has left a comment."
+msgstr "%s άφησε ένα σχόλιο."
+
+#: /app/lib/Model/Mail/ReminderMail.php:59
+#, php-format
+msgid "Reminder for poll \"%s\""
+msgstr "Υπενθύμιση για δημοσκόπηση \"%s\""
+
+#: /app/lib/Model/Mail/ReminderMail.php:63
+msgid "Check your votes"
+msgstr "Ελέγξτε τις ψήφους σας"
+
+#: /app/lib/Model/Mail/ReminderMail.php:79
+msgid ""
+"The first poll option is away less than {leftPeriod} hours ({dateTime}, "
+"{timezone})."
+msgstr ""
+"Η πρώτη επιλογή της δημοσκόπησης απέχει λιγότερο απο {leftPeriod} ώρες "
+"({dateTime},{timeZone})."
+
+#: /app/lib/Model/Mail/ReminderMail.php:85
+msgid ""
+"The poll is about to expire in less than {leftPeriod} hours ({dateTime}, "
+"{timezone})."
+msgstr ""
+"Η δημοσκόπηση θα λήξει σε λιγότερο απο {leftPeriod} ώρες "
+"({dateTime},{timezone})."
+
+#: /app/lib/Model/Mail/ReminderMail.php:91
+msgid "{owner} sends you this reminder to make sure, your votes are set."
+msgstr ""
+"Ο/η {owner} σας στέλνει αυτήν την υπενθύμιση για να βεβαιωθείτε ότι οι ψήφοι"
+" σας έχουν οριστεί.  "
+
+#: /app/lib/Model/UserGroup/Circle.php:43
+msgid "Circle"
+msgstr "Κύκλος"
+
+#: /app/lib/Model/UserGroup/Contact.php:47
+#: /app/lib/Model/UserGroup/Contact.php:123
+msgid "Contact"
+msgstr "Επαφή"
+
+#: /app/lib/Model/UserGroup/ContactGroup.php:39
+msgid "Contact group"
+msgstr "Ομάδα επαφών"
+
+#: /app/lib/Model/UserGroup/Email.php:39
+msgid "External Email"
+msgstr "Εξωτερική διεύθυνση ηλεκτρονικού ταχυδρομείου"
+
+#: /app/lib/Model/UserGroup/GenericUser.php:42
+msgid "External user"
+msgstr "Εξωτερικός χρήστης"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:144
+#: /app/lib/Model/UserGroup/GenericUser.php:47
+#: /app/specialVueFakeDummyForL10nScript.js:604
+msgid "Public link"
+msgstr "Δημόσιος σύνδεσμος"
+
+#: /app/lib/Model/UserGroup/Group.php:42
+msgid "Group"
+msgstr "Ομάδα"
+
+#: /app/lib/Model/UserGroup/User.php:49
+msgid "User"
+msgstr "Χρήστης"
+
+#. TRANSLATORS rc/js/views/Administration.vue:162
+#. TRANSLATORS rc/js/views/Combo.vue:91
+#. TRANSLATORS rc/js/views/PollList.vue:138
+#. TRANSLATORS rc/js/views/SideBarCombo.vue:30
+#. TRANSLATORS rc/js/views/SideBarCombo.vue:54
+#. TRANSLATORS rc/js/views/Vote.vue:130
+#: /app/lib/Notification/Notifier.php:83
+#: /app/lib/Provider/SearchProvider.php:69
+#: /app/lib/Provider/SearchProvider.php:88
+#: /app/lib/Settings/AdminSection.php:48
+#: /app/lib/Settings/PersonalSection.php:48
+#: /app/specialAppInfoFakeDummyForL10nScript.php:2
+#: /app/specialVueFakeDummyForL10nScript.js:734
+#: /app/specialVueFakeDummyForL10nScript.js:742
+#: /app/specialVueFakeDummyForL10nScript.js:752
+#: /app/specialVueFakeDummyForL10nScript.js:788
+#: /app/specialVueFakeDummyForL10nScript.js:792
+#: /app/specialVueFakeDummyForL10nScript.js:824
+#: /app/specialVueFakeDummyForL10nScript.js:826
+#: /app/specialVueFakeDummyForL10nScript.js:852
+msgid "Polls"
+msgstr "Δημοσκοπήσεις"
+
+#: /app/lib/Notification/Notifier.php:131
+#, php-format
+msgid "%s invited you to a poll"
+msgstr "Ο/η %sσας προσκάλεσε σε μια δημοσκόπηση"
+
+#: /app/lib/Notification/Notifier.php:132
+#, php-format
+msgid "{actor} has invited you to the poll \"%s\"."
+msgstr "{actor} σας προσκάλεσε στην δημοσκόπηση \"%s\""
+
+#: /app/lib/Notification/Notifier.php:136
+#, php-format
+msgid "%s took over your poll"
+msgstr "Ο/η %sανέλαβε την ψηφοφορία σας"
+
+#: /app/lib/Notification/Notifier.php:137
+#, php-format
+msgid "{actor} took over your poll \"%s\" and is the new owner."
+msgstr "{actor} ανέλαβε την δημοσκόπηση σας \"%s\" και είναι τώρα ο νέος κάτοχος."
+
+#: /app/lib/Notification/Notifier.php:141
+#, php-format
+msgid "%s deleted your poll"
+msgstr "Ο %s διέγραψε την δημοσκόπηση σας"
+
+#: /app/lib/Notification/Notifier.php:142
+#, php-format
+msgid "{actor} deleted your poll \"%s\"."
+msgstr "{actor} διέγραψε την δημοσκόπηση σας \"%s\""
+
+#: /app/lib/Notification/Notifier.php:146
+#, php-format
+msgid "%s archived your poll"
+msgstr "Ο %s αρχειοθέτησε την δημοσκόπηση σας"
+
+#: /app/lib/Notification/Notifier.php:147
+#, php-format
+msgid "{actor} archived your poll \"%s\"."
+msgstr "{actor} αρχειοθέτησε την δημοσκόπηση σας \"%s\""
+
+#: /app/lib/Service/ActivityService.php:103
+msgid "You have commented on poll {pollTitle}"
+msgstr "Σχολιάσατε στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:104
+msgid "{actor} has commented on poll {pollTitle}"
+msgstr "{actor} έχει σχολιάσει στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:107
+msgid "You have deleted a comment from poll {pollTitle}"
+msgstr "Έχετε διαγράψει ένα σχόλιο από την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:108
+msgid "{actor} has deleted a comment from poll {pollTitle}"
+msgstr "{actor} διέγραψε ένα σχόλιο από την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:112
+msgid "You have added an option to poll {pollTitle}"
+msgstr "Έχετε προσθέσει μια επιλογή στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:113
+msgid "{actor} has added an option to poll {pollTitle}"
+msgstr "{actor} έχει προσθέσει μια επιλογή στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:116
+msgid "You have changed an option of poll {pollTitle}"
+msgstr "Έχετε αλλάξει μια επιλογή της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:117
+msgid "{actor} has changed an option of poll {pollTitle}"
+msgstr "{actor} έχει αλλάξει μια επιλογή  της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:120
+msgid "You have confirmed option {optionTitle} of poll {pollTitle}"
+msgstr ""
+"Έχετε επιβεβαιώσει την επιλογή {optionTitle} της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:121
+msgid "{actor} has confirmed option {optionTitle} of poll {pollTitle}"
+msgstr ""
+"{actor} έχει επιβεβαιώσει την επιλογή {optionTitle} της δημοσκόπησης "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:124
+msgid "You have unconfirmed option {optionTitle} of poll {pollTitle}"
+msgstr ""
+"Δεν έχετε επιβεβαιώσει την επιλογή {optionTitle} της δημοσκόπησης "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:125
+msgid "{actor} has unconfirmed option {optionTitle} of poll {pollTitle}"
+msgstr ""
+"{actor} δεν έχει επιβεβαιώσει την επιλογή {optionTitle} της δημοσκόπησης "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:128
+msgid "You have removed option {optionTitle} from poll {pollTitle}"
+msgstr ""
+"Έχετε αφαιρέσει την επιλογή {optionTitle} απο την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:129
+msgid "{actor} has removed option {optionTitle} from poll {pollTitle}"
+msgstr ""
+"{actor} έχει αφαιρέσει την επιλογή {optionTitle} απο την δημοσκόπηση "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:133
+msgid "You have added poll {pollTitle}"
+msgstr "Έχετε προσθέσει δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:134
+msgid "{actor} has added poll {pollTitle}"
+msgstr "{actor} έχει προσθέσει δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:137
+msgid "You have changed the configuration of poll {pollTitle}"
+msgstr "Έχετε αλλάξει τη διαμόρφωση της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:138
+msgid "{actor} has changed the configuration of poll {pollTitle}"
+msgstr "{actor} έχει αλλάξει τη διαμόρφωση της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:141
+msgid "You have archived poll {pollTitle}"
+msgstr "Έχετε αρχειοθετήσει τη δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:142
+msgid "{actor} has archived poll {pollTitle}"
+msgstr "{actor} έχει αρχειοθετήσει την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:145
+msgid "You have restored poll {pollTitle}"
+msgstr "Έχετε ανακτήσει την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:146
+msgid "{actor} has restored poll {pollTitle}"
+msgstr "{actor} έχει ανακτήσει την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:148
+msgid "Poll {pollTitle} has been closed"
+msgstr "Η δημοσκόπηση {pollTitle} έχει κλείσει "
+
+#: /app/lib/Service/ActivityService.php:151
+msgid "You have changed the owner of poll {pollTitle}"
+msgstr "Έχετε αλλάξει τον κάτοχο της δημοσκόπησης {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:152
+msgid "{actor} has changed the owner of poll {pollTitle}"
+msgstr "{actor} έχει αλλάξει τον κάτοχο της δημοσκόπησης {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:155
+msgid "You have reordered the options of poll {pollTitle}"
+msgstr "Έχετε αναδιοργανώσει τις επιλογές της δημοσκόπησης {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:156
+msgid "{actor} has reordered the options of poll {pollTitle}"
+msgstr ""
+"{actor} έχει αναδιοργανώσει τις επιλογές της δημοσκόπησης {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:161
+msgid "You have added a public share to poll {pollTitle}"
+msgstr "Έχετε προσθέσει μια δημόσια κοινοποίηση στην δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:162
+msgid "{actor} has added a public share to poll {pollTitle}"
+msgstr ""
+"{actor} έχει προσθέσει μια δημόσια κοινοποίηση στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:165
+msgid "You have shared poll {pollTitle} with group {sharee}"
+msgstr "Έχετε κοινοποιήσει την δημοσκόπηση {pollTitle} με την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:166
+msgid "{actor} has shared poll {pollTitle} with group {sharee}"
+msgstr ""
+"{actor} έχει κοινοποιήσει την δημοσκόπηση {pollTitle} με την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:169
+msgid "You have shared poll {pollTitle} with circle {sharee}"
+msgstr "Έχετε κοινοποιήσει την δημοσκόπηση {pollTitle} με τον κύκλο {sharee}"
+
+#: /app/lib/Service/ActivityService.php:170
+msgid "{actor} has shared poll {pollTitle} with circle {sharee}"
+msgstr ""
+"{actor} έχει κοινοποιήσει την δημοσκόπηση {pollTitle} με τον κύκλο {sharee}"
+
+#: /app/lib/Service/ActivityService.php:173
+msgid "You have shared poll {pollTitle} with contact group {sharee}"
+msgstr ""
+"Έχετε κοινοποιήσει την δημοσκόπηση {pollTitle} με την ομάδα επαφών {sharee}"
+
+#: /app/lib/Service/ActivityService.php:174
+msgid "{actor} has shared poll {pollTitle} with contact group {sharee}"
+msgstr ""
+"{actor} έχει κοινοποιήσει την δημοσκόπηση {pollTitle} με την ομάδα επαφών "
+"{sharee}"
+
+#: /app/lib/Service/ActivityService.php:177
+msgid "You have shared poll {pollTitle} with {sharee}"
+msgstr "Έχετε κοινοποιήσει την δημοσκόπηση {pollTitle} με {sharee}"
+
+#: /app/lib/Service/ActivityService.php:178
+msgid "{actor} has shared poll {pollTitle} with {sharee}"
+msgstr "{actor} έχει κοινοποιήσει την δημοσκόπηση {pollTitle} με {sharee}"
+
+#: /app/lib/Service/ActivityService.php:181
+#: /app/lib/Service/ActivityService.php:327
+msgid "You have changed your email address"
+msgstr "Έχετε αλλάξει την διεύθυνση του ηλεκτρονικού σας ταχυδρομείου"
+
+#: /app/lib/Service/ActivityService.php:182
+msgid "{sharee} has changed his email address"
+msgstr ""
+"{sharee} έχει αλλάξει την διεύθυνση του ηλεκτρονικού του ταχυδρομείου "
+
+#: /app/lib/Service/ActivityService.php:185
+#: /app/lib/Service/ActivityService.php:331
+msgid "You have changed the share type"
+msgstr "Έχετε αλλάξει τον τύπο κοινοποίησης "
+
+#: /app/lib/Service/ActivityService.php:186
+#: /app/lib/Service/ActivityService.php:332
+msgid "{actor} has changed the share type"
+msgstr "{action} έχει αλλάξει τον τύπο κοινοποίησης "
+
+#: /app/lib/Service/ActivityService.php:189
+#: /app/lib/Service/ActivityService.php:335
+msgid "You have changed the registration constraints for share {sharee}"
+msgstr ""
+"Έχετε αλλάξει τους περιορισμούς εγγραφής για την κοινοποίηση {sharee} "
+
+#: /app/lib/Service/ActivityService.php:190
+#: /app/lib/Service/ActivityService.php:336
+msgid "{actor} has changed the registration constraints for share {sharee}"
+msgstr "{actor} έχει αλλάξει τους περιορισμούς για την κοινοποίηση {sharee}"
+
+#: /app/lib/Service/ActivityService.php:193
+msgid "You have registered to poll {pollTitle}"
+msgstr "Έχετε εγγραφεί στη δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:194
+msgid "{sharee} registered to poll {pollTitle}"
+msgstr "{sharee} εγγράφηκε στη δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:198
+msgid "You have deleted a public share from poll {pollTitle}"
+msgstr "Έχετε διαγράψει τη δημόσια κοινοποίηση από τη δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:199
+msgid "{actor} has deleted a public share from poll {pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την δημόσια κοινοποίηση απο την δημοσκόπηση "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:202
+msgid "You have deleted the share for group {sharee} from poll {pollTitle}"
+msgstr ""
+"Έχετε διαγράψει την κοινοποίηση για την ομάδα {sharee} απο την δημοσκόπηση "
+"{pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:203
+msgid "{actor} has deleted the share for group {sharee} from poll {pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την κοινοποίηση για την ομάδα {sharee} από τη "
+"δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:206
+#: /app/lib/Service/ActivityService.php:210
+#: /app/lib/Service/ActivityService.php:214
+#: /app/lib/Service/ActivityService.php:218
+msgid "You have deleted the share for {sharee} from poll {pollTitle}"
+msgstr ""
+"Έχετε διαγράψει την κοινοποίηση για {sharee} απο την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:207
+#: /app/lib/Service/ActivityService.php:211
+#: /app/lib/Service/ActivityService.php:215
+#: /app/lib/Service/ActivityService.php:219
+msgid "{actor} has deleted the share for {sharee} from poll {pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την κοινοποίηση για {sharee} απο την δημοσκόπηση "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:222
+msgid "You have deleted the share for circle {sharee} from poll {pollTitle}"
+msgstr ""
+"Έχετε διαγράψει την κοινοποίηση για τον κύκλο {sharee} απο την δημοσκόπηση "
+"{pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:223
+msgid ""
+"{actor} has deleted the share for circle {sharee} from poll {pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την κοινοποίηση για τον κύκλο {sharee} απο την "
+"δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:226
+msgid ""
+"You have deleted the share for contact group {sharee} from poll {pollTitle}"
+msgstr ""
+"Έχετε διαγράψει την κοινοποίηση για την ομάδα επαφής {sharee} απο την "
+"δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:227
+msgid ""
+"{actor} has deleted the share for contact group {sharee} from poll "
+"{pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την κοινοποίηση για την ομάδα επαφής {sharee} απο την"
+" δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:231
+msgid "You have deleted a share from poll {pollTitle}"
+msgstr "Έχετε διαγράψει την κοινοποίηση απο την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:232
+msgid "{actor} has deleted a share from poll {pollTitle}"
+msgstr ""
+"{actor} έχει διαγράψει την κοινοποίηση για την δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:236
+msgid "You have voted in poll {pollTitle}"
+msgstr "Έχετε ψηφίσει στη δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:237
+msgid "{actor} has voted in poll {pollTitle}"
+msgstr "{actor} έχει ψηφίσει στην δημοσκόπηση {pollTitle}"
+
+#: /app/lib/Service/ActivityService.php:241
+msgid "You have done something indescribable with poll {pollTitle}"
+msgstr "Έχετε κάνει κάτι απερίγραπτο με την δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:242
+msgid "{actor} has done something indescribable with poll {pollTitle}"
+msgstr "{actor} έχει κάνει κάτι απερίγραπτο με την δημοσκόπηση {pollTitle} "
+
+#: /app/lib/Service/ActivityService.php:249
+msgid "You have commented"
+msgstr "Έχετε σχολιάσει"
+
+#: /app/lib/Service/ActivityService.php:250
+msgid "{actor} has commented"
+msgstr "{actor} έχει σχολιάσει"
+
+#: /app/lib/Service/ActivityService.php:253
+msgid "You have deleted a comment"
+msgstr "Έχετε διαγράψει ένα σχόλιο "
+
+#: /app/lib/Service/ActivityService.php:254
+msgid "{actor} has deleted a comment"
+msgstr "{actor} έχει διαγράψει ένα σχόλιο"
+
+#: /app/lib/Service/ActivityService.php:258
+msgid "You have added an option"
+msgstr "Έχετε προσθέσει μια επιλογή"
+
+#: /app/lib/Service/ActivityService.php:259
+msgid "{actor} has added an option"
+msgstr "{actor} έχει προσθέσει μια επιλογή"
+
+#: /app/lib/Service/ActivityService.php:262
+msgid "You have changed an option"
+msgstr "Έχετε αλλάξει μια επιλογή"
+
+#: /app/lib/Service/ActivityService.php:263
+msgid "{actor} has changed an option"
+msgstr "{actor} έχει αλλάξει μια επιλογή"
+
+#: /app/lib/Service/ActivityService.php:266
+msgid "You have confirmed option {optionTitle}"
+msgstr "Έχετε επιβεβαιώσει την επιλογή {optionTitle}"
+
+#: /app/lib/Service/ActivityService.php:267
+msgid "{actor} has confirmed option {optionTitle}"
+msgstr "{actor} έχει επιβεβαιώσει την επιλογή {optionTitle} "
+
+#: /app/lib/Service/ActivityService.php:270
+msgid "You have unconfirmed option {optionTitle}"
+msgstr "Δεν έχετε επιβεβαιώσει την επιλογή {optionTitle} "
+
+#: /app/lib/Service/ActivityService.php:271
+msgid "{actor} has unconfirmed option {optionTitle}"
+msgstr "{actor} δεν έχει επιβεβαιώσει την επιλογή {optionTitle} "
+
+#: /app/lib/Service/ActivityService.php:274
+msgid "You have removed option {optionTitle}"
+msgstr "Έχετε αφαιρέσει την επιλογή {optionTitle}"
+
+#: /app/lib/Service/ActivityService.php:275
+msgid "{actor} has removed option {optionTitle}"
+msgstr "{actor} έχει αφαιρέσει την επιλογή {optionTitle}"
+
+#: /app/lib/Service/ActivityService.php:279
+msgid "You have created this poll"
+msgstr "Έχετε δημιουργήσει αυτήν τη δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:280
+msgid "{actor} has created this poll"
+msgstr "{actor} έχει δημιουργήσει αυτήν τη δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:283
+msgid "You have changed the configuration"
+msgstr "Έχετε αλλάξει τη διαμόρφωση "
+
+#: /app/lib/Service/ActivityService.php:284
+msgid "{actor} has changed the configuration"
+msgstr "{actor} έχει αλλάξει την διαμόρφωση"
+
+#: /app/lib/Service/ActivityService.php:287
+msgid "You have archived this poll"
+msgstr "Έχετε αρχειοθετήσει αυτήν τη δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:288
+msgid "{actor} has archived this poll"
+msgstr "{actor} έχει αρχειοθετήσει αυτην την δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:291
+msgid "You have restored this poll"
+msgstr "Έχετε ανακτήσει αυτήν τη δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:292
+msgid "{actor} has restored this poll"
+msgstr "{actor} έχει ανακτήσει αυτην την δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:294
+msgid "This poll has been closed"
+msgstr "Αυτη η δημοσκόπηση έχει κλείσει"
+
+#: /app/lib/Service/ActivityService.php:297
+msgid "You have changed the poll owner"
+msgstr "Έχετε αλλάξει τον κάτοχο της δημοσκόπησης"
+
+#: /app/lib/Service/ActivityService.php:298
+msgid "{actor} has changed the poll owner"
+msgstr "{actor} έχει αλλάξει τον κάτοχο της δημοσκόπησης"
+
+#: /app/lib/Service/ActivityService.php:301
+msgid "You have reordered the options"
+msgstr "Έχετε αναδιοργανώσει τις επιλογές "
+
+#: /app/lib/Service/ActivityService.php:302
+msgid "{actor} has reordered the options"
+msgstr "{actor} αναδιοργάνωσε τις επιλογές "
+
+#: /app/lib/Service/ActivityService.php:307
+msgid "You have added a public share"
+msgstr "Έχετε προσθέσει μια δημόσια κοινοποίηση"
+
+#: /app/lib/Service/ActivityService.php:308
+msgid "{actor} has added a public share"
+msgstr "{actor} έχει προσθέσει μια δημόσια κοινοποίηση"
+
+#: /app/lib/Service/ActivityService.php:311
+msgid "You have shared this poll with group {sharee}"
+msgstr "Έχετε κοινοποιήσει αυτήν τη δημοσκόπηση με την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:312
+msgid "{actor} has shared this poll with group {sharee}"
+msgstr "{actor} έχει κοινοποιήσει αυτην την δημοσκόπηση με την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:315
+msgid "You have shared this poll with circle {sharee}"
+msgstr "Έχετε κοινοποιήσει αυτήν τη δημοσκόπηση με τον κύκλο {sharee} "
+
+#: /app/lib/Service/ActivityService.php:316
+msgid "{actor} has shared this poll with circle {sharee}"
+msgstr "{actor} έχει κοινοποιήσει αυτήν τη δημοσκόπηση με τον κύκλο {sharee} "
+
+#: /app/lib/Service/ActivityService.php:319
+msgid "You have shared this poll with contact group {sharee}"
+msgstr "Έχετε κοινοποιήσει αυτήν τη δημοσκόπηση με την ομάδα επαφής {sharee} "
+
+#: /app/lib/Service/ActivityService.php:320
+msgid "{actor} has shared this poll with contact group {sharee}"
+msgstr "{actor} έχει κοινοποιήσει αυτήν τη δημοσκόπηση με την ομάδα {sharee} "
+
+#: /app/lib/Service/ActivityService.php:323
+msgid "You have shared this poll with {sharee}"
+msgstr "Έχετε κοινοποιήσει αυτήν τη δημοσκόπηση με {sharee} "
+
+#: /app/lib/Service/ActivityService.php:324
+msgid "{actor} has shared this poll with {sharee}"
+msgstr "{actor} έχει κοινοποιήσει αυτήν τη δημοσκόπηση με {sharee} "
+
+#: /app/lib/Service/ActivityService.php:328
+msgid "Email address of {sharee} has been changed"
+msgstr "Η διεύθυνση του ηλεκτρονικού ταχυδρομείου του {sharee} έχει αλλάξει"
+
+#: /app/lib/Service/ActivityService.php:339
+msgid "You have registered"
+msgstr "Έχετε εγγραφεί"
+
+#: /app/lib/Service/ActivityService.php:340
+msgid "{sharee} has registered"
+msgstr "{sharee} έχει εγγραφεί "
+
+#: /app/lib/Service/ActivityService.php:344
+msgid "You have deleted a public share"
+msgstr "Έχετε διαγράψει μια δημόσια κοινοποίηση"
+
+#: /app/lib/Service/ActivityService.php:345
+msgid "{actor} has deleted a public share"
+msgstr "{actor} έχει διαγράψει μια δημόσια κοινοποίηση"
+
+#: /app/lib/Service/ActivityService.php:348
+msgid "You have deleted the share for group {sharee}"
+msgstr "Έχετε διαγράψει την κοινοποίηση για την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:349
+msgid "{actor} has deleted the share for group {sharee}"
+msgstr "{actor} έχει διαγράψει την κοινοποίηση για την ομάδα {sharee}"
+
+#: /app/lib/Service/ActivityService.php:352
+msgid "You have deleted the share for circle {sharee}"
+msgstr "Έχετε διαγράψει την κοινοποίηση για τον κύκλο {sharee}"
+
+#: /app/lib/Service/ActivityService.php:353
+msgid "{actor} has deleted the share for circle {sharee}"
+msgstr "{actor} έχει διαγράψει την κοινοποίηση για τον κύκλο {sharee}"
+
+#: /app/lib/Service/ActivityService.php:356
+msgid "You have deleted the share for contact group {sharee}"
+msgstr "Έχετε διαγράψει την κοινοποίηση για την ομάδα επαφής {sharee}"
+
+#: /app/lib/Service/ActivityService.php:357
+msgid "{actor} has deleted the share for contact group {sharee}"
+msgstr "{actor} έχει διαγράψει την κοινοποίηση για την ομάδα επαφής {sharee} "
+
+#: /app/lib/Service/ActivityService.php:361
+msgid "You have deleted share of {sharee}"
+msgstr "Έχετε διαγράψει την κοινοποίηση του {sharee}"
+
+#: /app/lib/Service/ActivityService.php:362
+msgid "{actor} has deleted a share"
+msgstr "{actor} έχει διαγράψει μια κοινοποίηση"
+
+#: /app/lib/Service/ActivityService.php:366
+msgid "You have voted"
+msgstr "Έχετε ψηφίσει"
+
+#: /app/lib/Service/ActivityService.php:367
+msgid "{actor} has voted"
+msgstr "{actor} έχει ψηφίσει"
+
+#: /app/lib/Service/ActivityService.php:371
+msgid "You have done something indescribable with this poll"
+msgstr "Έχετε κάνει κάτι απερίγραπτο με αυτήν την δημοσκόπηση"
+
+#: /app/lib/Service/ActivityService.php:372
+msgid "{actor} has done something indescribable with this poll"
+msgstr "{actor} έχει κάνει κάτι απερίγραπτο με αυτήν την δημοσκόπηση"
+
+#: /app/lib/Settings/ActivitySettings.php:46
+msgid "Events happening inside of a <strong>poll</strong>"
+msgstr "Συμβαίνουν διάφορα γεγονότα μέσα σε μία <strong>δημοσκόπηση</strong>"
+
+#: /app/lib/Settings/ActivityVote.php:32
+msgid "Someone voted inside a <strong>poll</strong>"
+msgstr "Κάποιος ψήφισε μέσα σε μια <strong>δημοσκόπηση</strong>"
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:3
+msgid ""
+"A polls app, similar to Doodle/Dudle with the possibility to restrict "
+"access."
+msgstr ""
+"Μια εφαρμογή δημοσκόπησης, παρόμοια με το Doodle/Dudle με την δυνατότητα "
+"περιορισμένης πρόσβασης "
+
+#: /app/specialAppInfoFakeDummyForL10nScript.php:4
+msgid ""
+"A polls app, similar to Doodle/Dudle with the possibility to restrict access"
+" (members, certain groups/users, hidden and public)."
+msgstr ""
+"Μια εφαρμογή δημοσκόπησης, παρόμοια με το Doodle/Dudle με την δυνατότητα "
+"περιορισμένης πρόσβασης (μέλη, συγκεκριμένες ομάδες/ χρήστες, κρυμμένες και "
+"δημόσιες) "
+
+#. TRANSLATORS rc/js/components/Actions/ActionChangeView.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:2
+msgid "Switch to list view"
+msgstr "Αλλαγή σε προβολή λίστας"
+
+#. TRANSLATORS rc/js/components/Actions/ActionChangeView.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:4
+msgid "Switch to table view"
+msgstr "Αλλαγή σε προβολή πίνακα"
+
+#. TRANSLATORS rc/js/components/Actions/ActionDelete.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:6
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#. TRANSLATORS rc/js/components/Actions/ActionDelete.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:8
+msgid "Deleting in {countdown} second"
+msgid_plural "Deleting in {countdown} seconds"
+msgstr[0] "Διαγραφή σε {countdown} δευτερόλεπτο"
+msgstr[1] "Διαγραφή σε {countdown} δευτερόλεπτα"
+
+#. TRANSLATORS rc/js/components/Actions/ActionSortOptions.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:10
+msgid "Date order"
+msgstr "Ταξινόμηση κατά ημερομηνία"
+
+#. TRANSLATORS rc/js/components/Actions/ActionSortOptions.vue:70
+#: /app/specialVueFakeDummyForL10nScript.js:12
+msgid "Original order"
+msgstr "Αρχική ταξινόμηση"
+
+#. TRANSLATORS rc/js/components/Actions/ActionSortOptions.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:14
+msgid "Ranked order"
+msgstr "Διαβαθμισμένη ταξινόμηση"
+
+#. TRANSLATORS rc/js/components/Actions/ActionToggleSidebar.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:16
+msgid "Toggle Sidebar"
+msgstr "Εναλλαγή Πλευρικής στήλης"
+
+#. TRANSLATORS rc/js/components/Calendar/CalendarPeek.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:18
+msgid "Conflict"
+msgstr "Διένεξη"
+
+#. TRANSLATORS rc/js/components/Calendar/CalendarPeek.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:20
+msgid "Got a network error while checking calendar events."
+msgstr "Παρουσιάστηκε σφάλμα δικτύου κατά τον έλεγχο συμβάντων ημερολογίου."
+
+#. TRANSLATORS rc/js/components/Comments/CommentAdd.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:22
+msgid "New comment …"
+msgstr "Νέο σχόλιο …"
+
+#. TRANSLATORS rc/js/components/Comments/CommentAdd.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:24
+msgid "Error while saving comment"
+msgstr "Σφάλμα κατά την αποθήκευση σχολίου"
+
+#. TRANSLATORS rc/js/components/Comments/CommentItem.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:26
+msgid "Delete comment"
+msgstr "Διαγραφή σχολίου"
+
+#. TRANSLATORS rc/js/components/Comments/CommentItem.vue:77
+#: /app/specialVueFakeDummyForL10nScript.js:28
+msgid "Error while deleting the comment"
+msgstr "Σφάλμα κατά την διαγραφή του σχολίου"
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:30
+msgid "The automatic reminder is sent to all shares via email:"
+msgstr ""
+"Η αυτόματη υπενθύμιση αποστέλλεται σε όλα τα κοινόχρηστα στοιχεία μέσω "
+"email:"
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:32
+msgid "For polls with expiration:"
+msgstr "Για δημοσκοπήσεις με λήξη:"
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:34
+msgid ""
+"48 hours before the expiration date, if the poll is created more than 5 days"
+" before the expiration."
+msgstr ""
+"48 ώρες πριν από την ημερομηνία λήξης, εάν η δημοσκόπηση έχει δημιουργηθεί "
+"περισσότερες από 5 ημέρες πριν από τη λήξη."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:36
+msgid ""
+"36 hours before the expiration date, if the poll is created more than 2 and "
+"less than 5 days before the expiration."
+msgstr ""
+"36 ώρες πριν από την ημερομηνία λήξης, εάν η δημοσκόπηση έχει δημιουργηθεί "
+"περισσότερες από 2 και λιγότερο από 5 ημέρες πριν από τη λήξη."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:38
+msgid "For date polls without expiration:"
+msgstr "Για δημοσκοπήσεις ημερομηνίας χωρίς λήξη:"
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:40
+msgid ""
+"48 hours before the first date option, if the poll is created more than 5 "
+"days before the first date option."
+msgstr ""
+"48 ώρες πριν από την επιλογή πρώτης ημερομηνίας, εάν η δημοσκόπηση έχει "
+"δημιουργηθεί περισσότερες από 5 ημέρες πριν από την επιλογή πρώτης "
+"ημερομηνίας."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:42
+msgid ""
+"36 hours before the first date option, if the poll is created more than 2 "
+"and less than 5 days before the first date option."
+msgstr ""
+"36 ώρες πριν από την επιλογή πρώτης ημερομηνίας, εάν η δημοσκόπηση έχει "
+"δημιουργηθεί περισσότερες από 2 και λιγότερο από 5 ημέρες πριν από την "
+"επιλογή πρώτης ημερομηνίας."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:44
+msgid "No reminder is sent:"
+msgstr "Δεν αποστέλλεται υπενθύμιση:"
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:46
+msgid "For text polls without expiration."
+msgstr "Για δημοσκοπήσεις κειμένου χωρίς λήξη."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:48
+msgid "For polls created less than 2 days before the expiration."
+msgstr ""
+"Για δημοσκοπήσεις που δημιουργήθηκαν λιγότερο από 2 ημέρες πριν από τη λήξη."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:50
+msgid ""
+"If a share already got a reminder (no matter, if the expiration date got "
+"changed)."
+msgstr ""
+"Εάν ένας αποδέχτης έλαβε ήδη υπενθύμιση (δεν έχει σημασία αν άλλαξε η "
+"ημερομηνία λήξης)."
+
+#. TRANSLATORS rc/js/components/Configuration/AutoReminderInformation.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:52
+msgid "If the poll is already closed."
+msgstr "Εάν η δημοσκόπηση έχει ήδη κλείσει."
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAdminAccess.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:54
+msgid "Allow admins to edit this poll"
+msgstr "Επιτρέπεται σε διαχειριστές να επεξεργαστούν τη δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAllowComment.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:56
+msgid "Allow Comments"
+msgstr "Να επιτρέπονται σχόλια"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAllowMayBe.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:58
+msgid "Allow \"Maybe\" vote"
+msgstr "Να επιτρέπεται η ψήφος \"Ίσως\""
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAnonymous.vue:25
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:60
+#: /app/specialVueFakeDummyForL10nScript.js:254
+msgid "Anonymous poll"
+msgstr "Ανώνυμη δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAutoReminder.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:62
+msgid "Use Autoreminder"
+msgstr "Χρήση Αυτόματης Υπενθύμιση"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigAutoReminder.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:64
+msgid "Autoreminder informations"
+msgstr "Πληροφορίες αυτόματης υπενθύμισης"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigClosing.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:66
+msgid "Reopen poll"
+msgstr "Ανοίξτε ξανά τη δημοσκόπηση"
+
+#: /app/specialVueFakeDummyForL10nScript.js:66
+msgid "Close poll"
+msgstr "Κλείστε τη δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigClosing.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:68
+#: /app/specialVueFakeDummyForL10nScript.js:70
+msgid "Poll closing date"
+msgstr "Ημερομηνία λήξης δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigOptionLimit.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:72
+msgid "Limit \"Yes\" votes per option"
+msgstr "Περιορισμός ψήφων «Ναι» ανά επιλογή"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigOptionLimit.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:74
+msgid "Hide not available Options"
+msgstr "Απόκρυψη μη διαθέσιμων επιλογών"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigProposals.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:76
+msgid "Allow Proposals"
+msgstr "Να επιτρέπονται οι προτάσεις"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigProposals.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:78
+msgid "Proposal closing date"
+msgstr "Ημερομηνία λήξης πρότασης"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigProposals.vue:110
+#: /app/specialVueFakeDummyForL10nScript.js:80
+msgid "Proposals possible until"
+msgstr "Δυνατότητα υποβολής προτάσεων μέχρι"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigShowResults.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:82
+msgid "Always show results"
+msgstr "Πάντα εμφάνιση αποτελεσμάτων"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigShowResults.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:84
+msgid "Hide results until poll is closed"
+msgstr "Απόκρυψη αποτελεσμάτων έως ότου κλείσει η δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigShowResults.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:86
+msgid "Never show results"
+msgstr "Ποτέ να μην εμφανίζονται αποτελέσματα"
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigUseNo.vue:42
+#: /app/specialVueFakeDummyForL10nScript.js:88
+msgid "Delete vote when switched to \"No\""
+msgstr "Διαγραφή ψήφου όταν αλλάζει σε \"Όχι\""
+
+#. TRANSLATORS rc/js/components/Configuration/ConfigVoteLimit.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:90
+msgid "Limit \"Yes\" votes per user"
+msgstr "Περιορισμός ψήφων «Ναι» ανά χρήστη"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:25
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:26
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:26
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:92
+#: /app/specialVueFakeDummyForL10nScript.js:348
+#: /app/specialVueFakeDummyForL10nScript.js:374
+#: /app/specialVueFakeDummyForL10nScript.js:572
+msgid "Title"
+msgstr "Τίτλος"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:94
+msgid "Enter Title"
+msgstr "Προσθήκη Τίτλου"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:96
+msgid "Poll type"
+msgstr "Τύπος δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:40
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:41
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:98
+#: /app/specialVueFakeDummyForL10nScript.js:148
+#: /app/specialVueFakeDummyForL10nScript.js:310
+msgid "Cancel"
+msgstr "Aκύρωση"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:100
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:68
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:172
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:124
+#: /app/specialVueFakeDummyForL10nScript.js:102
+#: /app/specialVueFakeDummyForL10nScript.js:370
+#: /app/specialVueFakeDummyForL10nScript.js:392
+msgid "Date poll"
+msgstr "Δημοσκόπηση ημερομηνίας"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:69
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:169
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:122
+#: /app/specialVueFakeDummyForL10nScript.js:104
+#: /app/specialVueFakeDummyForL10nScript.js:368
+#: /app/specialVueFakeDummyForL10nScript.js:390
+msgid "Text poll"
+msgstr "Δημοσκόπηση κειμένου"
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:95
+#: /app/specialVueFakeDummyForL10nScript.js:106
+msgid "Poll \"{pollTitle}\" added"
+msgstr "Προστέθηκε η δημοσκόπηση \"{pollTitle}\""
+
+#. TRANSLATORS rc/js/components/Create/CreateDlg.vue:98
+#: /app/specialVueFakeDummyForL10nScript.js:108
+msgid "Error while creating Poll \"{pollTitle}\""
+msgstr "Σφάλμα κατά τη δημιουργία δημοσκόπησης \"{pollTitle}\"."
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:110
+msgid "Download Excel spreadsheet"
+msgstr "Λήψη υπολογιστικού φύλλου Excel"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:112
+msgid "Download Open Document spreadsheet"
+msgstr "Λήψη υπολογιστικού φύλλου Open Document"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:114
+msgid "Download CSV file"
+msgstr "Λήψη αρχείου CSV"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:116
+msgid "Download HTML file"
+msgstr "Λήψη αρχείου HTML"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:100
+#: /app/specialVueFakeDummyForL10nScript.js:118
+msgid "Participants"
+msgstr "Συμμετέχοντες"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:101
+#: /app/specialVueFakeDummyForL10nScript.js:120
+msgid "From"
+msgstr "Από"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:102
+#: /app/specialVueFakeDummyForL10nScript.js:122
+msgid "To"
+msgstr "Έως"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:124
+msgid "Email address"
+msgstr "Διεύθυνση αλληλογραφίας"
+
+#. TRANSLATORS rc/js/components/Export/ExportPoll.vue:175
+#. TRANSLATORS rc/js/views/Administration.vue:87
+#: /app/specialVueFakeDummyForL10nScript.js:126
+#: /app/specialVueFakeDummyForL10nScript.js:718
+#: /app/specialVueFakeDummyForL10nScript.js:728
+msgid "No"
+msgstr "Όχι"
+
+#. TRANSLATORS rc/js/components/Navigation/PollNavigationItems.vue:30
+#. TRANSLATORS rc/js/views/PollList.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:128
+#: /app/specialVueFakeDummyForL10nScript.js:780
+msgid "Clone poll"
+msgstr "Κλωνοποίηση δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Navigation/PollNavigationItems.vue:36
+#. TRANSLATORS rc/js/views/PollList.vue:66
+#: /app/specialVueFakeDummyForL10nScript.js:130
+#: /app/specialVueFakeDummyForL10nScript.js:582
+#: /app/specialVueFakeDummyForL10nScript.js:710
+#: /app/specialVueFakeDummyForL10nScript.js:782
+msgid "Archive poll"
+msgstr "Αρχειοθέτηση δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Navigation/PollNavigationItems.vue:42
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:60
+#. TRANSLATORS rc/js/views/Administration.vue:65
+#. TRANSLATORS rc/js/views/PollList.vue:73
+#: /app/specialVueFakeDummyForL10nScript.js:132
+#: /app/specialVueFakeDummyForL10nScript.js:582
+#: /app/specialVueFakeDummyForL10nScript.js:710
+#: /app/specialVueFakeDummyForL10nScript.js:784
+msgid "Restore poll"
+msgstr "Επαναφορά δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Navigation/PollNavigationItems.vue:49
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:66
+#. TRANSLATORS rc/js/views/Administration.vue:72
+#. TRANSLATORS rc/js/views/PollList.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:134
+#: /app/specialVueFakeDummyForL10nScript.js:584
+#: /app/specialVueFakeDummyForL10nScript.js:712
+#: /app/specialVueFakeDummyForL10nScript.js:786
+msgid "Delete poll"
+msgstr "Διαγραφή δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Options/Confirmation.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:136
+msgid "Confirmed"
+msgstr "Επιβεβαιώθηκε"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:138
+msgid "Clone to option sequence"
+msgstr "Κλωνοποίηση σε ακολουθία επιλογών"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:140
+msgid "Create a sequence of date options starting with {dateOption}."
+msgstr ""
+"Δημιουργήστε μια σειρά από επιλογές ημερομηνίας που αρχίζουν από "
+"{dateOption}."
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:142
+msgid "Step unit:"
+msgstr "Μονάδα βήματος:"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:144
+msgid "Step width:"
+msgstr "Εύρος βήματος:"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:146
+msgid "Number of items to create:"
+msgstr "Αριθμός στοιχείων προς δημιουργία:"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:42
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:150
+#: /app/specialVueFakeDummyForL10nScript.js:312
+msgid "OK"
+msgstr "Εντάξει"
+
+#. TRANSLATORS rc/js/components/Options/OptionCloneDate.vue:72
+#. TRANSLATORS rc/js/components/Options/OptionsDateShift.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:152
+#: /app/specialVueFakeDummyForL10nScript.js:196
+#: /app/src/js/mixins/dateMixins.js:30
+msgid "Week"
+msgstr "Εβδομάδα"
+
+#. TRANSLATORS rc/js/components/Options/OptionItemOwner.vue:26
+#. TRANSLATORS rc/js/components/Options/OptionsDate.vue:41
+#. TRANSLATORS rc/js/components/Options/OptionsText.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:154
+#: /app/specialVueFakeDummyForL10nScript.js:162
+#: /app/specialVueFakeDummyForL10nScript.js:198
+msgid "Delete option"
+msgstr "Διαγραφή επιλογής"
+
+#. TRANSLATORS rc/js/components/Options/OptionItemOwner.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:156
+msgid "{displayName}'s proposal"
+msgstr "πρόταση του/της {displayName}"
+
+#. TRANSLATORS rc/js/components/Options/OptionProposals.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:158
+msgid "Propose a date"
+msgstr "Προτείνετε μια ημερομηνία"
+
+#. TRANSLATORS rc/js/components/Options/OptionProposals.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:160
+msgid "Propose an option"
+msgstr "Προτείνετε μια επιλογή"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDate.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:164
+msgid "Clone option"
+msgstr "Κλωνοποίηση επιλογής"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDate.vue:53
+#. TRANSLATORS rc/js/components/Options/OptionsText.vue:51
+#. TRANSLATORS rc/js/components/VoteTable/VoteColumn.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:166
+#: /app/specialVueFakeDummyForL10nScript.js:200
+#: /app/specialVueFakeDummyForL10nScript.js:666
+msgid "Unconfirm option"
+msgstr "Επιλογή αναίρεσης επιβεβαίωσης"
+
+#: /app/specialVueFakeDummyForL10nScript.js:166
+#: /app/specialVueFakeDummyForL10nScript.js:200
+#: /app/specialVueFakeDummyForL10nScript.js:666
+msgid "Confirm option"
+msgstr "Επιλογή επιβεβαίωσης"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDate.vue:61
+#. TRANSLATORS rc/js/components/Options/OptionsText.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:168
+#: /app/specialVueFakeDummyForL10nScript.js:202
+msgid "No vote options"
+msgstr "Δεν υπάρχουν επιλογές ψήφου"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDate.vue:63
+#. TRANSLATORS rc/js/components/Options/OptionsText.vue:62
+#. TRANSLATORS rc/js/views/Vote.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:170
+#: /app/specialVueFakeDummyForL10nScript.js:204
+#: /app/specialVueFakeDummyForL10nScript.js:842
+msgid "Add some!"
+msgstr "Προσθέστε μερικές!"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:172
+msgid "Select range"
+msgstr "Επιλέξτε εύρος"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:174
+msgid "Remove time"
+msgstr "Αφαίρεση ώρας"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:176
+msgid "Add time"
+msgstr "Προσθήκη ώρας"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:63
+#: /app/specialVueFakeDummyForL10nScript.js:178
+msgid "Add"
+msgstr "Προσθήκη"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:180
+msgid "Added"
+msgstr "Προστέθηκε"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:182
+msgid "Pick a day."
+msgstr "Επιλέξτε ημέρα."
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:115
+#: /app/specialVueFakeDummyForL10nScript.js:184
+msgid "Add date"
+msgstr "Προσθήκη ημερομηνίας"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:201
+#: /app/specialVueFakeDummyForL10nScript.js:186
+msgid "Click to add an option"
+msgstr "Κάντε κλικ για προσθήκη επιλογής"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:291
+#. TRANSLATORS rc/js/components/Options/OptionsTextAdd.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:188
+#: /app/specialVueFakeDummyForL10nScript.js:208
+msgid "{optionText} added"
+msgstr "{optionText} προστέθηκε"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:294
+#. TRANSLATORS rc/js/components/Options/OptionsTextAdd.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:190
+#: /app/specialVueFakeDummyForL10nScript.js:210
+msgid "{optionText} already exists"
+msgstr "{optionText} υπάρχει ήδη"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateAdd.vue:296
+#. TRANSLATORS rc/js/components/Options/OptionsTextAdd.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:192
+#: /app/specialVueFakeDummyForL10nScript.js:212
+msgid "Error adding {optionText}"
+msgstr "Σφάλμα κατά την προσθήκη του {optionText}"
+
+#. TRANSLATORS rc/js/components/Options/OptionsDateShift.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:194
+msgid ""
+"Shifting dates is disabled to prevent shifting of other user's proposals."
+msgstr ""
+"Η αλλαγή ημερομηνιών είναι απενεργοποιημένη για να αποφευχθεί η μετακίνηση "
+"των προτάσεων άλλων χρηστών."
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAdd.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:206
+msgid "Add option"
+msgstr "Προσθήκη επιλογής"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:214
+msgid "Create multiple options at once"
+msgstr "Δημιουργήστε πολλές επιλογές ταυτόχρονα"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:216
+msgid ""
+"Each line creates a new option. Duplicates will get skipped without warning."
+msgstr ""
+"Κάθε γραμμή δημιουργεί μια νέα επιλογή. Τα διπλότυπα θα παραβλεφθούν χωρίς "
+"προειδοποίηση."
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:218
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:220
+msgid "Add options"
+msgstr "Προσθήκη επιλογών"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:71
+#: /app/specialVueFakeDummyForL10nScript.js:222
+msgid "Add options list (one option per line)"
+msgstr "Προσθήκη λίστας επιλογών (μία επιλογή ανά γραμμή)"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:224
+msgid "Paste option list"
+msgstr "Επικόλληση λίστας επιλογών"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:91
+#: /app/specialVueFakeDummyForL10nScript.js:226
+msgid "Options added"
+msgstr "Προστέθηκαν επιλογές"
+
+#. TRANSLATORS rc/js/components/Options/OptionsTextAddBulk.vue:94
+#: /app/specialVueFakeDummyForL10nScript.js:228
+msgid "Error adding options"
+msgstr "Σφάλμα κατά την προσθήκη επιλογών"
+
+#. TRANSLATORS rc/js/components/Poll/PollHeaderButtons.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:230
+msgid "Poll informations"
+msgstr "Πληροφορίες δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:232
+msgid "A hidden poll from {name}"
+msgstr "Μια κρυφή δημοσκόπηση από τον/την {name}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:234
+msgid "A public poll from {name}"
+msgstr "Μια δημόσια δημοσκόπηση από τον/την {name}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:236
+msgid "Invite users via the share tab in the sidebar"
+msgstr ""
+"Προσκαλέστε χρήστες μέσω της καρτέλας κοινής χρήσης στην πλαϊνή γραμμή"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:81
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:145
+#: /app/specialVueFakeDummyForL10nScript.js:238
+#: /app/specialVueFakeDummyForL10nScript.js:362
+msgid "Archived"
+msgstr "Αρχειοθετήθηκε"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:97
+#: /app/specialVueFakeDummyForL10nScript.js:240
+msgid "Closing {relativeExpirationTime}"
+msgstr "Κλείσιμο {relativeExpirationTime}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:105
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:125
+#: /app/specialVueFakeDummyForL10nScript.js:242
+#: /app/specialVueFakeDummyForL10nScript.js:264
+msgid "Proposal period ended {timeRelative}"
+msgstr "Η περίοδος πρότασης έληξε {timeRelative}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:113
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:122
+#: /app/specialVueFakeDummyForL10nScript.js:244
+#: /app/specialVueFakeDummyForL10nScript.js:262
+msgid "Proposal period ends {timeRelative}"
+msgstr "Η περίοδος πρότασης λήγει {timeRelative}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInfoLine.vue:141
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:179
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:132
+#: /app/specialVueFakeDummyForL10nScript.js:246
+#: /app/specialVueFakeDummyForL10nScript.js:372
+#: /app/specialVueFakeDummyForL10nScript.js:394
+msgid "never"
+msgstr "ποτέ"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:248
+msgid "Poll owner:"
+msgstr "Κάτοχος δημοσκόπησης:"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:250
+msgid "Created {dateRelative}"
+msgstr "Δημιουργήθηκε {dateRelative}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:252
+msgid "Closing: {dateRelative}"
+msgstr "Κλείνει: {dateRelative}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:256
+msgid "Time zone: {timezoneString}"
+msgstr "Ζώνη ώρας: {timezoneString}"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:258
+msgid "You subscribed to this poll"
+msgstr "Είστε εγγεγραμμένος σε αυτή τη δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:119
+#: /app/specialVueFakeDummyForL10nScript.js:260
+msgid "Proposals are allowed"
+msgstr "Επιτρέπονται προτάσεις"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:127
+#: /app/specialVueFakeDummyForL10nScript.js:266
+msgid "No proposals are allowed"
+msgstr "Δεν επιτρέπονται προτάσεις"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:132
+#: /app/specialVueFakeDummyForL10nScript.js:268
+msgid "Results are hidden until closing poll"
+msgstr "Τα αποτελέσματα είναι κρυφά μέχρι το κλείσιμο της δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:135
+#: /app/specialVueFakeDummyForL10nScript.js:270
+msgid "Results are visible since closing poll"
+msgstr "Τα αποτελέσματα είναι ορατά από το κλείσιμο της δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:138
+#: /app/specialVueFakeDummyForL10nScript.js:272
+msgid "Results are always hidden"
+msgstr "Τα αποτελέσματα είναι πάντα κρυφά"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:140
+#: /app/specialVueFakeDummyForL10nScript.js:274
+msgid "Results are visible"
+msgstr "Τα αποτελέσματα είναι ορατά"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:146
+#: /app/specialVueFakeDummyForL10nScript.js:276
+msgid "Access only for invited persons"
+msgstr "Πρόσβαση μόνο για προσκεκλημένα άτομα"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:149
+#: /app/specialVueFakeDummyForL10nScript.js:278
+msgid "Relevant and accessible for all users"
+msgstr "Σχετική και προσβάσιμη για όλους τους χρήστες"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:151
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:149
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:114
+#. TRANSLATORS rc/js/components/Shares/ShareItemAllUsers.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:280
+#: /app/specialVueFakeDummyForL10nScript.js:364
+#: /app/specialVueFakeDummyForL10nScript.js:386
+#: /app/specialVueFakeDummyForL10nScript.js:504
+#: /app/specialVueFakeDummyForL10nScript.js:506
+msgid "Open poll"
+msgstr "Ανοιχτή δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:282
+msgid "%n Participant"
+msgid_plural "%n Participants"
+msgstr[0] "%n Συμμετέχων"
+msgstr[1] "%n Συμμετέχοντες"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:284
+msgid "%n option"
+msgid_plural "%n options"
+msgstr[0] "%n επιλογή"
+msgstr[1] "%n επιλογές"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:50
+#: /app/specialVueFakeDummyForL10nScript.js:286
+msgid "%n \"Yes\" vote"
+msgid_plural "%n \"Yes\" votes"
+msgstr[0] "%n ψήφος \"Ναι\""
+msgstr[1] "%n ψήφοι \"Ναι\""
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:288
+msgid "%n \"No\" vote"
+msgid_plural "%n \"No\" votes"
+msgstr[0] "%n ψήφος \"Όχι\""
+msgstr[1] "%n ψήφοι \"Όχι\""
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:290
+msgid "%n \"Maybe\" vote"
+msgid_plural "%n \"Maybe\" votes"
+msgstr[0] "%n ψήφος \"Ίσως\""
+msgstr[1] "%n ψήφοι \"Ίσως\""
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:294
+msgid "Only %n vote per option."
+msgid_plural "Only %n votes per option."
+msgstr[0] "Μόνο %n ψήφος ανά επιλογή."
+msgstr[1] "Μόνο %n ψήφοι ανά επιλογή."
+
+#. TRANSLATORS rc/js/components/Poll/PublicEmail.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:296
+msgid "Optional email address"
+msgstr "Προαιρετική διεύθυνση email"
+
+#. TRANSLATORS rc/js/components/Poll/PublicEmail.vue:70
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:200
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:298
+#: /app/specialVueFakeDummyForL10nScript.js:334
+#: /app/specialVueFakeDummyForL10nScript.js:632
+msgid "Checking email address …"
+msgstr "Έλεγχος διεύθυνσης email…"
+
+#. TRANSLATORS rc/js/components/Poll/PublicEmail.vue:104
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:165
+#: /app/specialVueFakeDummyForL10nScript.js:300
+#: /app/specialVueFakeDummyForL10nScript.js:638
+msgid "valid email address."
+msgstr "έγκυρη διεύθυνση email."
+
+#. TRANSLATORS rc/js/components/Poll/PublicEmail.vue:107
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:213
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:168
+#: /app/specialVueFakeDummyForL10nScript.js:302
+#: /app/specialVueFakeDummyForL10nScript.js:336
+#: /app/specialVueFakeDummyForL10nScript.js:640
+msgid "Invalid email address."
+msgstr "Μη έγκυρη διεύθυνση email."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:304
+msgid "Public participation"
+msgstr "Συμμετοχή του κοινού"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:306
+msgid "To participate, tell us how we can call you!"
+msgstr "Για να συμμετάσχετε, πείτε μας πώς μπορούμε να σας καλέσουμε!"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:308
+msgid "Enter your name"
+msgstr "Προσθέστε το όνομά σας"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:314
+msgid "You are a registered user of this site?"
+msgstr "Είστε εγγεγραμμένος χρήστης αυτού του ιστότοπου;"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:316
+msgid "Login"
+msgstr "Σύνδεση"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:77
+#: /app/specialVueFakeDummyForL10nScript.js:318
+msgid ""
+"As a regular user of this site, you can participate with your internal "
+"identity after logging in."
+msgstr ""
+"Ως τακτικός επισκέπτης του ιστοτόπου, μπορείτε να συμμετέχετε αφότου "
+"συνδεθείτε με το εσωτερικό αναγνωριστικό σας."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:80
+#: /app/specialVueFakeDummyForL10nScript.js:320
+msgid "Otherwise participate publicly."
+msgstr "Διαφορετικά συμμετάσχετε δημόσια."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:148
+#: /app/specialVueFakeDummyForL10nScript.js:324
+msgid "By clicking the \"OK\" button you accept our {privacyPolicy}."
+msgstr "Κάνοντας κλικ στο κουμπί \"OK\" αποδέχεστε την {privacyPolicy} μας."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:154
+#: /app/specialVueFakeDummyForL10nScript.js:326
+msgid "privacy policy"
+msgstr "πολιτική απορρήτου"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:173
+#: /app/specialVueFakeDummyForL10nScript.js:328
+msgid "Checking name …"
+msgstr "Έλεγχος χρήστη …"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:186
+#: /app/specialVueFakeDummyForL10nScript.js:330
+msgid "{username} is invalid or reserved."
+msgstr "{username} δεν είναι έγκυρο ή έχει δεσμευτεί."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:192
+#: /app/specialVueFakeDummyForL10nScript.js:332
+msgid "{username} is valid."
+msgstr "{username} είναι έγκυρο."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:219
+#: /app/specialVueFakeDummyForL10nScript.js:338
+msgid "Valid email address."
+msgstr "Έγκυρη ηλεκτρονική διεύθυνση"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:305
+#: /app/specialVueFakeDummyForL10nScript.js:340
+msgid "Email could not be sent to {emailAddress}"
+msgstr "Δεν ήταν δυνατή η αποστολή email στη διεύθυνση {emailAddress}"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:308
+#: /app/specialVueFakeDummyForL10nScript.js:342
+msgid "Error saving name"
+msgstr "Σφάλμα αποθήκευσης ονόματος"
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:344
+msgid ""
+"Your email address is required. After the registration your personal link to"
+" the poll will be sent to this address."
+msgstr ""
+"Απαιτείται η διεύθυνση email σας. Μετά την εγγραφή ο προσωπικός σας "
+"σύνδεσμος για την ψηφοφορία θα σταλεί σε αυτή τη διεύθυνση."
+
+#. TRANSLATORS rc/js/components/Poll/PublicRegisterModal.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:346
+msgid ""
+"With your email address you can subscribe to notifications and you will "
+"receive your personal link to this poll."
+msgstr ""
+"Με τη διεύθυνση email σας μπορείτε να εγγραφείτε σε ειδοποιήσεις και θα "
+"λάβετε τον προσωπικό σας σύνδεσμο σε αυτήν τη δημοσκόπηση."
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:33
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:350
+#: /app/specialVueFakeDummyForL10nScript.js:376
+msgid "Access"
+msgstr "Πρόσβαση"
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:38
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:38
+#: /app/specialVueFakeDummyForL10nScript.js:352
+#: /app/specialVueFakeDummyForL10nScript.js:378
+msgid "Owner"
+msgstr "Ιδιοκτήτης"
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:44
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:354
+#: /app/specialVueFakeDummyForL10nScript.js:380
+msgid "Created"
+msgstr "Δημιουργήθηκε"
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:49
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:356
+#: /app/specialVueFakeDummyForL10nScript.js:382
+msgid "Closing date"
+msgstr "Ημερομηνία κλεισίματος"
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:64
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:358
+#: /app/specialVueFakeDummyForL10nScript.js:360
+#: /app/specialVueFakeDummyForL10nScript.js:384
+msgid "No description provided"
+msgstr "Δεν υπάρχει περιγραφή"
+
+#. TRANSLATORS rc/js/components/PollList/PollItem.vue:152
+#. TRANSLATORS rc/js/components/PollList/PollItemAdmin.vue:116
+#: /app/specialVueFakeDummyForL10nScript.js:366
+#: /app/specialVueFakeDummyForL10nScript.js:388
+msgid "Private poll"
+msgstr "Ιδιωτική δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminCombo.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:396
+msgid "Deactivate combo view for all users"
+msgstr "Απενεργοποίηση σύνθετης προβολής για όλους τους χρήστες"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminCombo.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:398
+msgid "Allow combo view for the following groups"
+msgstr "Να επιτρέπεται η σύνθετη προβολή για τις ακόλουθες ομάδες"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminCombo.vue:40
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollCreation.vue:40
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollDownload.vue:40
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminShareSettings.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:400
+#: /app/specialVueFakeDummyForL10nScript.js:438
+#: /app/specialVueFakeDummyForL10nScript.js:444
+#: /app/specialVueFakeDummyForL10nScript.js:450
+#: /app/specialVueFakeDummyForL10nScript.js:456
+msgid "Leave empty to disallow for all."
+msgstr "Αφήστε κενό για να μην επιτρέπεται για όλους."
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminEmail.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:402
+msgid "Add terms links also to the email footer"
+msgstr "Προσθέστε επίσης συνδέσμους όρων και στο υποσέλιδο του email"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminEmail.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:404
+msgid "Additional email disclaimer"
+msgstr ""
+"Πρόσθετη δήλωση αποποίησης ευθυνών στα μηνύματα ηλεκτρονικού ταχυδρομείου."
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminEmail.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:406
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:408
+msgid ""
+"The privacy link and the legal notice link are automatically added to the "
+"registration dialog of public polls."
+msgstr ""
+"Οι σύνδεσμοι για την πολιτική απορρήτου και της νομικής ειδοποίησης "
+"προστίθενται αυτόματα στο παράθυρο διαλόγου εγγραφής των δημόσιων "
+"δημοσκοπήσεων."
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:410
+msgid ""
+"As a default the links configured in the theming app are used. For public "
+"polls these can be overriden by individual terms."
+msgstr ""
+"Ως προεπιλογή χρησιμοποιούνται οι σύνδεσμοι που υπάρχουν στις ρυθμίσεις "
+"εμφάνισης. Για τις δημόσιες δημοσκοπήσεις, αυτά μπορούν να αντικατασταθούν "
+"από μεμονωμένους όρους."
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:412
+msgid "Privacy policy link:"
+msgstr "Σύνδεσμος πολιτικής απορρήτου:"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:414
+msgid "Legal notice link:"
+msgstr "Σύνδεσμος νομικής ειδοποίησης:"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:416
+msgid "Enter the URL of your privacy policy"
+msgstr "Εισαγάγετε τη διεύθυνση URL της πολιτικής απορρήτου σας"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminLegal.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:418
+msgid "Enter the URL of your legal notice"
+msgstr "Εισαγάγετε τη διεύθυνση URL της νομικής ειδοποίησης σας"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminMisc.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:420
+msgid "Track activities"
+msgstr "Παρακολούθηση δραστηριοτήτων"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminMisc.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:422
+msgid "Hide login option in public polls"
+msgstr "Απόκρυψη επιλογής σύνδεσης σε δημόσιες δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminMisc.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:424
+msgid "Archive closed polls automatically"
+msgstr "Αυτόματη αρχειοθέτηση κλειστών δημοσκοπήσεων"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminMisc.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:426
+msgid "After how many days are the closed polls to be archived:"
+msgstr "Μετά από πόσες ημέρες θα αρχειοθετηθούν οι κλειστές δημοσκοπήσεις:"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminPerformance.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:428
+msgid "Activate long polling for instant updates"
+msgstr "Λάβετε ενημερώσεις άμεσα"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminPerformance.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:430
+msgid "Activate periodic polling of updates from the client"
+msgstr "Λάβετε ενημερώσεις περιοδικά"
+
+#. TRANSLATORS rc/js/components/Settings/AdminSettings/AdminPerformance.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:432
+msgid "Disable automatic updates (reload app for updates)"
+msgstr ""
+"Απενεργοποίηση αυτόματων ενημερώσεων (επαναφόρτωση της εφαρμογής για "
+"ενημερώσεις)"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollCreation.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:434
+msgid "Disallow poll creation for all users"
+msgstr "Να μην επιτρέπεται η δημιουργία δημοσκοπήσεων για όλους τους χρήστες"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollCreation.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:436
+msgid "Allow poll creation for the following groups"
+msgstr "Να επιτρέπεται η δημιουργία δημοσκόπησης για τις ακόλουθες ομάδες"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollDownload.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:440
+msgid "Disallow poll download"
+msgstr "Να μην επιτρέπεται η λήψη δημοσκόπησης"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminPollDownload.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:442
+msgid "Allow poll download for the following groups"
+msgstr "Να επιτρέπεται η λήψη δημοσκόπησης για τις ακόλουθες ομάδες"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminShareSettings.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:446
+msgid "Disallow public shares"
+msgstr "Να μην επιτρέπεται η δημόσια κοινοποίηση"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminShareSettings.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:448
+msgid "Allow public shares for the following groups"
+msgstr "Να επιτρέπονται οι δημόσιες κοινοποιήσεις για τις ακόλουθες ομάδες"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminShareSettings.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:452
+msgid "Disallow open polls"
+msgstr "Να μην επιτρέπονται ανοιχτές δημοσκοπήσεις"
+
+#. TRANSLATORS
+#. rc/js/components/Settings/AdminSettings/AdminShareSettings.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:454
+msgid "Allow creating open polls for the following groups"
+msgstr ""
+"Να επιτρέπεται η δημιουργία ανοιχτών δημοσκοπήσεων για τις ακόλουθες ομάδες"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:458
+msgid "Use calendar lookup"
+msgstr "Χρησιμοποιήστε την αναζήτηση ημερολογίου"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:460
+msgid ""
+"Check, if an option in a date poll is conflicting with or near an entry in "
+"your calendar."
+msgstr ""
+"Ελέγξτε, εάν μια επιλογή σε μια δημοσκόπηση ημερομηνίας έρχεται σε διένεξη "
+"με ή κοντά σε μια καταχώριση στο ημερολόγιό σας."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:462
+msgid "Opt in to the calendars, which should be checked."
+msgstr "Συμμετοχή στα ημερολόγια, τα οποία πρέπει να ελεγχθούν."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:464
+msgid "Text polls default to list view"
+msgstr ""
+"Οι δημοσκοπήσεις κειμένου προβάλλονται  προεπιλεγμένα σε προβολή λίστας"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:466
+msgid ""
+"Check this, if you prefer to display text poll in a vertical aligned list "
+"rather than in the grid view. The initial default is list view."
+msgstr ""
+"Ελέγξτε αυτό, εάν προτιμάτε να εμφανίζεται η δημοσκόπηση κειμένου σε "
+"κατακόρυφη στοίχιση παρά σε προβολή πλέγματος. Η αρχική προεπιλογή είναι "
+"προβολή λίστας."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:468
+msgid "Date polls default to list view"
+msgstr ""
+"Οι δημοσκοπήσεις ημερομηνίας προβάλλονται προεπιλεγμένα σε προβολή λίστας"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/FeatureSettings.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:470
+msgid ""
+"Check this, if you prefer to display date poll in a vertical view rather "
+"than in the grid view. The initial default is grid view."
+msgstr ""
+"Ελέγξτε αυτό, εάν προτιμάτε να εμφανίζεται η δημοσκόπηση ημερομηνίας σε "
+"κατακόρυφη προβολή και όχι σε προβολή πλέγματος. Η αρχική προεπιλογή είναι "
+"προβολή πλέγματος."
+
+#. TRANSLATORS
+#. rc/js/components/Settings/UserSettings/PerformanceSettings.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:472
+msgid ""
+"A poll with many options and voters can have a heavy impact on client "
+"performance."
+msgstr ""
+"Μια δημοσκόπηση με πολλές επιλογές και ψηφοφόρους μπορεί να έχει μεγάλο "
+"αντίκτυπο στην απόδοση του client."
+
+#. TRANSLATORS
+#. rc/js/components/Settings/UserSettings/PerformanceSettings.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:474
+msgid ""
+"Set the amount of voting cells (options x participants) up to which all "
+"voting cells should be displayed."
+msgstr ""
+"Ορίστε τον αριθμό των κελιών ψηφοφορίας (επιλογές x συμμετέχοντες) μέχρι τον"
+" οποίο θα πρέπει να εμφανίζονται όλα τα κελιά ψηφοφορίας."
+
+#. TRANSLATORS
+#. rc/js/components/Settings/UserSettings/PerformanceSettings.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:476
+msgid ""
+"If this threshold gets tresspasses only the current user will be displayed, "
+"to avoid a performance breakdown."
+msgstr ""
+"Αν αυτό το όριο ξεπεραστεί θα εμφανιστεί μόνο ο τρέχων χρήστης, για την "
+"αποφυγή υπερφόρτωσης του συστήματος."
+
+#. TRANSLATORS
+#. rc/js/components/Settings/UserSettings/PerformanceSettings.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:478
+msgid "The default threshold of 1000 should be a good and safe value."
+msgstr ""
+"Το προεπιλεγμένο όριο των 1000 θα πρέπει να είναι μια καλή και ασφαλής τιμή."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:480
+msgid "The style settings are still experimental!"
+msgstr "Οι ρυθμίσεις στυλ είναι πειραματικές!"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:482
+msgid "Adopt dashboard style"
+msgstr "Υιοθέτησε το στυλ του Πίνακα ελέγχου"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:484
+msgid "Set individual styles"
+msgstr "Ορίστε μεμονωμένα στυλ"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:486
+msgid "Use background color"
+msgstr "Χρησιμοποιήστε χρώμα φόντου"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:488
+msgid "Use background image"
+msgstr "Χρησιμοποιήστε εικόνα φόντου"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:490
+msgid "Enter the URL of your favorite background image."
+msgstr "Εισάγετε τη διεύθυνση URL της αγαπημένης σας εικόνας φόντου."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:492
+msgid "Dark picture"
+msgstr "Σκοτεινή εικόνα"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:60
+#: /app/specialVueFakeDummyForL10nScript.js:494
+msgid "Translucent foreground elements"
+msgstr "Διαφανή στοιχεία προσκηνίου"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettings/StyleSettings.vue:64
+#: /app/specialVueFakeDummyForL10nScript.js:496
+msgid ""
+"Add a translucent effect on foreground elements like sidebar and poll table "
+"(Does not work with all browsers)."
+msgstr ""
+"Προσθέστε ένα ημιδιαφανές εφέ σε στοιχεία προσκηνίου όπως η πλαϊνή γραμμή "
+"και ο πίνακας δημοσκοπήσεων (Δε λειτουργεί με όλα τα προγράμματα "
+"περιήγησης)."
+
+#. TRANSLATORS rc/js/components/Settings/UserSettingsDlg.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:498
+msgid "User settings"
+msgstr "Ρυθμίσεις χρήστη"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettingsDlg.vue:29
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:52
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:500
+#: /app/specialVueFakeDummyForL10nScript.js:696
+#: /app/specialVueFakeDummyForL10nScript.js:832
+msgid "Performance settings"
+msgstr "Ρυθμίσεις απόδοσης"
+
+#. TRANSLATORS rc/js/components/Settings/UserSettingsDlg.vue:33
+#: /app/specialVueFakeDummyForL10nScript.js:502
+msgid "Styles"
+msgstr "Στυλ"
+
+#. TRANSLATORS rc/js/components/Shares/SharePublicAdd.vue:27
+#. TRANSLATORS rc/js/components/Shares/SharePublicAdd.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:508
+#: /app/specialVueFakeDummyForL10nScript.js:510
+msgid "Add a new public link"
+msgstr "Προσθήκη νέου δημόσιου συνδέσμου"
+
+#. TRANSLATORS rc/js/components/Shares/SharePublicAdd.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:512
+msgid "Error adding public link"
+msgstr "Σφάλμα κατά την προσθήκη δημόσιου συνδέσμου"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:24
+#: /app/specialVueFakeDummyForL10nScript.js:514
+msgid "Shares"
+msgstr "Κοινόχρηστα"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:37
+#: /app/specialVueFakeDummyForL10nScript.js:516
+msgid "Has voted"
+msgstr "Έχει ψηφίσει"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:518
+msgid "Has not voted"
+msgstr "Δεν έχει ψηφίσει"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:520
+msgid "Resend invitation mail"
+msgstr "Επαναποστολή μηνύματος πρόσκλησης"
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:520
+#: /app/specialVueFakeDummyForL10nScript.js:546
+msgid "Send invitation mail"
+msgstr "Αποστολή μηνύματος πρόσκλησης"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:522
+msgid "Grant poll admin access"
+msgstr "Παραχώρηση πρόσβασης διαχειριστή δημοσκόπησης"
+
+#: /app/specialVueFakeDummyForL10nScript.js:522
+msgid "Withdraw poll admin access"
+msgstr "Ανάκληση πρόσβασης διαχειριστή δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:524
+msgid "Copy link to clipboard"
+msgstr "Αντιγραφή συνδέσμου στο πρόχειρο"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:526
+msgid "Options for the registration dialog"
+msgstr "Επιλογές για το παράθυρο διαλόγου εγγραφής"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:67
+#: /app/specialVueFakeDummyForL10nScript.js:528
+msgid "Email address is optional"
+msgstr "Η διεύθυνση email είναι προαιρετική"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:74
+#: /app/specialVueFakeDummyForL10nScript.js:530
+msgid "Email address is mandatory"
+msgstr "Η διεύθυνση email είναι υποχρεωτική"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:81
+#: /app/specialVueFakeDummyForL10nScript.js:532
+msgid "Do not ask for email address"
+msgstr "Μη ζητάτε διεύθυνση email"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:534
+msgid "Remove share"
+msgstr "Κατάργηση διαμοιρασμού"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:145
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:97
+#: /app/specialVueFakeDummyForL10nScript.js:536
+#: /app/specialVueFakeDummyForL10nScript.js:558
+msgid "Invitation sent to {displayName} ({emailAddress})"
+msgstr "Πρόσκληση στάλθηκε σε {displayName} ({emailAddress})"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:151
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:103
+#: /app/specialVueFakeDummyForL10nScript.js:538
+#: /app/specialVueFakeDummyForL10nScript.js:560
+msgid "Error sending invitation to {displayName} ({emailAddress})"
+msgstr "Σφάλμα κατά την αποστολή πρόσκλησης σε {displayName} ({emailAddress})"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:159
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:196
+#: /app/specialVueFakeDummyForL10nScript.js:540
+#: /app/specialVueFakeDummyForL10nScript.js:650
+#: /app/specialVueFakeDummyForL10nScript.js:654
+msgid "Link copied to clipboard"
+msgstr "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο"
+
+#. TRANSLATORS rc/js/components/Shares/SharesList.vue:161
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:198
+#: /app/specialVueFakeDummyForL10nScript.js:542
+#: /app/specialVueFakeDummyForL10nScript.js:652
+#: /app/specialVueFakeDummyForL10nScript.js:656
+msgid "Error while copying link to clipboard"
+msgstr "Σφάλμα κατά την αντιγραφή συνδέσμου στο πρόχειρο"
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:24
+#: /app/specialVueFakeDummyForL10nScript.js:544
+msgid "Unsent invitations"
+msgstr "Μη απεσταλμένες προσκλήσεις"
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:548
+msgid "Resolve into individual invitations"
+msgstr "Ανάλυση σε ατομικές προσκλήσεις"
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:44
+#: /app/specialVueFakeDummyForL10nScript.js:550
+msgid "Remove invitation"
+msgstr "Κατάργηση πρόσκλησης"
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:552
+msgid "Resolving of {name} is not possible. The circles app is not enabled."
+msgstr ""
+"Δεν είναι δυνατή η επίλυση του {name}. Η εφαρμογή κύκλων δεν είναι "
+"ενεργοποιημένη."
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:86
+#: /app/specialVueFakeDummyForL10nScript.js:554
+msgid "Resolving of {name} is not possible. The contacts app is not enabled."
+msgstr ""
+"Δεν είναι δυνατή η επίλυση του {name}. Η εφαρμογή επαφών δεν είναι "
+"ενεργοποιημένη."
+
+#. TRANSLATORS rc/js/components/Shares/SharesListUnsent.vue:88
+#: /app/specialVueFakeDummyForL10nScript.js:556
+msgid "Error resolving {name}."
+msgstr "Σφάλμα κατά την επίλυση {name}."
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabActivity.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:562
+msgid "No activity"
+msgstr "Καμία δραστηριότητα"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabComments.vue:28
+#: /app/specialVueFakeDummyForL10nScript.js:564
+msgid "No comments"
+msgstr "Χωρίς σχόλια"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabComments.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:566
+msgid "Be the first."
+msgstr "Γίνετε ο πρώτος."
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:568
+msgid ""
+"Please be careful when changing options, because it can affect existing "
+"votes in an unwanted manner."
+msgstr ""
+"Να είστε προσεκτικοί όταν αλλάζετε επιλογές, γιατί μπορεί να επηρεάσει τις "
+"υπάρχουσες ψήφους με ανεπιθύμητο τρόπο."
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:29
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabOptions.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:570
+#: /app/specialVueFakeDummyForL10nScript.js:588
+msgid "As an admin you may edit this poll"
+msgstr "Ως διαχειριστής μπορείτε να επεξεργαστείτε την δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:574
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:576
+msgid "Poll configurations"
+msgstr "Ρυθμίσεις δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:578
+msgid "Poll closing status"
+msgstr "Κατάσταση κλεισίματος δημοσκόπησης"
+
+#. TRANSLATORS rc/js/components/Poll/PollInformation.vue:65
+#: /app/specialVueFakeDummyForL10nScript.js:292
+msgid "%n of {maximalVotes} vote left."
+msgid_plural "%n of {maximalVotes} votes left."
+msgstr[0] "απομένει %n από {maximalVotes} ψήφος."
+msgstr[1] "απομένουν %n από {maximalVotes} ψήφους."
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:580
+msgid "Result display"
+msgstr "Εμφάνιση αποτελεσμάτων"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabConfiguration.vue:140
+#. TRANSLATORS rc/js/views/Administration.vue:214
+#. TRANSLATORS rc/js/views/Navigation.vue:167
+#. TRANSLATORS rc/js/views/PollList.vue:200
+#: /app/specialVueFakeDummyForL10nScript.js:586
+#: /app/specialVueFakeDummyForL10nScript.js:738
+#: /app/specialVueFakeDummyForL10nScript.js:768
+#: /app/specialVueFakeDummyForL10nScript.js:796
+msgid "Error deleting poll."
+msgstr "Σφάλμα διαγραφής δημοσκόπησης."
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabOptions.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:590
+msgid "Allow proposals from users"
+msgstr "Επιτρέπονται προτάσεις από χρήστες"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabOptions.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:592
+msgid "Shift all date options"
+msgstr "Μετακινήστε όλες τις επιλογές ημερομηνίας"
+
+#. TRANSLATORS rc/js/components/SideBar/SideBarTabOptions.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:594
+msgid "Available Options"
+msgstr "Διαθέσιμες Επιλογές"
+
+#. TRANSLATORS rc/js/components/Subscription/ActionSubscription.vue:47
+#. TRANSLATORS rc/js/components/Subscription/Subscription.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:596
+#: /app/specialVueFakeDummyForL10nScript.js:600
+msgid "Receive notification email on activity to {emailAddress}"
+msgstr ""
+"Λάβετε email ειδοποίησης σχετικά με τη δραστηριότητα στο {emailAddress}"
+
+#. TRANSLATORS rc/js/components/Subscription/ActionSubscription.vue:49
+#. TRANSLATORS rc/js/components/Subscription/Subscription.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:598
+#: /app/specialVueFakeDummyForL10nScript.js:602
+msgid "Receive notification email on activity"
+msgstr "Ενημέρωση με email σε δραστηριότητα"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:148
+#: /app/specialVueFakeDummyForL10nScript.js:606
+msgid "Internal access"
+msgstr "Εσωτερική πρόσβαση"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:161
+#: /app/specialVueFakeDummyForL10nScript.js:608
+msgid "Token: {token}"
+msgstr "Token: {token}"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:166
+#: /app/specialVueFakeDummyForL10nScript.js:610
+msgid "This poll is private"
+msgstr "Αυτή η δημοσκόπηση είναι ιδιωτική"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:168
+#: /app/specialVueFakeDummyForL10nScript.js:612
+msgid "This is an open poll"
+msgstr "Αυτή είναι μια ανοιχτή δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:172
+#: /app/specialVueFakeDummyForL10nScript.js:614
+msgid "Resolve this group first!"
+msgstr "Επιλύστε πρώτα αυτήν την ομάδα!"
+
+#. TRANSLATORS rc/js/components/User/UserItem.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:616
+msgid "Is granted admin rights for this poll"
+msgstr "Παραχωρούνται δικαιώματα διαχειριστή για αυτήν τη δημοσκόπηση"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:618
+msgid "Copy your personal link to clipboard"
+msgstr "Αντιγράψτε τον προσωπικό σας σύνδεσμο στο πρόχειρο"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:620
+msgid "Edit Email Address"
+msgstr "Επεξεργασία Διεύθυνσης Email"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:622
+msgid "Get your personal link per mail"
+msgstr "Λάβετε τον προσωπικό σας σύνδεσμο με email"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:49
+#: /app/specialVueFakeDummyForL10nScript.js:624
+msgid "Subscribe to notifications"
+msgstr "Εγγραφείτε στις ειδοποιήσεις"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:626
+msgid "Remove Email Address"
+msgstr "Κατάργηση Διεύθυνσης Email"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:628
+msgid "Copy list of email addresses to clipboard"
+msgstr "Αντιγράψτε τη λίστα διευθύνσεων email στο πρόχειρο"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:61
+#: /app/specialVueFakeDummyForL10nScript.js:630
+msgid "Reset your votes"
+msgstr "Επαναφορά των ψήφων σας"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:154
+#: /app/specialVueFakeDummyForL10nScript.js:634
+msgid "Email address deleted."
+msgstr "Η διεύθυνση email διαγράφηκε."
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:156
+#: /app/specialVueFakeDummyForL10nScript.js:636
+msgid "Error deleting email address {emailAddress}"
+msgstr "Σφάλμα κατά τη διαγραφή της διεύθυνσης email {emailAddress}"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:178
+#: /app/specialVueFakeDummyForL10nScript.js:642
+msgid "Email address {emailAddress} saved."
+msgstr "Η διεύθυνση email {emailAddress} αποθηκεύτηκε."
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:180
+#: /app/specialVueFakeDummyForL10nScript.js:644
+msgid "Error saving email address {emailAddress}"
+msgstr "Σφάλμα κατά την αποθήκευση της διεύθυνσης email {emailAddress}"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:187
+#: /app/specialVueFakeDummyForL10nScript.js:646
+msgid "Invitation resent to {emailAddress}"
+msgstr "Η πρόσκληση ξαναστάλθηκε στη διεύθυνση {emailAddress}"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:189
+#: /app/specialVueFakeDummyForL10nScript.js:648
+msgid "Mail could not be resent to {emailAddress}"
+msgstr ""
+"Δεν ήταν δυνατή η εκ νέου αποστολή αλληλογραφίας στη διεύθυνση "
+"{emailAddress}"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:215
+#: /app/specialVueFakeDummyForL10nScript.js:658
+msgid "Your votes are reset"
+msgstr "Οι ψήφοι σας επαναφέρθηκαν"
+
+#. TRANSLATORS rc/js/components/User/UserMenu.vue:217
+#: /app/specialVueFakeDummyForL10nScript.js:660
+msgid "Error while resetting votes"
+msgstr "Σφάλμα κατά την επαναφορά των ψήφων"
+
+#. TRANSLATORS rc/js/components/User/UserSearch.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:662
+msgid "Type to add an individual share"
+msgstr "Πληκτρολογήστε για να προσθέσετε ένα μεμονωμένο χρήστη, ομάδα ή κύκλο"
+
+#. TRANSLATORS rc/js/components/User/UserSearch.vue:109
+#: /app/specialVueFakeDummyForL10nScript.js:664
+msgid "Error while adding share"
+msgstr "Σφάλμα κατά την προσθήκη κοινόχρηστων"
+
+#. TRANSLATORS rc/js/components/VoteTable/VoteItem.vue:116
+#: /app/specialVueFakeDummyForL10nScript.js:668
+msgid "Vote saved"
+msgstr "Η ψήφος αποθηκεύτηκε"
+
+#. TRANSLATORS rc/js/components/VoteTable/VoteItem.vue:118
+#: /app/specialVueFakeDummyForL10nScript.js:670
+msgid "Error saving vote"
+msgstr "Σφάλμα κατά την αποθήκευση ψήφου"
+
+#. TRANSLATORS rc/js/components/VoteTable/VoteTable.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:672
+msgid "Delete votes"
+msgstr "Διαγραφή ψήφων"
+
+#. TRANSLATORS rc/js/components/VoteTable/VoteTable.vue:96
+#: /app/specialVueFakeDummyForL10nScript.js:674
+msgid "User {userId} removed"
+msgstr "Ο/η χρήστης {userId} αφαιρέθηκε"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:676
+msgid "Share restrictions"
+msgstr "Περιορισμοί κοινοποίησης"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:678
+msgid "Restrict the share actions globally or on a group base"
+msgstr "Περιορίστε τη δημιουργία νέων δημοσκοπήσεων συνολικά ή ανά ομάδα"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:30
+#: /app/specialVueFakeDummyForL10nScript.js:680
+msgid "Poll creation restrictions"
+msgstr "Περιορισμοί δημιουργίας δημοσκοπήσης"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:682
+msgid "Restrict the creation of new polls globally or on a group base"
+msgstr "Περιορίστε τη δημιουργία νέων δημοσκοπήσεων συνολικά ή ανά ομάδα"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:684
+msgid "Legal terms for public poll registration"
+msgstr "Νομικοί όροι για εγγραφή σε δημόσια δημοσκόπηση"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:686
+msgid ""
+"Override the default links of your site to your legal terms. Leave empty to "
+"use the links, which are configured in the theming app."
+msgstr ""
+"Αντικαταστήστε τους προεπιλεγμένους συνδέσμους με τους νομικούς σας όρους "
+"του ιστότοπού σας. Αφήστε το κενό για να χρησιμοποιήσετε τους συνδέσμους, οι"
+" οποίοι έχουν διαμορφωθεί στις ρυθμίσεις θέματος εμφάνισης."
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:40
+#: /app/specialVueFakeDummyForL10nScript.js:688
+msgid "Email options"
+msgstr "Επιλογές email"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:690
+msgid ""
+"Add links to legal terms, if they exist and add an optional disclaimer to "
+"emails."
+msgstr ""
+"Προσθέστε συνδέσμους σε νομικούς όρους, εάν υπάρχουν και προσθέστε μια "
+"προαιρετική δήλωση αποποίησης ευθύνης στα μηνύματα ηλεκτρονικού "
+"ταχυδρομείου."
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:45
+#: /app/specialVueFakeDummyForL10nScript.js:692
+msgid "Other settings"
+msgstr "Άλλες ρυθμίσεις"
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:46
+#: /app/specialVueFakeDummyForL10nScript.js:694
+msgid "Activate or disable individual features."
+msgstr "Ενεργοποιήστε ή απενεργοποιήστε μεμονωμένες λειτουργίες."
+
+#. TRANSLATORS rc/js/views/AdminSettingsPage.vue:53
+#: /app/specialVueFakeDummyForL10nScript.js:698
+msgid ""
+"If you are experiencing connection problems, change how auto updates are "
+"retrieved."
+msgstr ""
+"Εάν αντιμετωπίζετε προβλήματα σύνδεσης, αλλάξτε τον τρόπο ανάκτησης των "
+"αυτόματων ενημερώσεων."
+
+#. TRANSLATORS rc/js/views/Administration.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:700
+msgid "Administrative poll management"
+msgstr ""
+
+#. TRANSLATORS rc/js/views/Administration.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:702
+msgid ""
+"Manage polls of other users. You can take over the ownership or delete "
+"polls."
+msgstr ""
+"Διαχείριση δημοσκοπήσεων άλλων χρηστών. Μπορείτε να αναλάβετε την ιδιοκτησία"
+" ή να διαγράψετε δημοσκοπήσεις."
+
+#. TRANSLATORS rc/js/views/Administration.vue:34
+#. TRANSLATORS rc/js/views/PollList.vue:34
+#: /app/specialVueFakeDummyForL10nScript.js:704
+#: /app/specialVueFakeDummyForL10nScript.js:776
+msgid "No polls found for this category"
+msgstr "Δεν βρέθηκαν δημοσκοπήσεις για αυτήν την κατηγορία"
+
+#. TRANSLATORS rc/js/views/Administration.vue:36
+#. TRANSLATORS rc/js/views/PollList.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:706
+#: /app/specialVueFakeDummyForL10nScript.js:778
+msgid "Add one or change category!"
+msgstr "Προσθέστε μία ή αλλάξτε κατηγορία!"
+
+#. TRANSLATORS rc/js/views/Administration.vue:59
+#: /app/specialVueFakeDummyForL10nScript.js:708
+msgid "Take over"
+msgstr "Ανάληψη"
+
+#. TRANSLATORS rc/js/views/Administration.vue:84
+#: /app/specialVueFakeDummyForL10nScript.js:714
+msgid "Do you want to take over this poll?"
+msgstr "Θέλετε να αναλάβετε αυτή τη δημοσκόπηση;"
+
+#. TRANSLATORS rc/js/views/Administration.vue:85
+#: /app/specialVueFakeDummyForL10nScript.js:716
+#: /app/specialVueFakeDummyForL10nScript.js:726
+msgid "{username} will get notified."
+msgstr "{username} θα ειδοποιηθεί."
+
+#. TRANSLATORS rc/js/views/Administration.vue:90
+#: /app/specialVueFakeDummyForL10nScript.js:720
+#: /app/specialVueFakeDummyForL10nScript.js:730
+msgid "Yes"
+msgstr "Ναι"
+
+#. TRANSLATORS rc/js/views/Administration.vue:98
+#: /app/specialVueFakeDummyForL10nScript.js:722
+msgid "Do you want to delete this poll?"
+msgstr "Θέλετε να διαγράψετε αυτήν τη δημοσκόπηση;"
+
+#. TRANSLATORS rc/js/views/Administration.vue:100
+#: /app/specialVueFakeDummyForL10nScript.js:724
+msgid "This action cannot be reverted."
+msgstr "Δεν είναι δυνατή η επαναφορά αυτής της ενέργειας."
+
+#. TRANSLATORS rc/js/views/Administration.vue:157
+#. TRANSLATORS rc/js/views/Navigation.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:732
+#: /app/specialVueFakeDummyForL10nScript.js:758
+msgid "Administration"
+msgstr "Διαχείριση"
+
+#. TRANSLATORS rc/js/views/Administration.vue:205
+#. TRANSLATORS rc/js/views/Navigation.vue:154
+#. TRANSLATORS rc/js/views/PollList.vue:192
+#: /app/specialVueFakeDummyForL10nScript.js:736
+#: /app/specialVueFakeDummyForL10nScript.js:766
+#: /app/specialVueFakeDummyForL10nScript.js:794
+msgid "Error archiving/restoring poll."
+msgstr "Σφάλμα αρχειοθέτησης/επαναφοράς δημοσκόπησης."
+
+#. TRANSLATORS rc/js/views/Administration.vue:224
+#: /app/specialVueFakeDummyForL10nScript.js:740
+msgid "Error overtaking poll."
+msgstr "Σφάλμα ανάληψης της δημοσκόπησης."
+
+#. TRANSLATORS rc/js/views/Combo.vue:41
+#: /app/specialVueFakeDummyForL10nScript.js:744
+msgid "No polls selected"
+msgstr "Δεν επιλέχθηκαν δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/views/Combo.vue:43
+#: /app/specialVueFakeDummyForL10nScript.js:746
+msgid "Select polls by clicking on them in the right sidebar!"
+msgstr ""
+"Επιλέξτε δημοσκοπήσεις κάνοντας κλικ σε αυτές στη δεξιά πλαϊνή γραμμή!"
+
+#. TRANSLATORS rc/js/views/Combo.vue:75
+#: /app/specialVueFakeDummyForL10nScript.js:748
+msgid "Combined polls"
+msgstr "Συνδυασμένες δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/views/Combo.vue:76
+#: /app/specialVueFakeDummyForL10nScript.js:750
+msgid "Combine multiple date polls in a single view"
+msgstr "Συνδυάστε πολλαπλές δημοσκοπήσεις ημερομηνίας σε μια ενιαία προβολή"
+
+#. TRANSLATORS rc/js/views/Navigation.vue:27
+#: /app/specialVueFakeDummyForL10nScript.js:754
+msgid "Add new Poll"
+msgstr "Προσθήκη νέας δημοσκόπησης"
+
+#. TRANSLATORS rc/js/views/Navigation.vue:51
+#: /app/specialVueFakeDummyForL10nScript.js:756
+msgid "Combine polls"
+msgstr "Συνδυάστε δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/views/Navigation.vue:58
+#: /app/specialVueFakeDummyForL10nScript.js:760
+msgid "Your app settings"
+msgstr "Οι ρυθμίσεις της εφαρμογής σας"
+
+#. TRANSLATORS rc/js/views/Navigation.vue:137
+#: /app/specialVueFakeDummyForL10nScript.js:762
+msgid "Error loading poll list"
+msgstr "Σφάλμα φόρτωσης λίστας δημοσκοπήσεων"
+
+#. TRANSLATORS rc/js/views/Navigation.vue:146
+#. TRANSLATORS rc/js/views/PollList.vue:208
+#: /app/specialVueFakeDummyForL10nScript.js:764
+#: /app/specialVueFakeDummyForL10nScript.js:798
+msgid "Error cloning poll."
+msgstr "Σφάλμα κλωνοποίησης δημοσκόπησης."
+
+#. TRANSLATORS rc/js/views/NotFound.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:770
+msgid "404 - poll not found"
+msgstr "404 - η δημοσκόπηση δεν βρέθηκε"
+
+#. TRANSLATORS rc/js/views/NotFound.vue:29
+#: /app/specialVueFakeDummyForL10nScript.js:772
+msgid "Enter a poll or start a new one."
+msgstr "Συμμετέχετε σε δημοσκόπηση ή ξεκινήστε μια νέα."
+
+#. TRANSLATORS rc/js/views/NotFound.vue:32
+#: /app/specialVueFakeDummyForL10nScript.js:774
+msgid "Goto Nextcloud"
+msgstr "Μετάβαση στο Nextcloud"
+
+#. TRANSLATORS rc/js/views/PollList.vue:176
+#: /app/specialVueFakeDummyForL10nScript.js:790
+msgid "Error loading poll"
+msgstr "Σφάλμα φόρτωσης δημοσκόπησης"
+
+#. TRANSLATORS rc/js/views/PollSelector.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:800
+msgid "No polls found"
+msgstr "Δε βρέθηκαν δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/views/PollSelector.vue:56
+#: /app/specialVueFakeDummyForL10nScript.js:802
+msgid "Select poll"
+msgstr "Επιλογή δημοσκόπησης"
+
+#. TRANSLATORS rc/js/views/PollSelector.vue:83
+#: /app/specialVueFakeDummyForL10nScript.js:804 /app/src/js/collections.js:70
+msgid "Link to a poll"
+msgstr "Σύνδεσμος σε δημοσκόπηση"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:806
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:808
+msgid "Configuration"
+msgstr "Ρυθμίσεις"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:39
+#: /app/specialVueFakeDummyForL10nScript.js:810
+msgid "Options"
+msgstr "Επιλογές"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:47
+#: /app/specialVueFakeDummyForL10nScript.js:812
+msgid "Sharing"
+msgstr "Διαμοιρασμός"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:55
+#: /app/specialVueFakeDummyForL10nScript.js:814
+msgid "Collaboration"
+msgstr "Συνεργασία"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:63
+#. TRANSLATORS rc/js/views/SideBar.vue:100
+#: /app/specialVueFakeDummyForL10nScript.js:816
+#: /app/specialVueFakeDummyForL10nScript.js:820
+msgid "Comments"
+msgstr "Σχόλια"
+
+#. TRANSLATORS rc/js/views/SideBar.vue:71
+#: /app/specialVueFakeDummyForL10nScript.js:818
+msgid "Activity"
+msgstr "Δραστηριότητα"
+
+#. TRANSLATORS rc/js/views/SideBarCombo.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:822
+msgid "Select polls to combine"
+msgstr "Επιλέξτε δημοσκοπήσεις για συνδυασμό"
+
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:25
+#: /app/specialVueFakeDummyForL10nScript.js:828
+msgid "Polls user settings"
+msgstr "Ρυθμίσεις δημοσκοπήσεων χρήστη"
+
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:26
+#: /app/specialVueFakeDummyForL10nScript.js:830
+msgid "Set your personal preferences for the polls app"
+msgstr "Ορίστε τις προσωπικές σας προτιμήσεις για την εφαρμογή polls"
+
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:31
+#: /app/specialVueFakeDummyForL10nScript.js:834
+msgid "Try to change these parameters to handle big polls"
+msgstr ""
+"Δοκιμάστε να αλλάξετε αυτές τις παραμέτρους για να χειριστείτε μεγάλες "
+"δημοσκοπήσεις"
+
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:35
+#: /app/specialVueFakeDummyForL10nScript.js:836
+msgid "Experimental styles"
+msgstr "Πειραματικά στυλ"
+
+#. TRANSLATORS rc/js/views/UserSettingsPage.vue:36
+#: /app/specialVueFakeDummyForL10nScript.js:838
+msgid "Some visual styling options."
+msgstr "Κάποιες ρυθμίσεις εμφάνισης"
+
+#. TRANSLATORS rc/js/views/Vote.vue:48
+#: /app/specialVueFakeDummyForL10nScript.js:840
+msgid "No vote options available"
+msgstr "Δεν υπάρχουν διαθέσιμες επιλογές ψήφου"
+
+#. TRANSLATORS rc/js/views/Vote.vue:54
+#: /app/specialVueFakeDummyForL10nScript.js:844
+msgid "Maybe the owner did not provide some until now."
+msgstr "Ίσως ο ιδιοκτήτης δεν παρείχε κάποια μέχρι τώρα."
+
+#. TRANSLATORS rc/js/views/Vote.vue:62
+#: /app/specialVueFakeDummyForL10nScript.js:846
+msgid ""
+"Due to performance concerns {countHiddenParticipants} voters are hidden."
+msgstr ""
+"Λόγω πιθανόν προβλημάτων σχετικά με την απόδοση {countHiddenParticipants} οι"
+" συμμετέχοντες δεν εμφανίζονται."
+
+#. TRANSLATORS rc/js/views/Vote.vue:68
+#: /app/specialVueFakeDummyForL10nScript.js:848
+msgid ""
+"Although participant's names are hidden, this is not a real anonymous poll "
+"because they are not hidden from the owner."
+msgstr ""
+"Παρόλο που τα ονόματα των συμμετεχόντων είναι κρυμμένα, αυτή δεν είναι μια "
+"πραγματικά ανώνυμη δημοσκόπηση επειδή τα ονόματα δεν είναι κρυφά από τον "
+"κάτοχο."
+
+#. TRANSLATORS rc/js/views/Vote.vue:69
+#: /app/specialVueFakeDummyForL10nScript.js:850
+msgid ""
+"Additionally the owner can remove the anonymous flag at any time, which will"
+" reveal the participant's names."
+msgstr ""
+"Επιπλέον, ο κάτοχος μπορεί να απενεργοποιήσει την σημαία ανωνυμίας ανά πάσα "
+"στιγμή, γεγονός που θα αποκαλύψει τα ονόματα των συμμετεχόντων."
+
+#: /app/src/js/mixins/dateMixins.js:27
+msgid "Minute"
+msgstr "Λεπτά"
+
+#: /app/src/js/mixins/dateMixins.js:28
+msgid "Hour"
+msgstr "Ώρα"
+
+#: /app/src/js/mixins/dateMixins.js:29
+msgid "Day"
+msgstr "Ημέρα"
+
+#: /app/src/js/mixins/dateMixins.js:31
+msgid "Month"
+msgstr "Μήνας"
+
+#: /app/src/js/mixins/dateMixins.js:32
+msgid "Year"
+msgstr "Έτος"
+
+#: /app/src/js/mixins/writePoll.js:38
+msgid "\"{pollTitle}\" successfully saved"
+msgstr "Η \"{pollTitle}\" αποθηκεύτηκε με επιτυχία"
+
+#: /app/src/js/mixins/writePoll.js:43
+msgid "Title must not be empty!"
+msgstr "Ο τίτλος δεν πρέπει να είναι κενός!"
+
+#: /app/src/js/mixins/writePoll.js:49
+msgid "Error writing poll"
+msgstr "Σφάλμα εγγραφής της δημοσκόπησης"
+
+#: /app/src/js/store/modules/poll.js:155
+msgid "Disallow proposals"
+msgstr "Να μην επιτρέπονται οι προτάσεις"
+
+#: /app/src/js/store/modules/poll.js:156
+msgid "Allow proposals"
+msgstr "Να επιτρέπονται οι προτάσεις"
+
+#: /app/src/js/store/modules/polls.js:43
+msgid "Relevant"
+msgstr "Σχετικές"
+
+#: /app/src/js/store/modules/polls.js:44
+msgid "Relevant polls"
+msgstr "Σχετικές δημοσκοπήσεις"
+
+#: /app/src/js/store/modules/polls.js:45
+msgid ""
+"All polls which are relevant or important to you, because you are a "
+"participant or the owner or you are invited to. Without polls closed more "
+"than five days ago."
+msgstr ""
+"Όλες οι δημοσκοπήσεις που είναι σχετικές ή σημαντικές για εσάς, επειδή είστε"
+" συμμετέχων ή κάτοχος ή έχετε προσκληθεί. Χωρίς να συμπεριλαμβάνονται "
+"δημοσκοπήσεις που έχουν κλείσει περισσότερες από πέντε ημέρες πριν."
+
+#: /app/src/js/store/modules/polls.js:61 /app/src/js/store/modules/polls.js:62
+msgid "My polls"
+msgstr "Οι δημοσκοπήσεις μου"
+
+#: /app/src/js/store/modules/polls.js:63
+msgid "Your polls (in which you are the owner)."
+msgstr "Οι δημοσκοπήσεις σας (στις οποίες είστε ο ιδιοκτήτης)."
+
+#: /app/src/js/store/modules/polls.js:73 /app/src/js/store/modules/polls.js:74
+msgid "Private polls"
+msgstr "Ιδιωτικές δημοσκοπήσεις"
+
+#: /app/src/js/store/modules/polls.js:75
+msgid "All private polls, to which you have access."
+msgstr "Όλες οι ιδιωτικές δημοσκοπήσεις, στις οποίες έχετε πρόσβαση."
+
+#: /app/src/js/store/modules/polls.js:85 /app/src/js/store/modules/polls.js:86
+msgid "Participated"
+msgstr "Με συμμετοχή μου"
+
+#: /app/src/js/store/modules/polls.js:87
+msgid "All polls, where you placed a vote."
+msgstr "Όλες οι δημοσκοπήσεις, στις οποίες ψηφίσατε."
+
+#: /app/src/js/store/modules/polls.js:97 /app/src/js/store/modules/polls.js:98
+msgid "Open polls"
+msgstr "Ανοιχτές δημοσκοπήσεις"
+
+#: /app/src/js/store/modules/polls.js:99
+msgid ""
+"A complete list with all open polls on this site, regardless who is the "
+"owner."
+msgstr ""
+"Μια πλήρης λίστα με όλες τις ανοιχτές δημοσκοπήσεις σε αυτόν τον ιστότοπο, "
+"ανεξάρτητα από το ποιος είναι ο κάτοχος."
+
+#: /app/src/js/store/modules/polls.js:109
+#: /app/src/js/store/modules/polls.js:110
+msgid "All polls"
+msgstr "Όλες οι δημοσκοπήσεις"
+
+#: /app/src/js/store/modules/polls.js:111
+msgid "All polls, where you have access to."
+msgstr "Όλες οι δημοσκοπήσεις, όπου έχετε πρόσβαση."
+
+#: /app/src/js/store/modules/polls.js:121
+#: /app/src/js/store/modules/polls.js:122
+msgid "Closed polls"
+msgstr "Κλειστές δημοσκοπήσεις"
+
+#: /app/src/js/store/modules/polls.js:123
+msgid "All closed polls, where voting is disabled."
+msgstr ""
+"Όλες οι κλειστές δημοσκοπήσεις, όπου η ψηφοφορία είναι απενεργοποιημένη."
+
+#: /app/src/js/store/modules/polls.js:135
+msgid "Archive"
+msgstr "Αρχειοθετημένες"
+
+#: /app/src/js/store/modules/polls.js:136
+msgid "My archived polls"
+msgstr "Οι αρχειοθετημένες δημοσκοπήσεις μου"
+
+#: /app/src/js/store/modules/polls.js:137
+msgid "Your archived polls are only accessible to you."
+msgstr "Οι αρχειοθετημένες δημοσκοπήσεις σας είναι προσβάσιμες μόνο σε εσάς."
