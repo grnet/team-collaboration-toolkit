@@ -1,0 +1,10 @@
+---
+roles:
+- src: https://github.com/aptiko-ansible/common
+  name: common
+
+- src: https://gitlab.grnet.gr/digigov/infrastructure/ansible-roles/nginx.git
+  name: nginx
+
+- src: https://gitlab.grnet.gr/digigov/infrastructure/ansible-roles/nginx-site.git
+  name: nginx-site

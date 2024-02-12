@@ -1,0 +1,12 @@
+---
+- name: Restart Xorg service
+  service:
+    name: jitsi-jibri-xorg
+    daemon-reload: true
+    state: restarted
+
+- name: Restart Jibri
+  service:
+    name: jitsi-jibri
+    daemon-reload: true
+    state: restarted

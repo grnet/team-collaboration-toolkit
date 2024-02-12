@@ -1,0 +1,151 @@
+---
+
+- name: Install Chromium (including chromedriver)
+  community.general.snap:
+    name: chromium
+
+- name: Install packages required for jibri
+  apt:
+    name:
+      - linux-modules-extra-{{ ansible_kernel }}
+      - linux-image-extra-virtual
+      - ffmpeg
+      - unzip
+      - openjdk-11-jdk-headless
+      - alsa-utils
+      - jq
+      - icewm
+      - xdotool
+      - xserver-xorg-video-dummy
+      - ruby-hocon
+      - maven
+
+- name: Ensure snd_aloop is loaded
+  community.general.modprobe:
+    name: snd_aloop
+    persistent: present
+
+#- name: Create Chrome managed policies configuration directory
+#  file:
+#    path: /etc/opt/chrome/policies/managed
+#    state: directory
+
+#- name: Hide Chrome warnings
+#  copy:
+#    dest: /etc/opt/chrome/policies/managed/managed_policies.json
+#    content: '{ "CommandLineFlagSecurityWarningsEnabled": false }'
+
+- name: Create group jibri
+  group:
+    name: jibri
+
+- name: Create user jibri
+  user:
+    name: jibri
+    group: jibri
+    groups: audio
+
+- name: Clone Jibri
+  git:
+    repo: https://github.com/jitsi/jibri.git
+    dest: /opt/jibri
+    version: 05294536bc
+
+- name: Build Jibri
+  command: mvn clean package
+  args:
+    chdir: /opt/jibri
+    creates: /opt/jibri/target/jibri-8.0-SNAPSHOT-jar-with-dependencies.jar
+  async: 1000
+  poll: 10
+
+- name: Create Jibri configuration directory
+  file:
+    dest: /etc/jitsi/jibri
+    state: directory
+
+- name: Create Xorg service
+  template:
+    src: jitsi-jibri-xorg.service
+    dest: /etc/systemd/system/jitsi-jibri-xorg.service
+
+- name: Configure Xorg service
+  template:
+    src: xorg-video-dummy.conf
+    dest: /etc/jitsi/jibri/xorg-video-dummy.conf
+  notify: Restart Xorg service
+
+- name: Enable Xorg service
+  service:
+    name: jitsi-jibri-xorg
+    enabled: yes
+    state: started
+
+- name: Create Icewm service
+  template:
+    src: jitsi-jibri-icewm.service
+    dest: /etc/systemd/system/jitsi-jibri-icewm.service
+
+- name: Enable Icewm service
+  service:
+    name: jitsi-jibri-icewm
+    enabled: yes
+    state: started
+
+- name: Create Jibri service
+  template:
+    src: jitsi-jibri.service
+    dest: /etc/systemd/system/jitsi-jibri.service
+  notify: Restart Jibri
+
+- name: Enable Jibri service
+  service:
+    name: jitsi-jibri
+    enabled: yes
+
+- name: Copy asoundrc
+  copy:
+    src: asoundrc
+    dest: /home/jibri/.asoundrc
+  notify: Restart Jibri
+
+- name: Configure Jibri
+  template:
+    src: jibri.conf
+    dest: /etc/jitsi/jibri/jibri.conf
+  notify:
+    - Restart Jibri
+
+- name: Copy Jibri finalization script
+  copy:
+    src: finalize-jibri
+    dest: /usr/local/bin/finalize-jibri
+    mode: 0755
+
+- name: Configure nginx
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/snippets/{{ jitsi_jibri_fqdn }}/jibri.conf
+  notify:
+    - Reload nginx
+
+- name: Create directory /var/www/jibri/recordings
+  file:
+    path: /var/www/jibri/recordings
+    state: directory
+    owner: jibri
+
+- name: Add script to remove old recordings
+  copy:
+    dest: /usr/local/bin/remove-jibri-recordings
+    mode: 0755
+    content: |
+      #!/bin/sh
+      find /var/www/jibri/recordings/* -type f -mtime +1 -delete
+      find /var/www/jibri/recordings/* -depth -type d -empty -delete
+
+- name: Add cron job to remove old recordings
+  copy:
+    dest: /etc/cron.d/remove-jibri-recordings
+    content: |
+      6 * * * * root /usr/local/bin/remove-jibri-recordings

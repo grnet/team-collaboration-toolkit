@@ -1,0 +1,67 @@
+---
+
+- name: Remove automatically created prosody configuration file
+  file:
+    dest: /etc/prosody/conf.d/{{ ansible_fqdn }}.cfg.lua
+    state: absent
+
+- name: Create directory /usr/local/lib/prosody
+  file:
+    state: directory
+    dest: /usr/local/lib/prosody
+
+- name: Link prosody modules
+  file:
+    state: link
+    src: /opt/jitsi-meet/resources/prosody-plugins
+    dest: /usr/local/lib/prosody/modules
+  notify:
+    - Restart prosody
+
+- name: Add prosody configuration for Jitsi
+  template:
+    src: prosody-jitsi.cfg.lua
+    dest: /etc/prosody/conf.avail/jitsi.cfg.lua
+  notify:
+    - Restart prosody
+
+- name: Enable prosody configuration for Jitsi
+  file:
+    state: link
+    src: /etc/prosody/conf.avail/jitsi.cfg.lua
+    dest: /etc/prosody/conf.d/jitsi.cfg.lua
+  notify:
+    - Restart prosody
+
+- name: Create prosody user for Jicofo
+  command:
+    cmd: prosodyctl register focus auth.meet.jitsi {{ jitsi_jicofo_password }}
+    creates: /var/lib/prosody/auth%2emeet%2ejitsi/accounts/focus.dat
+
+- name: Subscribe focus.meet.jitsi to prosody
+  command:
+    cmd: prosodyctl mod_roster_command subscribe focus.meet.jitsi focus@auth.meet.jitsi
+    creates: /var/lib/prosody/auth%2emeet%2ejitsi/roster/focus.dat
+  notify: Restart prosody
+
+- name: Create prosody user for the videobridges
+  command:
+    cmd: prosodyctl register {{ jitsi_jvb_user }} auth.meet.jitsi {{ jitsi_jvb_password }}
+    creates: /var/lib/prosody/auth%2emeet%2ejitsi/accounts/{{ jitsi_jvb_user | replace(".","%2e") | replace("-","%2d") | replace("_","%5f") }}.dat
+
+- name: Allow videobridges and jibri to access prosody through firewall
+  lineinfile:
+    path: /etc/ferm/ansible-late
+    line: "proto tcp saddr {{ hostvars[item]['ansible_default_ipv4']['address'] }} dport 5222 ACCEPT;"
+  notify: Reload ferm
+  loop: "{{ groups['jitsi_jvb'] | union(groups['jibri']) }}"
+
+- name: Create prosody user for jibri
+  command:
+    cmd: prosodyctl register jibri auth.meet.jitsi {{ jitsi_jibri_password }}
+    creates: /var/lib/prosody/auth%2emeet%2ejitsi/accounts/jibri.dat
+
+- name: Create prosody user for recorder
+  command:
+    cmd: prosodyctl register recorder recorder.meet.jitsi {{ jitsi_recorder_password }}
+    creates: /var/lib/prosody/recorder%2emeet%2ejitsi/accounts/recorder.dat

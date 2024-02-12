@@ -1,0 +1,13 @@
+[Unit]
+Description=Window manager for Jibri
+
+[Service]
+User=jibri
+Group=jibri
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/icewm-session
+Restart=on-failure
+RestartPreventExitStatus=255
+
+[Install]
+WantedBy=jitsi-jibri.service

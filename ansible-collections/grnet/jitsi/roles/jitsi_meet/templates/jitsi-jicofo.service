@@ -1,0 +1,9 @@
+[Unit]
+Description=Jitsi Jicofo
+
+[Service]
+Environment="JAVA_SYS_PROPS=-Dconfig.file=/etc/jitsi/jicofo/jicofo.conf -Djava.util.logging.config.file=/etc/jitsi/jicofo/logging.properties"
+ExecStart=/opt/jicofo/jicofo-{{ jicofo_build_number }}/jicofo.sh --domain={{ jitsi_fqdn }} --secret={{ jitsi_jicofo_secret }}
+
+[Install]
+WantedBy=multi-user.target

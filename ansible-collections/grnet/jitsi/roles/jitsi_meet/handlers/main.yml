@@ -1,0 +1,19 @@
+---
+
+- name: Restart Jicofo
+  service:
+    name: jitsi-jicofo
+    state: restarted
+    daemon-reload: yes
+
+- name: Restart prosody
+  service:
+    name: prosody
+    state: restarted
+
+- name: Install jitsi-meet
+  shell:
+    cmd: npm install && make
+    chdir: /opt/jitsi-meet
+  async: 1000
+  poll: 10

@@ -1,0 +1,6 @@
+[Unit]
+Description=Jibri
+
+[Service]
+ExecStart=java -Djava.util.logging.config.file=/etc/jitsi/jibri/logging.properties -Dconfig.file=/etc/jitsi/jibri/jibri.conf -jar /opt/jibri/target/jibri-8.0-SNAPSHOT-jar-with-dependencies.jar
+User=jibri

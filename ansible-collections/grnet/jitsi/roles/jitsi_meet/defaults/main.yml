@@ -1,0 +1,4 @@
+---
+jitsi_ldap_servers: []
+jitsi_ldap_filter: uid=$user
+jitsi_ldap_mode: bind

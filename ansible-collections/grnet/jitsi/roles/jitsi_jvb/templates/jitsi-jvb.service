@@ -1,0 +1,9 @@
+[Unit]
+Description=Jitsi Video Bridge
+
+[Service]
+Environment="JAVA_SYS_PROPS=-Dconfig.file=/etc/jitsi/jvb/jvb.conf -Djava.util.logging.config.file=/etc/jitsi/jvb/logging.properties -Dnet.java.sip.communicator.SC_HOME_DIR_LOCATION=/etc/jitsi/ -Dnet.java.sip.communicator.SC_HOME_DIR_NAME=jvb"
+ExecStart=/opt/jvb/jitsi-videobridge-{{ jvb_build_number}}/jvb.sh --host=localhost --domain={{ jitsi_fqdn }} --secret={{ jitsi_jvb_secret }}
+
+[Install]
+WantedBy=multi-user.target

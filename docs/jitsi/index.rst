@@ -33,8 +33,9 @@ idea to vault the passwords/secrets. Here is an example::
     jitsi_jicofo_secret: topsecret2
     jitsi_jvb_user: myvideobridgeuser
     jitsi_jvb_password: topsecret3
+    jitsi_jvb_secret: topsecret4
     jitsi_jvb_muc_nickname: myvideobridge_muc_nick
-    jitsi_prosody_external_service_secret: topsecret4
+    jitsi_prosody_external_service_secret: topsecret5
 
 Playbook
 ========
@@ -129,11 +130,11 @@ Variables and options
   username is set as "focus", and the password is set to the value of
   ``jitsi_jicofo_password``.  It's not actually used anywhere (but has
   to be set). Likewise with the ``jitsi_jicofo_secret``.
-- ``jitsi_jvb_user``, ``jitsi_jvb_password``: Username
-  and password for the videobridge. The user is registered in prosody,
-  and subsequently the videobridges connect to prosody as this user. The
-  user is also apparently used for SIP, but this is currently not
-  supported by this role.
+- ``jitsi_jvb_user``, ``jitsi_jvb_password``, ``jitsi_jvb_secret``:
+  Username, password and secret for the videobridge. The user is
+  registered in prosody, and subsequently the videobridges connect to
+  prosody as this user. The user is also apparently used for SIP, but
+  this is currently not supported by this role.
 - ``jitsi_jvb_muc_nickname``: (Used only by the
   ``jitsi_jvb`` role.) Any unique string that is the same for
   all videobridges will work here. Other than that, we don't know

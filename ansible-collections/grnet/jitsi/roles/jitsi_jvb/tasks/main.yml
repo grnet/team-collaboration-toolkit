@@ -1,0 +1,124 @@
+---
+- name: Gather jitsi-meet facts
+  setup:
+  delegate_to: "{{ groups['jitsi_meet'][0] }}"
+  delegate_facts: true
+
+- name: Increase TaskMax
+  lineinfile:
+    path: /etc/systemd/system.conf
+    regexp: DefaultTasksMax=
+    line: DefaultTasksMax=65000
+  notify:
+    - Reload systemd
+
+- name: Increase NOFILE
+  lineinfile:
+    path: /etc/systemd/system.conf
+    regexp: DefaultLimitNOFILE=
+    line: DefaultLimitNOFILE=65000
+  notify:
+    - Reload systemd
+
+- name: Increase NPROC
+  lineinfile:
+    path: /etc/systemd/system.conf
+    regexp: DefaultLimitNPROC=
+    line: DefaultLimitNPROC=65000
+  notify:
+    - Reload systemd
+
+- name: Install apt packages required for jvb
+  apt:
+    name:
+     - openjdk-11-jdk-headless
+     - git
+     - maven
+     - unzip
+
+- name: Clone jvb repository
+  git:
+    repo: https://github.com/jitsi/jitsi-videobridge.git
+    dest: /opt/src/jvb
+    version: stable/jitsi-meet_{{ jitsi_release_number }}
+
+- name: Get jvb build number
+  command: mvn help:evaluate -Dexpression=project.version -q -DforceStdout
+  args:
+    chdir: /opt/src/jvb
+  register: get_jvb_build_number
+  changed_when: false
+  check_mode: no
+
+- name: Build jvb
+  command: mvn install
+  args:
+    chdir: /opt/src/jvb
+    creates: /opt/src/jvb/jvb/target/jitsi-videobridge-{{ get_jvb_build_number.stdout }}-archive.zip
+  async: 1000
+  poll: 10
+
+- name: Create directories for jvb
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - /opt/jvb
+    - /etc/jitsi/jvb
+
+- name: Unzip built jvb
+  unarchive:
+    src: /opt/src/jvb/jvb/target/jitsi-videobridge-{{ get_jvb_build_number.stdout }}-archive.zip
+    dest: /opt/jvb
+    remote_src: yes
+    creates: /opt/jvb/jitsi-videobridge-{{ get_jvb_build_number.stdout }}
+  notify: Restart jvb
+
+- name: Create jvb service
+  template:
+    src: jitsi-jvb.service
+    dest: /etc/systemd/system/jitsi-jvb.service
+  vars:
+    jvb_build_number: "{{ get_jvb_build_number.stdout }}"
+  notify: Restart jvb
+
+- name: Enable jvb service
+  service:
+    name: jitsi-jvb
+    enabled: yes
+
+- name: Setup sip-communicator.properties
+  template:
+    src: jvb_sip-communicator.properties
+    dest: /etc/jitsi/jvb/sip-communicator.properties
+    mode: 0600
+  tags:
+    - jvbconf
+  notify:
+    - Restart jvb
+
+- name: Setup jvb config files
+  template:
+    src: "{{ item }}"
+    dest: /etc/jitsi/jvb/{{ item }}
+    mode: 0644
+  with_items:
+    - config
+    - jvb.conf
+    - logging.properties
+  tags:
+    - jvbconf
+  notify:
+    - Restart jvb
+
+- name: Allow nginx to proxy http requests
+  lineinfile:
+    path: /etc/ferm/ansible-late
+    line: "proto (tcp udp) saddr {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }} dport 9090 ACCEPT;"
+  notify: Reload ferm
+
+- name: Allow jvb through firewall
+  lineinfile:
+    path: /etc/ferm/ansible-late
+    line: "proto udp dport 10000 ACCEPT;"
+  notify: Reload ferm

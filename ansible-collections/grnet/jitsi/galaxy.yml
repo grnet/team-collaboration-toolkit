@@ -1,0 +1,18 @@
+namespace: grnet
+name: jitsi
+version: 0.1.0-dev0
+readme: README.md
+authors:
+- Antonis Christofides <antonis@admin.grnet.gr>
+description: Ansible roles for installing Jitsi on Debian/Ubuntu servers
+license:
+- GPL-3.0-or-later
+tags: []
+dependencies:
+  git+https://github.com/aptiko/aptiko.general.git: master
+repository: https://github.com/grnet/grnet.jitsi
+documentation: https://grnetjitsi.readthedocs.com
+homepage: https://github.com/grnet/grnet.jitsi
+issues: https://github.com/grnet/grnet.jitsi/issues/
+build_ignore: []
+

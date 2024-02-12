@@ -1,0 +1,11 @@
+---
+dependencies:
+
+- role: aptiko.general.nginx_site
+  server_name: "{{ jitsi_fqdn }}"
+  letsencrypt: true
+  force_ssl: true
+  document_root: /opt/jitsi-meet
+
+- role: aptiko.general.node
+  node_version: 20

@@ -1,0 +1,11 @@
+---
+- name: Reload systemd
+  systemd:
+    daemon_reexec: yes
+
+- name: Restart jvb
+  service:
+    name: jitsi-jvb
+    state: restarted
+    daemon-reload: yes
+
