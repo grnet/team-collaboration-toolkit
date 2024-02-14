@@ -1,8 +1,14 @@
 ---
 
-- name: Install Chromium (including chromedriver)
-  community.general.snap:
-    name: chromium
+- name: Add apt key for Google Chrome repository
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    keyring: /usr/share/keyrings/google-chrome-keyring.gpg
+
+- name: Add apt Google Chrome repository
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: google-chrome
 
 - name: Install packages required for jibri
   apt:
@@ -18,22 +24,33 @@
       - xdotool
       - xserver-xorg-video-dummy
       - ruby-hocon
+      - google-chrome-stable
       - maven
+      - python3-pip  # Required for installing chromedriver_autoinstaller
 
 - name: Ensure snd_aloop is loaded
   community.general.modprobe:
     name: snd_aloop
     persistent: present
 
-#- name: Create Chrome managed policies configuration directory
-#  file:
-#    path: /etc/opt/chrome/policies/managed
-#    state: directory
+- name: Create Chrome managed policies configuration directory
+  file:
+    path: /etc/opt/chrome/policies/managed
+    state: directory
 
-#- name: Hide Chrome warnings
-#  copy:
-#    dest: /etc/opt/chrome/policies/managed/managed_policies.json
-#    content: '{ "CommandLineFlagSecurityWarningsEnabled": false }'
+- name: Hide Chrome warnings
+  copy:
+    dest: /etc/opt/chrome/policies/managed/managed_policies.json
+    content: '{ "CommandLineFlagSecurityWarningsEnabled": false }'
+
+- name: Install Chromedriver installer
+  pip:
+    name: chromedriver_autoinstaller
+
+- name: Install Chromedriver
+  command:
+    cmd: python3 -c "import os; from glob import glob; import chromedriver_autoinstaller as cdai; cdai.install(); src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0]; os.rename(src, '/usr/local/bin/chromedriver'); os.chmod('/usr/local/bin/chromedriver', 0o755)"
+    creates: /usr/local/bin/chromedriver
 
 - name: Create group jibri
   group:
@@ -92,6 +109,12 @@
     enabled: yes
     state: started
 
+- name: Create Jibri log directory
+  file:
+    path: /var/log/jitsi/jibri
+    state: directory
+    owner: jibri
+
 - name: Create Jibri service
   template:
     src: jitsi-jibri.service
@@ -113,6 +136,13 @@
   template:
     src: jibri.conf
     dest: /etc/jitsi/jibri/jibri.conf
+  notify:
+    - Restart Jibri
+
+- name: Configure Jibri logging properties
+  template:
+    src: logging.properties
+    dest: /etc/jitsi/jibri/logging.properties
   notify:
     - Restart Jibri
 
