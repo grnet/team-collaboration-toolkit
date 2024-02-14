@@ -213,12 +213,14 @@ toolkit](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/master/
 
 ## Εγκατάσταση
 
-### Nextcloud
+### Nextcloud, Jitsi
 
-Για την εγκατάσταση του Nextcloud έχουμε το Ansible collection
-[grnet.nextcloud](https://grnetnextcloud.readthedocs.org/).
+Για την εγκατάσταση των Nextcloud και Jitsi έχουμε δύο Ansible
+collections, που περιλαμβάνονται στο αποθετήριο αυτού του toolkit, και
+τα οποία είναι τεκμηριωμένα στο
+[readthedocs](https://team-collaboration-toolkit.readthedocs.org/).
 
-### Matrix, Element, Jitsi
+### Matrix, Element
 
 Το Matrix είναι ένα πρωτόκολλο (ή σύνολο πρωτοκόλλων), όπως είναι το
 email. Ο Matrix Synapse είναι ένας matrix server, όπως ο Postfix είναι
@@ -226,14 +228,14 @@ email. Ο Matrix Synapse είναι ένας matrix server, όπως ο Postfix 
 μάλιστα web client. Στο παράδειγμα με το email, το αντίστοιχο είναι το
 Roundcube.
 
-Για την εγκατάσταση των Matrix (ειδικότερα του Matrix Synapse), Element
-και Jitsi χρησιμοποιούμε το δημοφιλές
+Για την εγκατάσταση των Matrix (ειδικότερα του Matrix Synapse) και
+Element χρησιμοποιούμε το δημοφιλές
 [matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy).
 Η τεκμηρίωσή του είναι εκτενής και παραπέμπουμε σ' αυτό για περισσότερα.
-Ειδικότερα, για το Jitsi, είναι χρήσιμη και η [περιγραφή της
-αρχιτεκτονικής](https://gitlab.grnet.gr/digigov-oss/ansible/jitsi-meet#jitsi-architecture)
-σε ένα Jitsi Ansible module που δημιουργήσαμε παλιότερα (του οποίου τη
-χρήση δεν προτείνουμε γιατί είναι ασυντήρητο).
+
+To Jitsi μπορεί να εγκατασταθεί και με το matrix-docker-ansible-deploy
+αντί με το δικό μας Ansible collection, όμως δεν είναι τόσο καλά
+υποστηριζόμενο και δεν υποστηρίζει εγγραφή τηλεσυσκέψεων με το Jibri.
 
 ## Εκπαίδευση και υποστήριξη
 
@@ -312,11 +314,6 @@ Matrix/Element/Jitsi. Σύμφωνα με την εμπειρία μας, τα M
   γράμματα](https://github.com/vector-im/element-meta/issues/744) στο
   Element.
 
-### matrix-docker-ansible-deploy
-
-* Δεν υποστηρίζει (ακόμα) [εγγραφή
-  τηλεσυσκέψεων](https://github.com/spantaleev/matrix-docker-ansible-deploy/issues/1473).
-
 ## Περισσότερες πληροφορίες
 
 * [Εγκατάσταση Nextcloud για τις ανάγκες ενός
@@ -325,7 +322,7 @@ Matrix/Element/Jitsi. Σύμφωνα με την εμπειρία μας, τα M
 
 ## Άδεια χρήσης για το παρόν
 
-© 2023 ΕΔΥΤΕ
+© 2023-2024 ΕΔΥΤΕ
 
 Έχετε άδεια να αντιγράφετε, να διανέμετε και να τροποποιείτε το κείμενο
 υπό τους όρους της άδειας χρήσης [CC BY-SA Greece
