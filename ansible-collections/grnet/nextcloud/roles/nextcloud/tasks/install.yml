@@ -167,7 +167,7 @@
     # more information, see
     # https://gitlab.grnet.gr/digigov/infrastructure/nextcloud-ansible-redux/-/issues/82
     # and the Nextcloud support ticket referred to in there.
-    dest: /etc/cron.d/nextcloud
+    dest: /var/spool/cron/crontabs/www-data
     content: "5 * * * * www-data php -f /var/www/{{ nextcloud_fqdn}}/nextcloud/cron.php\n"
 
 - name: Configure memcache.local
