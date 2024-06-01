@@ -83,6 +83,11 @@ Parameters
 
   Either all three must be empty, or all three must have a value.
 
+``nextcloud_cron_schedule``
+  How often to run Nextcloud's ``cron.php`` (which, e.g., sends
+  notifications to users). It must be in the format accepted by
+  ``cron``. The default is ``*/5 * * * *``.
+
 .. _upgrading_nextcloud:
 
 Upgrading Nextcloud

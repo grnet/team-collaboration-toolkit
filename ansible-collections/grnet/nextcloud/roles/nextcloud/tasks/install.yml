@@ -158,17 +158,8 @@
 
 - name: Add nextcloud cron job
   copy:
-    # Note: we should be running cron.php every 5 minutes or so, but this causes
-    # many cron.php instances to run at the same time. The reason is that our
-    # IMAP server (office365) does not support CONDSTORE and Nextcloud has to
-    # go through all the messages each time in order to see whether there has
-    # been any change. For users that have many messages, this takes much.
-    # Currently in the worst case cron.php takes about half an hour to run. For
-    # more information, see
-    # https://gitlab.grnet.gr/digigov/infrastructure/nextcloud-ansible-redux/-/issues/82
-    # and the Nextcloud support ticket referred to in there.
     dest: /etc/cron.d/nextcloud
-    content: "5 * * * * www-data php -f /var/www/{{ nextcloud_fqdn}}/nextcloud/cron.php\n"
+    content: "{{ nextcloud_cron_schedule }} www-data php -f /var/www/{{ nextcloud_fqdn}}/nextcloud/cron.php\n"
 
 - name: Configure memcache.local
   become: yes
