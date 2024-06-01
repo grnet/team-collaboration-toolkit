@@ -230,6 +230,14 @@
     - Restart redis
     - Restart php-fpm
 
+- name: Turn off PHP output_buffering (required by Nextcloud)
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: "^output_buffering ="
+    line: "output_buffering = Off"
+  notify:
+    - Restart php-fpm
+
 - name: Setup php-fpm for nextcloud
   template:
     src: fpm-nextcloud.conf
