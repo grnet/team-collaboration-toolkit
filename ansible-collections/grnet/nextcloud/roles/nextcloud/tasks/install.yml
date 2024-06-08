@@ -137,6 +137,19 @@
   notify:
     - Restart php-fpm
 
+- name: Setup trashbin_retention_obligation
+  # Deleted Files apps retention
+  become: yes
+  become_user: www-data
+  lineinfile:
+    path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+    regexp: trashbin_retention_obligation
+    line: "  'trashbin_retention_obligation' => 'auto, 35',"
+    insertbefore: '^\s*\);\s*$'
+  when: "'deletedfiles' in nextcloud_apps"
+  notify:
+    - Restart php-fpm
+
 - name: Check whether background jobs scheduler is set to cron
   become: yes
   become_user: www-data
