@@ -34,7 +34,6 @@ idea to vault the passwords/secrets. Here is an example::
     jitsi_jvb_user: myvideobridgeuser
     jitsi_jvb_password: topsecret3
     jitsi_jvb_secret: topsecret4
-    jitsi_jvb_muc_nickname: myvideobridge_muc_nick
     jitsi_prosody_external_service_secret: topsecret5
 
 Playbook
@@ -135,11 +134,6 @@ Variables and options
   registered in prosody, and subsequently the videobridges connect to
   prosody as this user. The user is also apparently used for SIP, but
   this is currently not supported by this role.
-- ``jitsi_jvb_muc_nickname``: (Used only by the
-  ``jitsi_jvb`` role.) Any unique string that is the same for
-  all videobridges will work here. Other than that, we don't know
-  exactly what it is for. See the `Jitsi multi-user chat documentation`_
-  for more information.
 - ``jitsi_jibri_password``, ``jitsi_recorder_password``: The passwords
   of the prosody ``jibri`` and ``recorder`` users, which are used by
   Jibri (see below).
