@@ -125,6 +125,9 @@ Variables and options
 - ``jitsi_fqdn``: The domain where jitsi meet is listening.
 - ``jitsi_jibri_fqdn``: The domain name of the jibri server (used for
   downloading recordings).
+- ``jitsi_local_recording_config``: A JS snippet with the Jitsi Meet
+  configuration for localRecording_. The default is ``disable: true``.
+  (See Recording Conferences below.)
 - ``jitsi_jicofo_password``, ``jitsi_jicofo_secret``: The Jicofo
   username is set as "focus", and the password is set to the value of
   ``jitsi_jicofo_password``.  It's not actually used anywhere (but has
@@ -167,8 +170,16 @@ records the conference and stores the recording locally at the user. At
 the time of this writing, local recording is marked "Beta" and works
 only on some browsers (e.g. Google Chrome; it doesn't work on Firefox).
 To share the recording, the user must upload it somewhere where the
-users can download it. In addition, there is no warning for the other
-users that the conference is being recorded.
+users can download it.
+
+To enable client recording, specify this::
+
+    jitsi_local_recording_config: "disable: false"
+
+See localRecording_ in the Jitsi documentation for more options. For
+example, you can specify this::
+
+    jitsi_local_recording_config: "disable: false, notifyAllParticipants: true"
 
 Recording at the server works with a Jitsi component called "Jibri". 
 It runs a headless browser at the server and participates in the
@@ -206,3 +217,5 @@ jitsi_jibri_fqdn }}/{{ room_name }}``. Users must know the room name to
 get the recordings.  A cron job removes recordings after 24 hours. (The
 fact that we have a single ``jitsi_jibri_fqdn``, a variable only used by
 nginx, is the only reason the role supports only a single jibri.)
+
+.. _localRecording: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-configuration/#localrecording

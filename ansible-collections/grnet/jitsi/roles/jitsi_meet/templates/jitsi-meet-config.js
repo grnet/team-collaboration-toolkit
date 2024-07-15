@@ -33,6 +33,10 @@ var config = {
 
     hiddenDomain: 'recorder.meet.jitsi',
 
+    localRecording: {
+      {{ jitsi_local_recording_config }}
+    },
+
     recordingService: {
         enabled: true,
         sharingEnabled: false,
