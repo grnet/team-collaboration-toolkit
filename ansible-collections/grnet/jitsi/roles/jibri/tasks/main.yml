@@ -47,10 +47,19 @@
   pip:
     name: chromedriver_autoinstaller
 
+- name: Check whether Chromedriver is properly installed
+  shell: >
+      test "$(google-chrome --version|awk '{ print $3 }')"
+      = "$(chromedriver --version|awk '{ print $2 }')"
+  register: check_chromedriver_version
+  check_mode: no
+  ignore_errors: yes
+  changed_when: no
+
 - name: Install Chromedriver
   command:
     cmd: python3 -c "import os; from glob import glob; import chromedriver_autoinstaller as cdai; cdai.install(); src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0]; os.rename(src, '/usr/local/bin/chromedriver'); os.chmod('/usr/local/bin/chromedriver', 0o755)"
-    creates: /usr/local/bin/chromedriver
+  when: check_chromedriver_version.rc != 0
 
 - name: Create group jibri
   group:
