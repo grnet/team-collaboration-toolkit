@@ -5,6 +5,7 @@ A collection of modules to set up team collaboration software on Debian.
 
 .. toctree::
    :caption: General
+   :maxdepth: 1
 
    install
    copyright
