@@ -1,0 +1,35 @@
+---
+
+- name: Clone jitsi-meet
+  git:
+    repo: https://github.com/jitsi/jitsi-meet.git
+    dest: /opt/jitsi-meet
+    version: stable/jitsi-meet_{{ jitsi_release_number }}
+  notify:
+   - Install jitsi-meet
+
+- name: Create directory /etc/jitsi/meet
+  file:
+    path: /etc/jitsi/meet
+    state: directory
+
+- name: Configure jitsi-meet
+  template:
+    src: jitsi-meet-config.js
+    dest: /etc/jitsi/meet/{{ jitsi_fqdn }}-config.js
+
+- name: Configure nginx for jitsi-meet
+  template:
+    src: jitsi-meet.nginx.conf
+    dest: /etc/nginx/snippets/{{ jitsi_fqdn }}/jitsi-meet.conf
+  notify: Reload nginx
+
+- name: Add application/wasm to mime.types
+  lineinfile:
+    path: /etc/nginx/mime.types
+    regexp: '^application/wasm'
+    line: 'application/wasm wasm;'
+    insertbefore: '^}'
+    create: no
+  notify: Reload nginx
+

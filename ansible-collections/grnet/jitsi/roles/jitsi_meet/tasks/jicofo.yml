@@ -1,0 +1,64 @@
+---
+
+- name: Clone Jicofo
+  git:
+    repo: https://github.com/jitsi/jicofo.git
+    dest: /opt/src/jicofo
+    version: stable/jitsi-meet_{{ jitsi_release_number }}
+
+- name: Get Jicofo build number
+  command: mvn help:evaluate -Dexpression=project.version -q -DforceStdout
+  args:
+    chdir: /opt/src/jicofo
+  register: get_jicofo_build_number
+  changed_when: false
+  check_mode: no
+
+- name: Build Jicofo
+  command: mvn install
+  args:
+    chdir: /opt/src/jicofo
+    creates: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
+  async: 1000
+  poll: 10
+
+- name: Create directories for jicofo
+  file:
+    name: "{{ item }}"
+    state: directory
+  loop:
+   - /opt/jicofo
+   - /etc/jitsi/jicofo
+
+- name: Unzip built Jicofo
+  unarchive:
+    src: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
+    dest: /opt/jicofo
+    remote_src: yes
+    creates: /opt/jicofo/jicofo-{{ get_jicofo_build_number.stdout }}
+  notify: Restart Jicofo
+
+- name: Create Jicofo service
+  template:
+    src: jitsi-jicofo.service
+    dest: /etc/systemd/system/jitsi-jicofo.service
+  vars:
+    jicofo_build_number: "{{ get_jicofo_build_number.stdout }}"
+  notify: Restart Jicofo
+
+- name: Enable Jicofo service
+  service:
+    name: jitsi-jicofo
+    enabled: yes
+
+- name: Configure Jicofo
+  template:
+    src: jicofo.conf
+    dest: /etc/jitsi/jicofo/jicofo.conf
+  notify: Restart Jicofo
+
+- name: Configure Jicofo logging properties
+  template:
+    src: jicofo-logging.properties
+    dest: /etc/jitsi/jicofo/logging.properties
+  notify: Restart Jicofo
