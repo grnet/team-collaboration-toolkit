@@ -52,6 +52,7 @@ VirtualHost "meet.jitsi"
         "external_services";
         "muc_breakout_rooms";
         "av_moderation";
+        "muc_census";
         --"auth_cyrus";
     }
     main_muc = "muc.meet.jitsi"
