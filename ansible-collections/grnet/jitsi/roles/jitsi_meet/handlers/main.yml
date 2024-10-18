@@ -15,5 +15,5 @@
   shell:
     cmd: npm install && make
     chdir: /opt/jitsi-meet
-  async: 1000
+  async: 2000
   poll: 10

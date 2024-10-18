@@ -19,7 +19,7 @@
   args:
     chdir: /opt/src/jicofo
     creates: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
-  async: 1000
+  async: 2000
   poll: 10
 
 - name: Create directories for jicofo

@@ -55,7 +55,7 @@
   args:
     chdir: /opt/src/jvb
     creates: /opt/src/jvb/jvb/target/jitsi-videobridge-{{ get_jvb_build_number.stdout }}-archive.zip
-  async: 1000
+  async: 2000
   poll: 10
 
 - name: Create directories for jvb

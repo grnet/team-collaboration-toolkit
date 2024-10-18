@@ -82,7 +82,7 @@
   args:
     chdir: /opt/jibri
     creates: /opt/jibri/target/jibri-8.0-SNAPSHOT-jar-with-dependencies.jar
-  async: 1000
+  async: 2000
   poll: 10
 
 - name: Create Jibri configuration directory
