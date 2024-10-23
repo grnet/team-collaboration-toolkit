@@ -20,7 +20,10 @@ A collection of modules to set up team collaboration software on Debian.
    nextcloud/collabora
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: grnet.jitsi collection
 
-   jitsi/index
+   jitsi/architecture
+   jitsi/guide
+   jitsi/reference
+   jitsi/recording
