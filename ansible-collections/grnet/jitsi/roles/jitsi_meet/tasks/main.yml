@@ -19,7 +19,11 @@
       - unzip
     autoremove: true
 
-- include_tasks: create_certificates.yml
-- include_tasks: meet.yml
-- include_tasks: prosody.yml
-- include_tasks: jicofo.yml
+- import_tasks: create_certificates.yml
+- import_tasks: meet.yml
+- import_tasks: prosody.yml
+- import_tasks: jicofo.yml
+- import_tasks: statistics.yml
+  tags:
+    - jitsi_statistics
+  when: prometheus_server_ips|default("False")

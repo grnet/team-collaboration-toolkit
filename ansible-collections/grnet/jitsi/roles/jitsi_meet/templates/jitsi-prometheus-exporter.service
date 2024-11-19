@@ -1,0 +1,10 @@
+[Unit]
+Description=Jitsi Prometheus Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/jitsi-prometheus-exporter {{ jitsi_prometheus_exporter_port }}
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

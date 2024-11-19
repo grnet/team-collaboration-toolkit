@@ -114,7 +114,7 @@
 - name: Allow nginx to proxy http requests
   lineinfile:
     path: /etc/ferm/ansible-late
-    line: "proto (tcp udp) saddr {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }} dport 9090 ACCEPT;"
+    line: "proto (tcp udp) saddr {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }} dport 9190 ACCEPT;"
   notify: Reload ferm
 
 - name: Allow jvb through firewall

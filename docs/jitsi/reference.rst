@@ -28,3 +28,6 @@ Variables and options
 - ``jitsi_ldap_*``: See :ref:`ldap`.
 - ``jitsi_prosody_external_service_secret``: The secret for external
   services (e.g. for TURN).
+- ``jitsi_prometheus_exporter_port``: The port on which the prometheus
+  exporter is listening; the default is 9102. See
+  :ref:`jitsi_statistics`.

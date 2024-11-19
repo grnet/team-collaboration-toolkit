@@ -1,0 +1,25 @@
+---
+
+- name: Install apt packages required for jitsi statistics
+  apt:
+    name:
+      - python3-requests
+      - python3-flask
+
+- name: Install jitsi-prometheus-exporter
+  copy:
+    src: jitsi-prometheus-exporter
+    dest: /usr/local/bin/jitsi-prometheus-exporter
+    mode: 0755
+  notify: Restart jitsi-prometheus-exporter
+
+- name: Install service for jitsi-prometheus-exporter
+  template:
+    src: jitsi-prometheus-exporter.service
+    dest: /etc/systemd/system/jitsi-prometheus-exporter.service
+  notify: Restart jitsi-prometheus-exporter
+
+- name: Enable service for jitsi-prometheus-exporter
+  service:
+    name: jitsi-prometheus-exporter
+    enabled: yes

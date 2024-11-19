@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+import sys
+
+import requests
+from flask import Flask, Response
+
+app = Flask(__name__)
+
+
+@app.route('/metrics')
+def metrics():
+    # Fetch data from the room census API
+    url = 'http://localhost:5280/room-census'
+    response = requests.get(url)
+    census_data = response.json()
+
+    # Prepare Prometheus metrics format
+    output = []
+    active_rooms_exist = int(bool(census_data["room_census"]))
+    output.append(
+        'jitsi_room_participants{room="__active_rooms_exist__"} '
+        f"{active_rooms_exist}"
+    )
+    for room in census_data["room_census"]:
+        output.append(
+            f'jitsi_room_participants{{room="{room["room_name"]}"}} '
+            f'{room["participants"]}'
+        )
+
+    # Return the Prometheus format response
+    return Response("\n".join(output), mimetype='text/plain')
+
+
+if __name__ == '__main__':
+    try:
+        port = int(sys.argv[1])
+    except (IndexError, ValueError):
+        sys.stderr.write(f"Usage: {sys.argv[0]} port_number\n")
+        sys.exit(1)
+    app.run(host='0.0.0.0', port=port)

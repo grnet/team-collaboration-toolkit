@@ -9,11 +9,13 @@ receive the video and audio streams of the other users from it. Clients
 talk WebRTC to the videobridge on UDP port 10000 (this does not appear
 to be configurable).
 
-The videobridge also listens on a TCP port, typically 9090, that speaks
-"Colibri", a protocol on top of HTTP/WebSocket. Clients receive extra
-information from that connection, such as which users connected or
-disconnected from the conference. This port is actually proxied through
-nginx, so clients actually connect to nginx at 443, and URL
+The videobridge also listens on a TCP port that speaks "Colibri", a
+protocol on top of HTTP/WebSocket. Clients receive extra information
+from that connection, such as which users connected or disconnected from
+the conference. By default this port is 9090, but here we change it to
+9190 in order to not conflict with the prometheus server port. The
+videobridge port (that is, 9190) is actually proxied through nginx, so
+clients actually connect to nginx at 443, and URL
 ``/colibri-ws/[videobridge-id]/`` is proxied to the videobridge.
 
 Although the most common case is for a Jitsi installation to use a

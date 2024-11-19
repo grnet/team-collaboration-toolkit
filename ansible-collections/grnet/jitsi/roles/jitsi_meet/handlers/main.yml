@@ -17,3 +17,9 @@
     chdir: /opt/jitsi-meet
   async: 2000
   poll: 10
+
+- name: Restart jitsi-prometheus-exporter
+  service:
+    name: jitsi-prometheus-exporter
+    state: restarted
+    daemon-reload: yes

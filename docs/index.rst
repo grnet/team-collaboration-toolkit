@@ -27,3 +27,4 @@ A collection of modules to set up team collaboration software on Debian.
    jitsi/guide
    jitsi/reference
    jitsi/recording
+   jitsi/statistics
