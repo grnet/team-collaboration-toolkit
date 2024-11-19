@@ -20,7 +20,7 @@ To enable the exporter, follow these steps:
       - job_name: jitsi
         static_configs:
           - targets:
-              - jitsi.example.com:9102
+              - jitsi.example.com:{{ jitsi_prometheus_exporter_port }}
 
 To create a graph of the data in a Grafana dashboard:
 
