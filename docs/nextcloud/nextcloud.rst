@@ -88,6 +88,11 @@ Parameters
   notifications to users). It must be in the format accepted by
   ``cron``. The default is ``*/5 * * * *``.
 
+``nextcloud_maintenance_window_start``
+  The start time, as an integer hour, in UTC, when cron is allowed to
+  perform non-time-critical tasks. (The end time is four hours later.)
+  The default is 1, i.e. 01:00 UTC.
+
 .. _upgrading_nextcloud:
 
 Upgrading Nextcloud
