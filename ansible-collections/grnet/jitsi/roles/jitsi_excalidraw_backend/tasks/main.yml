@@ -1,0 +1,47 @@
+---
+
+- name: Install apt packages required for excalidraw-backend
+  apt:
+    name:
+     - git
+     - nodejs
+
+- name: Clone jitsi excalidraw-backend
+  git:
+    repo: https://github.com/aptiko/excalidraw-backend.git
+    dest: /opt/jitsi-excalidraw-backend
+    version: 5207cefa8abb72b3edb9bac54c6bcf24fbb85b9f
+  notify:
+    - Build jitsi-excalidraw-backend
+
+- name: Install excalidraw-backend dependencies
+  community.general.npm:
+    path: /opt/jitsi-excalidraw-backend
+  notify:
+    - Build jitsi-excalidraw-backend
+
+- name: Create group excalidraw
+  group:
+    name: excalidraw
+
+- name: Create user excalidraw
+  user:
+    name: excalidraw
+    group: excalidraw
+
+- name: Create jitsi-excalidraw-backend service
+  template:
+    src: jitsi-excalidraw-backend.service
+    dest: /etc/systemd/system/jitsi-excalidraw-backend.service
+  notify: Restart jitsi-excalidraw-backend
+
+- name: Enable jitsi-excalidraw-backend service
+  service:
+    name: jitsi-excalidraw-backend
+    enabled: yes
+
+- name: Setup excalidraw proxying on nginx
+  template:
+    src: nginx-jitsi-excalidraw-backend.conf
+    dest: /etc/nginx/snippets/{{ jitsi_fqdn }}/jitsi-excalidraw-backend.conf
+  notify: Reload nginx

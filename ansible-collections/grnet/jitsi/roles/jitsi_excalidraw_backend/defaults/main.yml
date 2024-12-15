@@ -1,0 +1,4 @@
+---
+
+jitsi_excalidraw_backend_port: 1080
+jitsi_excalidraw_backend_prometheus_port: 9091

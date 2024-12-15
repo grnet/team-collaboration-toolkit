@@ -31,3 +31,9 @@ Variables and options
 - ``jitsi_prometheus_exporter_port``: The port on which the prometheus
   exporter is listening; the default is 9102. See
   :ref:`jitsi_statistics`.
+- ``jitsi_excalidraw_backend_port``: The port on which the excalidraw
+  backend is listening; the default is 1080. See
+  :ref:`jitsi_whiteboard`.
+- ``jitsi_excalidraw_backend_prometheus_port``: The port on which
+  excalidraw is providing data for prometheus; the default is 9091. See
+  :ref:`jitsi_whiteboard`.

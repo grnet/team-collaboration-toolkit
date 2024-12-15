@@ -1,0 +1,12 @@
+[Unit]
+Description=Jitsi Excalidraw Backend
+
+[Service]
+Environment="PORT={{ jitsi_excalidraw_backend_port }}"
+Environment="PROMETHEUS_PORT={{ jitsi_excalidraw_backend_prometheus_port }}"
+User=excalidraw
+ExecStart=npm start
+WorkingDirectory=/opt/jitsi-excalidraw-backend
+
+[Install]
+WantedBy=multi-user.target

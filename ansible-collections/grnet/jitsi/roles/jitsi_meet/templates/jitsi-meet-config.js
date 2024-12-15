@@ -45,4 +45,18 @@ var config = {
     liveStreaming: {
         enabled: false,
     },
+
+    {#
+      Note on collabServerBaseUrl: Through experimentation I've found
+      that the "https" is ignored and replaced with "wss"; however, it
+      must be there, and it must be "https", not "http". In addition,
+      any path after the hostname is also ignored; the request is always
+      "wss://hostname/socket.io/(.*)". So the only thing jitsi-meet
+      appears to be doing is extracting the hostname from the
+      collabServerBaseUrl.
+    #}
+    whiteboard: {
+      enabled: true,
+      collabServerBaseUrl: 'https://{{ jitsi_fqdn }}/',
+    },
 };

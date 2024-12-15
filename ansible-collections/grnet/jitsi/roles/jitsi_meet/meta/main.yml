@@ -9,3 +9,5 @@ dependencies:
 
 - role: aptiko.general.node
   node_version: 20
+
+- role: grnet.jitsi.jitsi_excalidraw_backend
