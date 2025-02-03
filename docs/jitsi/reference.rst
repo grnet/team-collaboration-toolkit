@@ -37,3 +37,11 @@ Variables and options
 - ``jitsi_excalidraw_backend_prometheus_port``: The port on which
   excalidraw is providing data for prometheus; the default is 9091. See
   :ref:`jitsi_whiteboard`.
+- ``jitsi_welcome_background_image``: The filename of the background
+  image that will be used on the Jitsi Meet front page, on top. If
+  unspecified, Jitsi's default image will be used. If specified, a file
+  with that name must exist in the ``files`` subdirectory of the
+  playbook (or `any directory where Ansible will search`_). The file
+  must be a ``.png`` with a resolution of 1280x437.
+
+.. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths

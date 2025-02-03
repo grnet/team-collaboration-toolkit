@@ -1,12 +1,45 @@
 ---
 
+- name: Check whether the correct version of jitsi-meet is checked out
+  command: git describe
+  args:
+    chdir: /opt/jitsi-meet
+  register: git_describe
+  check_mode: no
+  changed_when: false
+  ignore_errors: true
+
+- name: Discard local changes in jitsi-meet working directory
+  command: git reset --hard HEAD
+  args:
+    chdir: /opt/jitsi-meet
+  ignore_errors: true
+  when: git_describe.stdout != "stable/jitsi-meet_" ~ jitsi_release_number
+
 - name: Clone jitsi-meet
   git:
     repo: https://github.com/jitsi/jitsi-meet.git
     dest: /opt/jitsi-meet
     version: stable/jitsi-meet_{{ jitsi_release_number }}
+    update: no
+  register: clone_jitsi_meet
   notify:
    - Install jitsi-meet
+
+- name: Copy custom jitsi welcome background image
+  copy:
+    src: "{{ jitsi_welcome_background_image }}"
+    dest: "/opt/jitsi-meet/images/{{ jitsi_welcome_background_image }}"
+  when: jitsi_welcome_background_image is defined
+
+- name: Configure jitsi to use custom welcome background image
+  lineinfile:
+    path: /opt/jitsi-meet/css/_variables.scss
+    regexp: '^\$welcomePageHeaderBackground:'
+    line: "$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/{{ jitsi_welcome_background_image }}');"
+  when: jitsi_welcome_background_image is defined
+  notify:
+    - Compile Jitsi CSS
 
 - name: Create directory /etc/jitsi/meet
   file:
@@ -32,4 +65,3 @@
     insertbefore: '^}'
     create: no
   notify: Reload nginx
-

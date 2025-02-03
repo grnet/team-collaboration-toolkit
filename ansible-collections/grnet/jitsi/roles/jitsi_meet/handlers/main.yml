@@ -18,6 +18,11 @@
   async: 2000
   poll: 10
 
+- name: Compile Jitsi CSS
+  command: make deploy-css
+  args:
+    chdir: /opt/jitsi-meet
+
 - name: Restart jitsi-prometheus-exporter
   service:
     name: jitsi-prometheus-exporter
