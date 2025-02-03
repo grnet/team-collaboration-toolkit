@@ -41,6 +41,19 @@
   notify:
     - Compile Jitsi CSS
 
+- name: Copy custom jitsi favicon
+  copy:
+    src: "{{ jitsi_favicon }}"
+    dest: "/opt/jitsi-meet/images/{{ jitsi_favicon }}"
+  when: jitsi_favicon is defined
+
+- name: Configure jitsi to use custom favicon
+  lineinfile:
+    path: /opt/jitsi-meet/title.html
+    regexp: '<link rel="icon" '
+    line: '<link rel="icon" href="images/{{ jitsi_favicon }}">'
+  when: jitsi_favicon is defined
+
 - name: Create directory /etc/jitsi/meet
   file:
     path: /etc/jitsi/meet

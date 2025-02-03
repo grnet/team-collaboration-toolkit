@@ -43,5 +43,9 @@ Variables and options
   with that name must exist in the ``files`` subdirectory of the
   playbook (or `any directory where Ansible will search`_). The file
   must be a ``.png`` with a resolution of 1280x437.
+- ``jitsi_favicon``: The filename of the favicon. If unspecified,
+  Jitsi's default favicon will be used. If specified, a file
+  with that name must exist in the ``files`` subdirectory of the
+  playbook (or `any directory where Ansible will search`_).
 
 .. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths
