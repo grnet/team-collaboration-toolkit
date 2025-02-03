@@ -60,5 +60,7 @@ Variables and options
   specified, the welcome header is only modified in the specified
   languages, and the default welcome header title will be used in the
   unspecified languages.
+- ``jitsi_welcome_header_subtitle``: Like
+  ``jitsi_welcome_header_title``, but for the subtitle.
 
 .. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths

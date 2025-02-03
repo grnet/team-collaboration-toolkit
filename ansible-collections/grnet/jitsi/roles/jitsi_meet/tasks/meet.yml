@@ -69,6 +69,14 @@
   loop: "{{ jitsi_welcome_header_title | dict2items }}"
   when: jitsi_welcome_header_title is defined
 
+- name: Configure Jitsi welcome header subtitle
+  lineinfile:
+    path: /opt/jitsi-meet/lang/main{% if item.key != "en" %}-{{ item.key }}{% endif %}.json
+    regexp: '^        "headerSubtitle":'
+    line: '        "headerSubtitle": "{{ item.value }}",'
+  loop: "{{ jitsi_welcome_header_subtitle | dict2items }}"
+  when: jitsi_welcome_header_subtitle is defined
+
 - name: Create directory /etc/jitsi/meet
   file:
     path: /etc/jitsi/meet
