@@ -49,5 +49,16 @@ Variables and options
   playbook (or `any directory where Ansible will search`_).
 - ``jitsi_html_title``: The HTML title for Jitsi Meet. If unspecified,
   Jitsi's default HTML title will be used.
+- ``jitsi_welcome_header_title``: A hash with the welcome header title
+  in various languages; for example::
+
+     jitsi_welcome_header_title:
+       en: My own Jitsi installation
+       el: Η δική μου εγκατάσταση Jitsi
+
+  If unspecified, the default welcome header title is used. If
+  specified, the welcome header is only modified in the specified
+  languages, and the default welcome header title will be used in the
+  unspecified languages.
 
 .. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths
