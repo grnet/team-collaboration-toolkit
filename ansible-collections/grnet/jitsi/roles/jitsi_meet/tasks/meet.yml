@@ -50,9 +50,16 @@
 - name: Configure jitsi to use custom favicon
   lineinfile:
     path: /opt/jitsi-meet/title.html
-    regexp: '<link rel="icon" '
+    regexp: '^<link rel="icon" '
     line: '<link rel="icon" href="images/{{ jitsi_favicon }}">'
   when: jitsi_favicon is defined
+
+- name: Configure Jitsi HTML title
+  lineinfile:
+    path: /opt/jitsi-meet/interface_config.js
+    regexp: '^    APP_NAME: '
+    line: "    APP_NAME: '{{ jitsi_html_title }}',"
+  when: jitsi_html_title is defined
 
 - name: Create directory /etc/jitsi/meet
   file:

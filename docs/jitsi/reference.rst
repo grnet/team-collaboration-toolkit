@@ -47,5 +47,7 @@ Variables and options
   Jitsi's default favicon will be used. If specified, a file
   with that name must exist in the ``files`` subdirectory of the
   playbook (or `any directory where Ansible will search`_).
+- ``jitsi_html_title``: The HTML title for Jitsi Meet. If unspecified,
+  Jitsi's default HTML title will be used.
 
 .. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths
