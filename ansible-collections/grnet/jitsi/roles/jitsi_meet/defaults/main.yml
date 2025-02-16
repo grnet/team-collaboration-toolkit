@@ -4,3 +4,6 @@ jitsi_ldap_filter: uid=$user
 jitsi_ldap_mode: bind
 jitsi_local_recording_config: "disable: true"
 jitsi_prometheus_exporter_port: 9102
+jitsi_meet_meta_title: "Jitsi Meet"
+jitsi_meet_meta_description: "Join a WebRTC video conference powered by the Jitsi Videobridge"
+jitsi_favicon: "favicon.svg"

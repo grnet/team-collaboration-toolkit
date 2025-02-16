@@ -46,7 +46,10 @@ Variables and options
 - ``jitsi_favicon``: The filename of the favicon. If unspecified,
   Jitsi's default favicon will be used. If specified, a file
   with that name must exist in the ``files`` subdirectory of the
-  playbook (or `any directory where Ansible will search`_).
+  playbook (or `any directory where Ansible will search`_). If
+  specified, it should not have the value "favicon.svg"; this is Jitsi's
+  default value and in this case the playbook will consider that the
+  default Jitsi favicon will be used.
 - ``jitsi_html_title``: The HTML title for Jitsi Meet. If unspecified,
   Jitsi's default HTML title will be used.
 - ``jitsi_welcome_header_title``: A hash with the welcome header title
@@ -62,5 +65,12 @@ Variables and options
   unspecified languages.
 - ``jitsi_welcome_header_subtitle``: Like
   ``jitsi_welcome_header_title``, but for the subtitle.
+- ``jitsi_meet_meta_title``, ``jitsi_meet_meta_description``: The title
+  and description used in OpenGraph and similar meta HTML attributes.
+  Third-party services such as Matrix, Slack, X etc. may display these
+  when a link to the Jitsi Meet server is posted. The defaults are
+  "Jitsi Meet" for the title and "Join a WebRTC video conference powered
+  by the Jitsi Videobridge" for the description (these are actually the
+  stock defaults).
 
 .. _any directory where Ansible will search: https://docs.ansible.com/ansible/latest/playbook_guide/playbook_pathing.html#resolving-local-relative-paths

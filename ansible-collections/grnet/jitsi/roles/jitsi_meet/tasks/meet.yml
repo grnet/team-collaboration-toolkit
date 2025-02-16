@@ -41,18 +41,16 @@
   notify:
     - Compile Jitsi CSS
 
-- name: Copy custom jitsi favicon
+- name: Copy custom Jitsi favicon
   copy:
     src: "{{ jitsi_favicon }}"
     dest: "/opt/jitsi-meet/images/{{ jitsi_favicon }}"
-  when: jitsi_favicon is defined
+  when: jitsi_favicon != "favicon.svg"
 
-- name: Configure jitsi to use custom favicon
-  lineinfile:
-    path: /opt/jitsi-meet/title.html
-    regexp: '^<link rel="icon" '
-    line: '<link rel="icon" href="images/{{ jitsi_favicon }}">'
-  when: jitsi_favicon is defined
+- name: Override Jitsi meta HTML part
+  template:
+    src: jitsi-meet-html-meta.html
+    dest: /opt/jitsi-meet/title.html
 
 - name: Configure Jitsi HTML title
   lineinfile:
