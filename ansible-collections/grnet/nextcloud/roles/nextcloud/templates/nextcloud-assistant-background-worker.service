@@ -1,0 +1,15 @@
+[Unit]
+Description=Nextcloud Webhook worker %i
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/{{ nextcloud_fqdn }}/nextcloud
+ExecStart=php occ background-job:worker -t 60 'OC\TaskProcessing\SynchronousBackgroundJob'
+Restart=always
+StartLimitInterval=60
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target

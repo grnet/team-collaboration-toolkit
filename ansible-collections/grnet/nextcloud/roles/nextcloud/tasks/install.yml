@@ -174,5 +174,20 @@
   notify:
     - Convert po translation files
 
+- name: Create background worker service for Nextcloud Assistant
+  template:
+    src: nextcloud-assistant-background-worker.service
+    dest: '/etc/systemd/system/nextcloud-assistant-background-worker@.service'
+  when: nextcloud_assistant_background_worker
+
+- name: Enable background worker service for Nextcloud Assistant
+  systemd:
+    name: 'nextcloud-assistant-background-worker@{{ item }}.service'
+    enabled: yes
+    state: started
+    daemon-reload: yes
+  loop: [1, 2, 3, 4]
+  when: nextcloud_assistant_background_worker
+
 - import_tasks: configure_mysql_tls.yml
 - import_tasks: configure_email.yml

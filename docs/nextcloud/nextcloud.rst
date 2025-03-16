@@ -44,6 +44,14 @@ Parameters
   installed, the role does not upgrade it and ``nextcloud_download_url``
   is irrelevant. To upgrade Nextcloud, see :ref:`upgrading_nextcloud`.
 
+``nextcloud_assistant_background_worker``
+  If you install the Nextcloud Assistant, you will also want to install a
+  background worker (otherwise any requests to the Assistant will be
+  executed when cron runs, by default every 5 minutes). Set this
+  variable to ``true`` to enable the background worker. It runs four
+  instances of the worker (this is currently not configurable). The
+  default is ``false``.
+
 ``php_memory_limit``
   Default 512M.
 
