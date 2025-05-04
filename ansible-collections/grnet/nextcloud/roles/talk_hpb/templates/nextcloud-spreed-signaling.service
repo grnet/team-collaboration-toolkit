@@ -1,0 +1,40 @@
+[Unit]
+Description=Nextcloud Talk signaling server
+
+[Service]
+ExecStart=/opt/nextcloud-spreed-signaling/bin/signaling --config /etc/opt/nextcloud-spreed-signaling/server.conf
+User=signaling
+Group=signaling
+Restart=on-failure
+
+# Hardening - see systemd.exec(5)
+CapabilityBoundingSet=
+ExecPaths=/opt/nextcloud-spreed-signaling/bin/signaling /usr/lib /usr/lib64
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoExecPaths=/
+NoNewPrivileges=yes
+PrivateDevices=yes
+PrivateTmp=yes
+PrivateUsers=yes
+ProcSubset=pid
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHome=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectProc=invisible
+ProtectSystem=strict
+RemoveIPC=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~ @privileged
+
+[Install]
+WantedBy=multi-user.target

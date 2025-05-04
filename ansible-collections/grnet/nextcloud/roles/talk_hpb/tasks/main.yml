@@ -1,0 +1,72 @@
+---
+
+- name: Fail if nextcloud_talk_hpb_encryption_key is not exactly 32 characters
+  fail:
+    msg: "nextcloud_talk_hpb_encryption_key is {{ nextcloud_talk_hpb_encryption_key | length }} characters long; should be 32"
+  when: nextcloud_talk_hpb_encryption_key is not string or nextcloud_talk_hpb_encryption_key | length != 32
+
+- name: Install Nextcloud HPB apt dependencies
+  apt:
+    name:
+      - git
+      - golang-1.23
+      - make
+      - protobuf-compiler
+      - nats-server
+      - janus
+
+- name: Create symlink to go executable
+  file:
+    dest: /usr/local/bin/go
+    src: /usr/lib/go-1.23/bin/go
+    state: link
+
+- name: Clone nextcloud-spreed-signaling server
+  git:
+    repo: https://github.com/strukturag/nextcloud-spreed-signaling
+    dest: /opt/nextcloud-spreed-signaling
+    version: v2.0.2
+  notify: Build nextcloud-spreed-signaling
+
+- name: Create group signaling
+  group:
+    name: signaling
+    system: true
+    state: present
+
+- name: Create user signaling
+  user:
+    name: signaling
+    group: signaling
+    shell: /usr/sbin/nologin
+    system: true
+    state: present
+
+- name: Create nextcloud-spreed-signaling configuration directory
+  file:
+    path: /etc/opt/nextcloud-spreed-signaling
+    state: directory
+
+- name: Setup nextcloud-spreed-signaling configuration
+  template:
+    src: server.conf
+    dest: /etc/opt/nextcloud-spreed-signaling/server.conf
+  notify: Restart nextcloud-spreed-signaling
+
+- name: Create nextcloud-spreed-signaling service
+  template:
+    src: nextcloud-spreed-signaling.service
+    dest: /etc/systemd/system/nextcloud-spreed-signaling.service
+  notify: Restart nextcloud-spreed-signaling
+
+- name: Enable nextcloud-spreed-signaling service
+  service:
+    name: nextcloud-spreed-signaling
+    enabled: yes
+
+- name: Configure nginx for nextcloud-spreed-signaling
+  template:
+    src: nextcloud-spreed-signaling.nginx.conf
+    dest: /etc/nginx/snippets/{{ nextcloud_talk_hpb_fqdn }}/nextcloud-spreed-signaling.conf
+  notify: Reload nginx
+

@@ -1,0 +1,13 @@
+---
+
+- name: Build nextcloud-spreed-signaling
+  command: make build
+  args:
+    chdir: /opt/nextcloud-spreed-signaling
+  notify: Restart nextcloud-spreed-signaling
+
+- name: Restart nextcloud-spreed-signaling
+  service:
+    name: nextcloud-spreed-signaling
+    daemon-reload: true
+    state: restarted

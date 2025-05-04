@@ -1,0 +1,8 @@
+---
+dependencies:
+
+- role: aptiko.general.nginx_site
+  server_name: "{{ nextcloud_talk_hpb_fqdn }}"
+  letsencrypt: true
+  force_ssl: true
+  document_root: /opt/nextcloud-spreed-signaling

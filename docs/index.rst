@@ -18,6 +18,7 @@ A collection of modules to set up team collaboration software on Debian.
    nextcloud/faq
    nextcloud/nextcloud
    nextcloud/collabora
+   nextcloud/talk_hpb
 
 .. toctree::
    :maxdepth: 1
