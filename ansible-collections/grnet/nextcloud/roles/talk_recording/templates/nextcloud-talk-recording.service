@@ -1,0 +1,15 @@
+[Unit]
+Description=Nextcloud Talk Recording Service
+After=network.target
+
+[Service]
+User=recording
+Group=recording
+WorkingDirectory=/opt/nextcloud-talk-recording-venv/bin
+ExecStart=/opt/nextcloud-talk-recording-venv/bin/nextcloud-talk-recording \
+    --config /etc/opt/nextcloud-talk-recording.conf
+Restart=on-failure
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

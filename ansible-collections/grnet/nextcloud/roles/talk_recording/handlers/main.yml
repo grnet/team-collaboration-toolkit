@@ -1,0 +1,15 @@
+---
+
+- name: Install Nextcloud Talk Recording
+  pip:
+    name: /opt/nextcloud-talk-recording
+    virtualenv: /opt/nextcloud-talk-recording-venv
+    virtualenv_command: /usr/bin/python3 -m venv
+    virtualenv_site_packages: yes
+  notify: Restart nextcloud-talk-recording service
+
+- name: Restart nextcloud-talk-recording service
+  service:
+    name: nextcloud-talk-recording
+    daemon-reload: true
+    state: restarted

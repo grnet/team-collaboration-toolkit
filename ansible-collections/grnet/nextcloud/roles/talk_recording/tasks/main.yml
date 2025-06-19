@@ -1,0 +1,85 @@
+---
+
+- name: Create APT pinning preferences for Mozilla Team PPA
+  copy:
+    dest: /etc/apt/preferences.d/mozilla-firefox
+    content: |
+      Package: *
+      Pin: release o=LP-PPA-mozillateam
+      Pin-Priority: 1001
+
+- name: Add Mozilla Team PPA
+  apt_repository:
+    repo: ppa:mozillateam/ppa
+
+- name: Install apt packages required for spreed-recording-server
+  apt:
+    name:
+      - git
+      - ffmpeg
+      - nodejs
+      - npm
+      - firefox
+      - pulseaudio
+      - xvfb
+      - python3-venv
+
+- name: Install geckodriver
+  unarchive:
+    src: https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz
+    dest: /usr/local/bin
+    creates: /usr/local/bin/geckodriver
+    remote_src: yes
+
+- name: Install gunicorn
+  pip:
+    name: gunicorn
+    version: '23.0.0'
+    virtualenv: /opt/nextcloud-talk-recording-venv
+    virtualenv_command: /usr/bin/python3 -m venv
+    virtualenv_site_packages: yes
+  notify: Restart nextcloud-talk-recording service
+
+- name: Clone Nextcloud Talk Recording
+  git:
+    repo: https://github.com/nextcloud/nextcloud-talk-recording
+    dest: "/opt/nextcloud-talk-recording"
+    version: 1b79cc4
+  notify: Install Nextcloud Talk Recording
+
+- name: Create group recording
+  group:
+    name: recording
+    system: true
+    state: present
+
+- name: Create user recording
+  user:
+    name: recording
+    group: recording
+    shell: /usr/sbin/nologin
+    system: true
+    state: present
+
+- name: Create nextcloud-talk-recording configuration file
+  template:
+    src: nextcloud-talk-recording.conf
+    dest: /etc/opt/nextcloud-talk-recording.conf
+  notify: Restart nextcloud-talk-recording service
+
+- name: Create systemd service file
+  template:
+    src: nextcloud-talk-recording.service
+    dest: /etc/systemd/system/nextcloud-talk-recording.service
+  notify: Restart nextcloud-talk-recording service
+
+- name: Enable nextcloud-talk-recording service
+  service:
+    name: nextcloud-talk-recording
+    enabled: yes
+
+- name: Configure nginx for nextcloud-talk-recording
+  template:
+    src: nextcloud-talk-recording.nginx.conf
+    dest: /etc/nginx/snippets/{{ nextcloud_talk_recording_fqdn }}/nextcloud-talk-recording.conf
+  notify: Reload nginx

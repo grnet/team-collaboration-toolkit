@@ -21,85 +21,109 @@ interface. See section :ref:`nextcloud_limitations` for that.
 Parameters
 ==========
 
-``nextcloud_fqdn``
-  The domain name for Nextcloud.
+.. data:: nextcloud_fqdn
 
-``nextcloud_admin_user``
-  The username for the Nextcloud administrator. The default is
-  ``admin``.
+   The domain name for Nextcloud.
 
-``nextcloud_admin_user_password``
-  The Nextcloud administrator password. This will usually be in the
-  vault.
+.. data:: nextcloud_admin_user
 
-``nextcloud_download_url``
-  By default, the latest version of Nextcloud Community will be
-  installed. To install another version, specify a different URL, such
-  as
-  ``https://download.nextcloud.com/server/releases/nextcloud-24.0.11.zip``.
-  It must point to a zip file.
+   The username for the Nextcloud administrator. The default is
+   ``admin``.
 
-  Unless when an upgrade is specifically requested, this role downloads
-  and installs Nextcloud only if it is not already installed; if already
-  installed, the role does not upgrade it and ``nextcloud_download_url``
-  is irrelevant. To upgrade Nextcloud, see :ref:`upgrading_nextcloud`.
+.. data:: nextcloud_admin_user_password
 
-``nextcloud_assistant_background_worker``
-  If you install the Nextcloud Assistant, you will also want to install a
-  background worker (otherwise any requests to the Assistant will be
-  executed when cron runs, by default every 5 minutes). Set this
-  variable to ``true`` to enable the background worker. It runs four
-  instances of the worker (this is currently not configurable). The
-  default is ``false``.
+   The Nextcloud administrator password. This will usually be in the
+   vault.
 
-``php_memory_limit``
-  Default 512M.
+.. data:: nextcloud_download_url
 
-``opcache_interned_strings_buffer``
-  The default for this PHP setting is 8. However in some installations
-  it might need to be set to 16, and sometimes to 32. It seems to depend
-  on the installed apps. See the `related support forum discussion`_ for
-  more information.
+   By default, the latest version of Nextcloud Community will be
+   installed. To install another version, specify a different URL, such
+   as
+   ``https://download.nextcloud.com/server/releases/nextcloud-24.0.11.zip``.
+   It must point to a zip file.
+
+   Unless when an upgrade is specifically requested, this role downloads
+   and installs Nextcloud only if it is not already installed; if already
+   installed, the role does not upgrade it and ``nextcloud_download_url``
+   is irrelevant. To upgrade Nextcloud, see :ref:`upgrading_nextcloud`.
+
+.. data:: nextcloud_assistant_background_worker
+
+   If you install the Nextcloud Assistant, you will also want to install a
+   background worker (otherwise any requests to the Assistant will be
+   executed when cron runs, by default every 5 minutes). Set this
+   variable to ``true`` to enable the background worker. It runs four
+   instances of the worker (this is currently not configurable). The
+   default is ``false``.
+
+.. data:: php_memory_limit
+
+   Default 512M.
+
+.. data:: php_upload_max_filesize
+   php_post_max_size
+   php_max_execution_time
+
+   The defaults for these are 2M, 8M and 30, which are essentially the
+   php or the Debian fpm defaults. However, they are too low for
+   Nextcloud Talk recordings.  If you install Nextcloud Talk recording,
+   use 2048M, 2048M and 3600.
+
+.. data:: opcache_interned_strings_buffer
+
+   The default for this PHP setting is 8. However in some installations
+   it might need to be set to 16, and sometimes to 32. It seems to depend
+   on the installed apps. See the `related support forum discussion`_ for
+   more information.
 
   .. _related support forum discussion: https://help.nextcloud.com/t/nextcloud-23-02-opcache-interned-strings-buffer/134007/4
 
-``default_phone_region``
-  A country code like "GR". There is no default. This is used for
-  Nextcloud's ``default_phone_region`` configuration parameter.
+.. data:: default_phone_region
 
-``mail_from_address``, ``mail_domain``
-  The email address from which email notifications from Nextcloud appear
-  to be sent. For example, to use ``noreply@example.com``, specify
-  ``mail_from_address=noreply`` and ``mail_domain=example.com``.
+   A country code like "GR". There is no default. This is used for
+   Nextcloud's ``default_phone_region`` configuration parameter.
 
-  These settings are those that can be set in the web interface, under
-  Basic settings, Email server. This role will overwrite these settings
-  whenever Ansible is run.
+.. data:: mail_from_address
+   mail_domain
 
-  It will always use localhost port 25 as the smarthost, without
-  authentication and without encryption. For this to work, use Ansible
-  role mail_satellite_.
+   The email address from which email notifications from Nextcloud appear
+   to be sent. For example, to use ``noreply@example.com``, specify
+   ``mail_from_address=noreply`` and ``mail_domain=example.com``.
+
+   These settings are those that can be set in the web interface, under
+   Basic settings, Email server. This role will overwrite these settings
+   whenever Ansible is run.
+
+   It will always use localhost port 25 as the smarthost, without
+   authentication and without encryption. For this to work, use Ansible
+   role mail_satellite_.
 
   .. _mail_satellite: https://aptikogeneral.readthedocs.io/en/latest/mail_satellite.html
 
-``mysql_client_key``, ``mysql_client_cert``, ``mysql_ca_cert``
-  By default, these parameters are empty. In this case, Nextcloud
-  connects to MySQL without TLS. If they have values, they must be
-  pathnames (in the Ansible controller) from which the keys and
-  certificates are taken and installed in the Nextcloud server. In this
-  case, Nextcloud is configured to connect to MySQL with TLS.
+.. data:: mysql_client_key
+   mysql_client_cert
+   mysql_ca_cert
 
-  Either all three must be empty, or all three must have a value.
+   By default, these parameters are empty. In this case, Nextcloud
+   connects to MySQL without TLS. If they have values, they must be
+   pathnames (in the Ansible controller) from which the keys and
+   certificates are taken and installed in the Nextcloud server. In this
+   case, Nextcloud is configured to connect to MySQL with TLS.
 
-``nextcloud_cron_schedule``
-  How often to run Nextcloud's ``cron.php`` (which, e.g., sends
-  notifications to users). It must be in the format accepted by
-  ``cron``. The default is ``*/5 * * * *``.
+   Either all three must be empty, or all three must have a value.
 
-``nextcloud_maintenance_window_start``
-  The start time, as an integer hour, in UTC, when cron is allowed to
-  perform non-time-critical tasks. (The end time is four hours later.)
-  The default is 1, i.e. 01:00 UTC.
+.. data:: nextcloud_cron_schedule
+
+   How often to run Nextcloud's ``cron.php`` (which, e.g., sends
+   notifications to users). It must be in the format accepted by
+   ``cron``. The default is ``*/5 * * * *``.
+
+.. data:: nextcloud_maintenance_window_start
+
+   The start time, as an integer hour, in UTC, when cron is allowed to
+   perform non-time-critical tasks. (The end time is four hours later.)
+   The default is 1, i.e. 01:00 UTC.
 
 .. _upgrading_nextcloud:
 

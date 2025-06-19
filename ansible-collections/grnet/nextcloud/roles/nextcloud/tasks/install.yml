@@ -34,6 +34,30 @@
   notify:
     - Restart php-fpm
 
+- name: Set PHP upload_max_filesize
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^upload_max_filesize\s*='
+    line: upload_max_filesize = {{ php_upload_max_filesize }}
+  notify:
+    - Restart php-fpm
+
+- name: Set PHP post_max_size
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^post_max_size\s*='
+    line: post_max_size = {{ php_post_max_size }}
+  notify:
+    - Restart php-fpm
+
+- name: Set PHP max_execution_time
+  lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^max_execution_time\s*='
+    line: max_execution_time = {{ php_max_execution_time }}
+  notify:
+    - Restart php-fpm
+
 - name: Set opcache.interned_strings_buffer
   lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini

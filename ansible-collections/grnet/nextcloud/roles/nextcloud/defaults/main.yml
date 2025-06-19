@@ -2,6 +2,9 @@
 nextcloud_admin_user: admin
 use_awstats: false
 php_memory_limit: 512M
+php_upload_max_filesize: 2M
+php_post_max_size: 8M
+php_upload_max_execution_time: 30
 opcache_interned_strings_buffer: 8
 mysql_ca_cert: ""
 mysql_client_cert: ""
