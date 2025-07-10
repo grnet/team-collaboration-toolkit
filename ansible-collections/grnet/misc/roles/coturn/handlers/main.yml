@@ -1,0 +1,7 @@
+---
+
+- name: Restart coturn
+  service:
+    name: coturn
+    daemon-reload: true
+    state: restarted
