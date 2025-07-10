@@ -1,5 +1,14 @@
 ---
 
+# Snap sucks. Turning off its unattended updates requires hacks. We
+# uninstall it entirely in order to discourage Ubuntu from proposing to
+# install firefox via snap.
+- name: Uninstall snapd
+  apt:
+    name:
+      - snapd
+    state: absent
+
 - name: Create APT pinning preferences for Mozilla Team PPA
   copy:
     dest: /etc/apt/preferences.d/mozilla-firefox
@@ -23,6 +32,7 @@
       - pulseaudio
       - xvfb
       - python3-venv
+      - python3-pip
 
 - name: Install geckodriver
   unarchive:
