@@ -10,9 +10,9 @@ license:
 tags: []
 dependencies:
   git+https://github.com/aptiko/aptiko.general.git: master
-repository: https://github.com/grnet/grnet.nextcloud
-documentation: https://grnetnextcloud.readthedocs.com
-homepage: https://github.com/grnet/grnet.nextcloud
-issues: https://github.com/grnet/grnet.nextcloud/issues/
+repository: https://github.com/grnet/team-collaboration-toolkit
+documentation: https://team-collaboration-toolkit.readthedocs.io
+homepage: https://github.com/grnet/team-collaboration-toolkit
+issues: https://github.com/grnet/team-collaboration-toolkit/issues
 build_ignore: []
 
