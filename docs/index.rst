@@ -19,6 +19,7 @@ A collection of modules to set up team collaboration software on Debian.
    nextcloud/nextcloud
    nextcloud/collabora
    nextcloud/talk
+   nextcloud/coturn
 
 .. toctree::
    :maxdepth: 1

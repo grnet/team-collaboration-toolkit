@@ -1,0 +1,56 @@
+---
+ 
+- name: Install apt packages required for coturn
+  apt:
+    name:
+      - coturn
+      - ssl-cert
+      - certbot
+
+- name: Check if letsencrypt certificate exists
+  stat:
+    path: /etc/letsencrypt/live/{{ coturn_fqdn }}
+  register: letsencryptdir
+
+- name: Allow firewall for various STUN and TURN ports
+  lineinfile:
+    path: /etc/ferm/ansible-late
+    line: "{{ item }}"
+  notify: Reload ferm
+  when: coturn_use_ferm
+  loop:
+    - "proto (tcp udp) dport 80 ACCEPT;"
+    - "proto (tcp udp) dport 443 ACCEPT;"
+    - "proto (tcp udp) dport 3478 ACCEPT;"
+    - "proto (tcp udp) dport 3479 ACCEPT;"
+
+- name: Ensure ferm allows certbot
+  meta: flush_handlers
+
+- name: If we need to run certbot, ensure coturn is stopped
+  service:
+    name: coturn
+    state: stopped
+  when: letsencrypt and not letsencryptdir.stat.exists
+  notify: Restart coturn
+
+- name: Install letsencrypt certificate
+  command: certbot certonly --standalone --non-interactive --agree-tos -m {{ letsencrypt_admin }} -d {{ coturn_fqdn }}
+  when: letsencrypt and not letsencryptdir.stat.exists
+
+- name: Install turnserver.conf
+  template:
+    src: turnserver.conf
+    dest: /etc/turnserver.conf
+  notify: Restart coturn
+
+- name: Ensure systemd coturn drop-in directory exists
+  file:
+    path: /etc/systemd/system/coturn.service.d
+    state: directory
+
+- name: Install systemd coturn drop-in configuration file
+  template:
+    src: coturn-systemd.conf
+    dest: /etc/systemd/system/coturn.service.d/coturn.conf
+  notify: Restart coturn
