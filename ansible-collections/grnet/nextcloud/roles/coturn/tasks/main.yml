@@ -54,3 +54,11 @@
     src: coturn-systemd.conf
     dest: /etc/systemd/system/coturn.service.d/coturn.conf
   notify: Restart coturn
+
+- name: When letsencrypt renews the certificate, restart coturn
+  copy:
+    dest: /etc/letsencrypt/renewal-hooks/deploy/restart-coturn.sh
+    mode: "0755"
+    content: |
+      #!/bin/sh
+      systemctl restart coturn
