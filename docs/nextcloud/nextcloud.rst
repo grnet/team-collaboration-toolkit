@@ -1,7 +1,7 @@
 .. _nextcloud:
 
 =========
-nextcloud
+Nextcloud
 =========
 
 Overview

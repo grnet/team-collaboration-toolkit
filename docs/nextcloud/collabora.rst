@@ -1,5 +1,5 @@
 =========
-collabora
+Collabora
 =========
 
 Overview

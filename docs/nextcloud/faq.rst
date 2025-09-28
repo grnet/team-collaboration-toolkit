@@ -20,7 +20,7 @@ Why ferm?
 
 Short answer: It's simpler and better.
 
-Longer answer: ``iptables`` is hard to use and many users perfer
+Longer answer: ``iptables`` is hard to use and many users prefer
 ``ufw``. While it is often sufficient, ``ufw`` is too simple. It can
 work well for years but at some point you will need something it doesn't
 do. For example, you may want to deny access to a given IP address; this

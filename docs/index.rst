@@ -1,7 +1,9 @@
 Ansible collections for team collaboration
 ==========================================
 
-A collection of modules to set up team collaboration software on Debian.
+A collection of modules to set up team collaboration software, mostly
+Nextcloud (including Nextcloud Talk with High Preformance Backend) on
+Debian. See :ref:`usage` for a quick start.
 
 .. toctree::
    :caption: General
