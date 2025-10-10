@@ -150,8 +150,6 @@ works before trying it. Apart from some checks, this is what it does:
 * It executes the ``php occ upgrade`` command. This takes several
   minutes during which Nextcloud is out of service (it shows a related
   message to users).
-* It copies :file:`/tmp/nextcloud.old/translationfiles` to the correct
-  location (this contains updated Greek translations).
 * It moves :file:`/tmp/nextcloud.cron` back to its correct location.
 
 You can upgrade Nextcloud by specifying the ``upgrade_nextcloud`` tag.

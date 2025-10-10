@@ -185,19 +185,6 @@
   notify:
     - Activate richdocuments config
 
-- name: Install Nextcloud translation tool
-  copy:
-    src: translationtool.phar
-    dest: /usr/local/bin/
-
-- name: Copy translation files
-  copy:
-    src: translationfiles
-    dest: /var/www/{{ nextcloud_fqdn }}/nextcloud/
-    owner: www-data
-  notify:
-    - Convert po translation files
-
 - name: Create background worker service for Nextcloud Assistant
   template:
     src: nextcloud-assistant-background-worker.service
