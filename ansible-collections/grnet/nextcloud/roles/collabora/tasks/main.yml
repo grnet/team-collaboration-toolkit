@@ -5,13 +5,25 @@
     url: https://collaboraoffice.com/downloads/gpg/collaboraonline-release-keyring.gpg
     dest: /usr/share/keyrings/
 
-- name: Add collabora apt repository
+- name: Add collabora apt repository (Ubuntu 22.04 pinned)
   apt_repository:
     filename: collabora
-    repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-{{ ansible_distribution |lower }}{{ ansible_distribution_version | replace(".", "") }} ./'
+    repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-ubuntu2204 ./'
     validate_certs: true
     update_cache: true
     state: present
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version is version('22.04', '==')
+
+- name: Add collabora apt repository (Others, rolling)
+  apt_repository:
+    filename: collabora
+    repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-deb ./'
+    validate_certs: true
+    update_cache: true
+    state: present
+  when: ansible_distribution != 'Ubuntu' or ansible_distribution_version is not version('22.04', '==')
 
 - name: Install collabora
   apt:
