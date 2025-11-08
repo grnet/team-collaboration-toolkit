@@ -28,13 +28,13 @@
     regexp: '''dbdriveroptions''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
       'dbdriveroptions' => array ( ),
-  when: not mysql_client_cert
+  when: mysql_client_cert == ''
 
 - name: Ensure directory /etc/mysql/certs exists
   file:
     dest: /etc/mysql/certs
     state: directory
-  when: mysql_client_cert
+  when: mysql_client_cert != ''
 
 - name: Install MySQL client key
   copy:
@@ -42,19 +42,19 @@
     dest: /etc/mysql/certs/client-key.pem
     group: www-data
     mode: 0640
-  when: mysql_client_cert
+  when: mysql_client_cert != ''
 
 - name: Install MySQL client cert
   copy:
     src: "{{ mysql_client_cert }}"
     dest: /etc/mysql/certs/client-cert.pem
-  when: mysql_client_cert
+  when: mysql_client_cert != ''
   
 - name: Install MySQL ca cert
   copy:
     src: "{{ mysql_ca_cert }}"
     dest: /etc/mysql/certs/ca.pem
-  when: mysql_client_cert
+  when: mysql_client_cert != ''
 
 - name: Setup dbdriveroptions configuration in config.php
   become: yes
@@ -70,5 +70,5 @@
           \\PDO::MYSQL_ATTR_SSL_CA => "/etc/mysql/certs/ca.pem",
           \\PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
         ),
-  when: mysql_client_cert
+  when: mysql_client_cert != ''
 
