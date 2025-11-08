@@ -23,6 +23,14 @@
   tags:
     - upgrade_nextcloud
 
+- name: Set variables for Ubuntu 24.04
+  set_fact:
+    php_version: 8.3
+  when: ansible_distribution_release == "noble"
+  check_mode: no
+  tags:
+    - upgrade_nextcloud
+
 - import_tasks: install.yml
   when: "'upgrade_nextcloud' not in ansible_run_tags"
 
