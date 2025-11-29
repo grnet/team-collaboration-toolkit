@@ -25,6 +25,10 @@ Parameters
 
    The domain name for Nextcloud.
 
+.. data:: mysql_fqdn
+
+   The FQDN of the MySQL server. The default is ``localhost``.
+
 .. data:: nextcloud_admin_user
 
    The username for the Nextcloud administrator. The default is
