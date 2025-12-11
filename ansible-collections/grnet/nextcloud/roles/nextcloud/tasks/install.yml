@@ -17,6 +17,7 @@
       - php-mysql
       - php-gmp
       - php-bcmath
+      - php-imagick
       - redis-server
       - php-redis
       - python3-pymysql
