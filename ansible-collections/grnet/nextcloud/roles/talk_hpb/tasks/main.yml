@@ -1,12 +1,12 @@
 ---
 
 - name: Fail if nextcloud_talk_hpb_encryption_key is not exactly 32 characters
-  fail:
+  ansible.builtin.fail:
     msg: "nextcloud_talk_hpb_encryption_key is {{ nextcloud_talk_hpb_encryption_key | length }} characters long; should be 32"
   when: nextcloud_talk_hpb_encryption_key is not string or nextcloud_talk_hpb_encryption_key | length != 32
 
 - name: Install Nextcloud HPB apt dependencies
-  apt:
+  ansible.builtin.apt:
     name:
       - git
       - golang-1.23
@@ -16,26 +16,26 @@
       - janus
 
 - name: Create symlink to go executable
-  file:
+  ansible.builtin.file:
     dest: /usr/local/bin/go
     src: /usr/lib/go-1.23/bin/go
     state: link
 
 - name: Clone nextcloud-spreed-signaling server
-  git:
+  ansible.builtin.git:
     repo: https://github.com/strukturag/nextcloud-spreed-signaling
     dest: /opt/nextcloud-spreed-signaling
     version: v2.0.2
   notify: Build nextcloud-spreed-signaling
 
 - name: Create group signaling
-  group:
+  ansible.builtin.group:
     name: signaling
     system: true
     state: present
 
 - name: Create user signaling
-  user:
+  ansible.builtin.user:
     name: signaling
     group: signaling
     shell: /usr/sbin/nologin
@@ -43,30 +43,33 @@
     state: present
 
 - name: Create nextcloud-spreed-signaling configuration directory
-  file:
+  ansible.builtin.file:
     path: /etc/opt/nextcloud-spreed-signaling
     state: directory
+    mode: "0755"
 
 - name: Setup nextcloud-spreed-signaling configuration
-  template:
+  ansible.builtin.template:
     src: server.conf
     dest: /etc/opt/nextcloud-spreed-signaling/server.conf
+    mode: "0644"
   notify: Restart nextcloud-spreed-signaling
 
 - name: Create nextcloud-spreed-signaling service
-  template:
+  ansible.builtin.template:
     src: nextcloud-spreed-signaling.service
     dest: /etc/systemd/system/nextcloud-spreed-signaling.service
+    mode: "0644"
   notify: Restart nextcloud-spreed-signaling
 
 - name: Enable nextcloud-spreed-signaling service
-  service:
+  ansible.builtin.service:
     name: nextcloud-spreed-signaling
-    enabled: yes
+    enabled: true
 
 - name: Configure nginx for nextcloud-spreed-signaling
-  template:
+  ansible.builtin.template:
     src: nextcloud-spreed-signaling.nginx.conf
     dest: /etc/nginx/snippets/{{ nextcloud_talk_hpb_fqdn }}/nextcloud-spreed-signaling.conf
+    mode: "0644"
   notify: Reload nginx
-
