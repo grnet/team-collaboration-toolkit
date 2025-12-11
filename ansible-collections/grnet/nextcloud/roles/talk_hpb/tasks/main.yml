@@ -73,3 +73,12 @@
     dest: /etc/nginx/snippets/{{ nextcloud_talk_hpb_fqdn }}/nextcloud-spreed-signaling.conf
     mode: "0644"
   notify: Reload nginx
+  when: "'aptiko.general.nginx' in ansible_role_names"
+
+- name: Configure apache for nextcloud-spreed-signaling
+  ansible.builtin.template:
+    src: nextcloud-spreed-signaling.apache.conf
+    dest: /etc/apache2/snippets/{{ nextcloud_talk_hpb_fqdn }}/nextcloud-spreed-signaling.conf
+    mode: "0644"
+  notify: Reload apache
+  when: "'aptiko.general.apache' in ansible_role_names"

@@ -1,8 +1,16 @@
 ---
 dependencies:
 
-- role: aptiko.general.nginx_site
-  server_name: "{{ nextcloud_talk_hpb_fqdn }}"
-  letsencrypt: true
-  force_ssl: true
-  document_root: /opt/nextcloud-spreed-signaling
+  - role: aptiko.general.nginx_site
+    server_name: "{{ nextcloud_talk_hpb_fqdn }}"
+    letsencrypt: true
+    force_ssl: true
+    document_root: /opt/nextcloud-spreed-signaling
+    when: "'aptiko.general.nginx' in ansible_role_names"
+
+  - role: aptiko.general.apache_vhost
+    server_name: "{{ nextcloud_talk_hpb_fqdn }}"
+    letsencrypt: true
+    force_ssl: true
+    document_root: /opt/nextcloud-spreed-signaling
+    when: "'aptiko.general.apache' in ansible_role_names"
