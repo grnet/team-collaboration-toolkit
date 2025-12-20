@@ -13,4 +13,5 @@ nextcloud_download_url: https://download.nextcloud.com/server/releases/latest.zi
 nextcloud_cron_schedule: "*/5 * * * *"
 nextcloud_maintenance_window_start: 1
 nextcloud_assistant_background_worker: false
+nextcloud_mail_smtpmode: smtp
 mysql_fqdn: localhost

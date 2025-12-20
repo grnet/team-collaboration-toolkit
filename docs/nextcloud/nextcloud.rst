@@ -129,6 +129,13 @@ Parameters
    perform non-time-critical tasks. (The end time is four hours later.)
    The default is 1, i.e. 01:00 UTC.
 
+.. data:: nextcloud_mail_smtpmode
+
+   The mode to use for sending email. The default is "smtp". See the
+   `relevant Nextcloud documentation`_ for more.
+
+   .. _relevant Nextcloud documentation: https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/config_sample_php_parameters.html#mail-smtpmode
+
 .. _upgrading_nextcloud:
 
 Upgrading Nextcloud
