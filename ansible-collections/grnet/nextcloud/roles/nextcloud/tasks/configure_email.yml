@@ -1,6 +1,6 @@
 ---
 - name: Setup mail_from_address
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
@@ -9,7 +9,7 @@
     insertbefore: '^\s*\);\s*$'
 
 - name: Setup mail_domain
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
@@ -18,7 +18,7 @@
     insertbefore: '^\s*\);\s*$'
 
 - name: Setup mail_smtpmode
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
@@ -27,7 +27,7 @@
     insertbefore: '^\s*\);\s*$'
 
 - name: Setup mail_sendmailmode
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
@@ -36,7 +36,7 @@
     insertbefore: '^\s*\);\s*$'
 
 - name: Setup mail_smtphost
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
@@ -45,7 +45,7 @@
     insertbefore: '^\s*\);\s*$'
 
 - name: Setup mail_smtpport
-  become: yes
+  become: true
   become_user: www-data
   lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
