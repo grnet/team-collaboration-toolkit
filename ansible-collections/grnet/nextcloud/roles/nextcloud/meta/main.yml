@@ -5,7 +5,7 @@ dependencies:
     document_root: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
     ssl_extras: |
       SSLProxyEngine on
-    letsencrypt: "{{ nextcloud_fqdn }}"
+    letsencrypt: "{{ nextcloud_letsencrypt|default(nextcloud_fqdn) }}"
     force_ssl: yes
 
 galaxy_info:

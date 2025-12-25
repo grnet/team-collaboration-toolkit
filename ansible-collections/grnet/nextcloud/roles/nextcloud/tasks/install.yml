@@ -171,6 +171,7 @@
   command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
     cmd: php occ config:app:get richdocuments wopi_url
+  when: '"richdocuments" in nextcloud_apps'
   check_mode: no
   ignore_errors: yes
   changed_when: false
@@ -182,7 +183,7 @@
   command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
     cmd: php occ config:app:set --value https://{{ collabora_fqdn }} richdocuments wopi_url
-  when: check_collabora_url.stdout != "https://" ~ collabora_fqdn
+  when: '"richdocuments" in nextcloud_apps and check_collabora_url.stdout != "https://" ~ collabora_fqdn'
   notify:
     - Activate richdocuments config
 

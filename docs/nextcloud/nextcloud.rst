@@ -9,6 +9,8 @@ Overview
 
 Installs and configures Nextcloud. Use like this::
 
+  tasks:
+  - aptiko.general.docker  # Useful for AppAPI
   - role: grnet.nextcloud.nextcloud
     nextcloud_fqdn: nextcloud.example.com
     default_phone_region: GR
@@ -60,6 +62,12 @@ Parameters
    variable to ``true`` to enable the background worker. It runs four
    instances of the worker (this is currently not configurable). The
    default is ``false``.
+
+.. data:: nextcloud_letsencrypt
+
+   This role automatically includes an `apache_vhost role`_ , and
+   ``nextcloud_letsencrypt`` is passed to it as the ``letsencrypt``
+   parameter. The default is :data:`nextcloud_fqdn`.
 
 .. data:: php_memory_limit
 
