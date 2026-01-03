@@ -4,11 +4,11 @@ nextcloud_fqdn: nextcloud.example.com
 collabora_fqdn: nextcloud.example.com
 
 # Settings for Nextcloud and Collabora
-default_phone_region: GR
-mail_from_address: noreply
-mail_domain: example.com
+nextcloud_default_phone_region: GR
+nextcloud_mail_from_address: noreply
+nextcloud_mail_domain: example.com
 collabora_allowed_languages: en_US en_GB el_GR fr_FR de_DE
-opcache_interned_strings_buffer: 16  # See nextcloud ansible module README.md
+nextcloud_opcache_interned_strings_buffer: 16  # See nextcloud ansible module README.md
 nextcloud_apps:  # These apps could also be installed from the web interface
   - calendar
   - files_texteditor

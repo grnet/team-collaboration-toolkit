@@ -19,7 +19,7 @@
   ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_from_address
-    line: "  'mail_from_address' => '{{ mail_from_address }}',"
+    line: "  'mail_from_address' => '{{ nextcloud_mail_from_address }}',"
     insertbefore: '^\s*\);\s*$'
   when: nextcloud_mail_smtpmode is not none and nextcloud_mail_smtpmode != 'null'
 
@@ -29,7 +29,7 @@
   ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_domain
-    line: "  'mail_domain' => '{{ mail_domain }}',"
+    line: "  'mail_domain' => '{{ nextcloud_mail_domain }}',"
     insertbefore: '^\s*\);\s*$'
   when: nextcloud_mail_smtpmode is not none and nextcloud_mail_smtpmode != 'null'
 

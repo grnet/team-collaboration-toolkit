@@ -61,10 +61,10 @@ Recording example::
 Obviously the keys and secrets should be vaulted. The recording role
 also needs access to variables :data:`nextcloud_fqdn` and
 :data:`nextcloud_talk_hpb_internal_secret`. Variables
-:data:`php_upload_max_filesize`, :data:`php_post_max_size` and
-:data:`php_max_execution_time` must also be set for the ``nextcloud``
-role. In the Nextcloud installation, you must go to the Nextcloud Talk
-settings and specify the recording FQDN and the recording shared secret
+:data:`nextcloud_php_upload_max_filesize`, :data:`nextcloud_php_post_max_size`
+and :data:`nextcloud_php_max_execution_time` must also be set for the
+``nextcloud`` role. In the Nextcloud installation, you must go to the Nextcloud
+Talk settings and specify the recording FQDN and the recording shared secret
 (see :data:`nextcloud_talk_recording_shared_secret`).
 
 .. _talk_hpb_architecture:

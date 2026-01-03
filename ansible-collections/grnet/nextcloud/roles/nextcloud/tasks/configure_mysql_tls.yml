@@ -28,38 +28,38 @@
     regexp: '''dbdriveroptions''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
       'dbdriveroptions' => array ( ),
-  when: mysql_client_cert == ''
+  when: nextcloud_mysql_client_cert == ''
 
 - name: Ensure directory /etc/mysql/certs exists
   ansible.builtin.file:
     dest: /etc/mysql/certs
     state: directory
     mode: "0755"
-  when: mysql_client_cert != ''
+  when: nextcloud_mysql_client_cert != ''
 
 - name: Install MySQL client key
   ansible.builtin.copy:
-    src: "{{ mysql_client_key }}"
+    src: "{{ nextcloud_mysql_client_key }}"
     dest: /etc/mysql/certs/client-key.pem
     group: www-data
     mode: "0640"
-  when: mysql_client_cert != ''
+  when: nextcloud_mysql_client_cert != ''
 
 - name: Install MySQL client cert
   ansible.builtin.copy:
-    src: "{{ mysql_client_cert }}"
+    src: "{{ nextcloud_mysql_client_cert }}"
     dest: /etc/mysql/certs/client-cert.pem
     group: www-data
     mode: "0644"
-  when: mysql_client_cert != ''
+  when: nextcloud_mysql_client_cert != ''
 
 - name: Install MySQL ca cert
   ansible.builtin.copy:
-    src: "{{ mysql_ca_cert }}"
+    src: "{{ nextcloud_mysql_ca_cert }}"
     dest: /etc/mysql/certs/ca.pem
     group: www-data
     mode: "0644"
-  when: mysql_client_cert != ''
+  when: nextcloud_mysql_client_cert != ''
 
 - name: Setup dbdriveroptions configuration in config.php
   become: true
@@ -75,4 +75,4 @@
           \\PDO::MYSQL_ATTR_SSL_CA => "/etc/mysql/certs/ca.pem",
           \\PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
         ),
-  when: mysql_client_cert != ''
+  when: nextcloud_mysql_client_cert != ''

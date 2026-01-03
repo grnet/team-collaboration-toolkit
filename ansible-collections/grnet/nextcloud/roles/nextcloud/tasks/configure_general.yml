@@ -20,7 +20,7 @@
   ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: default_phone_region
-    line: "  'default_phone_region' => '{{ default_phone_region }}',"
+    line: "  'default_phone_region' => '{{ nextcloud_default_phone_region }}',"
     insertbefore: '^\s*\);\s*$'
   notify:
     - Restart php-fpm

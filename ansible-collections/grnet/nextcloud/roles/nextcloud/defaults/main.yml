@@ -1,18 +1,17 @@
 ---
 nextcloud_admin_user: admin
-use_awstats: false
-php_memory_limit: 512M
-php_upload_max_filesize: 2M
-php_post_max_size: 8M
-php_max_execution_time: 30
-opcache_interned_strings_buffer: 8
-mysql_ca_cert: ""
-mysql_client_cert: ""
-mysql_client_key: ""
+nextcloud_php_memory_limit: 512M
+nextcloud_php_upload_max_filesize: 2M
+nextcloud_php_post_max_size: 8M
+nextcloud_php_max_execution_time: 30
+nextcloud_opcache_interned_strings_buffer: 8
+nextcloud_mysql_ca_cert: ""
+nextcloud_mysql_client_cert: ""
+nextcloud_mysql_client_key: ""
 nextcloud_download_url: https://download.nextcloud.com/server/releases/latest.zip
 nextcloud_cron_schedule: "*/5 * * * *"
 nextcloud_maintenance_window_start: 1
 nextcloud_assistant_background_worker: false
 nextcloud_mail_smtpmode: smtp
 nextcloud_apps: []
-mysql_fqdn: localhost
+nextcloud_mysql_fqdn: localhost

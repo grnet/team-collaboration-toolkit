@@ -1,24 +1,26 @@
 ---
 - name: Restart redis
-  service:
+  ansible.builtin.service:
     name: redis
     state: restarted
 
 - name: Activate richdocuments config
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
     cmd: php occ richdocuments:activate-config
+  changed_when: true
 
 - name: Update htaccess
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
     cmd: php occ maintenance:update:htaccess
+  changed_when: true
 
 - name: Restart php-fpm
-  service:
+  ansible.builtin.service:
     name: php{{ php_version }}-fpm
     state: restarted

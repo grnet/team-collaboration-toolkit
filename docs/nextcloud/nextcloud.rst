@@ -13,9 +13,9 @@ Installs and configures Nextcloud. Use like this::
   - aptiko.general.docker  # Useful for AppAPI
   - role: grnet.nextcloud.nextcloud
     nextcloud_fqdn: nextcloud.example.com
-    default_phone_region: GR
-    mail_from_address: noreply
-    mail_domain: example.com
+    nextcloud_default_phone_region: GR
+    nextcloud_mail_from_address: noreply
+    nextcloud_mail_domain: example.com
 
 You may need to perform additional configuration using Nextcloud's web
 interface. See section :ref:`nextcloud_limitations` for that.
@@ -27,7 +27,7 @@ Parameters
 
    The domain name for Nextcloud.
 
-.. data:: mysql_fqdn
+.. data:: nextcloud_mysql_fqdn
 
    The FQDN of the MySQL server. The default is ``localhost``.
 
@@ -69,20 +69,20 @@ Parameters
    ``nextcloud_letsencrypt`` is passed to it as the ``letsencrypt``
    parameter. The default is :data:`nextcloud_fqdn`.
 
-.. data:: php_memory_limit
+.. data:: nextcloud_php_memory_limit
 
    Default 512M.
 
-.. data:: php_upload_max_filesize
-   php_post_max_size
-   php_max_execution_time
+.. data:: nextcloud_php_upload_max_filesize
+   nextcloud_php_post_max_size
+   nextcloud_php_max_execution_time
 
    The defaults for these are 2M, 8M and 30, which are essentially the
    php or the Debian fpm defaults. However, they are too low for
    Nextcloud Talk recordings.  If you install Nextcloud Talk recording,
    use 2048M, 2048M and 3600.
 
-.. data:: opcache_interned_strings_buffer
+.. data:: nextcloud_opcache_interned_strings_buffer
 
    The default for this PHP setting is 8. However in some installations
    it might need to be set to 16, and sometimes to 32. It seems to depend
@@ -91,17 +91,18 @@ Parameters
 
   .. _related support forum discussion: https://help.nextcloud.com/t/nextcloud-23-02-opcache-interned-strings-buffer/134007/4
 
-.. data:: default_phone_region
+.. data:: nextcloud_default_phone_region
 
    A country code like "GR". There is no default. This is used for
    Nextcloud's ``default_phone_region`` configuration parameter.
 
-.. data:: mail_from_address
-   mail_domain
+.. data:: nextcloud_mail_from_address
+   nextcloud_mail_domain
 
    The email address from which email notifications from Nextcloud appear
    to be sent. For example, to use ``noreply@example.com``, specify
-   ``mail_from_address=noreply`` and ``mail_domain=example.com``.
+   ``nextcloud_mail_from_address=noreply`` and
+   ``nextcloud_mail_domain=example.com``.
 
    These settings are those that can be set in the web interface, under
    Basic settings, Email server. This role will overwrite these settings
@@ -113,9 +114,9 @@ Parameters
 
   .. _mail_satellite: https://aptikogeneral.readthedocs.io/en/latest/mail_satellite.html
 
-.. data:: mysql_client_key
-   mysql_client_cert
-   mysql_ca_cert
+.. data:: nextcloud_mysql_client_key
+   nextcloud_mysql_client_cert
+   nextcloud_mysql_ca_cert
 
    By default, these parameters are empty. In this case, Nextcloud
    connects to MySQL without TLS. If they have values, they must be

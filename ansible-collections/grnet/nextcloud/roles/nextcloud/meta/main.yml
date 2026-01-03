@@ -1,4 +1,5 @@
 ---
+
 dependencies:
   - role: aptiko.general.apache_vhost
     server_name: "{{ nextcloud_fqdn }}"
@@ -6,9 +7,11 @@ dependencies:
     ssl_extras: |
       SSLProxyEngine on
     letsencrypt: "{{ nextcloud_letsencrypt|default(nextcloud_fqdn) }}"
-    force_ssl: yes
+    force_ssl: true
+    apache_use_awstats: false
 
 galaxy_info:
   author: Antonis Christofides
   description: Ansible role for installing nextcloud on Debian/Ubuntu
   license: GPLv3
+  min_ansible_version: "2.19"
