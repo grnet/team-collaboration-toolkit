@@ -1,13 +1,13 @@
 ---
 
 - name: Setup trusted domain
-  become: yes
+  become: true
   become_user: www-data
-  replace:
+  ansible.builtin.replace:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: '''trusted_domains''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
-      'trusted_domains' => 
+      'trusted_domains' =>
         array (
           0 => '{{ nextcloud_fqdn }}',
         ),
@@ -15,9 +15,9 @@
     - Restart php-fpm
 
 - name: Setup default_phone_region
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: default_phone_region
     line: "  'default_phone_region' => '{{ default_phone_region }}',"
@@ -26,9 +26,9 @@
     - Restart php-fpm
 
 - name: Setup base URL for command-line tools
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: overwrite.cli.url
     line: "  'overwrite.cli.url' => 'https://{{ nextcloud_fqdn }}/',"
@@ -37,9 +37,9 @@
     - Restart php-fpm
 
 - name: Setup pretty URLs
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: htaccess.RewriteBase
     line: "  'htaccess.RewriteBase' => '/',"
@@ -52,9 +52,9 @@
   # This parameter enables users to view activities in group folders or external
   # storages. However it isn't without problems: please take a good look at
   # https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/activity_configuration.html#activities-in-groupfolders-or-external-storages
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: activity_use_cached_mountpoints
     line: "  'activity_use_cached_mountpoints' => true,"
@@ -64,9 +64,9 @@
     - Restart php-fpm
 
 - name: Configure memcache.local
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: "memcache.local"
     line: '  ''memcache.local'' => ''\\OC\\Memcache\\Redis'','
@@ -75,9 +75,9 @@
     - Restart php-fpm
 
 - name: Configure memcache.locking
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: "memcache.locking"
     line: '  ''memcache.locking'' => ''\\OC\\Memcache\\Redis'','
@@ -86,20 +86,20 @@
     - Restart php-fpm
 
 - name: Check whether config.php contains a redis block
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: "redis"
     state: absent
-  check_mode: yes  # The file will never actually be modified
+  check_mode: true  # The file will never actually be modified
   register: redis
   changed_when: not redis.found
 
 - name: Ensure config.php contains a redis block
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     line: "  'redis' => array ( ),"
     insertbefore: '^\s*\);\s*$'
@@ -108,13 +108,13 @@
     - Restart php-fpm
 
 - name: Setup redis configuration in config.php
-  become: yes
+  become: true
   become_user: www-data
-  replace:
+  ansible.builtin.replace:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: '''redis''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
-      'redis' => 
+      'redis' =>
         array (
           'host' => 'localhost',
           'port' => 6379,
@@ -124,9 +124,9 @@
     - Restart php-fpm
 
 - name: Configure maintenance_window
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: "maintenance_window_start"
     line: '  ''maintenance_window_start'' => {{ nextcloud_maintenance_window_start }},'

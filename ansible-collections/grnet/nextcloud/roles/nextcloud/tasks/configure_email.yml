@@ -2,7 +2,7 @@
 - name: Setup mail_smtpmode
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_smtpmode
     # Technically mail_smtpmode should be a string. However it's easy to make
@@ -16,7 +16,7 @@
 - name: Setup mail_from_address
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_from_address
     line: "  'mail_from_address' => '{{ mail_from_address }}',"
@@ -26,7 +26,7 @@
 - name: Setup mail_domain
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_domain
     line: "  'mail_domain' => '{{ mail_domain }}',"
@@ -36,7 +36,7 @@
 - name: Setup mail_sendmailmode
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_sendmailmode
     line: "  'mail_sendmailmode' => 'smtp',"
@@ -46,7 +46,7 @@
 - name: Setup mail_smtphost
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_smtphost
     line: "  'mail_smtphost' => 'localhost',"
@@ -56,7 +56,7 @@
 - name: Setup mail_smtpport
   become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: mail_smtpport
     line: "  'mail_smtpport' => '25',"

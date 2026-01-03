@@ -1,40 +1,42 @@
 ---
 - name: Set variables for Debian 12
-  set_fact:
+  ansible.builtin.set_fact:
     php_version: 8.2
   when: ansible_distribution_release == "bookworm"
-  check_mode: no
+  check_mode: false
   tags:
     - upgrade_nextcloud
 
 - name: Set variables for Debian 13
-  set_fact:
+  ansible.builtin.set_fact:
     php_version: 8.4
   when: ansible_distribution_release == "trixie"
-  check_mode: no
+  check_mode: false
   tags:
     - upgrade_nextcloud
 
 - name: Set variables for Ubuntu 22.04
-  set_fact:
+  ansible.builtin.set_fact:
     php_version: 8.1
   when: ansible_distribution_release == "jammy"
-  check_mode: no
+  check_mode: false
   tags:
     - upgrade_nextcloud
 
 - name: Set variables for Ubuntu 24.04
-  set_fact:
+  ansible.builtin.set_fact:
     php_version: 8.3
   when: ansible_distribution_release == "noble"
-  check_mode: no
+  check_mode: false
   tags:
     - upgrade_nextcloud
 
-- import_tasks: install.yml
+- name: Import installation tasks
+  ansible.builtin.import_tasks: install.yml
   when: "'upgrade_nextcloud' not in ansible_run_tags"
 
-- include_tasks: upgrade.yml
+- name: Include upgrade tasks
+  ansible.builtin.include_tasks: upgrade.yml
   when: "'upgrade_nextcloud' in ansible_run_tags"
   tags:
     - upgrade_nextcloud

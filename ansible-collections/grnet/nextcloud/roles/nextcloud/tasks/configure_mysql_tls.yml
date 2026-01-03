@@ -1,29 +1,29 @@
 ---
 
 - name: Check whether config.php contains a dbdriveroptions block
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: "dbdriveroptions"
     state: absent
-  check_mode: yes  # The file will never actually be modified
+  check_mode: true  # The file will never actually be modified
   register: dbdriveroptions
   changed_when: not dbdriveroptions.found
 
 - name: Ensure config.php contains a dbdriveroptions block
-  become: yes
+  become: true
   become_user: www-data
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     line: "  'dbdriveroptions' => array ( ),"
     insertbefore: '^\s*\);\s*$'
   when: not dbdriveroptions.found
 
 - name: Setup empty dbdriveroptions configuration in config.php
-  become: yes
+  become: true
   become_user: www-data
-  replace:
+  ansible.builtin.replace:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: '''dbdriveroptions''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
@@ -31,39 +31,44 @@
   when: mysql_client_cert == ''
 
 - name: Ensure directory /etc/mysql/certs exists
-  file:
+  ansible.builtin.file:
     dest: /etc/mysql/certs
     state: directory
+    mode: "0755"
   when: mysql_client_cert != ''
 
 - name: Install MySQL client key
-  copy:
+  ansible.builtin.copy:
     src: "{{ mysql_client_key }}"
     dest: /etc/mysql/certs/client-key.pem
     group: www-data
-    mode: 0640
+    mode: "0640"
   when: mysql_client_cert != ''
 
 - name: Install MySQL client cert
-  copy:
+  ansible.builtin.copy:
     src: "{{ mysql_client_cert }}"
     dest: /etc/mysql/certs/client-cert.pem
+    group: www-data
+    mode: "0644"
   when: mysql_client_cert != ''
-  
+
 - name: Install MySQL ca cert
-  copy:
+  ansible.builtin.copy:
     src: "{{ mysql_ca_cert }}"
     dest: /etc/mysql/certs/ca.pem
+    group: www-data
+    mode: "0644"
   when: mysql_client_cert != ''
 
 - name: Setup dbdriveroptions configuration in config.php
-  become: yes
+  become: true
   become_user: www-data
-  replace:
+  ansible.builtin.replace:
     path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
     regexp: '''dbdriveroptions''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
     replace: |
-      'dbdriveroptions' => 
+      'dbdriveroptions' =>
         array (
           \\PDO::MYSQL_ATTR_SSL_KEY => "/etc/mysql/certs/client-key.pem",
           \\PDO::MYSQL_ATTR_SSL_CERT => "/etc/mysql/certs/client-cert.pem",
@@ -71,4 +76,3 @@
           \\PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
         ),
   when: mysql_client_cert != ''
-

@@ -1,6 +1,6 @@
 ---
 - name: Install apt packages required for nextcloud
-  apt:
+  ansible.builtin.apt:
     name:
       - unzip
       - php
@@ -23,12 +23,12 @@
       - python3-pymysql
 
 - name: Start Redis
-  service:
+  ansible.builtin.service:
     name: redis
     state: started
 
 - name: Set PHP memory limit
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: '^memory_limit\s*='
     line: memory_limit = {{ php_memory_limit }}
@@ -36,7 +36,7 @@
     - Restart php-fpm
 
 - name: Set PHP upload_max_filesize
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: '^upload_max_filesize\s*='
     line: upload_max_filesize = {{ php_upload_max_filesize }}
@@ -44,7 +44,7 @@
     - Restart php-fpm
 
 - name: Set PHP post_max_size
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: '^post_max_size\s*='
     line: post_max_size = {{ php_post_max_size }}
@@ -52,7 +52,7 @@
     - Restart php-fpm
 
 - name: Set PHP max_execution_time
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: '^max_execution_time\s*='
     line: max_execution_time = {{ php_max_execution_time }}
@@ -60,7 +60,7 @@
     - Restart php-fpm
 
 - name: Set opcache.interned_strings_buffer
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: '^;?opcache.interned_strings_buffer\s*='
     line: opcache.interned_strings_buffer = {{ opcache_interned_strings_buffer }}
@@ -68,11 +68,11 @@
     - Restart php-fpm
 
 - name: Install nextcloud
-  unarchive:
+  ansible.builtin.unarchive:
     creates: /var/www/{{ nextcloud_fqdn }}/nextcloud/index.php
     src: "{{ nextcloud_download_url }}"
     dest: /var/www/{{ nextcloud_fqdn }}
-    remote_src: yes
+    remote_src: true
     owner: www-data
     group: www-data
 
@@ -84,14 +84,14 @@
     filter:
       - databases
     exclude_fields: db_size
-  check_mode: no
+  check_mode: false
   changed_when: false
   register: check_databases
 
 - name: Setup nextcloud
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
     cmd: >
       php occ maintenance:install --database-host={{ mysql_fqdn }}
@@ -100,35 +100,39 @@
       --admin-user={{ nextcloud_admin_user }}
       --admin-pass={{ nextcloud_admin_user_password }}
   when: '"nextcloud" not in check_databases["databases"]'
+  changed_when: true
 
-- import_tasks: configure_general.yml
+- name: Import configuration tasks
+  ansible.builtin.import_tasks: configure_general.yml
 
 - name: Check whether background jobs scheduler is set to cron
-  become: yes
+  become: true
   become_user: www-data
-  shell:
+  ansible.builtin.shell:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
     cmd: php occ config:list core --output=plain | grep backgroundjobs_mode | awk '{ print $3 }'
-  check_mode: no
-  ignore_errors: yes
+  check_mode: false
+  ignore_errors: true
   changed_when: false
   register: check_background_jobs
 
 - name: Set background jobs scheduler to cron
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
     cmd: php occ background:cron
   when: check_background_jobs.stdout != "cron"
+  changed_when: true
 
 - name: Add nextcloud cron job
-  copy:
+  ansible.builtin.copy:
     dest: /etc/cron.d/nextcloud
-    content: "{{ nextcloud_cron_schedule }} www-data php -f /var/www/{{ nextcloud_fqdn}}/nextcloud/cron.php\n"
+    content: "{{ nextcloud_cron_schedule }} www-data php -f /var/www/{{ nextcloud_fqdn }}/nextcloud/cron.php\n"
+    mode: "0644"
 
 - name: Turn off PHP output_buffering (required by Nextcloud)
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
     regexp: "^output_buffering ="
     line: "output_buffering = Off"
@@ -136,71 +140,79 @@
     - Restart php-fpm
 
 - name: Setup php-fpm for nextcloud
-  template:
+  ansible.builtin.template:
     src: fpm-nextcloud.conf
     dest: /etc/php/{{ php_version }}/fpm/pool.d/nextcloud.conf
+    mode: "0644"
   notify:
     - Restart php-fpm
 
 - name: Setup apache for nextcloud
-  template:
+  ansible.builtin.template:
     src: apache-nextcloud.conf
     dest: /etc/apache2/snippets/{{ nextcloud_fqdn }}/nextcloud.conf
+    mode: "0644"
   notify:
     - Restart apache
 
 - name: Activate apache proxy_fcgi
-  apache2_module:
+  community.general.apache2_module:
     state: present
     name: proxy_fcgi
   notify:
     - Restart apache
 
 - name: Install nextcloud apps
-  become: yes
+  become: true
   become_user: www-data
-  shell: echo '{{ nextcloud_admin_user_password }}' | php occ app:install {{ item }}
+  ansible.builtin.shell: set -o pipefail && echo '{{ nextcloud_admin_user_password }}' | php occ app:install {{ item }}
   args:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
     creates: /var/www/{{ nextcloud_fqdn }}/nextcloud/apps/{{ item }}
+    executable: /bin/bash
   loop: "{{ nextcloud_apps }}"
 
 - name: Check whether collabora online server address has been set
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
     cmd: php occ config:app:get richdocuments wopi_url
   when: '"richdocuments" in nextcloud_apps'
-  check_mode: no
-  ignore_errors: yes
+  check_mode: false
+  ignore_errors: true
   changed_when: false
   register: check_collabora_url
 
 - name: Setup collabora online server address
-  become: yes
+  become: true
   become_user: www-data
-  command:
+  ansible.builtin.command:
     chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
     cmd: php occ config:app:set --value https://{{ collabora_fqdn }} richdocuments wopi_url
   when: '"richdocuments" in nextcloud_apps and check_collabora_url.stdout != "https://" ~ collabora_fqdn'
+  changed_when: true
   notify:
     - Activate richdocuments config
 
 - name: Create background worker service for Nextcloud Assistant
-  template:
+  ansible.builtin.template:
     src: nextcloud-assistant-background-worker.service
     dest: '/etc/systemd/system/nextcloud-assistant-background-worker@.service'
+    mode: "0644"
   when: nextcloud_assistant_background_worker
 
 - name: Enable background worker service for Nextcloud Assistant
-  systemd:
+  ansible.builtin.systemd:
     name: 'nextcloud-assistant-background-worker@{{ item }}.service'
-    enabled: yes
+    enabled: true
     state: started
-    daemon-reload: yes
+    daemon-reload: true
   loop: [1, 2, 3, 4]
   when: nextcloud_assistant_background_worker
 
-- import_tasks: configure_mysql_tls.yml
-- import_tasks: configure_email.yml
+- name: Import MySQL configuration tasks
+  ansible.builtin.import_tasks: configure_mysql_tls.yml
+
+- name: Import email configuration tasks
+  ansible.builtin.import_tasks: configure_email.yml
