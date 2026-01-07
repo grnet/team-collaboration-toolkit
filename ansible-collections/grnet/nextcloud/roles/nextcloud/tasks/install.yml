@@ -152,6 +152,7 @@
     src: apache-nextcloud.conf
     dest: /etc/apache2/snippets/{{ nextcloud_fqdn }}/nextcloud.conf
     mode: "0644"
+  when: "'aptiko.general.apache' in ansible_role_names"
   notify:
     - Restart apache
 
@@ -159,8 +160,27 @@
   community.general.apache2_module:
     state: present
     name: proxy_fcgi
+  when: "'aptiko.general.apache' in ansible_role_names"
   notify:
     - Restart apache
+
+- name: Setup global nginx configuration for nextcloud
+  ansible.builtin.template:
+    src: nginx-global-nextcloud.conf
+    dest: /etc/nginx/conf.d/nextcloud.conf
+    mode: "0644"
+  when: "'aptiko.general.nginx' in ansible_role_names"
+  notify:
+    - Reload nginx
+
+- name: Setup nginx site configuration for nextcloud
+  ansible.builtin.template:
+    src: nginx-nextcloud.conf
+    dest: /etc/nginx/snippets/{{ nextcloud_fqdn }}/nextcloud.conf
+    mode: "0644"
+  when: "'aptiko.general.nginx' in ansible_role_names"
+  notify:
+    - Reload nginx
 
 - name: Install nextcloud apps
   become: true

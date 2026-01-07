@@ -65,9 +65,12 @@ Parameters
 
 .. data:: nextcloud_letsencrypt
 
-   This role automatically includes an `apache_vhost role`_ , and
-   ``nextcloud_letsencrypt`` is passed to it as the ``letsencrypt``
-   parameter. The default is :data:`nextcloud_fqdn`.
+   This role automatically includes an `apache_vhost role`_  or an
+   `nginx_site role`_ as needed and ``nextcloud_letsencrypt`` is passed as
+   the ``letsencrypt`` parameter. The default is :data:`nextcloud_fqdn`.
+
+   .. _apache_vhost role: https://aptikogeneral.readthedocs.io/en/latest/apache_vhost.html
+   .. _nginx_site role: https://aptikogeneral.readthedocs.io/en/latest/nginx_site.html
 
 .. data:: nextcloud_php_memory_limit
 
