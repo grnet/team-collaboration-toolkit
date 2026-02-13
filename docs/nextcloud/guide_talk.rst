@@ -67,13 +67,13 @@ signaling server is mostly equivalent to Jitsi's jicofo.
 
 The **SFU (Selective Forwarding Unit)** receives media streams from
 clients and forwards selected streams to other participants. It is
-equivalent to the Jitsi Video Bridge.  The SFU listens on UDP port 3478
-for STUN/TURN and on TCP/UDP ports for RTP streams, usually 50000-60000.
-(RTP, the Realtime Transport Protocol, is used to deliver audio and
-video over IP networks in real time). The SFU supported by the HPB is
-called **Janus**. At the time of this writing the role supports only a
-single Janus server, although the HPB supports more in order to
-distribute the load of many concurrent conferences.
+equivalent to the Jitsi Video Bridge.  The SFU supported by the HPB is
+called **Janus**.  Janus listens on TCP/UDP ports for RTP streams,
+usually 50000-60000.  (RTP, the Realtime Transport Protocol, is used to
+deliver audio and video over IP networks in real time).  At the time of
+this writing the role supports only a single Janus server, although the
+HPB supports more in order to distribute the load of many concurrent
+conferences.
 
 **NATS**, also known as **NATS.io**, is a communications system with a
 publish/subscribe queue and more. The other components communicate
