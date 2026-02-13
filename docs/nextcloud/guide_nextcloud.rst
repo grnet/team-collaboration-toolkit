@@ -8,6 +8,49 @@ Guide to Nextcloud
    :local:
    :depth: 1
 
+Requirements
+============
+
+Short version
+-------------
+
+For 50 users:
+
+ * 4 CPUs
+ * 8 GB RAM
+ * As much disk space as the users' files plus 30 GB.
+
+But please read also the long version.
+
+Long version
+------------
+
+In GRNET, where Nextcloud is being used, as of 2026, by about 50 users,
+we have it installed on VMs with very slow disks, which are the
+bottleneck. In order to work around this, we've put MySQL on a separate
+VM, and that latter VM has two disks: one for the redo logs and one for
+the data files. Thus we effectively use three disks in parallel. However
+on a server with modern disks (let alone one with SSD), it is unlikely
+this will be necessary.
+
+Our Nextcloud server has 16 CPUs and 32 GB RAM, however the CPUs are
+mostly idle, and there are 20 GB RAM free and 9 GB used for buffers and
+cache. On our MySQL server it's hard to talk about RAM because MySQL
+always consumes the entire available RAM, however its 8 CPUs are mostly
+idle. Our feeling from what we see is that if the disk was faster, a
+single server as described in the short version above would suffice.
+
+However the machine load also depends on what these 50 users are doing,
+and every organization is different. In GRNET about half are
+developers/devops who use Nextcloud very little. For your organization
+we don't know, but it's likely you won't know either before you see the
+system in action.
+
+Regarding disk space, we see that the installed system and the MySQL
+data are slightly over 10 GB, but MySQL grows slowly. Therefore the 30
+GB that we propose is approximately twice as much as is needed and will
+result in about 50% usage, not including users' files.
+
 Usage
 =====
 
