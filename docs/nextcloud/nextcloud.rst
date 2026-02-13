@@ -1,8 +1,8 @@
 .. _nextcloud:
 
-=========
-Nextcloud
-=========
+=========================
+grnet.nextcloud.nextcloud
+=========================
 
 Overview
 ========

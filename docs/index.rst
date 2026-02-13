@@ -3,7 +3,7 @@ Ansible collections for team collaboration
 
 A collection of modules to set up team collaboration software, mostly
 Nextcloud (including Nextcloud Talk with High Preformance Backend) on
-Debian. See :ref:`usage` for a quick start.
+Debian. Start reading from :ref:`guide_nextcloud`.
 
 .. toctree::
    :caption: General
@@ -14,13 +14,19 @@ Debian. See :ref:`usage` for a quick start.
 
 .. toctree::
    :maxdepth: 1
-   :caption: grnet.nextcloud collection
+   :caption: grnet.nextcloud collection guides
 
-   nextcloud/usage
-   nextcloud/faq
+   nextcloud/guide_nextcloud
+   nextcloud/guide_talk
+
+.. toctree::
+   :maxdepth: 1
+   :caption: grnet.nextcloud collection reference
+
    nextcloud/nextcloud
    nextcloud/collabora
-   nextcloud/talk
+   nextcloud/talk_hpb
+   nextcloud/talk_recording
    nextcloud/coturn
 
 .. toctree::
