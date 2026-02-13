@@ -10,8 +10,8 @@ Overview
 Installs and configures a STUN and TURN server.
 
 The ``grnet.nextcloud.coturn`` role installs a STUN and TURN server with
-the widely used coturn software, with should be deployed alongside
-:ref:`talk`. It is listening on ports 3478 and 443.  Both ports can be
+the widely used coturn software.
+It is listening on ports 3478 and 443.  Both ports can be
 used for both unencrypted and encrypted communication, both UDP and TCP,
 and both STUN and TURN. A single port could actually suffice; as the
 coturn manual says, "we keep both endpoints to satisfy the RFC 5766

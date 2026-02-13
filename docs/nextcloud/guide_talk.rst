@@ -26,8 +26,8 @@ factor in that case is usually the server's connection speed.
 
 The ``grnet.nextcloud`` collection contains two related roles:
 
- * :ref:`_talk_hpb`: Installs the HPB.
- * :ref:`_talk_recording`: Installs software to record conferences.
+ * :ref:`talk_hpb`: Installs the HPB.
+ * :ref:`talk_recording`: Installs software to record conferences.
 
 The reference for these modules includes examples that will get you
 started.
