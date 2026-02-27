@@ -32,7 +32,7 @@
       - code-brand
       - python3-lxml
       - collaboraoffice-dict*
-      - collaboraofficebasis*
+      - collaboraofficebasis-*
 
 - name: Create group cool
   group:
