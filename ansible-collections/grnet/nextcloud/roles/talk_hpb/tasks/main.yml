@@ -25,7 +25,7 @@
   ansible.builtin.git:
     repo: https://github.com/strukturag/nextcloud-spreed-signaling
     dest: /opt/nextcloud-spreed-signaling
-    version: v2.0.2
+    version: v2.1.0
   notify: Build nextcloud-spreed-signaling
 
 - name: Create group signaling
