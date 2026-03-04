@@ -1,12 +1,13 @@
 ---
 
 - name: Install collabora apt key
-  get_url:
+  ansible.builtin.get_url:
     url: https://collaboraoffice.com/downloads/gpg/collaboraonline-release-keyring.gpg
     dest: /usr/share/keyrings/
+    mode: '0644'
 
 - name: Add collabora apt repository (Ubuntu 22.04 pinned)
-  apt_repository:
+  ansible.builtin.apt_repository:
     filename: collabora
     repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-ubuntu2204 ./'
     validate_certs: true
@@ -17,7 +18,7 @@
     - ansible_distribution_version is version('22.04', '==')
 
 - name: Add collabora apt repository (Others, rolling)
-  apt_repository:
+  ansible.builtin.apt_repository:
     filename: collabora
     repo: 'deb [signed-by=/usr/share/keyrings/collaboraonline-release-keyring.gpg] https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-deb ./'
     validate_certs: true
@@ -26,7 +27,7 @@
   when: ansible_distribution != 'Ubuntu' or ansible_distribution_version is not version('22.04', '==')
 
 - name: Install collabora
-  apt:
+  ansible.builtin.apt:
     name:
       - coolwsd
       - code-brand
@@ -35,13 +36,13 @@
       - collaboraofficebasis-*
 
 - name: Create group cool
-  group:
+  ansible.builtin.group:
     name: cool
     system: true
     state: present
 
 - name: Create user cool
-  user:
+  ansible.builtin.user:
     name: cool
     group: cool
     home: /opt/cool
@@ -50,94 +51,97 @@
     state: present
 
 - name: Create /etc/coolwsd
-  file:
+  ansible.builtin.file:
     path: /etc/coolwsd
     owner: root
     group: root
-    mode:  0755
+    mode: '0755'
     state: directory
 
-- name: "Allow domain {{ nextcloud_fqdn }} (1)"
-  xml:
+- name: "Allow nextcloud domain (1)"
+  community.general.xml:
     path: /etc/coolwsd/coolwsd.xml
     xpath: /config/storage/wopi/alias_groups
-    pretty_print: yes
+    pretty_print: true
     attribute: mode
     value: "groups"
   notify: Restart coolwsd
 
-- name: "Allow domain {{ nextcloud_fqdn }} (2)"
-  xml:
+- name: "Allow nextcloud domain (2)"
+  community.general.xml:
     path: /etc/coolwsd/coolwsd.xml
     xpath: /config/storage/wopi/alias_groups
-    pretty_print: yes
+    pretty_print: true
     input_type: xml
     set_children: "<group><host allow='true'>https://{{ nextcloud_fqdn | regex_replace('\\.', '\\.') }}:443</host></group>"
   notify: Restart coolwsd
 
 - name: "Setup allowed_languages"
-  xml:
+  community.general.xml:
     path: /etc/coolwsd/coolwsd.xml
     xpath: /config/allowed_languages
     value: "{{ collabora_allowed_languages }}"
   notify: Restart coolwsd
 
 - name: "Disable Collabora SSL, since we have reverse proxy"
-  xml:
+  community.general.xml:
     path: /etc/coolwsd/coolwsd.xml
     xpath: /config/ssl/enable
     value: "false"
   notify: Restart coolwsd
 
 - name: "Tell Collabora we use SSL reverse proxy"
-  xml:
+  community.general.xml:
     path: /etc/coolwsd/coolwsd.xml
     xpath: /config/ssl/termination
     value: "true"
   notify: Restart coolwsd
 
 - name: Start coolwsd
-  systemd:
+  ansible.builtin.systemd:
     name: coolwsd.service
     state: started
     enabled: true
 
 - name: Wait until collabora is started
-  wait_for:
+  ansible.builtin.wait_for:
     host: localhost
     port: 9980
 
 - name: Activate apache proxy
-  apache2_module:
+  community.general.apache2_module:
     state: present
     name: proxy
   notify:
     - Restart apache
 
 - name: Activate apache proxy_wstunnel
-  apache2_module:
+  community.general.apache2_module:
     state: present
     name: proxy_wstunnel
   notify:
     - Restart apache
 
 - name: Activate apache proxy_http
-  apache2_module:
+  community.general.apache2_module:
     state: present
     name: proxy_http
   notify:
     - Restart apache
 
 - name: Activate apache ssl
-  apache2_module:
+  community.general.apache2_module:
     state: present
     name: ssl
   notify:
     - Restart apache
 
 - name: Setup apache reverse proxy for collabora
-  template:
+  ansible.builtin.template:
     src: apache-collabora.conf
     dest: /etc/apache2/snippets/{{ collabora_fqdn }}/collabora.conf
+    owner: root
+    group: root
+    mode: "0644"
   notify:
     - Restart apache
