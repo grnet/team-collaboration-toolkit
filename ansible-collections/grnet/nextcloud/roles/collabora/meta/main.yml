@@ -1,15 +1,26 @@
 ---
+
 dependencies:
+
   - role: aptiko.general.apache_vhost
     server_name: "{{ collabora_fqdn }}"
-    use_awstats: false
-    document_root: "/var/www/{{ collabora_fqdn }}"
+    document_root: "/var/www/{{ collabora_fqdn }}/nextcloud"
     ssl_extras: |
       SSLProxyEngine on
-    letsencrypt: "{{ collabora_fqdn }}"
-    force_ssl: yes
+    letsencrypt: true
+    force_ssl: true
+    apache_use_awstats: false
+    when: "'aptiko.general.apache' in ansible_role_names"
+
+  - role: aptiko.general.nginx_site
+    server_name: "{{ collabora_fqdn }}"
+    document_root: "/var/www/{{ collabora_fqdn }}/nextcloud"
+    letsencrypt: true
+    force_ssl: true
+    when: "'aptiko.general.nginx' in ansible_role_names"
 
 galaxy_info:
   author: Antonis Christofides
   description: Install Collabora for Nextcloud on Debian/Ubuntu
   license: GPLv3
+  min_ansible_version: "2.19"

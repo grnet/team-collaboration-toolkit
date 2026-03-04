@@ -1,0 +1,11 @@
+---
+
+- name: Setup nginx reverse proxy for collabora
+  ansible.builtin.template:
+    src: nginx-collabora.conf
+    dest: /etc/nginx/snippets/{{ collabora_fqdn }}/collabora.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify:
+    - Reload nginx
