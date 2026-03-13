@@ -1,0 +1,80 @@
+---
+- name: Create HaRP data directory
+  ansible.builtin.file:
+    path: /var/lib/appapi-harp/certs
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Start HaRP container
+  community.docker.docker_container:
+    name: appapi-harp
+    image: ghcr.io/nextcloud/nextcloud-appapi-harp:release
+    pull: true
+    restart_policy: unless-stopped
+    state: started
+    env:
+      HP_SHARED_KEY: "{{ nextcloud_appapi_harp_shared_key }}"
+      NC_INSTANCE_URL: "https://{{ nextcloud_fqdn }}"
+      HP_EXAPPS_ADDRESS: "0.0.0.0:8780"
+      HP_FRP_ADDRESS: "0.0.0.0:8782"
+      HP_TRUSTED_PROXY_IPS: 127.0.0.1/32
+      HP_LOG_LEVEL: warning
+      HP_SESSION_LIFETIME: "3"
+      HP_BLACKLIST_COUNT: "10"
+      HP_BLACKLIST_WINDOW: "300"
+      HP_TIMEOUT_CONNECT: 30s
+      HP_TIMEOUT_CLIENT: 30s
+      HP_TIMEOUT_SERVER: 1800s
+      HP_VERBOSE_START: "1"
+    published_ports:
+      - "127.0.0.1:8780:8780"
+      - "8782:8782"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/appapi-harp/certs:/certs
+
+- name: Wait until HaRP HTTP frontend is started
+  ansible.builtin.wait_for:
+    host: 127.0.0.1
+    port: 8780
+
+- name: Wait until HaRP FRP frontend is started
+  ansible.builtin.wait_for:
+    host: 127.0.0.1
+    port: 8782
+
+- name: Check whether HaRP deploy daemon is registered
+  become: true
+  become_user: www-data
+  ansible.builtin.shell:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: php occ app_api:daemon:list | grep -Fq 'harp_proxy_host'
+    executable: /bin/bash
+  check_mode: false
+  changed_when: false
+  failed_when: false
+  register: check_harp_daemon
+
+- name: Register HaRP deploy daemon
+  become: true
+  become_user: www-data
+  ansible.builtin.command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud
+    cmd: >-
+      php occ app_api:daemon:register
+      harp_proxy_host
+      'HaRP Proxy (Host)'
+      docker-install
+      http
+      127.0.0.1:8780
+      https://{{ nextcloud_fqdn }}
+      --net host
+      --harp
+      --harp_frp_address localhost:8782
+      --harp_shared_key {{ nextcloud_appapi_harp_shared_key }}
+      --compute_device cpu
+      --set-default
+  when: check_harp_daemon.rc != 0
+  changed_when: true

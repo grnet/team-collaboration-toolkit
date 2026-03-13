@@ -215,6 +215,10 @@
   notify:
     - Activate richdocuments config
 
+- name: Import AppAPI configuration tasks
+  ansible.builtin.import_tasks: configure_appapi.yml
+  when: nextcloud_appapi_harp_shared_key is defined
+
 - name: Create background worker service for Nextcloud Assistant
   ansible.builtin.template:
     src: nextcloud-assistant-background-worker.service

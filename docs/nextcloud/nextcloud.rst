@@ -10,7 +10,6 @@ Overview
 Installs and configures Nextcloud. Use like this::
 
   tasks:
-  - aptiko.general.docker  # Useful for AppAPI
   - role: grnet.nextcloud.nextcloud
     nextcloud_fqdn: nextcloud.example.com
     nextcloud_default_phone_region: GR
@@ -62,6 +61,14 @@ Parameters
    variable to ``true`` to enable the background worker. It runs four
    instances of the worker (this is currently not configurable). The
    default is ``false``.
+
+.. data:: nextcloud_appapi_harp_shared_key
+
+   If you define this variable, the role enables Nextcloud AppAPI
+   support, installs a local HaRP container, and adds the required
+   ``/exapps/`` reverse proxy configuration to the main nginx or Apache
+   virtual host. The value is the shared secret used by HaRP and the
+   AppAPI deploy daemon, so it should be vaulted.
 
 .. data:: nextcloud_letsencrypt
 

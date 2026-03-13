@@ -2,6 +2,8 @@
 
 dependencies:
 
+  - role: aptiko.general.docker  # For AppAPI
+
   - role: aptiko.general.apache_vhost
     server_name: "{{ nextcloud_fqdn }}"
     document_root: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
