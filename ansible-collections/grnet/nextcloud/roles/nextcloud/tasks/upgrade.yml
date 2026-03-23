@@ -3,12 +3,12 @@
   ansible.builtin.assert:
     that:
       - nextcloud_download_url is defined
-      - nextcloud_download_url | regex_search('^http.*/[^/]*\\d+\\.\\d+\\.\\d+(-enterprise)?\\.zip$')
+      - nextcloud_download_url | regex_search('^http.*/[^/]*\\d+\\.\\d+\\.\\d+(-enterprise)?\\.zip$') is not none
     fail_msg: >
       The variable nextcloud_download_url is not a valid Nextcloud package
       download URL.  Note that it must point to a specific version and not
       vaguely to the "latest" or something. Specify it as in this example:
-      ansible-playbook site.yml --tags nextcloud_upgrade -e nextcloud_download_url=https://download.nextcloud.com/server/releases/nextcloud-23.0.9.zip
+      ansible-playbook site.yml --tags upgrade_nextcloud -e nextcloud_download_url=https://download.nextcloud.com/server/releases/nextcloud-23.0.9.zip
 
 - name: Get existing Nextcloud version
   ansible.builtin.command: "php /var/www/{{ nextcloud_fqdn }}/nextcloud/occ --version"

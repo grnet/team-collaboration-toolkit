@@ -36,7 +36,10 @@
   when: "'upgrade_nextcloud' not in ansible_run_tags"
 
 - name: Include upgrade tasks
-  ansible.builtin.include_tasks: upgrade.yml
+  ansible.builtin.include_tasks:
+    file: upgrade.yml
+    apply:
+      tags: upgrade_nextcloud
   when: "'upgrade_nextcloud' in ansible_run_tags"
   tags:
     - upgrade_nextcloud
