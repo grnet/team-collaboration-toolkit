@@ -101,6 +101,20 @@ Parameters
 
   .. _related support forum discussion: https://help.nextcloud.com/t/nextcloud-23-02-opcache-interned-strings-buffer/134007/4
 
+.. data:: nextcloud_fpm_mode
+   nextcloud_fpm_max_children
+   nextcloud_fpm_start_servers
+   nextcloud_fpm_min_spare_servers
+   nextcloud_fpm_max_spare_servers
+   nextcloud_fpm_process_idle_timeout
+
+   These configure the Nextcloud PHP-FPM pool's ``pm`` process manager
+   settings. The defaults are suitable for about 50 reasonably active
+   users. On smaller systems, modify these settings to use less RAM.
+   Setting ``nextcloud_fpm_mode=ondemand`` and
+   ``nextcloud_fpm_process_idle_timeout=10m`` is an alternative that
+   will use way less RAM on small systems and will likely scale well.
+
 .. data:: nextcloud_default_phone_region
 
    A country code like "GR". There is no default. This is used for
