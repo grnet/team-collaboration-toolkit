@@ -23,6 +23,8 @@
     - "proto (tcp udp) dport 443 ACCEPT;"
     - "proto (tcp udp) dport 3478 ACCEPT;"
     - "proto (tcp udp) dport 3479 ACCEPT;"
+    - "proto (tcp udp) dport 5349 ACCEPT;"
+    - "proto (tcp udp) dport 5350 ACCEPT;"
 
 - name: Ensure ferm allows certbot
   meta: flush_handlers

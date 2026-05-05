@@ -10,10 +10,11 @@ Overview
 Installs and configures a STUN and TURN server.
 
 The ``grnet.nextcloud.coturn`` role installs a STUN and TURN server with
-the widely used coturn software.
-It is listening on ports 3478 and 443.  Both ports can be
-used for both unencrypted and encrypted communication, both UDP and TCP,
-and both STUN and TURN. A single port could actually suffice; as the
+the widely used coturn software.  It listens on the default TURN ports
+3478 and 5349, and also on the firewall-friendly ports 80 and 443. The
+server supports both ``turn:`` and ``turns:`` URLs; coturn automatically
+recognizes plain and TLS traffic on its listening endpoints. A single
+port could actually suffice; as the
 coturn manual says, "we keep both endpoints to satisfy the RFC 5766
 specs." The server should probably be dedicated but small: 512 MB of RAM
 suffice, and it doesn't use much CPU either, but it needs a good network
@@ -50,7 +51,8 @@ Parameters
 
 .. data:: coturn_use_ferm
    
-   If ``true`` (the default), ports 3478 and 443 will be allowed in ferm
+   If ``true`` (the default), ports 80, 443, 3478, 3479, 5349, and 5350
+   will be allowed in ferm
    (see aptiko.general.common_); otherwise, the firewall will be
    untouched.
 

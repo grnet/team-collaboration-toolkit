@@ -114,10 +114,10 @@ restrict this traffic. (On the server side there should be no firewall
 problem—if an organization wants to install a video conferencing server
 accessible from the Internet, presumably they can configure their
 firewall for that.) A TURN server helps work around the problem by
-listening on UDP and TCP port 443, which is, especially the TCP, very
+listening on the default TURN ports 3478 and 5349, and also on UDP and
+TCP ports 80 and 443, which are very
 unlikely to be blocked.  The client talks UDP, or, failing that, TCP to
-the TURN server at port 443, and sends/receives all its data there, and
+the TURN server, and sends/receives all its data there, and
 the TURN server relays this data to the video conferencing server.
 Obviously this solution sucks (especially the TCP version) but it works
 as a last resort when everything else fails.
-
