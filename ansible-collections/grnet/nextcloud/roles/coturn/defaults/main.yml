@@ -1,4 +1,5 @@
 ---
 
 coturn_use_ferm: true
+coturn_use_http_ports: true
 letsencrypt: true

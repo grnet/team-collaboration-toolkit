@@ -56,6 +56,13 @@ Parameters
    (see aptiko.general.common_); otherwise, the firewall will be
    untouched.
 
+.. data:: coturn_use_http_ports
+
+   If ``true`` (the default), coturn will also listen on the
+   firewall-friendly ports 80 and 443. Set this to ``false`` when
+   another service, such as a web server, must bind these ports on the
+   coturn host.
+
 .. data:: nextcloud_fqdn
           letsencrypt
           letsencrypt_admin
