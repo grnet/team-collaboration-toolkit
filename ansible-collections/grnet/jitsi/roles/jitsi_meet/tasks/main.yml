@@ -26,4 +26,4 @@
 - import_tasks: statistics.yml
   tags:
     - jitsi_statistics
-  when: prometheus_server_ips|default("False")
+  when: prometheus_server_ips|default([]) | length > 0
