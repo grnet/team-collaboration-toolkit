@@ -82,10 +82,6 @@
       /var/www/{{ nextcloud_fqdn }}/nextcloud/data are on the same
       filesystem. This appears to not be the case here.
 
-- name: Deactivate nextcloud cron
-  ansible.builtin.command: mv /etc/cron.d/nextcloud /tmp/nextcloud.cron
-  changed_when: true
-
 - name: Download and unzip Nextcloud
   ansible.builtin.unarchive:
     remote_src: true
@@ -93,6 +89,25 @@
     dest: /tmp
     owner: www-data
     group: www-data
+
+- name: Check whether the archive extracted /tmp/nextcloud
+  ansible.builtin.stat:
+    path: /tmp/nextcloud
+  register: stat_extracted_nextcloud
+
+- name: Check that the archive extracted /tmp/nextcloud
+  ansible.builtin.assert:
+    that:
+      - stat_extracted_nextcloud.stat.exists
+    fail_msg: >
+      The Nextcloud archive did not extract /tmp/nextcloud. This usually
+      means nextcloud_download_url points to a source archive, such as a
+      GitHub server-*.zip archive, rather than a packaged Nextcloud release
+      archive from download.nextcloud.com.
+
+- name: Deactivate nextcloud cron
+  ansible.builtin.command: mv /etc/cron.d/nextcloud /tmp/nextcloud.cron
+  changed_when: true
 
 - name: Copy the config.php file
   ansible.builtin.copy:
