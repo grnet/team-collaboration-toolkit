@@ -18,6 +18,12 @@ nextcloud_download_url: https://download.nextcloud.com/server/releases/latest.zi
 nextcloud_cron_schedule: "*/5 * * * *"
 nextcloud_maintenance_window_start: 1
 nextcloud_assistant_background_worker: false
+nextcloud_install_notify_push: false
 nextcloud_mail_smtpmode: smtp
 nextcloud_apps: []
 nextcloud_mysql_fqdn: localhost
+
+nextcloud_notify_push_arch_map:
+  x86_64: x86_64
+  aarch64: aarch64
+  armv7l: arm7

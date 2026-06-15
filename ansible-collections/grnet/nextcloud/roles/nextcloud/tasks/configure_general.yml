@@ -14,6 +14,58 @@
   notify:
     - Restart php-fpm
 
+# The following block configures trusted_proxies in the Nextcloud configuration.
+# It is needed for notify_push, because notify_push:setup verifies that
+# Nextcloud trusts the address seen for the push server's test request, so we
+# need to include the local host addresses when notify_push is installed.
+#
+# However, trusted_proxies might have other use cases, and it might need to be
+# configured unconditionally, or with another configuration parameter. For the
+# moment we are playing it safe and avoid touching it if it's not needed.
+- name: Configure trusted proxies for notify_push
+  when: nextcloud_install_notify_push
+  block:
+    - name: Check whether config.php contains a trusted_proxies block
+      become: true
+      become_user: www-data
+      ansible.builtin.lineinfile:
+        path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+        regexp: "trusted_proxies"
+        state: absent
+      check_mode: true
+      register: trusted_proxies
+      changed_when: not trusted_proxies.found
+
+    - name: Ensure config.php contains a trusted_proxies block
+      become: true
+      become_user: www-data
+      ansible.builtin.lineinfile:
+        path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+        line: "  'trusted_proxies' => array ( ),"
+        insertbefore: '^\s*\);\s*$'
+      when: not trusted_proxies.found
+      notify:
+        - Restart php-fpm
+
+    - name: Setup trusted_proxies in config.php
+      become: true
+      become_user: www-data
+      ansible.builtin.replace:
+        path: /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+        regexp: '''trusted_proxies''(\s|\n)*=>(\s|\n)*array(\s|\n)*\((.|\n)*?\)(\s|\n)*,\s*\n'
+        replace: |
+          'trusted_proxies' =>
+            array (
+              0 => '127.0.0.1',
+              1 => '::1',
+              2 => '{{ ansible_default_ipv4.address }}',
+              {%- if ansible_default_ipv6 is defined and ansible_default_ipv6.address is defined %}
+              3 => '{{ ansible_default_ipv6.address }}',
+              {%- endif %}
+            ),
+      notify:
+        - Restart php-fpm
+
 - name: Setup default_phone_region
   become: true
   become_user: www-data

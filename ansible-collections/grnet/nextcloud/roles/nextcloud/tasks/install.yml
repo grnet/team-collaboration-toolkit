@@ -216,7 +216,7 @@
     - Activate richdocuments config
 
 - name: Import AppAPI configuration tasks
-  ansible.builtin.import_tasks: configure_appapi.yml
+  ansible.builtin.import_tasks: setup_appapi.yml
   when: nextcloud_appapi_harp_shared_key is defined
 
 - name: Create background worker service for Nextcloud Assistant
@@ -240,3 +240,7 @@
 
 - name: Import email configuration tasks
   ansible.builtin.import_tasks: configure_email.yml
+
+- name: Import Client Push configuration tasks
+  ansible.builtin.import_tasks: setup_client_push.yml
+  when: nextcloud_install_notify_push

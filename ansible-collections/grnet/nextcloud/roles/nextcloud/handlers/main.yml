@@ -24,3 +24,9 @@
   ansible.builtin.service:
     name: php{{ php_version }}-fpm
     state: restarted
+
+- name: Restart nextcloud client push
+  ansible.builtin.systemd:
+    name: nextcloud-client-push.service
+    state: restarted
+    daemon_reload: true

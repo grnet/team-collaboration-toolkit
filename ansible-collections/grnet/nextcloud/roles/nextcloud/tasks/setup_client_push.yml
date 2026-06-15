@@ -1,0 +1,48 @@
+---
+
+- name: Install notify_push
+  become: true
+  become_user: www-data
+  ansible.builtin.shell: set -o pipefail && echo '{{ nextcloud_admin_user_password }}' | php occ app:install notify_push
+  args:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    creates: /var/www/{{ nextcloud_fqdn }}/nextcloud/apps/notify_push
+    executable: /bin/bash
+
+- name: Setup client push service
+  ansible.builtin.template:
+    src: client_push.service.j2
+    dest: /etc/systemd/system/nextcloud-client-push.service
+    mode: "0644"
+  notify:
+    - Restart nextcloud client push
+
+- name: Enable and start client push service
+  ansible.builtin.systemd:
+    name: nextcloud-client-push.service
+    enabled: true
+    state: started
+    daemon_reload: true
+
+- name: Apply pending client push service and apache changes
+  ansible.builtin.meta: flush_handlers
+
+- name: Check whether notify_push endpoint is configured
+  become: true
+  become_user: www-data
+  ansible.builtin.command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    cmd: php occ config:app:get notify_push base_endpoint
+  check_mode: false
+  changed_when: false
+  failed_when: false
+  register: check_notify_push_endpoint
+
+- name: Setup notify_push endpoint in Nextcloud
+  become: true
+  become_user: www-data
+  ansible.builtin.command:
+    chdir: /var/www/{{ nextcloud_fqdn }}/nextcloud/
+    cmd: php occ notify_push:setup https://{{ nextcloud_fqdn }}/push
+  when: check_notify_push_endpoint.stdout != "https://" ~ nextcloud_fqdn ~ "/push"
+  changed_when: true

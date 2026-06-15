@@ -1,0 +1,18 @@
+[Unit]
+After=network.target mariadb.service apache2.service nginx.service postgresql.service redis.service
+Description = Push daemon for Nextcloud clients
+Documentation = https://github.com/nextcloud/notify_push
+
+[Service]
+Environment = PORT=7867
+{% if not nextcloud_letsencrypt|default(true) %}
+Environment = ALLOW_SELF_SIGNED=true
+{% endif %}
+ExecStart = /var/www/{{ nextcloud_fqdn }}/nextcloud/apps/notify_push/bin/{{ nextcloud_notify_push_arch_map[ansible_architecture] }}/notify_push /var/www/{{ nextcloud_fqdn }}/nextcloud/config/config.php
+Type = notify
+User = www-data
+Restart = always
+RestartSec = 60
+
+[Install]
+WantedBy = multi-user.target

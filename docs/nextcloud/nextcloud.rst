@@ -62,6 +62,17 @@ Parameters
    instances of the worker (this is currently not configurable). The
    default is ``false``.
 
+.. data:: nextcloud_install_notify_push
+
+   Set this variable to ``true`` to install the Nextcloud ``notify_push``
+   app and configure the related client push systemd service and
+   Nextcloud endpoint. The default is ``false``.
+
+   Note that this might not work. If MySQL is in the localhost, it
+   usually works. But if the connection to MySQL uses TLS, as of 15 June
+   2026 it doesn't work because of
+   https://github.com/nextcloud/notify_push/issues/707.
+
 .. data:: nextcloud_appapi_harp_shared_key
 
    If you define this variable, the role enables Nextcloud AppAPI
