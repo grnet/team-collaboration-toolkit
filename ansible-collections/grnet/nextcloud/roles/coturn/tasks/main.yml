@@ -57,10 +57,35 @@
     dest: /etc/systemd/system/coturn.service.d/coturn.conf
   notify: Restart coturn
 
-- name: When letsencrypt renews the certificate, restart coturn
+- name: Ensure letsencrypt renewal hook directories exist
+  file:
+    path: /etc/letsencrypt/renewal-hooks/{{ item }}
+    state: directory
+  loop:
+    - pre
+    - post
+  when: letsencrypt
+
+- name: Stop coturn before letsencrypt renewal
   copy:
-    dest: /etc/letsencrypt/renewal-hooks/deploy/restart-coturn.sh
+    dest: /etc/letsencrypt/renewal-hooks/pre/stop-coturn.sh
     mode: "0755"
     content: |
       #!/bin/sh
-      systemctl restart coturn
+      systemctl stop coturn
+  when: letsencrypt
+
+- name: Start coturn after letsencrypt renewal
+  copy:
+    dest: /etc/letsencrypt/renewal-hooks/post/start-coturn.sh
+    mode: "0755"
+    content: |
+      #!/bin/sh
+      systemctl start coturn
+  when: letsencrypt
+
+- name: Remove obsolete letsencrypt deploy hook
+  file:
+    path: /etc/letsencrypt/renewal-hooks/deploy/restart-coturn.sh
+    state: absent
+  when: letsencrypt
