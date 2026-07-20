@@ -1,19 +1,19 @@
 ---
- 
+
 - name: Install apt packages required for coturn
-  apt:
+  ansible.builtin.apt:
     name:
       - coturn
       - ssl-cert
       - certbot
 
 - name: Check if letsencrypt certificate exists
-  stat:
+  ansible.builtin.stat:
     path: /etc/letsencrypt/live/{{ coturn_fqdn }}
   register: letsencryptdir
 
 - name: Allow firewall for various STUN and TURN ports
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/ferm/ansible-late
     line: "{{ item }}"
   notify: Reload ferm
@@ -27,47 +27,54 @@
     - "proto (tcp udp) dport 5350 ACCEPT;"
 
 - name: Ensure ferm allows certbot
-  meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 
 - name: If we need to run certbot, ensure coturn is stopped
-  service:
+  ansible.builtin.service:
     name: coturn
     state: stopped
   when: letsencrypt and not letsencryptdir.stat.exists
   notify: Restart coturn
 
 - name: Install letsencrypt certificate
-  command: certbot certonly --standalone --non-interactive --agree-tos -m {{ letsencrypt_admin }} -d {{ coturn_fqdn }}
+  ansible.builtin.command: >-
+    certbot certonly --standalone --non-interactive --agree-tos
+    -m {{ letsencrypt_admin }} -d {{ coturn_fqdn }}
+  changed_when: true
   when: letsencrypt and not letsencryptdir.stat.exists
 
 - name: Install turnserver.conf
-  template:
+  ansible.builtin.template:
     src: turnserver.conf
     dest: /etc/turnserver.conf
+    mode: "0644"
   notify: Restart coturn
 
 - name: Ensure systemd coturn drop-in directory exists
-  file:
+  ansible.builtin.file:
     path: /etc/systemd/system/coturn.service.d
     state: directory
+    mode: "0755"
 
 - name: Install systemd coturn drop-in configuration file
-  template:
+  ansible.builtin.template:
     src: coturn-systemd.conf
     dest: /etc/systemd/system/coturn.service.d/coturn.conf
+    mode: "0644"
   notify: Restart coturn
 
 - name: Ensure letsencrypt renewal hook directories exist
-  file:
+  ansible.builtin.file:
     path: /etc/letsencrypt/renewal-hooks/{{ item }}
     state: directory
+    mode: "0755"
   loop:
     - pre
     - post
   when: letsencrypt
 
 - name: Stop coturn before letsencrypt renewal
-  copy:
+  ansible.builtin.copy:
     dest: /etc/letsencrypt/renewal-hooks/pre/stop-coturn.sh
     mode: "0755"
     content: |
@@ -76,7 +83,7 @@
   when: letsencrypt
 
 - name: Start coturn after letsencrypt renewal
-  copy:
+  ansible.builtin.copy:
     dest: /etc/letsencrypt/renewal-hooks/post/start-coturn.sh
     mode: "0755"
     content: |
@@ -85,7 +92,7 @@
   when: letsencrypt
 
 - name: Remove obsolete letsencrypt deploy hook
-  file:
+  ansible.builtin.file:
     path: /etc/letsencrypt/renewal-hooks/deploy/restart-coturn.sh
     state: absent
   when: letsencrypt
