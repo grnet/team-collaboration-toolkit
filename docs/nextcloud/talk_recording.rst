@@ -13,8 +13,9 @@ Example
 ::
 
   roles:
-    - aptiko.general.common
-    - aptiko.general.nginx
+    - aptiko.general.base
+    - role: aptiko.general.webserver
+      webserver_type: nginx
     - role: grnet.nextcloud.talk_recording
       nextcloud_talk_recording_fqdn: nextcloud-talk-recording.example.com
       nextcloud_talk_recording_shared_secret: topsecret12345678

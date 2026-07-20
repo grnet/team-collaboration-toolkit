@@ -4,14 +4,13 @@
   vars_files:
     - group_vars/secrets.yml
   roles:
-    - aptiko.general.common
+    - aptiko.general.base
     - role: aptiko.general.mysql
       mysql_config:
         bind-address: 0.0.0.0
       mysql_allowed_client_ips: "{{ ansible_default_ipv4['address'] }}"
-    - role: aptiko.general.apache
-      use_ferm: true
-      use_awstats: false
+    - role: aptiko.general.webserver
+      webserver_type: apache
     - grnet.nextcloud.collabora
     - grnet.nextcloud.nextcloud
     - aptiko.general.mail_satellite

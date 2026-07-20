@@ -12,8 +12,9 @@ Example
 ::
 
   roles:
-    - aptiko.general.common
-    - aptiko.general.nginx
+    - aptiko.general.base
+    - role: aptiko.general.webserver
+      webserver_type: nginx
     - role: grnet.nextcloud.talk_hpb
       nextcloud_talk_hpb_fqdn: nextcloud-talk-hpb.example.com
       nextcloud_talk_hpb_user_password: topsecret0000000

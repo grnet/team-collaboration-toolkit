@@ -87,7 +87,7 @@
 - name: Enable jvb service
   ansible.builtin.service:
     name: jitsi-jvb
-    enabled: false
+    enabled: true
 
 - name: Setup sip-communicator.properties
   ansible.builtin.template:
@@ -115,12 +115,17 @@
 
 - name: Allow nginx to proxy http requests
   ansible.builtin.lineinfile:
-    path: /etc/ferm/ansible-late
-    line: "proto (tcp udp) saddr {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }} dport 9190 ACCEPT;"
-  notify: Reload ferm
+    path: /etc/nftables/ansible-late.nft
+    line: >-
+      ip saddr
+      {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }}
+      meta l4proto { tcp, udp } th dport 9190 accept
+  notify: Reload nftables
+  when: base_setup_firewall | default(false)
 
 - name: Allow jvb through firewall
   ansible.builtin.lineinfile:
-    path: /etc/ferm/ansible-late
-    line: "proto udp dport 10000 ACCEPT;"
-  notify: Reload ferm
+    path: /etc/nftables/ansible-late.nft
+    line: "udp dport 10000 accept"
+  notify: Reload nftables
+  when: base_setup_firewall | default(false)

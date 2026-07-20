@@ -7,14 +7,18 @@ grnet.nextcloud.nextcloud
 Overview
 ========
 
-Installs and configures Nextcloud. Use like this::
+Installs and configures Nextcloud. Use like this:
 
-  tasks:
-  - role: grnet.nextcloud.nextcloud
-    nextcloud_fqdn: nextcloud.example.com
-    nextcloud_default_phone_region: GR
-    nextcloud_mail_from_address: noreply
-    nextcloud_mail_domain: example.com
+.. code-block:: yaml
+
+   roles:
+    - role: aptiko.general.webserver
+      webserver_type: nginx  # or apache
+    - role: grnet.nextcloud.nextcloud
+      nextcloud_fqdn: nextcloud.example.com
+      nextcloud_default_phone_region: GR
+      nextcloud_mail_from_address: noreply
+      nextcloud_mail_domain: example.com
 
 You may need to perform additional configuration using Nextcloud's web
 interface. See section :ref:`nextcloud_limitations` for that.
@@ -81,14 +85,16 @@ Parameters
    virtual host. The value is the shared secret used by HaRP and the
    AppAPI deploy daemon, so it should be vaulted.
 
-.. data:: nextcloud_letsencrypt
+.. data:: nextcloud_ssl
 
-   This role automatically includes an `apache_vhost role`_  or an
-   `nginx_site role`_ as needed and ``nextcloud_letsencrypt`` is passed as
-   the ``letsencrypt`` parameter. The default is :data:`nextcloud_fqdn`.
+   This role automatically includes an `aptiko.general.website role`_ and
+   ``nextcloud_ssl`` defines the SSL configuration for that role (see
+   ``website_ssl`` in the `aptiko.general.website role`_). The default is
+   ``letsencrypt``. Set to ``self_signed`` to use a self-signed certificate
+   instead. (This can be useful for internal nextcloud instances that are not
+   exposed to the Internet.)
 
-   .. _apache_vhost role: https://aptikogeneral.readthedocs.io/en/latest/apache_vhost.html
-   .. _nginx_site role: https://aptikogeneral.readthedocs.io/en/latest/nginx_site.html
+   .. _aptiko.general.website role: https://aptikogeneral.readthedocs.io/en/latest/website.html
 
 .. data:: nextcloud_php_memory_limit
 

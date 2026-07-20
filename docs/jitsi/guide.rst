@@ -49,15 +49,17 @@ Use a playbook similar to this::
     - name: Jitsi server
       hosts: jitsi_meet
       roles:
-        - aptiko.general.common
-        - aptiko.general.nginx
+        - aptiko.general.base
+        - role: aptiko.general.webserver
+          webserver_type: nginx  # Only nginx is supported
         - grnet.jitsi.jitsi_meet
 
     - name: Jitsi videobridge
       hosts: jitsi_jvb
       roles:
-        - aptiko.general.common
-        - aptiko.general.nginx
+        - aptiko.general.base
+        - role: aptiko.general.webserver
+          webserver_type: nginx  # Only nginx is supported
         - grnet.jitsi.jitsi_jvb
 
 .. _ldap:
@@ -124,6 +126,8 @@ Third, add this to the playbook::
     - name: Jibri
       hosts: jibri
       roles:
+        - role: aptiko.general.webserver
+          webserver_type: nginx  # Only nginx is supported
         - grnet.jitsi.jibri
 
 Jibri doesn't have a ready-made way for users to download conferences.

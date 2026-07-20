@@ -1,7 +1,6 @@
 ---
 dependencies:
-- role: aptiko.general.nginx_site
-  server_name: "{{ jitsi_jibri_fqdn }}"
-  letsencrypt: true
-  force_ssl: true
-  document_root: /var/www/jibri/recordings
+ - role: aptiko.general.website
+   website_domain: "{{ jitsi_jibri_fqdn }}"
+   website_ssl: letsencrypt
+   website_document_root: /var/www/jibri/recordings

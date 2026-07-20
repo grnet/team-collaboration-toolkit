@@ -28,12 +28,12 @@ Example
   - name: Coturn server
     hosts: coturn
     roles:
-      - aptiko.general.common
+      - aptiko.general.base
       - role: grnet.nextcloud.coturn
         coturn_fqdn: coturn.example.com
         coturn_static_auth_secret: topsecret0123456789
+        coturn_letsencrypt_admin: admin@example.com
         nextcloud_fqdn: nextcloud.example.com
-        letsencrypt_admin: admin@example.com
 
 Parameters
 ==========
@@ -49,12 +49,26 @@ Parameters
    from here, it must also be specified in the Nextcloud settings, Talk,
    TURN servers.
 
-.. data:: coturn_use_ferm
+.. data:: coturn_setup_firewall
    
    If ``true`` (the default), ports 80, 443, 3478, 3479, 5349, and 5350
-   will be allowed in ferm
-   (see aptiko.general.common_); otherwise, the firewall will be
-   untouched.
+   will be allowed in the firewall (see aptiko.general.base_); otherwise,
+   the firewall will be untouched.
+
+.. data:: coturn_setup_letsencrypt
+
+   If ``true`` (the default), a Let's Encrypt certificate will be
+   automatically obtained and installed for the coturn server.  The
+   certificate will be renewed automatically by certbot, and the coturn
+   service will be restarted after each renewal.  Set this to ``false``
+   when another service, such as a web server, must bind ports 80 and 443
+   on the coturn host.
+
+.. data:: coturn_letsencrypt_admin
+
+   The email address of the administrator for Let's Encrypt
+   notifications.  This is only used when ``coturn_setup_letsencrypt`` is
+   ``true``, in which case it is required.
 
 .. data:: coturn_use_http_ports
 
@@ -63,14 +77,4 @@ Parameters
    another service, such as a web server, must bind these ports on the
    coturn host.
 
-.. data:: nextcloud_fqdn
-          letsencrypt
-          letsencrypt_admin
-   :noindex:
-
-   These are also used in other roles; :data:`nextcloud_fqdn` in
-   ``grnet.nextcloud.nextcloud``, and the other two in, for example,
-   aptiko.general.nginx_site_.
-
-.. _aptiko.general.common: https://aptikogeneral.readthedocs.io/en/latest/common.html
-.. _aptiko.general.nginx_site: https://aptikogeneral.readthedocs.io/en/latest/nginx_site.html
+.. _aptiko.general.base: https://aptikogeneral.readthedocs.io/en/latest/base.html

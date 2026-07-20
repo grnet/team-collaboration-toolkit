@@ -1,13 +1,12 @@
 ---
 dependencies:
 
-- role: aptiko.general.nginx_site
-  server_name: "{{ jitsi_fqdn }}"
-  letsencrypt: true
-  force_ssl: true
-  document_root: /opt/jitsi-meet
+ - role: aptiko.general.website
+   website_domain: "{{ jitsi_fqdn }}"
+   website_ssl: letsencrypt
+   website_document_root: /opt/jitsi-meet
 
-- role: aptiko.general.node
-  node_version: 20
+ - role: aptiko.general.node
+   node_version: 20
 
-- role: grnet.jitsi.jitsi_excalidraw_backend
+ - role: grnet.jitsi.jitsi_excalidraw_backend

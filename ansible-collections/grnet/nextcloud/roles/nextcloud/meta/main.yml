@@ -4,22 +4,10 @@ dependencies:
 
   - role: aptiko.general.docker  # For AppAPI
 
-  - role: aptiko.general.apache_vhost
-    server_name: "{{ nextcloud_fqdn }}"
-    document_root: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
-    ssl_extras: |
-      SSLProxyEngine on
-    letsencrypt: "{{ nextcloud_letsencrypt|default(nextcloud_fqdn) }}"
-    force_ssl: true
-    apache_use_awstats: false
-    when: "'aptiko.general.apache' in ansible_role_names"
-
-  - role: aptiko.general.nginx_site
-    server_name: "{{ nextcloud_fqdn }}"
-    document_root: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
-    letsencrypt: "{{ nextcloud_letsencrypt|default(nextcloud_fqdn) }}"
-    force_ssl: true
-    when: "'aptiko.general.nginx' in ansible_role_names"
+  - role: aptiko.general.website
+    website_domain: "{{ nextcloud_fqdn }}"
+    website_document_root: "/var/www/{{ nextcloud_fqdn }}/nextcloud"
+    website_ssl: "{{ nextcloud_ssl }}"
 
 galaxy_info:
   author: Antonis Christofides

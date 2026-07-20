@@ -1,8 +1,7 @@
 ---
 dependencies:
 
-- role: aptiko.general.nginx_site
-  server_name: "{{ nextcloud_talk_recording_fqdn }}"
-  letsencrypt: true
-  force_ssl: true
-  document_root: /opt/nextcloud-talk-recording
+ - role: aptiko.general.website
+   website_domain: "{{ nextcloud_talk_recording_fqdn }}"
+   website_ssl: letsencrypt
+   website_document_root: /opt/nextcloud-talk-recording

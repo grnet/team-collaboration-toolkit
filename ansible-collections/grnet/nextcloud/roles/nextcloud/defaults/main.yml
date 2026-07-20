@@ -22,6 +22,7 @@ nextcloud_install_notify_push: false
 nextcloud_mail_smtpmode: smtp
 nextcloud_apps: []
 nextcloud_mysql_fqdn: localhost
+nextcloud_ssl: letsencrypt
 
 nextcloud_notify_push_arch_map:
   x86_64: x86_64

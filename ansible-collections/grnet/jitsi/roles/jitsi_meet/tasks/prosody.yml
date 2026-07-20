@@ -54,10 +54,13 @@
 
 - name: Allow videobridges and jibri to access prosody through firewall
   ansible.builtin.lineinfile:
-    path: /etc/ferm/ansible-late
-    line: "proto tcp saddr {{ hostvars[item]['ansible_default_ipv4']['address'] }} dport 5222 ACCEPT;"
-  notify: Reload ferm
+    path: /etc/nftables/ansible-late.nft
+    line: >-
+      ip saddr {{ hostvars[item]['ansible_default_ipv4']['address'] }}
+      tcp dport 5222 accept
+  notify: Reload nftables
   loop: "{{ groups['jitsi_jvb'] | union(groups['jibri']) }}"
+  when: base_setup_firewall | default(false)
 
 - name: Create prosody user for jibri
   ansible.builtin.command:

@@ -2,22 +2,11 @@
 
 dependencies:
 
-  - role: aptiko.general.apache_vhost
-    server_name: "{{ collabora_fqdn }}"
-    document_root: "/var/www/{{ collabora_fqdn }}/nextcloud"
-    ssl_extras: |
-      SSLProxyEngine on
-    letsencrypt: true
-    force_ssl: true
-    apache_use_awstats: false
-    when: "'aptiko.general.apache' in ansible_role_names"
+  - role: aptiko.general.website
+    website_domain: "{{ collabora_fqdn }}"
+    website_document_root: "/var/www/{{ collabora_fqdn }}/nextcloud"
+    website_ssl: letsencrypt
 
-  - role: aptiko.general.nginx_site
-    server_name: "{{ collabora_fqdn }}"
-    document_root: "/var/www/{{ collabora_fqdn }}/nextcloud"
-    letsencrypt: true
-    force_ssl: true
-    when: "'aptiko.general.nginx' in ansible_role_names"
 
 galaxy_info:
   author: Antonis Christofides
