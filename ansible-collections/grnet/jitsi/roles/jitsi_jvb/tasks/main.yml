@@ -1,7 +1,7 @@
 ---
 - name: Gather jitsi-meet facts
   ansible.builtin.setup:
-  delegate_to: "{{ groups['jitsi_meet'][0] }}"
+  delegate_to: "{{ groups[jitsi_meet_group][0] }}"
   delegate_facts: true
 
 - name: Increase TaskMax
@@ -114,11 +114,12 @@
     - Restart jvb
 
 - name: Allow nginx to proxy http requests
+
   ansible.builtin.lineinfile:
     path: /etc/nftables/ansible-late.nft
     line: >-
       ip saddr
-      {{ hostvars[groups['jitsi_meet'][0]]['ansible_default_ipv4']['address'] }}
+      {{ hostvars[groups[jitsi_meet_group][0]]['ansible_default_ipv4']['address'] }}
       meta l4proto { tcp, udp } th dport 9190 accept
   notify: Reload nftables
   when: base_setup_firewall | default(false)

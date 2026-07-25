@@ -1,13 +1,20 @@
 ---
 
 - name: Add apt key for Google Chrome repository
-  apt_key:
-    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
-    keyring: /usr/share/keyrings/google-chrome-keyring.gpg
+  ansible.builtin.get_url:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    dest: /usr/share/keyrings/google-chrome-keyring.asc
+    mode: "0644"
+
+- name: Remove Google Chrome repository using the old keyring
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main"
+    update_cache: false
+    state: absent
 
 - name: Add apt Google Chrome repository
-  apt_repository:
-    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main"
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.asc] https://dl.google.com/linux/chrome/deb/ stable main"
     filename: google-chrome
 
 - name: Install packages required for jibri
@@ -26,7 +33,7 @@
       - ruby-hocon
       - google-chrome-stable
       - maven
-      - python3-pip  # Required for installing chromedriver_autoinstaller
+      - python3-venv
 
 - name: Ensure snd_aloop is loaded
   community.general.modprobe:
@@ -46,19 +53,21 @@
 - name: Install Chromedriver installer
   pip:
     name: chromedriver_autoinstaller
+    virtualenv: /opt/chromedriver-autoinstaller
+    virtualenv_command: /usr/bin/python3 -m venv
 
 - name: Check whether Chromedriver is properly installed
   shell: >
-      test "$(google-chrome --version|awk '{ print $3 }')"
-      = "$(chromedriver --version|awk '{ print $2 }')"
+      test "$(google-chrome --product-version | cut -d. -f1-3)"
+      = "$(chromedriver --version | awk '{ print $2 }' | cut -d. -f1-3)"
   register: check_chromedriver_version
-  check_mode: no
-  ignore_errors: yes
-  changed_when: no
+  check_mode: false
+  failed_when: false
+  changed_when: false
 
 - name: Install Chromedriver
   command:
-    cmd: python3 -c "import os; from glob import glob; import chromedriver_autoinstaller as cdai; cdai.install(); src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0]; os.rename(src, '/usr/local/bin/chromedriver'); os.chmod('/usr/local/bin/chromedriver', 0o755)"
+    cmd: /opt/chromedriver-autoinstaller/bin/python -c "import os; from glob import glob; import chromedriver_autoinstaller as cdai; cdai.install(); src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0]; os.rename(src, '/usr/local/bin/chromedriver'); os.chmod('/usr/local/bin/chromedriver', 0o755)"
   when: check_chromedriver_version.rc != 0
 
 - name: Create group jibri
@@ -166,7 +175,7 @@
     src: nginx.conf
     dest: /etc/nginx/snippets/{{ jitsi_jibri_fqdn }}/jibri.conf
   notify:
-    - Reload nginx
+    - Reload web server
 
 - name: Create directory /var/www/jibri/recordings
   file:

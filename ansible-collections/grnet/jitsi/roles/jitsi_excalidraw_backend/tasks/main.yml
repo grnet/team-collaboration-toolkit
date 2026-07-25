@@ -44,4 +44,4 @@
   template:
     src: nginx-jitsi-excalidraw-backend.conf
     dest: /etc/nginx/snippets/{{ jitsi_fqdn }}/jitsi-excalidraw-backend.conf
-  notify: Reload nginx
+  notify: Reload web server

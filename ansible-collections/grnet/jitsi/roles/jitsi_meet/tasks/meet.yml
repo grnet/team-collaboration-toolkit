@@ -89,7 +89,7 @@
   template:
     src: jitsi-meet.nginx.conf
     dest: /etc/nginx/snippets/{{ jitsi_fqdn }}/jitsi-meet.conf
-  notify: Reload nginx
+  notify: Reload web server
 
 - name: Add application/wasm to mime.types
   lineinfile:
@@ -98,4 +98,4 @@
     line: 'application/wasm wasm;'
     insertbefore: '^}'
     create: no
-  notify: Reload nginx
+  notify: Reload web server

@@ -62,6 +62,51 @@ Use a playbook similar to this::
           webserver_type: nginx  # Only nginx is supported
         - grnet.jitsi.jitsi_jvb
 
+Custom topology group names
+===========================
+
+By default, the roles use these inventory groups:
+
+- ``jitsi_meet``
+- ``jitsi_jvb``
+- ``jibri``
+
+If the same inventory contains more than one independent Jitsi
+installation, use different group names for each installation and tell
+the roles which groups belong together. For example::
+
+    [jitsi_example_meet]
+    meet.example.com
+
+    [jitsi_example_jvb]
+    meet.example.com
+    jvb1.example.com
+
+    [jitsi_example_jibri]
+    jibri.example.com
+
+Then set the topology group variables in the playbook::
+
+    - name: Example Jitsi server
+      hosts: jitsi_example_meet
+      vars:
+        jitsi_jvb_group: jitsi_example_jvb
+        jitsi_jibri_group: jitsi_example_jibri
+      roles:
+        - grnet.jitsi.jitsi_meet
+
+    - name: Example Jitsi videobridge
+      hosts: jitsi_example_jvb
+      vars:
+        jitsi_meet_group: jitsi_example_meet
+      roles:
+        - grnet.jitsi.jitsi_jvb
+
+    - name: Example Jibri
+      hosts: jitsi_example_jibri
+      roles:
+        - grnet.jitsi.jibri
+
 .. _ldap:
 
 External authentication with LDAP

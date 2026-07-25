@@ -8,6 +8,15 @@ Variables and options
 =====================
 
 - ``jitsi_fqdn``: The domain where jitsi meet is listening.
+- ``jitsi_meet_group``: The inventory group containing the Jitsi Meet
+  server for this installation; the default is ``jitsi_meet``. Used by
+  the ``jitsi_jvb`` role.
+- ``jitsi_jvb_group``: The inventory group containing the videobridges
+  for this installation; the default is ``jitsi_jvb``. Used by the
+  ``jitsi_meet`` role.
+- ``jitsi_jibri_group``: The inventory group containing Jibri servers
+  for this installation; the default is ``jibri``. Used by the
+  ``jitsi_meet`` role.
 - ``jitsi_jibri_fqdn``: The domain name of the jibri server (used for
   downloading recordings).
 - ``jitsi_local_recording_config``: A JS snippet with the Jitsi Meet

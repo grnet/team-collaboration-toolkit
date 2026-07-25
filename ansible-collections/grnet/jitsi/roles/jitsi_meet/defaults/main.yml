@@ -1,4 +1,6 @@
 ---
+jitsi_jvb_group: jitsi_jvb
+jitsi_jibri_group: jibri
 jitsi_ldap_servers: []
 jitsi_ldap_filter: uid=$user
 jitsi_ldap_mode: bind

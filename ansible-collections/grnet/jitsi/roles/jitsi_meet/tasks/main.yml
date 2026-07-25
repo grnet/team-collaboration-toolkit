@@ -3,7 +3,7 @@
   setup:
   delegate_to: "{{ item }}"
   delegate_facts: true
-  loop: "{{ groups['jitsi_jvb'] | union(groups['jibri'])}}"
+  loop: "{{ groups[jitsi_jvb_group] | union(groups[jitsi_jibri_group] | default([])) }}"
 
 - name: Install apt packages required for Jitsi
   apt:
