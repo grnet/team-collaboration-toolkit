@@ -1,25 +1,26 @@
 ---
 
 - name: Install apt packages required for jitsi statistics
-  apt:
+  ansible.builtin.apt:
     name:
       - python3-requests
       - python3-flask
 
 - name: Install jitsi-prometheus-exporter
-  copy:
+  ansible.builtin.copy:
     src: jitsi-prometheus-exporter
     dest: /usr/local/bin/jitsi-prometheus-exporter
-    mode: 0755
+    mode: "0755"
   notify: Restart jitsi-prometheus-exporter
 
 - name: Install service for jitsi-prometheus-exporter
-  template:
+  ansible.builtin.template:
     src: jitsi-prometheus-exporter.service
     dest: /etc/systemd/system/jitsi-prometheus-exporter.service
+    mode: "0644"
   notify: Restart jitsi-prometheus-exporter
 
 - name: Enable service for jitsi-prometheus-exporter
-  service:
+  ansible.builtin.service:
     name: jitsi-prometheus-exporter
-    enabled: yes
+    enabled: true

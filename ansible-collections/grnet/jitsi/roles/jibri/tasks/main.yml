@@ -18,7 +18,7 @@
     filename: google-chrome
 
 - name: Install packages required for jibri
-  apt:
+  ansible.builtin.apt:
     name:
       - linux-modules-extra-{{ ansible_kernel }}
       - linux-image-extra-virtual
@@ -41,23 +41,26 @@
     persistent: present
 
 - name: Create Chrome managed policies configuration directory
-  file:
+  ansible.builtin.file:
     path: /etc/opt/chrome/policies/managed
     state: directory
+    mode: "0755"
 
 - name: Hide Chrome warnings
-  copy:
+  ansible.builtin.copy:
     dest: /etc/opt/chrome/policies/managed/managed_policies.json
     content: '{ "CommandLineFlagSecurityWarningsEnabled": false }'
+    mode: "0644"
 
 - name: Install Chromedriver installer
-  pip:
+  ansible.builtin.pip:
     name: chromedriver_autoinstaller
     virtualenv: /opt/chromedriver-autoinstaller
     virtualenv_command: /usr/bin/python3 -m venv
 
 - name: Check whether Chromedriver is properly installed
-  shell: >
+  ansible.builtin.shell: >
+      set -o pipefail;
       test "$(google-chrome --product-version | cut -d. -f1-3)"
       = "$(chromedriver --version | awk '{ print $2 }' | cut -d. -f1-3)"
   register: check_chromedriver_version
@@ -66,28 +69,37 @@
   changed_when: false
 
 - name: Install Chromedriver
-  command:
-    cmd: /opt/chromedriver-autoinstaller/bin/python -c "import os; from glob import glob; import chromedriver_autoinstaller as cdai; cdai.install(); src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0]; os.rename(src, '/usr/local/bin/chromedriver'); os.chmod('/usr/local/bin/chromedriver', 0o755)"
+  ansible.builtin.command:
+    cmd: |-
+      /opt/chromedriver-autoinstaller/bin/python -c
+      "import os;
+      from glob import glob;
+      import chromedriver_autoinstaller as cdai;
+      cdai.install();
+      src = glob(os.path.join(cdai.utils.get_chromedriver_path(), '*', 'chromedriver'))[0];
+      os.rename(src, '/usr/local/bin/chromedriver');
+      os.chmod('/usr/local/bin/chromedriver', 0o755)"
+  changed_when: true
   when: check_chromedriver_version.rc != 0
 
 - name: Create group jibri
-  group:
+  ansible.builtin.group:
     name: jibri
 
 - name: Create user jibri
-  user:
+  ansible.builtin.user:
     name: jibri
     group: jibri
     groups: audio
 
 - name: Clone Jibri
-  git:
+  ansible.builtin.git:
     repo: https://github.com/jitsi/jibri.git
     dest: /opt/jibri
     version: 05294536bc
 
 - name: Build Jibri
-  command: mvn clean package
+  ansible.builtin.command: mvn clean package
   args:
     chdir: /opt/jibri
     creates: /opt/jibri/target/jibri-8.0-SNAPSHOT-jar-with-dependencies.jar
@@ -95,105 +107,117 @@
   poll: 10
 
 - name: Create Jibri configuration directory
-  file:
+  ansible.builtin.file:
     dest: /etc/jitsi/jibri
     state: directory
+    mode: "0755"
 
 - name: Create Xorg service
-  template:
+  ansible.builtin.template:
     src: jitsi-jibri-xorg.service
     dest: /etc/systemd/system/jitsi-jibri-xorg.service
+    mode: "0644"
 
 - name: Configure Xorg service
-  template:
+  ansible.builtin.template:
     src: xorg-video-dummy.conf
     dest: /etc/jitsi/jibri/xorg-video-dummy.conf
+    mode: "0644"
   notify: Restart Xorg service
 
 - name: Enable Xorg service
-  service:
+  ansible.builtin.service:
     name: jitsi-jibri-xorg
-    enabled: yes
+    enabled: true
     state: started
 
 - name: Create Icewm service
-  template:
+  ansible.builtin.template:
     src: jitsi-jibri-icewm.service
     dest: /etc/systemd/system/jitsi-jibri-icewm.service
+    mode: "0644"
 
 - name: Enable Icewm service
-  service:
+  ansible.builtin.service:
     name: jitsi-jibri-icewm
-    enabled: yes
+    enabled: true
     state: started
 
 - name: Create Jibri log directory
-  file:
+  ansible.builtin.file:
     path: /var/log/jitsi/jibri
     state: directory
     owner: jibri
+    mode: "0755"
 
 - name: Create Jibri service
-  template:
+  ansible.builtin.template:
     src: jitsi-jibri.service
     dest: /etc/systemd/system/jitsi-jibri.service
+    mode: "0644"
   notify: Restart Jibri
 
 - name: Enable Jibri service
-  service:
+  ansible.builtin.service:
     name: jitsi-jibri
-    enabled: yes
+    enabled: true
 
 - name: Copy asoundrc
-  copy:
+  ansible.builtin.copy:
     src: asoundrc
     dest: /home/jibri/.asoundrc
+    mode: "0644"
   notify: Restart Jibri
 
 - name: Configure Jibri
-  template:
+  ansible.builtin.template:
     src: jibri.conf
     dest: /etc/jitsi/jibri/jibri.conf
+    mode: "0644"
   notify:
     - Restart Jibri
 
 - name: Configure Jibri logging properties
-  template:
+  ansible.builtin.template:
     src: logging.properties
     dest: /etc/jitsi/jibri/logging.properties
+    mode: "0644"
   notify:
     - Restart Jibri
 
 - name: Copy Jibri finalization script
-  copy:
+  ansible.builtin.copy:
     src: finalize-jibri
     dest: /usr/local/bin/finalize-jibri
-    mode: 0755
+    mode: "0755"
 
 - name: Configure nginx
-  copy:
+  ansible.builtin.copy:
     src: nginx.conf
     dest: /etc/nginx/snippets/{{ jitsi_jibri_fqdn }}/jibri.conf
+    mode: "0644"
   notify:
     - Reload web server
 
 - name: Create directory /var/www/jibri/recordings
-  file:
+  ansible.builtin.file:
     path: /var/www/jibri/recordings
     state: directory
     owner: jibri
+    mode: "0755"
 
 - name: Add script to remove old recordings
-  copy:
+  ansible.builtin.copy:
     dest: /usr/local/bin/remove-jibri-recordings
-    mode: 0755
+    mode: "0755"
     content: |
       #!/bin/sh
       find /var/www/jibri/recordings/* -type f -mtime +1 -delete
       find /var/www/jibri/recordings/* -depth -type d -empty -delete
 
 - name: Add cron job to remove old recordings
-  copy:
+  ansible.builtin.copy:
     dest: /etc/cron.d/remove-jibri-recordings
     content: |
       6 * * * * root /usr/local/bin/remove-jibri-recordings
+    mode: "0644"

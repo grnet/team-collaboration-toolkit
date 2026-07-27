@@ -1,39 +1,34 @@
 ---
 
-- name: Check whether the correct version of jitsi-meet is checked out
-  command: git describe
+- name: Check whether the correct version of jitsi-meet is checked out  # noqa: command-instead-of-module
+  ansible.builtin.command: git describe
   args:
     chdir: /opt/jitsi-meet
   register: git_describe
-  check_mode: no
+  check_mode: false
   changed_when: false
   ignore_errors: true
 
-- name: Discard local changes in jitsi-meet working directory
-  command: git reset --hard HEAD
-  args:
-    chdir: /opt/jitsi-meet
-  ignore_errors: true
-  when: git_describe.stdout != "stable/jitsi-meet_" ~ jitsi_release_number
-
 - name: Clone jitsi-meet
-  git:
+  ansible.builtin.git:
     repo: https://github.com/jitsi/jitsi-meet.git
     dest: /opt/jitsi-meet
     version: stable/jitsi-meet_{{ jitsi_release_number }}
-    update: no
+    update: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
+    force: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
   register: clone_jitsi_meet
   notify:
-   - Install jitsi-meet
+    - Install jitsi-meet
 
 - name: Copy custom jitsi welcome background image
-  copy:
+  ansible.builtin.copy:
     src: "{{ jitsi_welcome_background_image }}"
     dest: "/opt/jitsi-meet/images/{{ jitsi_welcome_background_image }}"
+    mode: "0644"
   when: jitsi_welcome_background_image is defined
 
 - name: Configure jitsi to use custom welcome background image
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /opt/jitsi-meet/css/_variables.scss
     regexp: '^\$welcomePageHeaderBackground:'
     line: "$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/{{ jitsi_welcome_background_image }}');"
@@ -42,25 +37,27 @@
     - Compile Jitsi CSS
 
 - name: Copy custom Jitsi favicon
-  copy:
+  ansible.builtin.copy:
     src: "{{ jitsi_favicon }}"
     dest: "/opt/jitsi-meet/images/{{ jitsi_favicon }}"
+    mode: "0644"
   when: jitsi_favicon != "favicon.svg"
 
 - name: Override Jitsi meta HTML part
-  template:
+  ansible.builtin.template:
     src: jitsi-meet-html-meta.html
     dest: /opt/jitsi-meet/title.html
+    mode: "0644"
 
 - name: Configure Jitsi HTML title
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /opt/jitsi-meet/interface_config.js
     regexp: '^    APP_NAME: '
     line: "    APP_NAME: '{{ jitsi_html_title }}',"
   when: jitsi_html_title is defined
 
 - name: Configure Jitsi welcome header title
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /opt/jitsi-meet/lang/main{% if item.key != "en" %}-{{ item.key }}{% endif %}.json
     regexp: '^        "headerTitle":'
     line: '        "headerTitle": "{{ item.value }}",'
@@ -68,7 +65,7 @@
   when: jitsi_welcome_header_title is defined
 
 - name: Configure Jitsi welcome header subtitle
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /opt/jitsi-meet/lang/main{% if item.key != "en" %}-{{ item.key }}{% endif %}.json
     regexp: '^        "headerSubtitle":'
     line: '        "headerSubtitle": "{{ item.value }}",'
@@ -76,26 +73,29 @@
   when: jitsi_welcome_header_subtitle is defined
 
 - name: Create directory /etc/jitsi/meet
-  file:
+  ansible.builtin.file:
     path: /etc/jitsi/meet
     state: directory
+    mode: "0755"
 
 - name: Configure jitsi-meet
-  template:
+  ansible.builtin.template:
     src: jitsi-meet-config.js
     dest: /etc/jitsi/meet/{{ jitsi_fqdn }}-config.js
+    mode: "0644"
 
 - name: Configure nginx for jitsi-meet
-  template:
+  ansible.builtin.template:
     src: jitsi-meet.nginx.conf
     dest: /etc/nginx/snippets/{{ jitsi_fqdn }}/jitsi-meet.conf
+    mode: "0644"
   notify: Reload web server
 
 - name: Add application/wasm to mime.types
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/nginx/mime.types
     regexp: '^application/wasm'
     line: 'application/wasm wasm;'
     insertbefore: '^}'
-    create: no
+    create: false
   notify: Reload web server

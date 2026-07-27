@@ -1,12 +1,12 @@
 ---
 - name: Gather jvb and jibri facts
-  setup:
+  ansible.builtin.setup:
   delegate_to: "{{ item }}"
   delegate_facts: true
   loop: "{{ groups[jitsi_jvb_group] | union(groups[jitsi_jibri_group] | default([])) }}"
 
 - name: Install apt packages required for Jitsi
-  apt:
+  ansible.builtin.apt:
     name:
       - openjdk-11-jdk-headless
       - lua5.1
@@ -19,11 +19,16 @@
       - unzip
     autoremove: true
 
-- import_tasks: create_certificates.yml
-- import_tasks: meet.yml
-- import_tasks: prosody.yml
-- import_tasks: jicofo.yml
-- import_tasks: statistics.yml
+- name: Import certificates tasks
+  ansible.builtin.import_tasks: create_certificates.yml
+- name: Import meet tasks
+  ansible.builtin.import_tasks: meet.yml
+- name: Import prosody tasks
+  ansible.builtin.import_tasks: prosody.yml
+- name: Import jicofo tasks
+  ansible.builtin.import_tasks: jicofo.yml
+- name: Import statistics tasks
+  ansible.builtin.import_tasks: statistics.yml
   tags:
     - jitsi_statistics
   when: prometheus_server_ips|default([]) | length > 0

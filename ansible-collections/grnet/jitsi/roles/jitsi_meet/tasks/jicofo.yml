@@ -1,21 +1,21 @@
 ---
 
 - name: Clone Jicofo
-  git:
+  ansible.builtin.git:
     repo: https://github.com/jitsi/jicofo.git
     dest: /opt/src/jicofo
     version: stable/jitsi-meet_{{ jitsi_release_number }}
 
 - name: Get Jicofo build number
-  command: mvn help:evaluate -Dexpression=project.version -q -DforceStdout
+  ansible.builtin.command: mvn help:evaluate -Dexpression=project.version -q -DforceStdout
   args:
     chdir: /opt/src/jicofo
   register: get_jicofo_build_number
   changed_when: false
-  check_mode: no
+  check_mode: false
 
 - name: Build Jicofo
-  command: mvn install
+  ansible.builtin.command: mvn install
   args:
     chdir: /opt/src/jicofo
     creates: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
@@ -23,42 +23,46 @@
   poll: 10
 
 - name: Create directories for jicofo
-  file:
+  ansible.builtin.file:
     name: "{{ item }}"
     state: directory
+    mode: "0755"
   loop:
-   - /opt/jicofo
-   - /etc/jitsi/jicofo
+    - /opt/jicofo
+    - /etc/jitsi/jicofo
 
 - name: Unzip built Jicofo
-  unarchive:
+  ansible.builtin.unarchive:
     src: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
     dest: /opt/jicofo
-    remote_src: yes
+    remote_src: true
     creates: /opt/jicofo/jicofo-{{ get_jicofo_build_number.stdout }}
   notify: Restart Jicofo
 
 - name: Create Jicofo service
-  template:
+  ansible.builtin.template:
     src: jitsi-jicofo.service
     dest: /etc/systemd/system/jitsi-jicofo.service
+    mode: "0644"
   vars:
     jicofo_build_number: "{{ get_jicofo_build_number.stdout }}"
   notify: Restart Jicofo
 
 - name: Enable Jicofo service
-  service:
+  ansible.builtin.service:
     name: jitsi-jicofo
-    enabled: yes
+    enabled: true
 
 - name: Configure Jicofo
-  template:
+  ansible.builtin.template:
     src: jicofo.conf
     dest: /etc/jitsi/jicofo/jicofo.conf
+    mode: "0644"
   notify: Restart Jicofo
 
 - name: Configure Jicofo logging properties
-  template:
+  ansible.builtin.template:
     src: jicofo-logging.properties
     dest: /etc/jitsi/jicofo/logging.properties
+    mode: "0644"
   notify: Restart Jicofo
