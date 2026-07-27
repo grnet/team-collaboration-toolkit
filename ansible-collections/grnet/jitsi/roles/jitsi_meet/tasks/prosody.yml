@@ -66,8 +66,10 @@
   ansible.builtin.command:
     cmd: prosodyctl register jibri auth.meet.jitsi {{ jitsi_jibri_password }}
     creates: /var/lib/prosody/auth%2emeet%2ejitsi/accounts/jibri.dat
+  when: jitsi_jibri_password is defined
 
 - name: Create prosody user for recorder
   ansible.builtin.command:
     cmd: prosodyctl register recorder recorder.meet.jitsi {{ jitsi_recorder_password }}
     creates: /var/lib/prosody/recorder%2emeet%2ejitsi/accounts/recorder.dat
+  when: jitsi_recorder_password is defined
