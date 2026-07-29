@@ -15,10 +15,12 @@
   check_mode: false
 
 - name: Build Jicofo
-  ansible.builtin.command: mvn install
+  ansible.builtin.shell: >-
+    mvn clean install &&
+    touch .built-jitsi-meet-{{ jitsi_release_number | quote }}
   args:
     chdir: /opt/src/jicofo
-    creates: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
+    creates: /opt/src/jicofo/.built-jitsi-meet-{{ jitsi_release_number }}
   async: 2000
   poll: 10
 
@@ -29,14 +31,19 @@
     mode: "0755"
   loop:
     - /opt/jicofo
+    - /opt/jicofo/jitsi-meet-{{ jitsi_release_number }}
     - /etc/jitsi/jicofo
 
 - name: Unzip built Jicofo
   ansible.builtin.unarchive:
-    src: /opt/src/jicofo/jicofo/target/jicofo-{{ get_jicofo_build_number.stdout }}-archive.zip
-    dest: /opt/jicofo
+    src: >-
+      /opt/src/jicofo/jicofo/target/jicofo-{{
+      get_jicofo_build_number.stdout }}-archive.zip
+    dest: /opt/jicofo/jitsi-meet-{{ jitsi_release_number }}
     remote_src: true
-    creates: /opt/jicofo/jicofo-{{ get_jicofo_build_number.stdout }}
+    creates: >-
+      /opt/jicofo/jitsi-meet-{{ jitsi_release_number
+      }}/jicofo-{{ get_jicofo_build_number.stdout }}/jicofo.sh
   notify: Restart Jicofo
 
 - name: Create Jicofo service

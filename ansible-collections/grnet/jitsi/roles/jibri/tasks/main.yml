@@ -63,6 +63,8 @@
       set -o pipefail;
       test "$(google-chrome --product-version | cut -d. -f1-3)"
       = "$(chromedriver --version | awk '{ print $2 }' | cut -d. -f1-3)"
+  args:
+    executable: /bin/bash
   register: check_chromedriver_version
   check_mode: false
   failed_when: false

@@ -51,10 +51,12 @@
   check_mode: false
 
 - name: Build jvb
-  ansible.builtin.command: mvn install
+  ansible.builtin.shell: >-
+    mvn clean install &&
+    touch .built-jitsi-meet-{{ jitsi_release_number | quote }}
   args:
     chdir: /opt/src/jvb
-    creates: /opt/src/jvb/jvb/target/jitsi-videobridge-{{ get_jvb_build_number.stdout }}-archive.zip
+    creates: /opt/src/jvb/.built-jitsi-meet-{{ jitsi_release_number }}
   async: 2000
   poll: 10
 
@@ -65,14 +67,19 @@
     mode: "0755"
   loop:
     - /opt/jvb
+    - /opt/jvb/jitsi-meet-{{ jitsi_release_number }}
     - /etc/jitsi/jvb
 
 - name: Unzip built jvb
   ansible.builtin.unarchive:
-    src: /opt/src/jvb/jvb/target/jitsi-videobridge-{{ get_jvb_build_number.stdout }}-archive.zip
-    dest: /opt/jvb
+    src: >-
+      /opt/src/jvb/jvb/target/jitsi-videobridge-{{
+      get_jvb_build_number.stdout }}-archive.zip
+    dest: /opt/jvb/jitsi-meet-{{ jitsi_release_number }}
     remote_src: true
-    creates: /opt/jvb/jitsi-videobridge-{{ get_jvb_build_number.stdout }}
+    creates: >-
+      /opt/jvb/jitsi-meet-{{ jitsi_release_number
+      }}/jitsi-videobridge-{{ get_jvb_build_number.stdout }}/jvb.sh
   notify: Restart jvb
 
 - name: Create jvb service

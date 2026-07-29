@@ -5,7 +5,6 @@
     name:
       - git
       - nodejs
-      - npm
 
 - name: Clone jitsi excalidraw-backend
   ansible.builtin.git:

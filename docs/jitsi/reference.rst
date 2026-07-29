@@ -8,9 +8,12 @@ Variables and options
 =====================
 
 - ``jitsi_fqdn``: The domain where jitsi meet is listening.
+- ``jitsi_release_number``: The Jitsi release to install. This is shared
+  by the Jitsi Meet and Jitsi Videobridge roles and must be specified in
+  the inventory.
 - ``jitsi_meet_group``: The inventory group containing the Jitsi Meet
-  server for this installation; the default is ``jitsi_meet``. Used by
-  the ``jitsi_jvb`` role.
+  server for this installation. Used by the ``jitsi_jvb`` role and must
+  be specified in the inventory.
 - ``jitsi_jvb_group``: The inventory group containing the videobridges
   for this installation; the default is ``jitsi_jvb``. Used by the
   ``jitsi_meet`` role.

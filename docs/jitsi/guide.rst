@@ -33,6 +33,8 @@ roles, e.g. by putting them in ``group_vars/all``. Obviously it's a good
 idea to vault the passwords/secrets. Here is an example::
 
     jitsi_fqdn: jitsi.example.com
+    jitsi_release_number: 10978
+    jitsi_meet_group: jitsi_meet
     jitsi_jicofo_password: topsecret1
     jitsi_jicofo_secret: topsecret2
     jitsi_jvb_user: myvideobridgeuser
@@ -85,27 +87,18 @@ the roles which groups belong together. For example::
     [jitsi_example_jibri]
     jibri.example.com
 
-Then set the topology group variables in the playbook::
+    [jitsi_example:children]
+    jitsi_example_meet
+    jitsi_example_jvb
+    jitsi_example_jibri
 
-    - name: Example Jitsi server
-      hosts: jitsi_example_meet
-      vars:
-        jitsi_jvb_group: jitsi_example_jvb
-        jitsi_jibri_group: jitsi_example_jibri
-      roles:
-        - grnet.jitsi.jitsi_meet
+Then put the shared release and topology variables in
+``group_vars/jitsi_example``::
 
-    - name: Example Jitsi videobridge
-      hosts: jitsi_example_jvb
-      vars:
-        jitsi_meet_group: jitsi_example_meet
-      roles:
-        - grnet.jitsi.jitsi_jvb
-
-    - name: Example Jibri
-      hosts: jitsi_example_jibri
-      roles:
-        - grnet.jitsi.jibri
+    jitsi_release_number: 10978
+    jitsi_meet_group: jitsi_example_meet
+    jitsi_jvb_group: jitsi_example_jvb
+    jitsi_jibri_group: jitsi_example_jibri
 
 .. _ldap:
 
