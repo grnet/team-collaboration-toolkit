@@ -1,30 +1,32 @@
 ---
 
 - name: Restart Jicofo
-  service:
+  ansible.builtin.service:
     name: jitsi-jicofo
     state: restarted
-    daemon-reload: yes
+    daemon-reload: true
 
 - name: Restart prosody
-  service:
+  ansible.builtin.service:
     name: prosody
     state: restarted
 
 - name: Install jitsi-meet
-  shell:
+  ansible.builtin.shell:
     cmd: npm install && make
     chdir: /opt/jitsi-meet
   async: 2000
   poll: 10
+  changed_when: true
 
 - name: Compile Jitsi CSS
-  command: make deploy-css
+  ansible.builtin.command: make deploy-css
   args:
     chdir: /opt/jitsi-meet
+  changed_when: true
 
 - name: Restart jitsi-prometheus-exporter
-  service:
+  ansible.builtin.service:
     name: jitsi-prometheus-exporter
     state: restarted
-    daemon-reload: yes
+    daemon-reload: true
