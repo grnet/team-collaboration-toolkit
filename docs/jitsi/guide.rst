@@ -13,13 +13,17 @@ Here is an example inventory for installing on a single server::
     [jitsi_jvb]
     my-jitsi-meet-server
 
+    [coturn]
+    my-coturn-server
+
 The ``jitsi_meet`` group must contain only one server. That server must
 also be listed in the ``jitsi_jvb`` group ; that is, the Jitsi Meet
 server must also be a videobridge (this is an old limitation and it
 shouldn't be difficult to fix, assuming it's still there).  Additional
 videobridges can be added if desired.  The playbook (see below) will
 assign the ``jitsi_meet`` role to the server in the ``jitsi_meet`` group
-and the ``jitsi_jvb`` role to the servers in the ``jitsi_jvb`` group.
+and the ``jitsi_jvb`` role to the servers in the ``jitsi_jvb`` group. It
+also installs coturn on the server in the ``coturn`` group.
 
 Although in principle nginx, jitsi-meet, prosody and jicofo could reside
 in different machines, the role ``jitsi_meet`` puts them all in a single
@@ -40,7 +44,9 @@ idea to vault the passwords/secrets. Here is an example::
     jitsi_jvb_user: myvideobridgeuser
     jitsi_jvb_password: topsecret3
     jitsi_jvb_secret: topsecret4
-    jitsi_prosody_external_service_secret: topsecret5
+    jitsi_turn_secret: topsecret5
+    coturn_fqdn: coturn.example.com
+    coturn_letsencrypt_admin: admin@example.com
 
 Playbook
 ========
@@ -64,6 +70,13 @@ Use a playbook similar to this::
           webserver_type: nginx  # Only nginx is supported
         - grnet.jitsi.jitsi_jvb
 
+    - name: Coturn server
+      hosts: coturn
+      roles:
+        - aptiko.general.base
+        - role: grnet.webrtc.coturn
+          coturn_static_auth_secret: "{{ jitsi_turn_secret }}"
+
 Custom topology group names
 ===========================
 
@@ -72,6 +85,7 @@ By default, the roles use these inventory groups:
 - ``jitsi_meet``
 - ``jitsi_jvb``
 - ``jibri``
+- ``coturn``
 
 If the same inventory contains more than one independent Jitsi
 installation, use different group names for each installation and tell
@@ -87,10 +101,14 @@ the roles which groups belong together. For example::
     [jitsi_example_jibri]
     jibri.example.com
 
+    [jitsi_example_coturn]
+    coturn.example.com
+
     [jitsi_example:children]
     jitsi_example_meet
     jitsi_example_jvb
     jitsi_example_jibri
+    jitsi_example_coturn
 
 Then put the shared release and topology variables in
 ``group_vars/jitsi_example``::

@@ -38,8 +38,10 @@ Variables and options
   of the prosody ``jibri`` and ``recorder`` users, which are used by
   Jibri (see :ref:`jitsi_recording`).
 - ``jitsi_ldap_*``: See :ref:`ldap`.
-- ``jitsi_prosody_external_service_secret``: The secret for external
-  services (e.g. for TURN).
+- ``coturn_fqdn``: The FQDN of the coturn server. When specified, the
+  ``jitsi_meet`` role advertises that server to clients over Prosody.
+- ``jitsi_turn_secret``: The secret shared by Prosody and coturn. Pass
+  the same value to the coturn role as ``coturn_static_auth_secret``.
 - ``jitsi_prometheus_exporter_port``: The port on which the prometheus
   exporter is listening; the default is 9102. See
   :ref:`jitsi_statistics`.

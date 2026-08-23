@@ -22,7 +22,11 @@ var config = {
     p2p: {
         enabled: true,
         stunServers: [
+            {% if coturn_fqdn | default('') != '' %}
+            { urls: 'stun:{{ coturn_fqdn }}:3478' },
+            {% else %}
             { urls: 'stun:meet-jit-si-turnrelay.jitsi.net:443' },
+            {% endif %}
         ],
     },
 

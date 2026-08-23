@@ -27,7 +27,12 @@ Debian. Start reading from :ref:`guide_nextcloud`.
    nextcloud/collabora
    nextcloud/talk_hpb
    nextcloud/talk_recording
-   nextcloud/coturn
+
+.. toctree::
+   :maxdepth: 1
+   :caption: grnet.webrtc collection reference
+
+   webrtc/coturn
 
 .. toctree::
    :maxdepth: 1

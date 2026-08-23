@@ -3,3 +3,4 @@
 coturn_setup_firewall: true
 coturn_use_http_ports: true
 coturn_setup_letsencrypt: true
+coturn_realm: "{{ coturn_fqdn }}"

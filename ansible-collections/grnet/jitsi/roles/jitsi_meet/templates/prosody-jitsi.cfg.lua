@@ -14,11 +14,16 @@ plugin_paths = { "/opt/jitsi-meet/resources/prosody-plugins" };
 muc_mapper_domain_base = "meet.jitsi";
 muc_mapper_domain_prefix = "muc";
 http_default_host = "meet.jitsi";
-external_service_secret = "{{ jitsi_prosody_external_service_secret }}";
+{% if coturn_fqdn | default('') != '' %}
+external_service_secret = "{{ jitsi_turn_secret }}";
 external_services = {
-     { type = "turn", host = "turn.{{ ansible_host }}", port = 3478, transport = "tcp", secret = true, ttl = 86400, algorithm = "turn" },
-     { type = "turns", host = "turn.{{ ansible_host }}", port = 5349, transport = "tcp", secret = true, ttl = 86400, algorithm = "turn" }
+    { type = "stun", host = "{{ coturn_fqdn }}", port = 3478 },
+    { type = "turn", host = "{{ coturn_fqdn }}", port = 3478, transport = "udp", secret = true, ttl = 86400, algorithm = "turn" },
+    { type = "turns", host = "{{ coturn_fqdn }}", port = 5349, transport = "tcp", secret = true, ttl = 86400, algorithm = "turn" }{% if coturn_use_http_ports | default(true) %},
+    { type = "turns", host = "{{ coturn_fqdn }}", port = 443, transport = "tcp", secret = true, ttl = 86400, algorithm = "turn" }
+    {% endif %}
 };
+{% endif %}
 consider_bosh_secure = true;
 consider_websocket_secure = true;
 
@@ -49,7 +54,9 @@ VirtualHost "meet.jitsi"
         "conference_duration";
         "room_metadata";
         "end_conference";
+        {% if coturn_fqdn | default('') != '' %}
         "external_services";
+        {% endif %}
         "muc_breakout_rooms";
         "av_moderation";
         "muc_census";

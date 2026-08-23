@@ -1,15 +1,15 @@
 .. _coturn:
 
-======================
-grnet.nextcloud.coturn
-======================
+===================
+grnet.webrtc.coturn
+===================
 
 Overview
 ========
 
 Installs and configures a STUN and TURN server.
 
-The ``grnet.nextcloud.coturn`` role installs a STUN and TURN server with
+The ``grnet.webrtc.coturn`` role installs a STUN and TURN server with
 the widely used coturn software.  It listens on the default TURN ports
 3478 and 5349, and also on the firewall-friendly ports 80 and 443. The
 server supports both ``turn:`` and ``turns:`` URLs; coturn automatically
@@ -29,11 +29,10 @@ Example
     hosts: coturn
     roles:
       - aptiko.general.base
-      - role: grnet.nextcloud.coturn
+      - role: grnet.webrtc.coturn
         coturn_fqdn: coturn.example.com
         coturn_static_auth_secret: topsecret0123456789
         coturn_letsencrypt_admin: admin@example.com
-        nextcloud_fqdn: nextcloud.example.com
 
 Parameters
 ==========
@@ -44,10 +43,14 @@ Parameters
 
 .. data:: coturn_static_auth_secret
 
-   A secret shared between the Nextcloud Talk server and the TURN
-   server; it allows Nextcloud users to logon to the TURN server. Except
-   from here, it must also be specified in the Nextcloud settings, Talk,
-   TURN servers.
+   A secret shared between the TURN server and its clients. Use the same
+   value in the Nextcloud Talk TURN settings and/or as Jitsi's Prosody
+   external service secret.
+
+.. data:: coturn_realm
+
+   The TURN authentication realm. It defaults to ``coturn_fqdn`` and can
+   be overridden when clients require a specific realm.
 
 .. data:: coturn_setup_firewall
    

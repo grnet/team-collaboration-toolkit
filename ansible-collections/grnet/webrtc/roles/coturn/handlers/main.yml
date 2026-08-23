@@ -1,7 +1,7 @@
 ---
 
 - name: Restart coturn
-  service:
+  ansible.builtin.service:
     name: coturn
     daemon-reload: true
     state: restarted
