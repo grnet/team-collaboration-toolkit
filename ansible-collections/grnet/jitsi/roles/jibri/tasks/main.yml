@@ -24,7 +24,7 @@
       - linux-image-extra-virtual
       - ffmpeg
       - unzip
-      - openjdk-11-jdk-headless
+      - openjdk-17-jdk-headless
       - alsa-utils
       - jq
       - icewm
