@@ -16,9 +16,6 @@
     version: stable/jitsi-meet_{{ jitsi_release_number }}
     update: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
     force: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
-  register: clone_jitsi_meet
-  notify:
-    - Install jitsi-meet
 
 - name: Copy custom jitsi welcome background image
   ansible.builtin.copy:
@@ -71,6 +68,17 @@
     line: '        "headerSubtitle": "{{ item.value }}",'
   loop: "{{ jitsi_welcome_header_subtitle | dict2items }}"
   when: jitsi_welcome_header_subtitle is defined
+
+- name: Build jitsi-meet
+  ansible.builtin.shell: >-
+    npm install &&
+    make &&
+    touch .built-jitsi-meet-{{ jitsi_release_number | quote }}
+  args:
+    chdir: /opt/jitsi-meet
+    creates: /opt/jitsi-meet/.built-jitsi-meet-{{ jitsi_release_number }}
+  async: 2000
+  poll: 10
 
 - name: Create directory /etc/jitsi/meet
   ansible.builtin.file:

@@ -11,14 +11,6 @@
     name: prosody
     state: restarted
 
-- name: Install jitsi-meet
-  ansible.builtin.shell:
-    cmd: npm install && make
-    chdir: /opt/jitsi-meet
-  async: 2000
-  poll: 10
-  changed_when: true
-
 - name: Compile Jitsi CSS
   ansible.builtin.command: make deploy-css
   args:
