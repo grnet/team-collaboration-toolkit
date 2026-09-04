@@ -15,9 +15,25 @@
 - name: Allow firewall for various STUN and TURN ports
   ansible.builtin.lineinfile:
     path: /etc/nftables/ansible-late.nft
+    regexp: '^meta l4proto.*th dport.*3478.*$'
     line: >-
       meta l4proto { tcp, udp }
-      th dport { 80, 443, 3478, 3479, 5349, 5350 } accept
+      th dport {
+      {{ (([80, 443] if coturn_use_http_ports else [])
+      + [3478, 3479, 5349, 5350]) | join(', ') }}
+      } accept # managed by grnet.webrtc.coturn
+  notify: Reload nftables
+  when:
+    - base_setup_firewall | default(false)
+    - coturn_setup_firewall
+
+- name: Allow firewall for TURN relay ports
+  ansible.builtin.lineinfile:
+    path: /etc/nftables/ansible-late.nft
+    regexp: '^udp dport .*# managed by grnet.webrtc.coturn$'
+    line: >-
+      udp dport {{ coturn_min_port }}-{{ coturn_max_port }} accept
+      # managed by grnet.webrtc.coturn
   notify: Reload nftables
   when:
     - base_setup_firewall | default(false)

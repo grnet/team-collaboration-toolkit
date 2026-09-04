@@ -4,3 +4,5 @@ coturn_setup_firewall: true
 coturn_use_http_ports: true
 coturn_setup_letsencrypt: true
 coturn_realm: "{{ coturn_fqdn }}"
+coturn_min_port: 49152
+coturn_max_port: 65535

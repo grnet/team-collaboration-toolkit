@@ -54,18 +54,20 @@ Parameters
 
 .. data:: coturn_setup_firewall
    
-   If ``true`` (the default), ports 80, 443, 3478, 3479, 5349, and 5350
-   will be allowed in the firewall (see aptiko.general.base_); otherwise,
-   the firewall will be untouched.
+   If this and ``base_setup_firewall`` are both true, ports 3478, 3479,
+   5349, and 5350, the UDP relay port range, and, when
+   ``coturn_use_http_ports`` is true, ports 80 and 443 will be allowed in
+   the firewall (see aptiko.general.base_); otherwise, the firewall will
+   be untouched.
 
 .. data:: coturn_setup_letsencrypt
 
    If ``true`` (the default), a Let's Encrypt certificate will be
    automatically obtained and installed for the coturn server.  The
    certificate will be renewed automatically by certbot, and the coturn
-   service will be restarted after each renewal.  Set this to ``false``
-   when another service, such as a web server, must bind ports 80 and 443
-   on the coturn host.
+   service will be restarted after each renewal. If another role has
+   already obtained a certificate for ``coturn_fqdn``, coturn will reuse
+   it without running certbot in standalone mode.
 
 .. data:: coturn_letsencrypt_admin
 
@@ -79,5 +81,13 @@ Parameters
    firewall-friendly ports 80 and 443. Set this to ``false`` when
    another service, such as a web server, must bind these ports on the
    coturn host.
+
+.. data:: coturn_min_port
+
+   The lower bound of the UDP relay port range. Defaults to 49152.
+
+.. data:: coturn_max_port
+
+   The upper bound of the UDP relay port range. Defaults to 65535.
 
 .. _aptiko.general.base: https://aptikogeneral.readthedocs.io/en/latest/base.html
