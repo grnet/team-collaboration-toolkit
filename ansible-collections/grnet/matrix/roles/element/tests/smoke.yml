@@ -1,0 +1,31 @@
+---
+# Run against a deployed host with element_* settings in inventory.
+- name: Check the deployed Element website
+  hosts: all
+  gather_facts: false
+  vars:
+    # Not vars_files: play variables would override the inventory's settings.
+    element_test_ssl: "{{ element_ssl | default('letsencrypt') }}"
+    element_test_url: "{{ 'http' if element_test_ssl == 'off' else 'https' }}://{{ element_fqdn }}"
+  tasks:
+    - name: Fetch the Element entry point
+      ansible.builtin.uri:
+        url: "{{ element_test_url }}/"
+        validate_certs: "{{ element_test_ssl != 'self-signed' }}"
+        return_content: true
+      register: element_page
+
+    - name: Fetch the Element configuration
+      ansible.builtin.uri:
+        url: "{{ element_test_url }}/config.json"
+        validate_certs: "{{ element_test_ssl != 'self-signed' }}"
+      register: element_config
+
+    - name: Check content, homeserver and headers
+      ansible.builtin.assert:
+        that:
+          - "'text/html' in element_page.content_type"
+          - "'no-cache' in element_page.cache_control"
+          - element_page.x_content_type_options == 'nosniff'
+          - element_config.json.default_server_config['m.homeserver'].base_url == element_homeserver_url
+          - "'no-cache' in element_config.cache_control"

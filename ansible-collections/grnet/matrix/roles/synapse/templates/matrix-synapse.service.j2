@@ -1,0 +1,18 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Synapse Matrix homeserver
+After=network.target postgresql.service
+
+[Service]
+Type=notify
+User=matrix-synapse
+Group=matrix-synapse
+WorkingDirectory=/var/opt/synapse
+ExecStartPre=/opt/synapse/venv/bin/python -m synapse.app.homeserver --config-path=/etc/opt/synapse/homeserver.yaml --generate-keys
+ExecStart=/opt/synapse/venv/bin/python -m synapse.app.homeserver --config-path=/etc/opt/synapse/homeserver.yaml
+Restart=on-failure
+RestartSec=5
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

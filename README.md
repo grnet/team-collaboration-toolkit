@@ -1,6 +1,6 @@
 # Open source software installers for team collaboration
 
-Ansible collections for installing Nextcloud and Jitsi
+Ansible collections for installing Nextcloud, Jitsi and Matrix Synapse
 
 [Documentation for the Ansible collections (for system administrators)](https://team-collaboration-toolkit.readthedocs.io/)
 

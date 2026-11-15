@@ -1,0 +1,26 @@
+---
+- name: Check required Element settings
+  ansible.builtin.assert:
+    that:
+      - element_version is defined
+      - element_version is string
+      - element_version is match('^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.-]+)?$')
+      - element_fqdn is defined
+      - element_fqdn is string
+      - element_fqdn is match('^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+\.?$')
+      - element_homeserver_url is defined
+      - element_homeserver_url is string
+      - (element_homeserver_url | ansible.builtin.urlsplit('scheme')) in ['http', 'https']
+      - (element_homeserver_url | ansible.builtin.urlsplit('hostname') | default('', true)) | length > 0
+    fail_msg: Set element_version, element_fqdn and an absolute HTTP(S) element_homeserver_url.
+
+- name: Require separate Element and homeserver hostnames
+  ansible.builtin.assert:
+    that:
+      - >-
+        element_fqdn | lower | regex_replace('\.$', '') !=
+        element_homeserver_url | ansible.builtin.urlsplit('hostname') | lower | regex_replace('\.$', '')
+      - >-
+        element_fqdn | lower | regex_replace('\.$', '') !=
+        synapse_fqdn | default('') | lower | regex_replace('\.$', '')
+    fail_msg: Element must use a different hostname from Synapse, even on the same server.

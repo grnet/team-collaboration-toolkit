@@ -1,0 +1,57 @@
+---
+# Run against a deployed host with synapse_version defined in inventory:
+# ansible-playbook -i INVENTORY smoke.yml --limit HOST
+- name: Check the installed Synapse service
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    # Role defaults, without overriding the inventory as vars_files would.
+    synapse_test_ssl: "{{ synapse_ssl | default('letsencrypt') }}"
+    synapse_test_baseurl: >-
+      {{ synapse_public_baseurl | default(('http' if synapse_test_ssl == 'off' else 'https')
+         ~ '://' ~ synapse_fqdn | default(synapse_server_name) ~ '/') }}
+  tasks:
+    - name: Read the virtual environment configuration
+      ansible.builtin.slurp:
+        src: /opt/synapse/venv/pyvenv.cfg
+      register: synapse_venv_config
+
+    - name: Check that distribution packages are visible
+      ansible.builtin.assert:
+        that:
+          - "'include-system-site-packages = true' in (synapse_venv_config.content | b64decode)"
+
+    - name: Query the running Synapse version
+      ansible.builtin.uri:
+        url: http://127.0.0.1:8008/_synapse/admin/v1/server_version
+      register: synapse_running
+      until: synapse_running.status == 200
+      retries: 12
+      delay: 5
+
+    - name: Check the running version satisfies inventory
+      ansible.builtin.command:
+        argv:
+          - /opt/synapse/venv/bin/python
+          - -c
+          - |
+            import re
+            import sys
+            from packaging.specifiers import SpecifierSet
+            spec = SpecifierSet(re.sub(r'^(?=\d)', '==', sys.argv[1].strip()))
+            assert spec.contains(sys.argv[2], prereleases=True), (sys.argv[1], sys.argv[2])
+          - "{{ synapse_version }}"
+          - "{{ synapse_running.json.server_version }}"
+      changed_when: false
+
+    - name: Check the public Matrix endpoint through the reverse proxy
+      ansible.builtin.uri:
+        url: "{{ synapse_test_baseurl.rstrip('/') }}/_matrix/client/versions"
+        validate_certs: "{{ synapse_test_ssl != 'self-signed' }}"
+      register: synapse_public
+
+    - name: Check the proxy returned the Matrix versions response
+      ansible.builtin.assert:
+        that:
+          - synapse_public.json.versions | length > 0

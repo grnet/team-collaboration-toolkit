@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+DirectoryIndex index.html
+Header always set X-Frame-Options SAMEORIGIN
+Header always set Content-Security-Policy "frame-ancestors 'self'"
+Header always set X-Content-Type-Options nosniff
+# Revalidate all files, including config, translations and the entry point.
+Header always set Cache-Control "no-cache"

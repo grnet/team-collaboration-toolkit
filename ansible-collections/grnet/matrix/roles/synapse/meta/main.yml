@@ -1,0 +1,12 @@
+---
+dependencies:
+  - role: aptiko.general.website
+    website_domain: "{{ synapse_fqdn }}"
+    website_document_root: "/var/www/{{ synapse_fqdn }}"
+    website_ssl: "{{ synapse_ssl }}"
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Synapse with PostgreSQL on Debian/Ubuntu
+  license: GPLv3
+  min_ansible_version: "2.19"

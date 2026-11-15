@@ -1,0 +1,168 @@
+---
+- name: Check required Synapse settings
+  ansible.builtin.assert:
+    that:
+      - synapse_server_name | default('') | length > 0
+      - synapse_database_password | default('') | length > 0
+      - synapse_version is defined
+      - synapse_version is string
+      - synapse_version | trim | length > 0
+    fail_msg: Set synapse_server_name, synapse_version and synapse_database_password.
+  no_log: true
+
+- name: Check Synapse email settings
+  ansible.builtin.assert:
+    that:
+      - synapse_email is mapping
+      - synapse_email.notif_from | default('') is string
+      - synapse_email.notif_from | default('') | trim | length > 0
+    fail_msg: Set synapse_email.notif_from and configure SMTP in synapse_email.
+  when: synapse_registration_requires_email | bool or synapse_email | length > 0
+  no_log: true
+
+- name: Install Synapse dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - python3-venv
+      - python3-pip
+      - python3-setuptools
+      - python3-setuptools-rust
+      - python3-attr
+      - python3-bcrypt
+      - python3-bleach
+      - python3-canonicaljson
+      - python3-cffi
+      - python3-cryptography
+      - python3-ijson
+      - python3-immutabledict
+      - python3-jinja2
+      - python3-jsonschema
+      - python3-msgpack
+      - python3-multipart
+      - python3-nacl
+      - python3-netaddr
+      - python3-openssl
+      - python3-packaging
+      - python3-phonenumbers
+      - python3-pil
+      - python3-prometheus-client
+      - python3-psycopg2
+      - python3-pyasn1
+      - python3-pyasn1-modules
+      - python3-pydantic
+      - python3-pymacaroons
+      - python3-pyparsing
+      - python3-pyrsistent
+      - python3-requests
+      - python3-service-identity
+      - python3-signedjson
+      - python3-sortedcontainers
+      - python3-treq
+      - python3-twisted
+      - python3-typing-extensions
+      - python3-unpaddedbase64
+      - python3-urllib3
+      - python3-yaml
+      - python3-zope.interface
+      - python3-matrix-common
+      - python3-rpds-py
+
+- name: Create the Synapse service account
+  ansible.builtin.user:
+    name: matrix-synapse
+    system: true
+    home: /var/opt/synapse
+    create_home: false
+    shell: /usr/sbin/nologin
+
+- name: Create the Synapse installation directory
+  ansible.builtin.file:
+    path: /opt/synapse
+    state: directory
+    owner: root
+    group: matrix-synapse
+    mode: "0750"
+
+- name: Create the Synapse configuration directory
+  ansible.builtin.file:
+    path: /etc/opt/synapse
+    state: directory
+    owner: root
+    group: matrix-synapse
+    mode: "0750"
+
+- name: Create the Synapse data directory
+  ansible.builtin.file:
+    path: /var/opt/synapse
+    state: directory
+    owner: matrix-synapse
+    group: matrix-synapse
+    mode: "0750"
+
+- name: Install the selected Synapse version in its virtual environment
+  ansible.builtin.pip:
+    name: matrix-synapse[postgres]
+    version: "{{ synapse_version }}"
+    virtualenv: /opt/synapse/venv
+    virtualenv_command: /usr/bin/python3 -m venv
+    virtualenv_site_packages: true
+    umask: "0022"
+  notify: Restart Synapse
+
+- name: Create the Synapse database user
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_user:
+    name: "{{ synapse_database_user }}"
+    password: "{{ synapse_database_password }}"
+    role_attr_flags: LOGIN,NOSUPERUSER,NOCREATEDB,NOCREATEROLE
+  no_log: true
+
+- name: Create the Synapse database
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_db:
+    name: "{{ synapse_database_name }}"
+    owner: "{{ synapse_database_user }}"
+    encoding: UTF8
+    lc_collate: C
+    lc_ctype: C
+    template: template0
+
+- name: Configure Synapse
+  ansible.builtin.template:
+    src: synapse.yaml.j2
+    dest: /etc/opt/synapse/homeserver.yaml
+    owner: root
+    group: matrix-synapse
+    mode: "0640"
+  no_log: true
+  notify: Restart Synapse
+
+- name: Install the Synapse systemd service
+  ansible.builtin.template:
+    src: matrix-synapse.service.j2
+    dest: /etc/systemd/system/matrix-synapse.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart Synapse
+
+- name: Configure the Synapse reverse proxy
+  ansible.builtin.template:
+    src: "synapse.{{ webserver_type }}.conf.j2"
+    dest: "/etc/{{ 'apache2' if webserver_type == 'apache' else 'nginx' }}/snippets/{{ synapse_fqdn }}/synapse.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: "{{ 'Restart web server' if webserver_type == 'apache' else 'Reload web server' }}"
+
+- name: Apply Synapse and reverse proxy configuration
+  ansible.builtin.meta: flush_handlers
+
+- name: Enable and start Synapse
+  ansible.builtin.service:
+    name: matrix-synapse
+    enabled: true
+    state: started

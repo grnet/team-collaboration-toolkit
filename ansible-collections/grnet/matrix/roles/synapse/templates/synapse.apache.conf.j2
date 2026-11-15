@@ -1,0 +1,12 @@
+# {{ ansible_managed }}
+AllowEncodedSlashes NoDecode
+ProxyPreserveHost On
+ProxyRequests Off
+RequestHeader set X-Forwarded-Proto expr=%{REQUEST_SCHEME}
+RequestHeader unset X-Forwarded-For
+# mod_proxy adds the connecting client's address to X-Forwarded-For.
+ProxyAddHeaders On
+ProxyPass /_matrix http://127.0.0.1:8008/_matrix nocanon
+ProxyPassReverse /_matrix http://127.0.0.1:8008/_matrix
+ProxyPass /_synapse/client http://127.0.0.1:8008/_synapse/client nocanon
+ProxyPassReverse /_synapse/client http://127.0.0.1:8008/_synapse/client

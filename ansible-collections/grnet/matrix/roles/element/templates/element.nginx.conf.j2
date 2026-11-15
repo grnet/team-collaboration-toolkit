@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+index index.html;
+add_header X-Frame-Options SAMEORIGIN always;
+add_header Content-Security-Policy "frame-ancestors 'self'" always;
+add_header X-Content-Type-Options nosniff always;
+# Revalidate all files, including config, translations and the entry point.
+add_header Cache-Control "no-cache" always;

@@ -36,6 +36,13 @@ Debian. Start reading from :ref:`guide_nextcloud`.
 
 .. toctree::
    :maxdepth: 1
+   :caption: grnet.matrix collection reference
+
+   matrix/synapse
+   matrix/element
+
+.. toctree::
+   :maxdepth: 1
    :caption: grnet.jitsi collection
 
    jitsi/architecture

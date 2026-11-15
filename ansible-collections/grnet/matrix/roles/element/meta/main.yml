@@ -1,0 +1,12 @@
+---
+dependencies:
+  - role: aptiko.general.website
+    website_domain: "{{ element_fqdn }}"
+    website_document_root: "/var/www/{{ element_fqdn }}/element-v{{ element_version }}"
+    website_ssl: "{{ element_ssl }}"
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Element Web on Debian/Ubuntu
+  license: GPLv3
+  min_ansible_version: "2.19"

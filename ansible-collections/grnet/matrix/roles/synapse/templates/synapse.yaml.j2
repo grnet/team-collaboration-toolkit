@@ -1,0 +1,34 @@
+# {{ ansible_managed }}
+server_name: {{ synapse_server_name | to_json }}
+public_baseurl: {{ synapse_public_baseurl | to_json }}
+report_stats: {{ synapse_report_stats | bool | to_json }}
+enable_registration: {{ synapse_enable_registration | bool | to_json }}
+enable_registration_without_verification: {{ (synapse_enable_registration | bool and not synapse_registration_requires_email | bool) | to_json }}
+registrations_require_3pid: {{ (['email'] if synapse_registration_requires_email | bool else []) | to_json }}
+{% if synapse_email %}
+email:
+{{ synapse_email | to_nice_yaml(indent=2) | indent(2, true) }}
+{% endif %}
+registration_shared_secret_path: /var/opt/synapse/registration_shared_secret
+media_store_path: /var/opt/synapse/media_store
+signing_key_path: /var/opt/synapse/homeserver.signing.key
+
+database:
+  name: psycopg2
+  args:
+    user: {{ synapse_database_user | to_json }}
+    password: {{ synapse_database_password | to_json }}
+    dbname: {{ synapse_database_name | to_json }}
+    host: 127.0.0.1
+    cp_min: 5
+    cp_max: 10
+
+listeners:
+  - port: 8008
+    type: http
+    tls: false
+    bind_addresses: ['127.0.0.1', '::1']
+    x_forwarded: true
+    resources:
+      - names: [client, federation]
+        compress: false

@@ -1,0 +1,19 @@
+namespace: grnet
+name: matrix
+version: 0.1.0-dev0
+readme: README.md
+authors:
+  - Antonis Christofides <antonis@admin.grnet.gr>
+description: Ansible roles for Matrix services
+license:
+  - GPL-3.0-or-later
+tags:
+  - infrastructure
+dependencies:
+  git+https://github.com/aptiko/aptiko.general.git: master
+  community.postgresql: '*'
+repository: https://github.com/grnet/team-collaboration-toolkit
+documentation: https://team-collaboration-toolkit.readthedocs.io
+homepage: https://github.com/grnet/team-collaboration-toolkit
+issues: https://github.com/grnet/team-collaboration-toolkit/issues
+build_ignore: []

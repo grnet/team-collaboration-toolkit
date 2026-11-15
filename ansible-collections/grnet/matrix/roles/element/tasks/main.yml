@@ -1,0 +1,46 @@
+---
+- name: Validate Element settings
+  ansible.builtin.import_tasks: validate.yml
+
+- name: Install archive and download dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - tar
+
+- name: Download and extract the selected Element release
+  ansible.builtin.unarchive:
+    src: "https://github.com/element-hq/element-web/releases/download/v{{ element_version }}/element-v{{ element_version }}.tar.gz"
+    dest: "/var/www/{{ element_fqdn }}"
+    remote_src: true
+    owner: root
+    group: root
+    creates: "/var/www/{{ element_fqdn }}/element-v{{ element_version }}/index.html"
+
+- name: Configure Element's default homeserver
+  ansible.builtin.copy:
+    content: "{{ {'default_server_config': {'m.homeserver': {'base_url': element_homeserver_url}}} | ansible.builtin.to_nice_json }}\n"
+    dest: "/var/www/{{ element_fqdn }}/element-v{{ element_version }}/config.json"
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Configure Apache for Element
+  ansible.builtin.template:
+    src: element.apache.conf.j2
+    dest: "/etc/apache2/snippets/{{ element_fqdn }}/element.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  when: webserver_type == 'apache'
+  notify: Restart web server
+
+- name: Configure nginx for Element
+  ansible.builtin.template:
+    src: element.nginx.conf.j2
+    dest: "/etc/nginx/snippets/{{ element_fqdn }}/element.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  when: webserver_type == 'nginx'
+  notify: Reload web server

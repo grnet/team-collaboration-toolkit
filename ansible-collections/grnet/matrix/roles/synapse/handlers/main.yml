@@ -1,0 +1,6 @@
+---
+- name: Restart Synapse
+  ansible.builtin.systemd_service:
+    name: matrix-synapse
+    daemon_reload: true
+    state: restarted
