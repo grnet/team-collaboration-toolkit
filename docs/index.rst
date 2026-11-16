@@ -40,6 +40,7 @@ Debian. Start reading from :ref:`guide_nextcloud`.
 
    matrix/synapse
    matrix/mas
+   matrix/dex
    matrix/element
 
 .. toctree::

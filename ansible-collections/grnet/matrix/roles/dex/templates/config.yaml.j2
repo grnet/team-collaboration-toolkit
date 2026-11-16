@@ -1,0 +1,27 @@
+# {{ ansible_managed }}
+issuer: {{ (('http' if dex_ssl == 'off' else 'https') ~ '://' ~ dex_fqdn) | to_json }}
+web:
+  http: 127.0.0.1:5556
+frontend:
+  dir: /opt/dex/{{ dex_version }}/web
+storage:
+  type: postgres
+  config:
+    host: 127.0.0.1
+    port: 5432
+    database: {{ dex_database_name | to_json }}
+    user: {{ dex_database_user | to_json }}
+    password: {{ dex_database_password | to_json }}
+    ssl:
+      mode: disable
+enablePasswordDB: false
+oauth2:
+  # MAS is the only, trusted client; don't ask users to approve it on every login.
+  skipApprovalScreen: true
+connectors:
+  - type: ldap
+    id: ldap
+    name: LDAP
+    config:
+{{ dex_ldap | to_nice_yaml(indent=2) | indent(6, true) }}
+staticClients: {{ dex_static_clients | to_json }}

@@ -1,0 +1,12 @@
+---
+dependencies:
+  - role: aptiko.general.website
+    website_domain: "{{ dex_fqdn }}"
+    website_document_root: "/var/www/{{ dex_fqdn }}"
+    website_ssl: "{{ dex_ssl }}"
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Dex with PostgreSQL and LDAP on Debian/Ubuntu
+  license: GPLv3
+  min_ansible_version: "2.19"

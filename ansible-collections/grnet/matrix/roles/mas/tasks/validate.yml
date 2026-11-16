@@ -38,3 +38,11 @@
     fail_msg: Configure mas_email to deliver verification messages before enabling email-required registration.
   when: mas_enable_registration | bool and mas_registration_requires_email | bool
   no_log: true
+
+- name: Require upstream authentication when MAS passwords are disabled
+  ansible.builtin.assert:
+    that:
+      - mas_upstream_oauth2_providers | length > 0
+      - not mas_enable_registration | bool
+    fail_msg: Disabling MAS passwords requires an upstream provider and disabled password registration.
+  when: not mas_passwords_enabled | bool

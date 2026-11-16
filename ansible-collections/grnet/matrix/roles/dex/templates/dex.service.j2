@@ -1,0 +1,18 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Dex OIDC identity provider
+After=network.target postgresql.service
+
+[Service]
+User=dex
+Group=dex
+WorkingDirectory=/opt/dex/{{ dex_version }}
+# Preserve literal dollar signs in LDAP and database passwords.
+Environment=DEX_EXPAND_ENV=false
+ExecStart=/opt/dex/{{ dex_version }}/bin/dex serve /etc/opt/dex/config.yaml
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

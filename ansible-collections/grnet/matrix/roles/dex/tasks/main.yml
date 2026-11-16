@@ -1,0 +1,115 @@
+---
+- name: Validate Dex settings
+  ansible.builtin.import_tasks: validate.yml
+
+- name: Install Dex build dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - tar
+      - git
+      - make
+      - gcc
+      - libc6-dev
+      - golang-go
+
+- name: Create the Dex service account
+  ansible.builtin.user:
+    name: dex
+    system: true
+    home: /var/opt/dex
+    create_home: false
+    shell: /usr/sbin/nologin
+
+- name: Create the Dex release directory
+  ansible.builtin.file:
+    path: "/opt/dex/{{ dex_version }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Download the selected Dex source release
+  ansible.builtin.unarchive:
+    src: "https://github.com/dexidp/dex/archive/refs/tags/v{{ dex_version }}.tar.gz"
+    dest: "/opt/dex/{{ dex_version }}"
+    remote_src: true
+    extra_opts: [--strip-components=1]
+    owner: root
+    group: root
+    creates: "/opt/dex/{{ dex_version }}/Makefile"
+
+- name: Build the selected Dex release
+  ansible.builtin.command:
+    # Upstream derives GOBIN from PWD, which Ansible's chdir does not update.
+    argv: [make, build, "VERSION=v{{ dex_version }}", "GOBIN=/opt/dex/{{ dex_version }}/bin"]
+    chdir: "/opt/dex/{{ dex_version }}"
+    creates: "/opt/dex/{{ dex_version }}/bin/dex"
+  environment:
+    GOTOOLCHAIN: auto
+    GOPATH: /var/cache/dex/go
+    GOCACHE: /var/cache/dex/build
+  notify: Restart Dex
+
+- name: Create the Dex configuration directory
+  ansible.builtin.file:
+    path: /etc/opt/dex
+    state: directory
+    owner: root
+    group: dex
+    mode: "0750"
+
+- name: Create the Dex database user
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_user:
+    name: "{{ dex_database_user }}"
+    password: "{{ dex_database_password }}"
+    role_attr_flags: LOGIN,NOSUPERUSER,NOCREATEDB,NOCREATEROLE
+  no_log: true
+
+- name: Create the Dex database
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_db:
+    name: "{{ dex_database_name }}"
+    owner: "{{ dex_database_user }}"
+    encoding: UTF8
+    lc_collate: C
+    lc_ctype: C
+    template: template0
+
+- name: Configure Dex
+  ansible.builtin.template:
+    src: config.yaml.j2
+    dest: /etc/opt/dex/config.yaml
+    owner: root
+    group: dex
+    mode: "0640"
+  no_log: true
+  notify: Restart Dex
+
+- name: Install the Dex systemd service
+  ansible.builtin.template:
+    src: dex.service.j2
+    dest: /etc/systemd/system/dex.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart Dex
+
+- name: Configure the Dex reverse proxy
+  ansible.builtin.template:
+    src: "dex.{{ webserver_type }}.conf.j2"
+    dest: "/etc/{{ 'apache2' if webserver_type == 'apache' else 'nginx' }}/snippets/{{ dex_fqdn }}/dex.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: "{{ 'Restart web server' if webserver_type == 'apache' else 'Reload web server' }}"
+
+- name: Enable and start Dex
+  ansible.builtin.systemd_service:
+    name: dex
+    daemon_reload: true
+    enabled: true
+    state: started

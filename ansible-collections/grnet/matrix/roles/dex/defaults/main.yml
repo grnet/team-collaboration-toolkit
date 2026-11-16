@@ -1,0 +1,5 @@
+---
+dex_ssl: letsencrypt
+dex_database_name: dex
+dex_database_user: dex
+dex_static_clients: []

@@ -1,0 +1,6 @@
+---
+- name: Restart Dex
+  ansible.builtin.systemd_service:
+    name: dex
+    daemon_reload: true
+    state: restarted

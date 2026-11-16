@@ -1,0 +1,22 @@
+---
+# Run against an installed server using its normal inventory variables.
+- name: Check the installed Dex service
+  hosts: all
+  gather_facts: false
+  vars:
+    # Role default, without overriding the inventory as vars_files would.
+    dex_test_ssl: "{{ dex_ssl | default('letsencrypt') }}"
+    dex_test_issuer: "{{ ('http' if dex_test_ssl == 'off' else 'https') ~ '://' ~ dex_fqdn }}"
+  tasks:
+    - name: Check public Dex discovery
+      ansible.builtin.uri:
+        url: "{{ dex_test_issuer }}/.well-known/openid-configuration"
+        validate_certs: "{{ dex_test_ssl != 'self-signed' }}"
+        return_content: true
+      register: dex_discovery
+
+    - name: Check the issuer and authorization endpoint
+      ansible.builtin.assert:
+        that:
+          - dex_discovery.json.issuer == dex_test_issuer
+          - dex_discovery.json.authorization_endpoint == dex_test_issuer ~ '/auth'

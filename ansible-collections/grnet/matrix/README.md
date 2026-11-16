@@ -1,5 +1,10 @@
 # grnet.matrix
 
+The `grnet.matrix.dex` role installs Dex with PostgreSQL and a TLS LDAP
+connector. Use it as an OIDC provider for MAS; see the
+[Dex role documentation](https://team-collaboration-toolkit.readthedocs.io/en/latest/matrix/dex.html)
+for a complete inventory example and identity mapping requirements.
+
 The `grnet.matrix.synapse` role installs an explicitly selected Synapse version
 with pip in `/opt/synapse/venv`, reusing distribution Python packages through
 `--system-site-packages`. It configures a local PostgreSQL database.

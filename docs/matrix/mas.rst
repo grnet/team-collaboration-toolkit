@@ -71,6 +71,12 @@ release's options and pass ``--config /etc/opt/mas/config.yaml``.
 Parameters
 ==========
 
+.. data:: mas_passwords_enabled
+
+   Default ``true``. Set to ``false`` for authentication only through upstream
+   OIDC providers, for example :doc:`dex`. At least one upstream provider must
+   be configured and ``mas_enable_registration`` must be ``false``.
+
 .. data:: mas_version
 
    Required quoted release number without ``v``, for example ``"1.26.0"``.
@@ -119,7 +125,8 @@ Parameters
    MAS's ``upstream_oauth2.providers``; see the upstream
    `provider configuration
    <https://element-hq.github.io/matrix-authentication-service/reference/configuration.html#upstream_oauth2providers>`_.
-   LDAP requires an OIDC bridge such as Dex, installed separately.
+   LDAP requires an OIDC bridge; :doc:`dex` provides a role and a complete
+   LDAP integration example.
    Use Ansible's ``!unsafe`` tag on provider claim
    templates containing literal ``{{ ... }}`` so Ansible leaves them for MAS.
    Removing a provider from inventory does not delete its database entry;

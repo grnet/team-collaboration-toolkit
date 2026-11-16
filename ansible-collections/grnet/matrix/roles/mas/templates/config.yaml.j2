@@ -32,6 +32,8 @@ templates:
   translations_path: /opt/mas/{{ mas_version }}/share/translations/
 policy:
   wasm_module: /opt/mas/{{ mas_version }}/share/policy.wasm
+passwords:
+  enabled: {{ mas_passwords_enabled | bool | to_json }}
 account:
   password_registration_enabled: {{ mas_enable_registration | bool | to_json }}
   password_registration_email_required: {{ mas_registration_requires_email | bool | to_json }}

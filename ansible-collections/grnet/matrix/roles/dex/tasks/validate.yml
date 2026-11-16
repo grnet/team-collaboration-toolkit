@@ -1,0 +1,77 @@
+---
+- name: Check the Dex release and hostname
+  ansible.builtin.assert:
+    that:
+      - dex_version is defined
+      - dex_version is string
+      - dex_version is match('^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.-]+)?$')
+      - dex_fqdn is defined
+      - dex_fqdn is string
+      - dex_fqdn is match('^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+\.?$')
+      - dex_fqdn | lower | regex_replace('\.$', '') != mas_fqdn | default('') | lower | regex_replace('\.$', '')
+      - dex_fqdn | lower | regex_replace('\.$', '') != synapse_fqdn | default(synapse_server_name | default('')) | lower | regex_replace('\.$', '')
+      - dex_fqdn | lower | regex_replace('\.$', '') != element_fqdn | default('') | lower | regex_replace('\.$', '')
+    fail_msg: Set dex_version without a v prefix and a separate dex_fqdn.
+
+- name: Check Dex database settings
+  ansible.builtin.assert:
+    that:
+      - dex_database_password | default('') is string
+      - dex_database_password | default('') | length > 0
+      - dex_database_name | length > 0
+      - dex_database_user | length > 0
+      - dex_database_name not in [mas_database_name | default('mas'), synapse_database_name | default('synapse')]
+      - dex_database_user not in [mas_database_user | default('mas'), synapse_database_user | default('synapse')]
+    fail_msg: Set dex_database_password and use a separate Dex database and user.
+
+- name: Check the LDAP connector and require verified TLS
+  ansible.builtin.assert:
+    that:
+      - dex_ldap is defined
+      - dex_ldap is mapping
+      - dex_ldap.host | default('') | length > 0
+      - not dex_ldap.insecureNoSSL | default(false) | bool
+      - not dex_ldap.insecureSkipVerify | default(false) | bool
+      - dex_ldap.userSearch is defined
+      - dex_ldap.userSearch is mapping
+      - dex_ldap.userSearch.baseDN | default('') | length > 0
+      - dex_ldap.userSearch.username | default('') | length > 0
+      - dex_ldap.userSearch.idAttr | default('') | length > 0
+      - dex_ldap.userSearch.emailAttr | default('') | length > 0
+      - dex_ldap.userSearch.nameAttr | default('') | length > 0
+      - (dex_ldap.bindDN | default('') | length > 0) == (dex_ldap.bindPW | default('') | length > 0)
+    fail_msg: Configure dex_ldap with userSearch attributes and verified LDAPS or StartTLS; supply both bindDN and bindPW or neither.
+
+- name: Check the Dex client list
+  ansible.builtin.assert:
+    that:
+      - dex_static_clients is sequence
+      - dex_static_clients is not string
+      - dex_static_clients is not mapping
+      - dex_static_clients | length > 0
+    fail_msg: Set dex_static_clients to a list of confidential OIDC clients.
+
+- name: Check Dex client credentials and callbacks
+  ansible.builtin.assert:
+    that:
+      - item is mapping
+      - item.id | default('') | length > 0
+      - item.secret | default('') is string
+      - item.secret | default('') | length >= 32
+      - not item.public | default(false) | bool
+      - item.redirectURIs is defined
+      - item.redirectURIs is sequence
+      - item.redirectURIs is not string
+      - item.redirectURIs is not mapping
+      - item.redirectURIs | length > 0
+      - item.redirectURIs | select('match', '^https://[^/?#*\s]+/[^#*\s]*$') | list | length == item.redirectURIs | length
+    fail_msg: Each confidential client needs an id, a random secret of at least 32 characters and exact HTTPS redirectURIs.
+  loop: "{{ dex_static_clients }}"
+  # The loop output would show each client secret.
+  no_log: true
+
+- name: Require unique Dex client IDs
+  ansible.builtin.assert:
+    that:
+      - dex_static_clients | map(attribute='id') | unique | length == dex_static_clients | length
+    fail_msg: Dex client IDs must be unique.
