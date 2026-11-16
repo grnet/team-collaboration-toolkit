@@ -6,6 +6,10 @@ RequestHeader set X-Forwarded-Proto expr=%{REQUEST_SCHEME}
 RequestHeader unset X-Forwarded-For
 # mod_proxy adds the connecting client's address to X-Forwarded-For.
 ProxyAddHeaders On
+{% if synapse_mas_enabled | bool %}
+ProxyPassMatch ^(/_matrix/client/[^/]+/(login|logout|refresh)(/.*)?)$ http://127.0.0.1:8080$1 nocanon
+ProxyPassReverse /_matrix http://127.0.0.1:8080/_matrix
+{% endif %}
 ProxyPass /_matrix http://127.0.0.1:8008/_matrix nocanon
 ProxyPassReverse /_matrix http://127.0.0.1:8008/_matrix
 ProxyPass /_synapse/client http://127.0.0.1:8008/_synapse/client nocanon

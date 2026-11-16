@@ -1,0 +1,127 @@
+---
+- name: Validate MAS settings
+  ansible.builtin.import_tasks: validate.yml
+
+- name: Install MAS download dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - tar
+
+- name: Create the MAS service account
+  ansible.builtin.user:
+    name: matrix-authentication-service
+    system: true
+    home: /var/opt/mas
+    create_home: false
+    shell: /usr/sbin/nologin
+
+- name: Create the MAS release directory
+  ansible.builtin.file:
+    path: "/opt/mas/{{ mas_version }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Download and extract the selected MAS release
+  ansible.builtin.unarchive:
+    src: >
+      https://github.com/element-hq/matrix-authentication-service/releases/download/v{{ mas_version }}/mas-cli-{{ ansible_facts.architecture }}-linux.tar.gz
+    dest: "/opt/mas/{{ mas_version }}"
+    remote_src: true
+    owner: root
+    group: root
+    creates: "/opt/mas/{{ mas_version }}/mas-cli"
+  notify: Restart MAS
+
+- name: Create the MAS configuration directory
+  ansible.builtin.file:
+    path: /etc/opt/mas
+    state: directory
+    owner: root
+    group: matrix-authentication-service
+    mode: "0750"
+
+- name: Create the private MAS data directory
+  ansible.builtin.file:
+    path: /var/opt/mas
+    state: directory
+    owner: matrix-authentication-service
+    group: matrix-authentication-service
+    mode: "0700"
+
+- name: Generate persistent MAS secrets on first installation
+  become: true
+  become_user: matrix-authentication-service
+  ansible.builtin.command:
+    argv:
+      - "/opt/mas/{{ mas_version }}/mas-cli"
+      - config
+      - generate
+      - --output
+      - /var/opt/mas/generated.yaml
+    creates: /var/opt/mas/generated.yaml
+  no_log: true
+
+- name: Read the persistent MAS secrets
+  ansible.builtin.slurp:
+    src: /var/opt/mas/generated.yaml
+  register: mas_generated_config
+  no_log: true
+
+- name: Create the MAS database user
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_user:
+    name: "{{ mas_database_user }}"
+    password: "{{ mas_database_password }}"
+    role_attr_flags: LOGIN,NOSUPERUSER,NOCREATEDB,NOCREATEROLE
+  no_log: true
+
+- name: Create the MAS database
+  become: true
+  become_user: postgres
+  community.postgresql.postgresql_db:
+    name: "{{ mas_database_name }}"
+    owner: "{{ mas_database_user }}"
+    encoding: UTF8
+    lc_collate: C
+    lc_ctype: C
+    template: template0
+
+- name: Configure MAS
+  ansible.builtin.template:
+    src: config.yaml.j2
+    dest: /etc/opt/mas/config.yaml
+    owner: root
+    group: matrix-authentication-service
+    mode: "0640"
+    validate: "/opt/mas/{{ mas_version }}/mas-cli config check --config %s"
+  no_log: true
+  notify: Restart MAS
+
+- name: Install the MAS systemd service
+  ansible.builtin.template:
+    src: matrix-authentication-service.service.j2
+    dest: /etc/systemd/system/matrix-authentication-service.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart MAS
+
+- name: Configure the MAS reverse proxy
+  ansible.builtin.template:
+    src: "mas.{{ webserver_type }}.conf.j2"
+    dest: "/etc/{{ 'apache2' if webserver_type == 'apache' else 'nginx' }}/snippets/{{ mas_fqdn }}/mas.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: "{{ 'Restart web server' if webserver_type == 'apache' else 'Reload web server' }}"
+
+- name: Enable and start MAS
+  ansible.builtin.systemd_service:
+    name: matrix-authentication-service
+    daemon-reload: true
+    enabled: true
+    state: started

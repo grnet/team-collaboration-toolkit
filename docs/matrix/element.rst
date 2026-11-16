@@ -14,7 +14,8 @@ share a machine and IP address.  See `Element's security guidance
 Example
 =======
 
-With Synapse and PostgreSQL passwords defined in vaulted inventory variables::
+Without MAS (see :doc:`mas`), and with Synapse and PostgreSQL passwords
+defined in vaulted inventory variables::
 
   - hosts: matrix
     become: true
@@ -24,6 +25,7 @@ With Synapse and PostgreSQL passwords defined in vaulted inventory variables::
       synapse_version: "1.159.0"
       synapse_server_name: example.org
       synapse_fqdn: matrix.example.org
+      synapse_mas_enabled: false
       duply_deactivate: true
       element_version: "1.11.100"
       element_fqdn: chat.example.org

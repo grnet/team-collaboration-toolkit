@@ -1,0 +1,16 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Matrix Authentication Service
+After=network.target postgresql.service
+
+[Service]
+User=matrix-authentication-service
+Group=matrix-authentication-service
+WorkingDirectory=/opt/mas/{{ mas_version }}
+ExecStart=/opt/mas/{{ mas_version }}/mas-cli server --config /etc/opt/mas/config.yaml
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

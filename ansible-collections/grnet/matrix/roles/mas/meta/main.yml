@@ -1,0 +1,12 @@
+---
+dependencies:
+  - role: aptiko.general.website
+    website_domain: "{{ mas_fqdn }}"
+    website_document_root: "/var/www/{{ mas_fqdn }}"
+    website_ssl: "{{ mas_ssl }}"
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Matrix Authentication Service with PostgreSQL on Debian/Ubuntu
+  license: GPLv3
+  min_ansible_version: "2.19"

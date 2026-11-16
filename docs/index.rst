@@ -39,6 +39,7 @@ Debian. Start reading from :ref:`guide_nextcloud`.
    :caption: grnet.matrix collection reference
 
    matrix/synapse
+   matrix/mas
    matrix/element
 
 .. toctree::

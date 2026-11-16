@@ -10,6 +10,16 @@
     fail_msg: Set synapse_server_name, synapse_version and synapse_database_password.
   no_log: true
 
+- name: Check Synapse MAS settings
+  ansible.builtin.assert:
+    that:
+      - mas_synapse_secret | default('') | length >= 32
+      - not synapse_enable_registration | bool
+      - not synapse_registration_requires_email | bool
+    fail_msg: Set mas_synapse_secret and disable Synapse registration settings; configure registration in MAS instead.
+  when: synapse_mas_enabled | bool
+  no_log: true
+
 - name: Check Synapse email settings
   ansible.builtin.assert:
     that:

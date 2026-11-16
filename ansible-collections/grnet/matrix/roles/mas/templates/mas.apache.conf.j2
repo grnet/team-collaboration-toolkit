@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+ProxyPreserveHost On
+ProxyRequests Off
+RequestHeader set X-Forwarded-Proto expr=%{REQUEST_SCHEME}
+RequestHeader unset X-Forwarded-For
+ProxyAddHeaders On
+ProxyPass / http://127.0.0.1:8080/
+ProxyPassReverse / http://127.0.0.1:8080/

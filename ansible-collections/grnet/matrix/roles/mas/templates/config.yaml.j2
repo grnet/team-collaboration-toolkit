@@ -1,0 +1,40 @@
+# {{ ansible_managed }}
+http:
+  public_base: {{ (('http' if mas_ssl == 'off' else 'https') ~ '://' ~ mas_fqdn ~ '/') | to_json }}
+  trusted_proxies: ['127.0.0.1/32', '::1/128']
+  listeners:
+    - name: web
+      resources:
+        - name: discovery
+        - name: human
+        - name: oauth
+        - name: compat
+        - name: graphql
+        - name: assets
+          path: /opt/mas/{{ mas_version }}/share/assets/
+      binds:
+        - address: '127.0.0.1:8080'
+database:
+  host: 127.0.0.1
+  username: {{ mas_database_user | to_json }}
+  password: {{ mas_database_password | to_json }}
+  database: {{ mas_database_name | to_json }}
+matrix:
+  kind: synapse
+  homeserver: {{ synapse_server_name | to_json }}
+  endpoint: http://127.0.0.1:8008
+  secret: {{ mas_synapse_secret | to_json }}
+secrets:
+{{ (mas_generated_config.content | b64decode | from_yaml)['secrets'] | to_nice_yaml(indent=2) | indent(2, true) }}
+templates:
+  path: /opt/mas/{{ mas_version }}/share/templates/
+  assets_manifest: /opt/mas/{{ mas_version }}/share/manifest.json
+  translations_path: /opt/mas/{{ mas_version }}/share/translations/
+policy:
+  wasm_module: /opt/mas/{{ mas_version }}/share/policy.wasm
+account:
+  password_registration_enabled: {{ mas_enable_registration | bool | to_json }}
+  password_registration_email_required: {{ mas_registration_requires_email | bool | to_json }}
+email: {{ {'transport': 'blackhole', 'from': 'auth@' ~ mas_fqdn} | combine(mas_email) | to_json }}
+upstream_oauth2:
+  providers: {{ mas_upstream_oauth2_providers | to_json }}

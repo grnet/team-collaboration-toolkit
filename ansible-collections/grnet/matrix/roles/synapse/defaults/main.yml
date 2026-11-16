@@ -8,3 +8,4 @@ synapse_registration_requires_email: false
 synapse_email: {}
 synapse_database_name: synapse
 synapse_database_user: synapse
+synapse_mas_enabled: true

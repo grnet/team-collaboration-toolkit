@@ -2,14 +2,16 @@
 server_name: {{ synapse_server_name | to_json }}
 public_baseurl: {{ synapse_public_baseurl | to_json }}
 report_stats: {{ synapse_report_stats | bool | to_json }}
+{% if not synapse_mas_enabled | bool %}
 enable_registration: {{ synapse_enable_registration | bool | to_json }}
 enable_registration_without_verification: {{ (synapse_enable_registration | bool and not synapse_registration_requires_email | bool) | to_json }}
 registrations_require_3pid: {{ (['email'] if synapse_registration_requires_email | bool else []) | to_json }}
+registration_shared_secret_path: /var/opt/synapse/registration_shared_secret
+{% endif %}
 {% if synapse_email %}
 email:
 {{ synapse_email | to_nice_yaml(indent=2) | indent(2, true) }}
 {% endif %}
-registration_shared_secret_path: /var/opt/synapse/registration_shared_secret
 media_store_path: /var/opt/synapse/media_store
 signing_key_path: /var/opt/synapse/homeserver.signing.key
 
@@ -32,3 +34,10 @@ listeners:
     resources:
       - names: [client, federation]
         compress: false
+
+{% if synapse_mas_enabled | bool %}
+matrix_authentication_service:
+  enabled: true
+  endpoint: http://127.0.0.1:8080/
+  secret: {{ mas_synapse_secret | to_json }}
+{% endif %}

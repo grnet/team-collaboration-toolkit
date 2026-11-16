@@ -45,7 +45,8 @@ in ``/var/opt/synapse/homeserver.signing.key``; media is stored in
 Example
 =======
 
-With the passwords defined in vaulted inventory variables::
+Without MAS (see :doc:`mas` for the default setup), and with the passwords
+defined in vaulted inventory variables::
 
   - hosts: matrix
     become: true
@@ -53,6 +54,7 @@ With the passwords defined in vaulted inventory variables::
       synapse_version: "1.159.0"
       synapse_server_name: example.org
       synapse_fqdn: matrix.example.org
+      synapse_mas_enabled: false
       webserver_type: nginx
       website_letsencrypt_admin: admin@example.org
       duply_deactivate: true
@@ -166,3 +168,13 @@ Parameters
 
    Both default to ``synapse``. The database uses UTF-8 encoding and ``C``
    collation, as required by Synapse.
+
+.. data:: synapse_mas_enabled
+
+   When ``true`` (the default), it delegates authentication to a local
+   :doc:`mas` instance (Synapse >= 1.136.0 required). Set the same
+   ``mas_synapse_secret`` for both roles. The reverse proxy forwards
+   login, logout and refresh requests to MAS on localhost port 8080.
+
+   Set to ``false`` to use Synapse's built-in authentication. This is not
+   recommended and it might not be well tested.

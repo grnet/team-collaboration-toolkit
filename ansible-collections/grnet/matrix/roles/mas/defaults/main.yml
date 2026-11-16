@@ -1,0 +1,8 @@
+---
+mas_ssl: letsencrypt
+mas_database_name: mas
+mas_database_user: mas
+mas_enable_registration: false
+mas_registration_requires_email: true
+mas_email: {}
+mas_upstream_oauth2_providers: []

@@ -1,0 +1,40 @@
+---
+- name: Check the MAS release version
+  ansible.builtin.assert:
+    that:
+      - mas_version is defined
+      - mas_version is string
+      - mas_version is match('^[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.-]+)?$')
+    fail_msg: Set mas_version to an explicit release number without the v prefix.
+
+- name: Check required MAS settings
+  ansible.builtin.assert:
+    that:
+      - ansible_facts.architecture in ['x86_64', 'aarch64']
+      - mas_fqdn is defined
+      - mas_fqdn is string
+      - mas_fqdn is match('^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+\.?$')
+      - mas_fqdn | lower | regex_replace('\.$', '') != synapse_fqdn | default(synapse_server_name) | lower | regex_replace('\.$', '')
+      - synapse_server_name | default('') | length > 0
+      - mas_database_password | default('') | length > 0
+      - mas_synapse_secret | default('') | length >= 32
+      - mas_database_name != synapse_database_name | default('synapse')
+      - mas_database_user != synapse_database_user | default('synapse')
+      - mas_email is mapping
+      - mas_upstream_oauth2_providers is sequence
+      - mas_upstream_oauth2_providers is not string
+      - mas_upstream_oauth2_providers is not mapping
+    fail_msg: >-
+      Set a separate mas_fqdn, database and database user, mas_database_password,
+      synapse_server_name and a random mas_synapse_secret of at least 32
+      characters. MAS requires x86_64 or aarch64.
+  no_log: true
+
+- name: Check MAS registration email settings
+  ansible.builtin.assert:
+    that:
+      - mas_email.transport | default('blackhole') in ['smtp', 'sendmail']
+      - mas_email.from | default('') | length > 0
+    fail_msg: Configure mas_email to deliver verification messages before enabling email-required registration.
+  when: mas_enable_registration | bool and mas_registration_requires_email | bool
+  no_log: true
