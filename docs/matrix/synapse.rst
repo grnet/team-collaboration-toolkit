@@ -25,16 +25,28 @@ to install the shared Apache or nginx web server.
 
 Synapse listens on localhost port 8008 with registration disabled by default. The role
 configures a reverse proxy through ``aptiko.general.website``,
-forwarding ``/_matrix`` and ``/_synapse/client``
+forwarding ``/_matrix``, ``/_synapse/client`` and ``/.well-known/matrix``
 with the required headers and preserving encoded request paths. The admin API
 is not proxied unless ``synapse_expose_admin_api`` is set. HTTPS uses Let's Encrypt by default; DNS must point to the
 server and ports 80 and 443 must be reachable for certificate issuance.
 
-Federation discovery must direct other servers to ``synapse_fqdn:443`` (for
-example, through ``https://<synapse_server_name>/.well-known/matrix/server``).
-The role does not listen on the default federation port 8448 or configure
-discovery on the server-name domain. Client discovery on that domain must
-also be configured separately when needed.
+Clients and other servers find the homeserver through
+``https://<synapse_server_name>/.well-known/matrix/client`` and
+``/.well-known/matrix/server``. The role does not listen on the default
+federation port 8448, so federation depends on the latter.
+
+* If ``synapse_fqdn`` equals ``synapse_server_name`` (the default), Synapse
+  serves both files itself; nothing else is needed.
+* Otherwise the server-name domain is usually another website, which must
+  serve them as ``application/json``, the client file with
+  ``Access-Control-Allow-Origin: *``. For the client file, copy what Synapse
+  serves at ``https://<synapse_fqdn>/.well-known/matrix/client``; it
+  includes the MAS details when MAS is enabled. The server file is, for
+  example for ``synapse_fqdn: matrix.example.org``::
+
+    {"m.server": "matrix.example.org:443"}
+
+  The smoke test checks both files on the server-name domain.
 
 The role manages ``/etc/opt/synapse/homeserver.yaml`` and the ``matrix-synapse``
 systemd service, which runs as the ``matrix-synapse`` user. Logs go to the

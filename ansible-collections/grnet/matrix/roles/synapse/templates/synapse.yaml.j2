@@ -1,6 +1,8 @@
 # {{ ansible_managed }}
 server_name: {{ synapse_server_name | to_json }}
 public_baseurl: {{ synapse_public_baseurl | to_json }}
+# Synapse would announce <server_name>:443, which is right only when that is this host.
+serve_server_wellknown: {{ (synapse_fqdn == synapse_server_name) | to_json }}
 report_stats: {{ synapse_report_stats | bool | to_json }}
 {% if not synapse_mas_enabled | bool %}
 enable_registration: {{ synapse_enable_registration | bool | to_json }}

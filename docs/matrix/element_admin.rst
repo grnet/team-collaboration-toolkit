@@ -34,8 +34,9 @@ Requirements
   APIs directly. Set ``synapse_expose_admin_api: true`` (:doc:`synapse`) and
   ``mas_expose_admin_api: true`` (:doc:`mas`). Both default to ``false``.
 * The browser finds the homeserver through client discovery,
-  ``https://<server name>/.well-known/matrix/client``, which is the
-  administrator's responsibility (see :doc:`synapse`).
+  ``https://<server name>/.well-known/matrix/client``. The synapse role
+  serves it when the server name is the Synapse hostname; otherwise see
+  :doc:`synapse`.
 * Element Admin registers itself as a MAS client on first login. Log in with
   a MAS account that is allowed to request administrator access::
 

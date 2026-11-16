@@ -11,6 +11,8 @@
     synapse_test_baseurl: >-
       {{ synapse_public_baseurl | default(('http' if synapse_test_ssl == 'off' else 'https')
          ~ '://' ~ synapse_fqdn | default(synapse_server_name) ~ '/') }}
+    synapse_test_discovery: >-
+      {{ ('http' if synapse_test_ssl == 'off' else 'https') ~ '://' ~ synapse_server_name ~ '/.well-known/matrix' }}
   tasks:
     - name: Read the virtual environment configuration
       ansible.builtin.slurp:
@@ -55,3 +57,25 @@
       ansible.builtin.assert:
         that:
           - synapse_public.json.versions | length > 0
+
+    # Clients and other servers look on the server-name domain, whoever serves it.
+    - name: Check client discovery on the server-name domain
+      ansible.builtin.uri:
+        url: "{{ synapse_test_discovery }}/client"
+        validate_certs: "{{ synapse_test_ssl != 'self-signed' }}"
+      register: synapse_client_well_known
+
+    - name: Check federation discovery on the server-name domain
+      ansible.builtin.uri:
+        url: "{{ synapse_test_discovery }}/server"
+        validate_certs: "{{ synapse_test_ssl != 'self-signed' }}"
+      register: synapse_server_well_known
+      when: synapse_test_ssl != 'off'
+
+    - name: Check discovery points to this Synapse
+      ansible.builtin.assert:
+        that:
+          - synapse_client_well_known.json['m.homeserver'].base_url.rstrip('/') == synapse_test_baseurl.rstrip('/')
+          - >-
+            synapse_test_ssl == 'off' or synapse_server_well_known.json['m.server']
+            == (synapse_fqdn | default(synapse_server_name)) ~ ':443'

@@ -41,9 +41,9 @@ Use Synapse 1.136.0 or later. For example::
       - grnet.matrix.synapse
 
 DNS for both hostnames must point to this server. Ports 80 and 443 must be
-reachable for Let's Encrypt. Client and federation discovery on the
-server-name domain remain the administrator's responsibility; see
-:doc:`synapse`.
+reachable for Let's Encrypt. Because the server name here differs from
+the Synapse hostname, client and federation discovery on the server-name
+domain are the administrator's responsibility; see :doc:`synapse`.
 
 ``synapse_mas_enabled`` enables delegation and routes login, logout and
 refresh requests on the Synapse hostname to MAS. The same
