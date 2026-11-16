@@ -10,7 +10,7 @@ import yaml
 
 
 class ConfigTests(unittest.TestCase):
-    def test_disable_password_login(self):
+    def render(self, **overrides):
         role = Path(__file__).resolve().parents[1]
         env = Environment(loader=FileSystemLoader(role / 'templates'), undefined=StrictUndefined)
         env.filters.update(FilterModule().filters())
@@ -18,8 +18,21 @@ class ConfigTests(unittest.TestCase):
         settings.update(
             ansible_managed='test', mas_version='1.26.0', mas_fqdn='auth.example.org',
             synapse_server_name='example.org', mas_database_password='test',
-            mas_synapse_secret='test', mas_passwords_enabled=False,
+            mas_synapse_secret='test',
             mas_generated_config={'content': base64.b64encode(b'secrets: {}').decode()},
         )
-        config = yaml.safe_load(env.get_template('config.yaml.j2').render(settings))
+        settings.update(overrides)
+        return yaml.safe_load(env.get_template('config.yaml.j2').render(settings))
+
+    def resources(self, config):
+        return [r['name'] for r in config['http']['listeners'][0]['resources']]
+
+    def test_disable_password_login(self):
+        config = self.render(mas_passwords_enabled=False)
         self.assertEqual(config.get('passwords'), {'enabled': False})
+
+    def test_admin_api_not_exposed_by_default(self):
+        self.assertNotIn('adminapi', self.resources(self.render()))
+
+    def test_expose_admin_api(self):
+        self.assertIn('adminapi', self.resources(self.render(mas_expose_admin_api=True)))

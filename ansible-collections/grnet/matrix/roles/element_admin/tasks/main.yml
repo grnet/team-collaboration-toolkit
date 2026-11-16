@@ -1,0 +1,43 @@
+---
+- name: Validate Element Admin settings
+  ansible.builtin.import_tasks: validate.yml
+
+- name: Install download dependencies
+  ansible.builtin.apt:
+    name: ca-certificates
+
+- name: Extract the selected Element Admin release from its container image
+  ansible.builtin.script:
+    cmd: >-
+      fetch_element_admin.py {{ element_admin_version | quote }}
+      {{ element_admin_root | quote }}
+    executable: python3
+    creates: "{{ element_admin_root }}/index.html"
+
+- name: Read the Element Admin entry point
+  ansible.builtin.slurp:
+    src: "{{ element_admin_root }}/index.html"
+  register: element_admin_index
+  # In check mode the extraction above did not run.
+  when: not ansible_check_mode
+
+- name: Configure Element Admin's server name
+  ansible.builtin.copy:
+    # The same substitution upstream's container performs at startup.
+    content: >-
+      {{ element_admin_index.content | b64decode | replace('APP_CONFIG_PLACEHOLDER',
+         {'serverName': element_admin_server_name} | to_json | b64encode) }}
+    dest: "{{ element_admin_root }}/index.runtime.html"
+    owner: root
+    group: root
+    mode: "0644"
+  when: not ansible_check_mode
+
+- name: Configure the Element Admin web server
+  ansible.builtin.template:
+    src: "element_admin.{{ webserver_type }}.conf.j2"
+    dest: "/etc/{{ 'apache2' if webserver_type == 'apache' else 'nginx' }}/snippets/{{ element_admin_fqdn }}/element_admin.conf"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: "{{ 'Restart web server' if webserver_type == 'apache' else 'Reload web server' }}"

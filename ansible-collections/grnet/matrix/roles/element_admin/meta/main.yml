@@ -1,0 +1,12 @@
+---
+dependencies:
+  - role: aptiko.general.website
+    website_domain: "{{ element_admin_fqdn }}"
+    website_document_root: "/var/www/{{ element_admin_fqdn }}/element-admin-{{ element_admin_version }}"
+    website_ssl: "{{ element_admin_ssl }}"
+
+galaxy_info:
+  author: Antonis Christofides
+  description: Install Element Admin on Debian/Ubuntu
+  license: GPLv3
+  min_ansible_version: "2.19"

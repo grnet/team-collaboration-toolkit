@@ -1,0 +1,25 @@
+---
+# Run against a deployed host with element_admin_* settings in inventory.
+- name: Check the deployed Element Admin website
+  hosts: all
+  gather_facts: false
+  vars:
+    # Role default, without overriding the inventory as vars_files would.
+    element_admin_test_ssl: "{{ element_admin_ssl | default('letsencrypt') }}"
+    element_admin_test_url: "https://{{ element_admin_fqdn }}"
+  tasks:
+    - name: Fetch an Element Admin page through its browser-side route
+      ansible.builtin.uri:
+        url: "{{ element_admin_test_url }}/rooms"
+        validate_certs: "{{ element_admin_test_ssl != 'self-signed' }}"
+        return_content: true
+      register: element_admin_page
+
+    - name: Check content, server name and headers
+      ansible.builtin.assert:
+        that:
+          - "'text/html' in element_admin_page.content_type"
+          - "({'serverName': element_admin_server_name} | to_json | b64encode) in element_admin_page.content"
+          - "'no-cache' in element_admin_page.cache_control"
+          - element_admin_page.x_content_type_options == 'nosniff'
+          - element_admin_page.x_frame_options == 'DENY'

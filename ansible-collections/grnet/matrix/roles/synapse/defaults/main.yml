@@ -4,6 +4,7 @@ synapse_ssl: letsencrypt
 synapse_public_baseurl: "{{ 'http' if synapse_ssl == 'off' else 'https' }}://{{ synapse_fqdn }}/"
 synapse_report_stats: false
 synapse_enable_registration: false
+synapse_expose_admin_api: false
 synapse_registration_requires_email: false
 synapse_email: {}
 synapse_database_name: synapse

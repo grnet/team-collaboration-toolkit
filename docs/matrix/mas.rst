@@ -112,6 +112,13 @@ Parameters
    working ``mas_email`` transport. Set ``mas_registration_requires_email``
    to ``false`` only if registrations without email verification are intended.
 
+.. data:: mas_expose_admin_api
+
+   Whether to enable MAS's admin API at ``/api/admin`` on the MAS hostname.
+   Default ``false``. Set to ``true`` for :doc:`element_admin`. Calls need a
+   token with the ``urn:mas:admin`` scope, which only accounts promoted with
+   ``mas-cli manage promote-admin`` can obtain.
+
 .. data:: mas_email
 
    MAS email configuration mapping, default ``{}`` (no delivery).

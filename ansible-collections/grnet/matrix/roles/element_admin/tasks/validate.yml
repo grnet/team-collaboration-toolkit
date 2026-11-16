@@ -1,0 +1,27 @@
+---
+- name: Check required Element Admin settings
+  ansible.builtin.assert:
+    that:
+      - element_admin_version is defined
+      - element_admin_version is string
+      - element_admin_version is match('^[0-9]+\.[0-9]+\.[0-9]+$')
+      - element_admin_fqdn is defined
+      - element_admin_fqdn is string
+      - element_admin_fqdn is match('^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+\.?$')
+      - element_admin_server_name is defined
+      - element_admin_server_name is string
+      - element_admin_server_name is match('^[a-zA-Z0-9.:\[\]-]+$')
+    fail_msg: Set element_admin_version, element_admin_fqdn and element_admin_server_name.
+
+- name: Require HTTPS for Element Admin
+  ansible.builtin.assert:
+    that: element_admin_ssl != 'off'
+    fail_msg: Element Admin must be served over HTTPS (a browser secure context).
+
+- name: Require a separate Element Admin hostname
+  ansible.builtin.assert:
+    that:
+      - >-
+        element_admin_fqdn | lower | regex_replace('\.$', '') not in
+        [synapse_fqdn | default(''), mas_fqdn | default(''), element_fqdn | default('')] | map('lower') | map('regex_replace', '\.$', '')
+    fail_msg: Element Admin must use a different hostname from Synapse, MAS and Element, even on the same server.

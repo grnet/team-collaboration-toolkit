@@ -27,7 +27,7 @@ Synapse listens on localhost port 8008 with registration disabled by default. Th
 configures a reverse proxy through ``aptiko.general.website``,
 forwarding ``/_matrix`` and ``/_synapse/client``
 with the required headers and preserving encoded request paths. The admin API
-is not proxied. HTTPS uses Let's Encrypt by default; DNS must point to the
+is not proxied unless ``synapse_expose_admin_api`` is set. HTTPS uses Let's Encrypt by default; DNS must point to the
 server and ports 80 and 443 must be reachable for certificate issuance.
 
 Federation discovery must direct other servers to ``synapse_fqdn:443`` (for
@@ -121,6 +121,13 @@ Parameters
 .. data:: synapse_report_stats
 
    Whether to report usage statistics to Synapse developers. Default ``false``.
+
+.. data:: synapse_expose_admin_api
+
+   Whether to proxy ``/_synapse/admin`` on the Synapse hostname. Default
+   ``false``. Set to ``true`` for :doc:`element_admin`, which calls the API
+   from the administrator's browser. Calls still need an administrator
+   token. Set back to ``false`` and rerun the role to remove the route.
 
 .. data:: synapse_enable_registration
 

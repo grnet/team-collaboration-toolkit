@@ -8,7 +8,7 @@ location ~ ^/_matrix/client/[^/]+/(login|logout|refresh)(/|$) {
     proxy_set_header X-Forwarded-Proto $scheme;
 }
 {% endif %}
-location ~ ^(/_matrix|/_synapse/client)(/|$) {
+location ~ ^(/_matrix|/_synapse/client{% if synapse_expose_admin_api | bool %}|/_synapse/admin{% endif %})(/|$) {
     # No trailing slash: preserve the original URI for signature verification.
     proxy_pass http://127.0.0.1:8008;
     proxy_http_version 1.1;

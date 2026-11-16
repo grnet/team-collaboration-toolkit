@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+DirectoryIndex index.runtime.html
+# Element Admin routes in the browser; serve the entry point for any path.
+FallbackResource /index.runtime.html
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https:; font-src 'self'; connect-src *; object-src 'none'; media-src 'self'; child-src 'none'; worker-src 'self'; manifest-src 'self';"
+Header always set X-Frame-Options DENY
+Header always set X-Content-Type-Options nosniff
+Header always set Referrer-Policy strict-origin-when-cross-origin
+Header always set X-Robots-Tag "noindex, nofollow"
+Header always set Cache-Control "no-cache"

@@ -1,0 +1,3 @@
+---
+# Must match website_document_root in meta/main.yml.
+element_admin_root: "/var/www/{{ element_admin_fqdn }}/element-admin-{{ element_admin_version }}"

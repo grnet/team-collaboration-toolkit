@@ -1,0 +1,12 @@
+# {{ ansible_managed }}
+index index.runtime.html;
+location / {
+    # Element Admin routes in the browser; serve the entry point for any path.
+    try_files $uri $uri/ /index.runtime.html;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https:; font-src 'self'; connect-src *; object-src 'none'; media-src 'self'; child-src 'none'; worker-src 'self'; manifest-src 'self';" always;
+    add_header X-Frame-Options DENY always;
+    add_header X-Content-Type-Options nosniff always;
+    add_header Referrer-Policy strict-origin-when-cross-origin always;
+    add_header X-Robots-Tag "noindex, nofollow" always;
+    add_header Cache-Control "no-cache" always;
+}

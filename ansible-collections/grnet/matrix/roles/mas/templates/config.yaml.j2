@@ -12,6 +12,9 @@ http:
         - name: graphql
         - name: assets
           path: /opt/mas/{{ mas_version }}/share/assets/
+{% if mas_expose_admin_api | bool %}
+        - name: adminapi
+{% endif %}
       binds:
         - address: '127.0.0.1:8080'
 database:

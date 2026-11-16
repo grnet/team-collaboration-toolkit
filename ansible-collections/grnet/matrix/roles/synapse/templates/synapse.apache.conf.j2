@@ -14,3 +14,7 @@ ProxyPass /_matrix http://127.0.0.1:8008/_matrix nocanon
 ProxyPassReverse /_matrix http://127.0.0.1:8008/_matrix
 ProxyPass /_synapse/client http://127.0.0.1:8008/_synapse/client nocanon
 ProxyPassReverse /_synapse/client http://127.0.0.1:8008/_synapse/client
+{% if synapse_expose_admin_api | bool %}
+ProxyPass /_synapse/admin http://127.0.0.1:8008/_synapse/admin nocanon
+ProxyPassReverse /_synapse/admin http://127.0.0.1:8008/_synapse/admin
+{% endif %}
