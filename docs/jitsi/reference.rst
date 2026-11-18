@@ -10,7 +10,10 @@ Variables and options
 - ``jitsi_fqdn``: The domain where jitsi meet is listening.
 - ``jitsi_release_number``: The Jitsi release to install. This is shared
   by the Jitsi Meet and Jitsi Videobridge roles and must be specified in
-  the inventory.
+  the inventory. The ``jitsi_meet`` role downloads the matching prebuilt
+  ``jitsi-meet-web`` and ``jitsi-meet-prosody`` packages from
+  https://download.jitsi.org/stable/, finding their version in the
+  dependencies of that release's ``jitsi-meet`` package.
 - ``jitsi_meet_group``: The inventory group containing the Jitsi Meet
   server for this installation. Used by the ``jitsi_jvb`` role and must
   be specified in the inventory.

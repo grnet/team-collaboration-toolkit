@@ -94,6 +94,8 @@
     group: jibri
     groups: audio
 
+# Built from source rather than installed from Jitsi's apt packages;
+# see the comment at the top of roles/jitsi_meet/tasks/meet.yml.
 - name: Clone Jibri
   ansible.builtin.git:
     repo: https://github.com/jitsi/jibri.git

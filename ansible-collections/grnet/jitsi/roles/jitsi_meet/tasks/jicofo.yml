@@ -1,5 +1,7 @@
 ---
 
+# Built from source rather than installed from Jitsi's apt packages;
+# see the comment at the top of roles/jitsi_meet/tasks/meet.yml.
 - name: Clone Jicofo
   ansible.builtin.git:
     repo: https://github.com/jitsi/jicofo.git

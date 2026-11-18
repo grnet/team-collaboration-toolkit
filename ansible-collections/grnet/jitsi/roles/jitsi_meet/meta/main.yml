@@ -6,7 +6,4 @@ dependencies:
     website_ssl: letsencrypt
     website_document_root: /opt/jitsi-meet
 
-  - role: aptiko.general.node
-    node_version: 24
-
   - role: grnet.jitsi.jitsi_excalidraw_backend

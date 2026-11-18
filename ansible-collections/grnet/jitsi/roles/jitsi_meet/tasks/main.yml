@@ -14,8 +14,6 @@
       - prosody-modules
       - git
       - maven
-      - nodejs
-      - make
       - unzip
     autoremove: true
 

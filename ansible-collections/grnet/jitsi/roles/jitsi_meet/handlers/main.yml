@@ -11,12 +11,6 @@
     name: prosody
     state: restarted
 
-- name: Compile Jitsi CSS
-  ansible.builtin.command: make deploy-css
-  args:
-    chdir: /opt/jitsi-meet
-  changed_when: true
-
 - name: Restart jitsi-prometheus-exporter
   ansible.builtin.service:
     name: jitsi-prometheus-exporter

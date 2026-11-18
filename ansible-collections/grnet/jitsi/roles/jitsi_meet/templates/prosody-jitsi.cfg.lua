@@ -9,7 +9,7 @@ unlimited_jids = {
     "jvb@auth.meet.jitsi",
 }
 
-plugin_paths = { "/opt/jitsi-meet/resources/prosody-plugins" };
+plugin_paths = { "/opt/jitsi-meet/prosody-plugins" };
 
 muc_mapper_domain_base = "meet.jitsi";
 muc_mapper_domain_prefix = "muc";

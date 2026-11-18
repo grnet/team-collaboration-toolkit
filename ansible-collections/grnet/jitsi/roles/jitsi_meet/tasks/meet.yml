@@ -1,61 +1,109 @@
 ---
 
-- name: Check whether the correct version of jitsi-meet is checked out  # noqa: command-instead-of-module
-  ansible.builtin.command: git describe
-  args:
-    chdir: /opt/jitsi-meet
-  register: git_describe
+# We don't install Jitsi's apt packages: they are an all-in-one installer
+# whose maintainer scripts configure prosody, nginx, certificates, jicofo
+# and jvb themselves, which would conflict with this collection doing
+# that. Jicofo, jvb and jibri are therefore built from source. For
+# jitsi-meet, building needs too much memory (#25), so we extract (with
+# dpkg-deb -x, which runs no maintainer scripts) the prebuilt
+# jitsi-meet-web and jitsi-meet-prosody packages into a directory per
+# version, and /opt/jitsi-meet is a symlink to the current one.
+- name: Get Jitsi's package index
+  ansible.builtin.uri:
+    url: https://download.jitsi.org/stable/Packages
+    return_content: true
+  register: jitsi_meet_packages
   check_mode: false
-  changed_when: false
-  ignore_errors: true
 
-- name: Clone jitsi-meet
-  ansible.builtin.git:
-    repo: https://github.com/jitsi/jitsi-meet.git
-    dest: /opt/jitsi-meet
-    version: stable/jitsi-meet_{{ jitsi_release_number }}
-    update: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
-    force: "{{ git_describe.stdout != 'stable/jitsi-meet_' ~ jitsi_release_number }}"
+# The jitsi-meet package of each release only pins its components' versions
+- name: Determine jitsi-meet-web version for release {{ jitsi_release_number }}
+  ansible.builtin.set_fact:
+    # Double-quoted so that YAML turns \n into newlines
+    jitsi_meet_web_version: "{{
+        jitsi_meet_packages.content.split('\n\n')
+        | select('search', '^Package: jitsi-meet[^-a-z]')
+        | select('search',
+                 'Version: 2[.]0[.]' ~ jitsi_release_number ~ '-[0-9]+[^0-9]')
+        | join('\n')
+        | regex_findall('jitsi-meet-web [(]= ([^)]+)[)]')
+        | last
+        | default('')
+      }}"
+
+- name: Check that a jitsi-meet package exists for the release
+  ansible.builtin.assert:
+    that: jitsi_meet_web_version | length > 0
+    fail_msg: >-
+      There is no jitsi-meet package for release {{ jitsi_release_number }}
+      in https://download.jitsi.org/stable/Packages
+    quiet: true
+
+- name: Set jitsi-meet-web directories
+  ansible.builtin.set_fact:
+    jitsi_meet_web_root: /opt/jitsi-meet-web/{{ jitsi_meet_web_version }}
+    jitsi_meet_web_dir: >-
+      /opt/jitsi-meet-web/{{ jitsi_meet_web_version }}/usr/share/jitsi-meet
+
+- name: Create directory /opt/jitsi-meet-web
+  ansible.builtin.file:
+    path: /opt/jitsi-meet-web
+    state: directory
+    mode: "0755"
+
+- name: Download jitsi-meet packages
+  ansible.builtin.get_url:
+    url: https://download.jitsi.org/stable/{{ item }}_{{ jitsi_meet_web_version }}_all.deb
+    dest: /opt/jitsi-meet-web/{{ item }}_{{ jitsi_meet_web_version }}_all.deb
+    mode: "0644"
+  loop:
+    - jitsi-meet-web
+    - jitsi-meet-prosody
+
+- name: Extract jitsi-meet packages
+  ansible.builtin.shell:
+    cmd: |
+      set -e
+      rm -rf {{ jitsi_meet_web_root | quote }}.tmp
+      mkdir {{ jitsi_meet_web_root | quote }}.tmp
+      for package in jitsi-meet-web jitsi-meet-prosody; do
+        dpkg-deb -x ${package}_{{ jitsi_meet_web_version | quote }}_all.deb \
+          {{ jitsi_meet_web_root | quote }}.tmp
+      done
+      mv {{ jitsi_meet_web_root | quote }}.tmp {{ jitsi_meet_web_root | quote }}
+    chdir: /opt/jitsi-meet-web
+    creates: "{{ jitsi_meet_web_root }}"
 
 - name: Copy custom jitsi welcome background image
   ansible.builtin.copy:
     src: "{{ jitsi_welcome_background_image }}"
-    dest: "/opt/jitsi-meet/images/{{ jitsi_welcome_background_image }}"
+    # Overwrite Jitsi's own, which is what the compiled css/all.css uses
+    dest: "{{ jitsi_meet_web_dir }}/images/welcome-background.png"
     mode: "0644"
   when: jitsi_welcome_background_image is defined
-
-- name: Configure jitsi to use custom welcome background image
-  ansible.builtin.lineinfile:
-    path: /opt/jitsi-meet/css/_variables.scss
-    regexp: '^\$welcomePageHeaderBackground:'
-    line: "$welcomePageHeaderBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/{{ jitsi_welcome_background_image }}');"
-  when: jitsi_welcome_background_image is defined
-  notify:
-    - Compile Jitsi CSS
 
 - name: Copy custom Jitsi favicon
   ansible.builtin.copy:
     src: "{{ jitsi_favicon }}"
-    dest: "/opt/jitsi-meet/images/{{ jitsi_favicon }}"
+    dest: "{{ jitsi_meet_web_dir }}/images/{{ jitsi_favicon }}"
     mode: "0644"
   when: jitsi_favicon != "favicon.svg"
 
 - name: Override Jitsi meta HTML part
   ansible.builtin.template:
     src: jitsi-meet-html-meta.html
-    dest: /opt/jitsi-meet/title.html
+    dest: "{{ jitsi_meet_web_dir }}/title.html"
     mode: "0644"
 
 - name: Configure Jitsi HTML title
   ansible.builtin.lineinfile:
-    path: /opt/jitsi-meet/interface_config.js
+    path: "{{ jitsi_meet_web_dir }}/interface_config.js"
     regexp: '^    APP_NAME: '
     line: "    APP_NAME: '{{ jitsi_html_title }}',"
   when: jitsi_html_title is defined
 
 - name: Configure Jitsi welcome header title
   ansible.builtin.lineinfile:
-    path: /opt/jitsi-meet/lang/main{% if item.key != "en" %}-{{ item.key }}{% endif %}.json
+    path: "{{ jitsi_meet_web_dir }}/lang/main{% if item.key != 'en' %}-{{ item.key }}{% endif %}.json"
     regexp: '^        "headerTitle":'
     line: '        "headerTitle": "{{ item.value }}",'
   loop: "{{ jitsi_welcome_header_title | dict2items }}"
@@ -63,22 +111,33 @@
 
 - name: Configure Jitsi welcome header subtitle
   ansible.builtin.lineinfile:
-    path: /opt/jitsi-meet/lang/main{% if item.key != "en" %}-{{ item.key }}{% endif %}.json
+    path: "{{ jitsi_meet_web_dir }}/lang/main{% if item.key != 'en' %}-{{ item.key }}{% endif %}.json"
     regexp: '^        "headerSubtitle":'
     line: '        "headerSubtitle": "{{ item.value }}",'
   loop: "{{ jitsi_welcome_header_subtitle | dict2items }}"
   when: jitsi_welcome_header_subtitle is defined
 
-- name: Build jitsi-meet
-  ansible.builtin.shell: >-
-    npm install &&
-    make &&
-    touch .built-jitsi-meet-{{ jitsi_release_number | quote }}
-  args:
-    chdir: /opt/jitsi-meet
-    creates: /opt/jitsi-meet/.built-jitsi-meet-{{ jitsi_release_number }}
-  async: 2000
-  poll: 10
+- name: Check /opt/jitsi-meet
+  ansible.builtin.stat:
+    path: /opt/jitsi-meet
+  register: opt_jitsi_meet
+
+# It is a directory if aptiko.general.website has just created it, or if
+# it is the git checkout in which older versions of this role built
+# jitsi-meet.
+- name: Remove directory /opt/jitsi-meet
+  ansible.builtin.file:
+    path: /opt/jitsi-meet
+    state: absent
+  when: opt_jitsi_meet.stat.isdir | default(false)
+
+- name: Point /opt/jitsi-meet to the current jitsi-meet version
+  ansible.builtin.file:
+    src: "{{ jitsi_meet_web_dir }}"
+    dest: /opt/jitsi-meet
+    state: link
+  notify:
+    - Restart prosody
 
 - name: Create directory /etc/jitsi/meet
   ansible.builtin.file:

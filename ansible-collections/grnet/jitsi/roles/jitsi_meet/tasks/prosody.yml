@@ -14,7 +14,7 @@
 - name: Link prosody modules
   ansible.builtin.file:
     state: link
-    src: /opt/jitsi-meet/resources/prosody-plugins
+    src: /opt/jitsi-meet/prosody-plugins
     dest: /usr/local/lib/prosody/modules
   notify:
     - Restart prosody
