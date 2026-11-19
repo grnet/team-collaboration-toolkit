@@ -59,6 +59,14 @@
   notify:
     - Restart php-fpm
 
+- name: Disable session upload progress (mitigates CVE-2026-115560)
+  ansible.builtin.lineinfile:
+    path: /etc/php/{{ php_version }}/fpm/php.ini
+    regexp: '^;?session.upload_progress.enabled\s*='
+    line: session.upload_progress.enabled = Off
+  notify:
+    - Restart php-fpm
+
 - name: Set opcache.interned_strings_buffer
   ansible.builtin.lineinfile:
     path: /etc/php/{{ php_version }}/fpm/php.ini
